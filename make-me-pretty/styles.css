@@ -1,0 +1,526 @@
+/* Cross Site Stylings */
+
+    /* set universal colors */
+:root {
+    --tealblue: #063C5E; 
+    --lightblue: rgb(205, 218, 218);
+    --brightteal: teal;
+    --darkpurple: rgb(36, 8, 32);
+    --darkerpurple: rgb(111, 37, 148);
+    --seagreen: lightseagreen;
+    --headercolor: rgb(45, 11, 61);
+    --headertextcolor: lightseagreen;
+}
+
+body {
+
+    /* background-color: white;
+    color: black; */
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* make dark mode */
+body {
+       background-color: rgb(54, 59, 59);
+    color: rgb(184, 167, 187); 
+}
+
+/* nice gradient for darkmode: background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+ */
+
+
+.center-this-top {
+    display: flex;
+    justify-content: center;
+}
+
+.center-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 5vw;
+}
+    /* style links */
+
+/* Header Stylings */
+
+header {
+    background-color: var(--headercolor);
+    /* width: 100%; */
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
+    color: white;
+}
+
+header img {
+    /* width: 50px; */
+    height: 2.3em;
+    /* margin-top: 5vw;
+    margin-left: 5vw; */
+}
+
+header h2 {
+    color: var(--headertextcolor);
+    /* color: var(--tealblue); */
+    /* display: inline-flex; */
+    margin-left: 10px;
+    /* margin-bottom: 0px;
+    margin-top: 0px; */
+    /* padding-bottom: 30px; */
+
+}
+
+.divA {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw;
+
+}
+
+.little-divA {
+    display: flex;
+    align-items: center;
+}
+
+#show-me-hamburger {
+    color: var(--headertextcolor);
+}
+
+.link-menu {
+    display: none;
+}
+
+.link-menu.open {
+    /* background-color: var(--tealblue); */
+    background-color: var(--headercolor);
+    display: block;
+    position: absolute;
+    margin-left: 65vw;
+}
+
+.headlink {
+    display: block;
+    text-align: center;
+    padding: 7% 7% 7% 7%; 
+    border-top: 1px solid white;
+    text-decoration: none;
+    color: var(--brightteal)
+}
+
+.headlink:hover {
+    color: var(--brightteal);
+    font-weight: bold;
+}
+
+.headlink:active {
+    color: white;
+    background-color: var(--brightteal)
+}
+
+
+
+
+/* FOOTER STYLINGS */
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);    
+}
+
+.heart {
+    width: 40px;
+    margin: 10vh;
+}
+
+footer p, footer button {
+    margin: 5vw;
+}
+
+#darkmode-button{
+    background-color: rgb(71, 88, 88);
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
+    border: 1px solid rgb(15, 29, 24);
+    border-radius: 17px;
+    width: 150px;
+    font-size: 1.2em;
+    padding: 4px 4px 5px 4px;
+    margin: 5vw 0;
+    
+}
+
+
+
+/* Landing Page Stylings */
+
+.landing-div {
+    /* background-image: url("robert-katzki-rainbow.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgb(35, 65, 65);
+    /* background-position: center; */
+    /* width: 100vw; */
+    height: 50vh;
+}
+
+.landing-div h2 {
+    color: rgb(131, 110, 110);
+    margin: 0px;
+    padding: 5vw;
+    /* align this text somehow that makes sense */
+}
+
+#welcome-div {
+    margin: 5vw;
+}
+
+#stuff-to-do-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.do-stuff img {
+    width: 200px;
+}
+
+.color-divider-div {
+    background-color: var(--seagreen);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8vh 0vh
+}
+
+.do-stuff a{
+    text-decoration: none;
+    color: var(--brightteal)
+}
+
+.do-stuff {
+    margin-bottom: 10vh;
+}
+
+
+
+
+/* How to Find a Therapist Page */
+
+.how-to-landing {
+    width: 100%;
+    /* height: 200px; */
+    background-color: lightseagreen;
+}
+
+.how-to-landing h1 {
+    margin: 0vw;
+    padding: 5vw 5vw 0 5vw;
+}
+
+.how-to-landing h2 {
+    margin: 0vw;
+    padding: 5vw;
+    font-size: 1.2em;
+}
+
+.how-to-text {
+    padding: 5vw 5vw 0 5vw;
+}
+
+.how-to-text li {
+    margin: .8em 0 0 0;
+}
+
+
+
+.pro-tips {
+    width: 100%;
+    background-color: lightseagreen;
+    padding: 5vw;
+    margin-top: 5vw;
+}
+
+.example {
+    background-color: mediumaquamarine;
+    /* width: 75%; */
+    padding: 5vw;
+    background-color: mediumaquamarine;
+    width: 75%;
+    margin: 5wv;
+}
+
+.example p {
+    margin: 0px;
+}
+
+.pro-tips li, .pro-tips p{
+    margin: .8em 10vw 0 0;
+}
+
+
+    /* Do something with ol maybe not numbers */
+    /* Style li with some space between */
+
+
+
+/* ADD TO THE LIST PAGE STYLINGS */
+
+
+.button-align {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-button, input[type=submit] {
+    /* background-color: lightseagreen; */
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);     
+    border: 1px solid mediumaquamarine;
+    border-radius: 17px;
+    width: 150px;
+    font-size: 1.2em;
+    padding: 4px;
+    margin: 5vw 0;
+    
+}
+
+.who-button:focus, input[type=submit]:hover {
+    border: 3px solid black;
+    font-weight: bold;
+}
+
+.add-provider-form input[type=submit] {
+    display: none;
+}
+
+
+    /* fix this later */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    color: rgb(9, 61, 85);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+
+
+
+/* this is the entire form, both versions */
+.add-provider-form {
+    margin: 5vw;
+}  
+
+/* this is the entire client form version - UNCOMMENT */
+.client-add-provider {
+    display: none;
+}
+
+
+/* this is the entire provider form version*/
+.provider-add-provider {
+    display: none;
+}
+
+
+
+
+
+
+
+.client-rating{
+    /* display:none; */
+    margin: 5em 0em;
+}
+
+.radio-div, .radio-label-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-label-div {
+    margin-left: .4em;
+    margin-right: .22em;
+    margin-top: 1em;
+}
+
+.client-rating p {
+    font-size: .7em;
+    width: 28vw;
+}
+
+.rating-explain {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* for radio button alignment */
+.indent-me {
+    margin: 0vw 6vw;
+}
+
+input[type='radio'] { 
+    transform: scale(2.5); 
+}
+/* maybe change radio select color later */
+
+
+
+.radio-yn-div, .radio-yn-label-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.radio-yn-label-div {
+    margin-top: 1em;
+}
+
+.question {
+    margin: 5em 0em;
+}
+
+.radio-yn-div, .radio-div {
+    margin-top: 2em;
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+input[type=checkbox] {
+    /* width: 5em; */
+    /* padding: 5em; */
+    transform: scale(2);
+    margin: 1em;
+}
+
+
+.text1 {
+    font-weight: 600;
+}
+
+.question textarea, .client-rating textarea {
+    margin-top: 20px;
+}
+
+
+#poly-rating, #queer-rating, #trans-rating, #kink-rating, #sw-rating, #bipoc-rating, #additional-rating {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* MOAR RESOURCES PAGE */
+
+.resources-for {
+    margin: 5vw;
+}
+
+.resource-square{
+    background-color: mediumslateblue;
+    margin: 5vw;
+    padding: 5vw;
+}
+
+.sw-resource, .trans-resource, .kink-resource, .poly-resource, .bipoc-resource {
+    display: none;
+}
+
+.show-me-resource {
+    display: block;
+}
+
+.resource-square a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.5em;
+    margin-top: .2em;
+ 
+}
+
+.resource-square p {
+    font-size: 1.2em;
+    margin-bottom: .1em;
+}
+
+/* FIND A THERAPIST pAGE */
+
+
+
+
+
+
+
+
+/* CONTACT PAGE STYLINGS */
+
+
+
+
+.contact-form {
+    /* background-color: white; */
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.contact-form-div {
+    margin-top: 7vh;
+}
+
+.contact-form-content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 88%;
+    color: var(--darkerpurple);
+}
+
+.form-input-text {
+    border: 0px;
+    border-bottom: 2px solid  darkorchid;
+    padding-top: 3vh;
+}
+
+.contact-form-div textarea {
+    /* do not relocate this */
+    padding: 0px;
+}
+
+
+.contact-submit-button {
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3); 
+    border: 0px;
+    border-radius: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 75%;
+    margin-top: 3vh;
+}
+
