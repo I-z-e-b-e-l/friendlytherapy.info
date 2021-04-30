@@ -4,67 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friendly Therapist List</title>
+    <title>Find a Therapist: the Friendly Therapist List</title>
     <link rel="stylesheet" type="text/css" href="make-me-pretty/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <script src="scripts.js" defer></script>
 </head>
 <body>
+
+    <header>
+       
+        <div class="divA">
+            <div class="little-divA">
+                <img src="make-me-pretty/magnify-talk-no-bg.png" alt="magnifying glass heart icon" class="magnify-talk">
+                <h2>friendlytherapy.info</h2>
+            </div>    
+            <a href="javascript:void(0);" id="hamburger">
+                <i class="fas fa-bars fa-2x" id=show-me-hamburger></i> 
+            </a>
+
+        </div>    
+  
+        <nav class="link-menu">
+            <a class="headlink" href="index.html">Home</a>
+            <a class="headlink" href="findatherapist.html">Find a Therapist</a>
+            <a class="headlink" href="resources.html">Resources</a>
+            <a class="headlink" href="how-to.html">How to Find a Therapist</a>
+            <a class="headlink" href="about.html">About</a> 
+        </nav>
+
+        <!-- Dark mod toggle button? Moar cats toggle button? -->
+
+    </header>
+
+
+
+
+
     <div class="what-do">
-        <div class="take-me-og">
-            <img src="">
+
+        <div class="take-me-searchable-db center-me2">
+            <a href="#search-the-list"></a>
+            <img src="make-me-pretty/search-list-no-bg.png">
+            
+                <h2>The Searchable Database</h2>
+            </a>
+            <p>
+                Search providers by insurance, location, and more.
+            </p>
+        </div>
+
+        <div class="take-me-add center-me2">
+            
+            <a href="add-to-the-list.html">
+                <img src="make-me-pretty/talk-icon.jpg">
+                <h2>Add a Provider</h2>
+            </a>
+            <p>
+                Clients and providers are encouraged to add their information to The List.                
+            </p>
+        </div>
+
+        <div class="take-me-og center-me2">
+            
             <a href="https://docs.google.com/spreadsheets/d/1zrEkpd6vOEyXpqTZsDl2lhlbfCSPop2BIlMQxINlSac/edit?
             <p>Scroll through to view all of the entries created by clients and providers.</p>
             usp=sharing">
+                <img src="make-me-pretty/list.jpg">
                 <h2>The original Google Sheet</h2>
             </a>
             <p>Scroll through to view all of the entries created by clients and providers.</p>
         </div>
 
-        <div class="what-do">
-            <div class="take-me-searchable-db">
-                <img src="">
-                <a href="#search-the-list">
-                    <h2>The Searchable Database</h2>
-                </a>
-                <p>
-                    Search providers by insurance, location, and more.
-                </p>
-            </div>
-        </div>
-
-        <div class="what-do">
-            <div class="take-me-add">
-                <img src="">
-                <a href="add-to-the-list.html">
-                    <!-- use anchor instead? -->
-                    <h2>Add a Provider</h2>
-                </a>
-                <p>
-                    Clients and providers are encouraged to add their information to The List.                
-                </p>
-            </div>
-        </div>
     </div>
 
     
-    <a id="search-the-list">
+    <!-- why wont this work? -->
         <div class="banner">
-            <h2>
-                Built by the community, for the community.
-            </h2>
+            <a name="search-the-list">
+                <h2>
+                    Built by the community, for the community.
+                </h2>
+            </a>
         </div>
-    </a>
+ 
 
 
     <div class="how-to-search">
         <p>        
             Entries on The Therapist List are provided by members of the community, as well as providers who have submitted their information.
-
+            <br><br>
             Clients may anonymously rate a provider's competency in a given community on a 0 - 3 scale: 
-
-            0 = completely unfamiliar   3 = super comfortable and familiar.
-
+            <br><br>
+            0 = completely unfamiliar   
+            <br>
+            3 = super comfortable and familiar.
+            <br><br>
             Providers are not permitted to rate their own familiarity a given community using the rating scale, but may describe their level of competence in the comments section. 
 
             <!-- To order the listings in your search by freindliness to a given community, click the name of that community in bold at the top. For example, you can search "Somerville" and then click POC at the top of the window to sort all of the providers in Somerville with a friendliness rating for 3 to the top. You can click "download" to save your search results.
@@ -74,17 +108,36 @@
         </p>
     </div>
 
-<!-- display search/results here -->
+<!-- display search/results here, probably a table?  -->
 
 
     <div class="search-footer">
         <p>
-            The moderator does not assume responsibility for community submitted content.  
-
-            To give feedback on this resource, or to submit updates, please contact us.
+            The moderator does not assume responsibility for community submitted content. Thank you Section 230 💜 
+            <br>
+            To give feedback on this resource, or to submit updates, please contact Izebel.
+            <!-- link -->
         </p>
     </div>
 
+    <footer>
+
+        <center>
+                  <img class="heart" src="make-me-pretty/heart-no-bg.png">
+  
+        </center>
+
+        <p>
+            This is a footer. Theoretically something goes here. Like a sitemap and a link to contact form, maybe some testimonials. Shit like that.  
+        </p>
+
+        <button id="darkmode-button">🌙 Dark Mode</button>
+
+        <p>
+            &COPY; Izebel, 2021
+        </p>
+
+    </footer>
    
 
 

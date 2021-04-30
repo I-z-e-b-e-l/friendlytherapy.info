@@ -14,34 +14,21 @@
 
 body {
 
-    /* background-color: white;
-    color: black; */
+    background-color: white;
+    color: black;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
 /* make dark mode */
-body {
+/* body {
        background-color: rgb(54, 59, 59);
     color: rgb(184, 167, 187); 
-}
+} */
 
 /* nice gradient for darkmode: background-color: #0cbaba;
 background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
  */
-
-
-.center-this-top {
-    display: flex;
-    justify-content: center;
-}
-
-.center-me {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 h1 {
     margin: 5vw;
@@ -51,9 +38,9 @@ h1 {
 /* Header Stylings */
 
 header {
-    background-color: var(--headercolor);
+    /* background-color: var(--headercolor); */
     /* width: 100%; */
-    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3); 
     color: white;
 }
 
@@ -131,6 +118,7 @@ header h2 {
 footer {
     width: 100%;
     background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);    
+    padding-bottom: 1em;
 }
 
 .heart {
@@ -150,13 +138,13 @@ footer p, footer button {
     width: 150px;
     font-size: 1.2em;
     padding: 4px 4px 5px 4px;
-    margin: 5vw 0;
+    margin: 5vw;
     
 }
 
 
 
-/* Landing Page Stylings */
+/* INDEX Landing Page Stylings */
 
 .landing-div {
     /* background-image: url("robert-katzki-rainbow.jpg"); */
@@ -205,8 +193,28 @@ footer p, footer button {
 
 .do-stuff {
     margin-bottom: 10vh;
+    width: 275px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* .do-stuff h4 {
+    display: flex;
+    justify-content: center;
+} */
+
+#magnify-talk-index {
+    width: 225px;
+    padding-right: 10px;
+    /* margin-top: 30px; */
+}
+
+#plant-index {
+    width: 175px;
+}
 
 
 
@@ -263,6 +271,9 @@ footer p, footer button {
     margin: .8em 10vw 0 0;
 }
 
+#note {
+    padding-bottom: 10vh;
+}
 
     /* Do something with ol maybe not numbers */
     /* Style li with some space between */
@@ -295,6 +306,10 @@ footer p, footer button {
 .who-button:focus, input[type=submit]:hover {
     border: 3px solid black;
     font-weight: bold;
+}
+
+#provider-display-button:focus {
+    width: 160px;
 }
 
 .add-provider-form input[type=submit] {
@@ -473,17 +488,41 @@ input[type=checkbox] {
 
 /* FIND A THERAPIST pAGE */
 
+.what-do, .how-to-search, .search-footer {
+    margin: 5vw;
+}
 
+.what-do a{
+    text-decoration: none;
+    color: var(--brightteal)
+}
 
+.what-do p{
+    /* margin-top: 0; */
+    margin: 0 6vw;
+}
 
+.what-do div {
+    margin-top: 10vh;
+}
 
+.banner {
+    height: 11em;
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 0;
+}
+
+.banner h2 {
+    margin: 10vw;
+    /* color: white; */
+}
 
 
 
 /* CONTACT PAGE STYLINGS */
-
-
-
 
 .contact-form {
     /* background-color: white; */
@@ -522,5 +561,195 @@ input[type=checkbox] {
     padding-bottom: 8px;
     width: 75%;
     margin-top: 3vh;
+}
+
+
+/* ABOUT PAGE STYLINGS */
+
+.faq-div {
+    margin: 5vw;
+}
+
+.faq-div a{
+    text-decoration: none;
+}
+
+.faq-div h4 {
+    margin-top: 3em;
+}
+
+.about-landing {
+    background-color: #fac3ef;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.about-landing img {
+    width: 100%;
+}
+
+.donate a{
+    margin-bottom: .5em;
+}
+
+/* TABLET STYLINGS */
+/* 481-767px */
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* body {
+        background-color: aqua;
+    } */
+
+
+}
+
+
+@media screen and (min-width: 685px) {
+
+/* INDEX PAGE STYLINGS - TABLET - non-standard breakpoint  */
+    #stuff-to-do-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5vw;
+    }
+
+    #magnify-talk-index {
+        width: 175px;
+        padding-right: 25px;
+        margin-top: 30px;
+    }
+
+    #list-index {
+        width: 150px;
+    }
+
+    #plant-index {
+        width: 120px;
+    }
+
+    .do-stuff {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MONITOR STYLINGS */
+
+/* 768-1280px */
+/* non standard for index at 1250? */
+
+@media screen and (min-width: 768px) {
+
+/* HEADER */
+    #hamburger {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .link-menu {
+        display: flex;
+        align-items: center;
+        margin-right: 3vw;
+    }
+
+    .headlink {
+        padding: .5em; 
+        border: none;
+    }
+
+
+/* FOOTER */
+    footer p, #darkmode-button {
+        margin: 2vw 5vw;
+    }
+
+
+/* INDEX PAGE STYLINGS */
+    .color-divider-div {
+        height: 20vw;
+    }
+
+    .color-divider-div h3 {
+        font-size: 3vw;
+    }
+
+/* ABOUT PAGE STYLINGS */
+
+    .about-landing img {
+        width: 70%;
+        margin-left: 12vw;
+    }
+
+/* ADD TO THE LIST PAGE */
+
+
+
+.button-align {
+    width: 375px;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.button-space {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+}
+
+
+
+
+
+/* APPLY TO ALL PAGES */
+
+.center-this-top {
+    display: flex;
+    justify-content: center;
+}
+
+.center-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-me2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
