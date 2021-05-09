@@ -119,15 +119,44 @@ footer {
     width: 100%;
     background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);    
     padding-bottom: 1em;
+    
+}
+
+.extend-footer {
+    /* display: none; */
+}
+
+#little-caret-up {
+    margin-top: 20px;
 }
 
 .heart {
     width: 40px;
-    margin: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
 }
 
-footer p, footer button {
+.testimonial {
     margin: 5vw;
+}
+
+.footer-map {
+    margin: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-map p{
+    margin: 1em 0 .5em 0;
+    font-size: 1.2em;
+
+    /* font-weight:bold */
+}
+
+.footlink {
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: .2em 0;
 }
 
 #darkmode-button{
@@ -142,7 +171,9 @@ footer p, footer button {
     
 }
 
-
+.copyright {
+    margin: 5vw;
+}
 
 /* INDEX Landing Page Stylings */
 
@@ -520,7 +551,9 @@ input[type=checkbox] {
     /* color: white; */
 }
 
-
+#find-magnify-heart-img {
+    width: 150px;
+}
 
 /* CONTACT PAGE STYLINGS */
 
