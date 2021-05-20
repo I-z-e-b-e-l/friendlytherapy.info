@@ -10,6 +10,7 @@
     --seagreen: lightseagreen;
     --headercolor: rgb(45, 11, 61);
     --headertextcolor: lightseagreen;
+    --heartcolor: #5be3e3;
 }
 
 body {
@@ -40,7 +41,9 @@ h1 {
 header {
     /* background-color: var(--headercolor); */
     /* width: 100%; */
-    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3); 
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
+    /* background-image: linear-gradient(to right,  #06c5d5, #cee1a6, #fd970a);  */
+
     color: white;
 }
 
@@ -123,21 +126,56 @@ footer {
 }
 
 .extend-footer {
-    /* display: none; */
+    display: none;
 }
 
-#little-caret-up {
-    margin-top: 20px;
+.extend-footer.open {
+    display: block;
 }
+
+/* #little-caret-up {
+    margin-top: 20px;
+    color: black;
+    -webkit-text-fill-color: var(--heartcolor); 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+} */
+
+
+
+
+    #caret-down {
+        width: 25px;
+        margin: 20px 0 10px 0;
+    }
+
+/* irrelevant until JS fixed */
+        #caret-up {
+            /* width: 25px;
+            margin: 20px 0 10px 0; */
+            display: none;
+        }
+
+        /* #caret-up.open {
+            width: 25px;
+            margin: 20px 0 10px 0;
+            display: block;
+        } */
+
+        /* not working */
+        /* 
+        #caret-down.hide {
+            display: none;
+        } */
 
 .heart {
     width: 40px;
-    margin-top: 5vh;
-    margin-bottom: 3vh;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .testimonial {
-    margin: 5vw;
+    margin: 2em 5vw;
 }
 
 .footer-map {
@@ -148,7 +186,7 @@ footer {
 
 .footer-map p{
     margin: 1em 0 .5em 0;
-    font-size: 1.2em;
+    font-size: 1.3em;
 
     /* font-weight:bold */
 }
@@ -157,6 +195,12 @@ footer {
     text-decoration: none;
     font-size: 1.2em;
     margin: .2em 0;
+    color: var(--headercolor);
+}
+
+.footlink:active {
+    color: var(--brightteal);
+    /* background-color: var(--brightteal) */
 }
 
 #darkmode-button{
@@ -168,27 +212,39 @@ footer {
     font-size: 1.2em;
     padding: 4px 4px 5px 4px;
     margin: 5vw;
-    
+}
+
+#addcats-button{
+    /* background-color: var(--heartcolor); */
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
+    border: 1px solid rgb(15, 29, 24);
+    border-radius: 17px;
+    width: 150px;
+    font-size: 1.2em;
+    padding: 4px 4px 5px 4px;
+    margin: 5vw;
 }
 
 .copyright {
-    margin: 5vw;
+    margin: 2em 5vw;
 }
 
 /* INDEX Landing Page Stylings */
 
 .landing-div {
-    /* background-image: url("robert-katzki-rainbow.jpg"); */
+    background-image: url("robert-katzki-rainbow.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:rgb(35, 65, 65);
+    /* background-color:rgb(35, 65, 65); */
     /* background-position: center; */
     /* width: 100vw; */
     height: 50vh;
+    /* display: flex;
+    align-items: flex-end; */
 }
 
-.landing-div h2 {
-    color: rgb(131, 110, 110);
+.landing-div h1 {
+    color: rgb(245, 241, 241);
     margin: 0px;
     padding: 5vw;
     /* align this text somehow that makes sense */
@@ -311,8 +367,11 @@ footer {
 
 
 
-/* ADD TO THE LIST PAGE STYLINGS */
+/* ADD TO THE LIST PAGE MOBILE STYLINGS */
 
+.spacer1 {
+    height: 10vh;
+}
 
 .button-align {
     width: 100%;
@@ -337,6 +396,10 @@ footer {
 .who-button:focus, input[type=submit]:hover {
     border: 3px solid black;
     font-weight: bold;
+}
+
+#client-display-button {
+    margin-top: 3em;
 }
 
 #provider-display-button:focus {
@@ -426,7 +489,21 @@ input[type='radio'] {
     transform: scale(2.5); 
 }
 /* maybe change radio select color later */
-
+input[type='radio']:checked:after { 
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        /* background-color: #ffa500; */
+        background-image: linear-gradient(to right,  #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);    
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white; 
+ 
+}
 
 
 .radio-yn-div, .radio-yn-label-div {
@@ -476,7 +553,9 @@ input[type=checkbox] {
     display: none;
 }
 
-
+#thank-you-add {
+    display: none;
+}
 
 
 
@@ -491,7 +570,8 @@ input[type=checkbox] {
 }
 
 .resource-square{
-    background-color: mediumslateblue;
+    /* background-color: mediumslateblue; */
+    border: mediumslateblue 5px solid;
     margin: 5vw;
     padding: 5vw;
 }
@@ -506,7 +586,8 @@ input[type=checkbox] {
 
 .resource-square a{
     text-decoration: none;
-    color: aliceblue;
+    /* color: aliceblue; */
+    color: black;
     font-size: 1.5em;
     margin-top: .2em;
  
@@ -516,6 +597,46 @@ input[type=checkbox] {
     font-size: 1.2em;
     margin-bottom: .1em;
 }
+
+#show-resources-form-button {
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);     
+    border: 1px solid mediumaquamarine;
+    border-radius: 17px;
+    /* width: 150px; */
+    font-size: 1.2em;
+    padding: 4px 5px;
+    margin: 3em 0 4em 0;
+}
+
+#add-resource-form {
+    display: none;
+}
+
+.color-divider-div2 {
+    background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh 0 0 0;
+}
+
+#add-resource-container {
+    margin: 5em 5vw 7em 5vw;
+}
+
+.resource-question label, .resource-question input, .resource-question textarea {
+    margin: 1em 0 2em 0
+}
+
+.resource-question label {
+    font-weight: bold;
+}
+
+#thank-you-resource {
+    display: none;
+}
+
 
 /* FIND A THERAPIST pAGE */
 
@@ -722,11 +843,15 @@ input[type=checkbox] {
 
 /* INDEX PAGE STYLINGS */
     .color-divider-div {
-        height: 20vw;
+        height: 150px;
     }
 
     .color-divider-div h3 {
-        font-size: 3vw;
+        font-size: 1.5em;
+    }
+
+    #stuff-to-do-container h2 {
+        font-size: 1.2em;
     }
 
 /* ABOUT PAGE STYLINGS */
@@ -736,7 +861,7 @@ input[type=checkbox] {
         margin-left: 12vw;
     }
 
-/* ADD TO THE LIST PAGE */
+/* ADD TO THE LIST PAGE - media*/
 
 
 
@@ -761,7 +886,14 @@ input[type=checkbox] {
 }
 
 
+@media screen and (min-width: 1100px) {
+    .wider-margin {
+        margin-left: ;
+        margin-right: ;
+    }
 
+
+}
 
 
 /* APPLY TO ALL PAGES */

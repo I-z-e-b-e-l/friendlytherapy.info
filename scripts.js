@@ -11,6 +11,39 @@ const toggleMenu = function () {
 hamburgerMenu.addEventListener('click', toggleMenu);
 
 
+// FOOTER
+
+const caretDown = document.querySelector("#caret-down-plz"); 
+const caretUp = document.querySelector("#caret-up"); 
+const extendfooter = document.querySelector(".extend-footer")
+
+const toggleFatFooter = function() {
+    extendfooter.classList.toggle('open');
+    // caretUp.classList.toggle('open');
+    //does not work
+    // caretDown.classList.toggle('hide');
+}
+
+caretDown.addEventListener('click', toggleFatFooter);
+
+
+
+
+
+    //nope!!
+
+    // function displayFatFooter() {
+    //     document.querySelector('.extend-footer').style.display = "block";
+    //     document.querySelector('#carret-down').style.display = "none";   
+    //     document.querySelector('#carret-up').style.display = "block";  
+    // }
+
+    // function hideFatFooter() {
+
+    // }
+
+
+
 // MOAR RESOURCES PAGE
 
 function displaySWresource(){
@@ -25,17 +58,43 @@ function displayTransResource(){
     }
 }
 
+function displayBIPOCResource(){
+    for (let i=0; i<document.querySelectorAll(".bipoc-resource").length; i++){
+        document.querySelectorAll(".bipoc-resource")[i].classList.toggle('show-me-resource'); 
+}
+}
+
 function displayKinkResource(){
     for (let i=0; i<document.querySelectorAll(".kink-resource").length; i++){
         document.querySelectorAll(".kink-resource")[i].classList.toggle('show-me-resource'); 
 }
 }
 
+function displayPolyResource(){
+    for (let i=0; i<document.querySelectorAll(".poly-resource").length; i++){
+        document.querySelectorAll(".poly-resource")[i].classList.toggle('show-me-resource'); 
+}
+}
+
+function displayAllResource(){
+    for (let i=0; i<document.querySelectorAll(".resource-square").length; i++){
+        document.querySelectorAll(".resource-square")[i].classList.toggle('show-me-resource'); 
+}
+}
 
 
-// ...etc. Is there a more efficient way to do this?
+function displayAddResourceForm() {
+    document.querySelector('#add-resource-form').style.display = "block";
+    document.querySelector('#show-resources-form-button').style.display = "none";   
+
+}
+
+function displayThankYouResource(){
+    document.querySelector('#thank-you-resource').style.display = "block";
+}
 
 
+//  ADD TO THE LIST
 
 // returns and applies only to first instance of .client-add-provider
 //revisit form plan
@@ -58,6 +117,9 @@ function displayProviderForm() {
     document.querySelector('#client-display-button').style.display = "none";
     document.querySelector('.add-provider-submit').style.display = "block";
 }
+
+
+
 
 
 // function displayClientForm() {
@@ -147,4 +209,6 @@ function showAdditionalRating() {
     }
 }
 
-
+function displayThankYouAdd(){
+    document.querySelector('#thank-you-add').style.display = "block";
+}
