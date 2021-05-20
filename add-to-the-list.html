@@ -30,10 +30,9 @@
             <a class="headlink" href="resources.html">Resources</a>
             <!-- <a class="headlink" href="how-to.html">How to Find a Therapist</a> -->
             <a class="headlink" href="about.html">About</a> 
-            <!-- Darkmode button here? -->
         </nav>
 
-        <!-- Dark mod toggle button? Moar cats toggle button? -->
+    
 
     </header>
     
@@ -41,10 +40,10 @@
 
     <div class="spacer1"></div>
 
-    <label class="how-to-text text1">First, tell us who you are:</label> 
+    <label class="how-to-text text1" >First, tell us who you are:</label> 
 
     <!-- set button also to page anchor -->
-
+    <div class="spacer2"></div>
 
     <div class="button-space">
         <div class="button-align">
@@ -56,6 +55,8 @@
         
         </div>
     </div>
+
+     <div class="spacer2"></div>
 
     <form class="add-provider-form" id="add-provider-form">
 
@@ -72,7 +73,7 @@
             <div class="who-are-you">
 
                 <input type="checkbox" id="queer-check" name="queer-check" value="queer-check" onclick="showQueerRating();showAdditionalRating()">
-                <label for="queer-check" class="tooltip text1">I am Queer<span class="tooltiptext">or something else under that umbrella: Lesbian, Gay, Bi, Pan, Polysexual, etc... </span><label><br>
+                <label for="queer-check" class="tooltip text1">I am Queer<span class="tooltiptext">- or something else under that umbrella: Lesbian, Gay, Bi, Pan, Polysexual, etc... </span><label><br>
                     <!-- FIX THIS HOVERTEXT -->
 
                 <input type="checkbox" id="trans-check" name="trans-check" value="trans-check" onclick="showTransRating();showAdditionalRating()">
@@ -80,7 +81,7 @@
                     <!-- or of a gender often considered under that umbrella, nb etc -->
 
                 <input type="checkbox" id="nonmono-check" name="nonmono-check" value="nonmono-check" onclick="showPolyRating();showAdditionalRating()">
-                <label for="nonmono-check" class="tooltip text1"> I am Non-monogamous <span class="tooltiptext">Polyamorous, ENM, etc. </span></label><br>
+                <label for="nonmono-check" class="tooltip text1"> I am Non-Monogamous <span class="tooltiptext">- Polyamorous, ENM, etc. </span></label><br>
                 
                 <input type="checkbox" id="kink-check" name="kink-check" value="kink-check" onclick="showKinkRating();showAdditionalRating()">
                 <label for="kink-check" class="text1"> I am Kinky</label><br>
@@ -151,7 +152,7 @@
                 <label for="ny-check"> New York</label><br>
 
                 <input type="checkbox" id="somewhere-else-check" name="somewhere-else-check" value="somewhere-else-check">
-                <label for="somewhere-else-check"> Massachusetts</label><br><br>
+                <label for="somewhere-else-check">Somewhere else</label><br><br>
 
                 
                 <label for="therapist-location" class="text1">Location/Neighborhood:</label>
@@ -343,6 +344,18 @@
             </div>
 
             <div class="question client-question">
+                <label class="text1">Does this therapist serve youth? (skip if unknown)</label>
+                <div class="radio-yn-div">
+                    <input type="radio" id="client-youth-yes" name="youth" value="yes">
+                    <input type="radio" id="client-youth-no" name="youth" value="no">
+                </div>
+                <div class=radio-yn-label-div>
+                    <label for="client-youth-yes">Yes</label>
+                    <label for="client-youth-no">No</label>
+                </div>
+            </div>
+
+            <div class="question client-question">
                 <label for="therapist-website" class="text1">Therapist's website:</label>
                 <input type="text" id="therapist-website" name="therapist-website">
             </div>
@@ -384,6 +397,10 @@
                 </div>
             </div>
 
+            <div class="question client-question">
+                <label for="therapist-cost" class="text1">If you do not use insurance to pay for therapy, what is the cost per session? (If you are able to use insurance, skip this.)</label>
+                <input type="text" id="therapist-cost" name="therapist-cost">
+            </div>
 
             <div class="question client-question">
                 <label for="therapist-access" class="text1">Can you share any accessibility info about their location?</label>
@@ -492,6 +509,18 @@
             </div>
 
             <div class="question provider-question">
+                <label class="text1">Do you serve youth? (skip if unknown)</label>
+                <div class="radio-yn-div">
+                    <input type="radio" id="provider-youth-couples-yes" name="youth" value="yes">
+                    <input type="radio" id="provider-youth-no" name="youth" value="no">
+                </div>
+                <div class=radio-yn-label-div>
+                    <label for="provider-youth-yes">Yes</label>
+                    <label for="provider-youth-no">No</label>
+                </div>
+            </div>
+
+            <div class="question provider-question">
                 <label for="therapist-website" class="text1">Your website:</label>
                 <input type="text" id="therapist-website" name="therapist-website">
             </div>
@@ -533,9 +562,13 @@
                 </div>
             </div>
 
+            <div class="question provider-question">
+                <label for="therapist-cost" class="text1">What is the average cost per session for someone unable to use insurance?</label>
+                <input type="text" id="therapist-cost" name="therapist-cost">
+            </div>
 
             <div class="question provider-question">
-                <label for="therapist-access" class="text1">Please share any accessibility info about your location if you provide in-person services</label>
+                <label for="therapist-access" class="text1">Please share any accessibility info about your location if you provide in-person services: Stairs, scents, gender inclusive bathrooms, etc.</label>
                 <textarea id="therapist-access" name="therapist-access" class="center-me" rows="6" cols="50">
                 </textarea>
             </div>
@@ -544,7 +577,7 @@
             <div class="question provider-question">
 
                     <label for="therapist-comments" class="text1">Comments</label>
-                    <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">Please use this area to describe anything it might be useful for clients to know about you, particularly your comfort and familiarity in serving marginalized communities. 
+                    <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">Please use this area to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving marginalized communities. 
                     </textarea> 
         </div>
 

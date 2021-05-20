@@ -373,6 +373,11 @@ footer {
     height: 10vh;
 }
 
+
+.spacer2 {
+    height: 5vh;
+}
+
 .button-align {
     width: 100%;
     display: flex;
@@ -399,7 +404,6 @@ footer {
 }
 
 #client-display-button {
-    margin-top: 3em;
 }
 
 #provider-display-button:focus {
@@ -414,13 +418,14 @@ footer {
     /* fix this later */
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 300px;
+    /* width: 300px; */
     color: rgb(9, 61, 85);
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 11px 0 0 4px;
     position: absolute;
     z-index: 1;
+    font-weight: normal
   }
   
   .tooltip:hover .tooltiptext {
@@ -560,6 +565,21 @@ input[type=checkbox] {
 
 
 
+/* RESULTS */
+
+.results-box {
+    margin: 5vw;
+    padding: 5vw;
+    border: 5px lavender solid;
+}
+
+.name-div {
+    background-color: #8b73dd;
+    /* width: 100%; */
+    height: 3em;
+    display: flex;
+    padding-left: 1em;
+}
 
 
 
@@ -640,7 +660,7 @@ input[type=checkbox] {
 
 /* FIND A THERAPIST pAGE */
 
-.what-do, .how-to-search, .search-footer {
+.what-do, .search-explain, .search-footer, .search-the-list {
     margin: 5vw;
 }
 
@@ -675,6 +695,34 @@ input[type=checkbox] {
 #find-magnify-heart-img {
     width: 150px;
 }
+
+.search-question {
+    margin: 3em 0em;
+}
+
+#provider-state {
+    min-width: 275px;
+    height: 35px;
+}
+
+optgroup {
+    font-size: 1em;
+}
+
+.friendly-select {
+    /* min-width: 275px; */
+    height: 30px;
+}
+
+.community-ratings-select {
+    margin-left: 5vw;
+}
+
+.community-ratings-select label {
+    display: block;
+    margin-bottom: .2em;
+}
+
 
 /* CONTACT PAGE STYLINGS */
 
