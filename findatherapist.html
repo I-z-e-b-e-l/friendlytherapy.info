@@ -42,8 +42,7 @@
 
     <div class="what-do">
 
-        <!-- Add link to How to Find a Therapist -->
-
+    <!-- broken anchor link? -->
         <div class="take-me-searchable-db center-me2">
             <a href="#search-the-list"></a>
             <img src="make-me-pretty/search-list-no-bg.png">
@@ -75,7 +74,7 @@
                 <img src="make-me-pretty/magnify-heart-no-bg.png" id="find-magnify-heart-img">
                 <h2>How to Find a Therapist</h2>
             </a>
-            <p>Scroll through to view all of the entries created by clients and providers.</p>
+            <p>A step by step guide to finding a therapist.</p>
         </div>
 
 
@@ -127,7 +126,9 @@
 
             <div class="search-question">
                 <label for="provider-state" class="text1">What state would you like to see a provider in?</label>
-                <p>For insurance and licensing reasons, this should usually be the state you live in, even if you are looking for remote therapy.</p>
+                <p>For insurance and licensing reasons, this should usually be the state you live in, even if you are looking for remote therapy. 
+                <br><br>
+                International therapists are not bound by US licensing restrictions.</p>
                 <select name="provider-state" id="provider-state">
                     <optgroup>
                     <option value="massachusetts">Massachusetts</option>
@@ -135,6 +136,10 @@
                     <option value="new-hampshire">New Hampshire</option>
                     <option value="connecticut">Connecticut</option>
                     <option value="new-york">New York</option>
+                    option>
+                    <option value="somewhere-else">Somewhere else</option>
+                    option>
+                    <option value="international">Show me international therapists</option>
                     </optgroup>
                 </select>
             </div>
@@ -264,7 +269,7 @@
             <div class="search-question">
                 <label for="provider-insurance" class="text1">What insurance do you want to use?</label>
                 <p>Note: There may be additonal insurances accepted by provders, so don't give up hope if you don't see yours here, or don't see it listed.</p>
-                <select name="provider-insurance" id="provider-insurance">
+                <select name="provider-insurance" id="provider-insurance-select">
                     <optgroup>
 
                     <option value="aetna">Aetna</option>

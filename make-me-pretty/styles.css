@@ -720,10 +720,6 @@ optgroup {
     font-size: 1em;
 }
 
-.friendly-select {
-    /* min-width: 275px; */
-    height: 30px;
-}
 
 .community-ratings-select {
     margin-left: 5vw;
@@ -733,6 +729,16 @@ optgroup {
     display: block;
     margin-bottom: .2em;
 }
+
+#provider-insurance-select, .friendly-select {
+    max-width: 90vw;
+    height: 3em;
+    font-size: 1em;
+}
+
+
+
+
 
 
 /* CONTACT PAGE STYLINGS */
