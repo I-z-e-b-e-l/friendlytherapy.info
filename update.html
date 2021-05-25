@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="make-me-pretty/styles.css">
+    <title>friendlytherapy.info</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+       
+        <div class="divA">
+            <div class="little-divA">
+                <img src="make-me-pretty/magnify-talk-no-bg.png" alt="magnifying glass heart icon" class="magnify-talk">
+                <h2>friendlytherapy.info</h2>
+            </div>    
+            <a href="javascript:void(0);" id="hamburger">
+                <i class="fas fa-bars fa-2x" id=show-me-hamburger></i> 
+            </a>
+
+        </div>    
+  
+        <nav class="link-menu">
+            <a class="headlink" href="index.html">Home</a>
+            <a class="headlink" href="findatherapist.html">Find a Therapist</a>
+            <a class="headlink" href="add-to-the-list.html">Add a Provider</a>
+            <a class="headlink" href="resources.html">Resources</a>
+            <!-- <a class="headlink" href="how-to.html">How to Find a Therapist</a> -->
+            <a class="headlink" href="about.html">About</a> 
+        </nav>
+
+    </header>
+
+
+
+
+    <h1>Update a Provider's Information</h1>
+
+    <form class="update-form">
+    
+
+        <div class="question update-question">
+            <label for="therapist-name" class="text1">Therapist's name:</label>
+            <input type="text" id="therapist-name" name="therapist-name">
+        </div>
+
+        <div class="question update-question">
+            <label for="therapist-practice" class="text1">Institution / Private Practice:</label>
+            <input type="text" id="therapist-practice" name="therapist-practice">
+        </div>
+
+        <div class="question update-question">
+            <label for="provider-type" class="text1">What kind of mental health provider are they?</label>
+            <input type="text" id="provider-type" name="provider-typee" placeholder="therapist? psychiatrist?">
+        </div>
+
+        <div class="question update-question">
+            <p class="text1">Does this provider offer teletherapy?</p>
+            <!-- <input type="checkbox" id="teletherapy" name="teletherapy" value="teletherapy">
+            <label for="teletherapy">Yes</label><br><br> -->
+
+            <div class="radio-yn-div">
+                <input type="radio" id="update-teletherapy-yes" name="teletherapy-yes" value="yes">
+                <input type="radio" id="update-teletherapy-no" name="teletherapy-no" value="no">
+            </div>
+            <div class=radio-yn-label-div>
+                <label for="teletherapy-yes">Yes</label>
+                <label for="teletherapy-no">No</label>
+            </div>
+        </div>
+
+        <div class="question update-question">
+
+            <label for="provider-license-state" class="text1">Where does this provider practice / Where is this provider licensed?</label>
+
+            <!-- do auto dropdown instead? -->
+            <br><br>
+            <input type="checkbox" id="ma-check" name="ma-check" value="ma-check">
+            <label for="ma-check"> Massachusetts</label><br>
+
+            <input type="checkbox" id="ri-check" name="ri-check" value="ri-check">
+            <label for="ri-check"> Rhode Island</label><br>
+
+            <input type="checkbox" id="nh-check" name="nh-check" value="nh-check">
+            <label for="nh-check">New Hampshire</label><br>
+
+            <input type="checkbox" id="ct-check" name="ct-check" value="ct-check">
+            <label for="ct-check">Connecticut</label><br>
+
+            <input type="checkbox" id="ny-check" name="ny-check" value="ny-check">
+            <label for="ny-check"> New York</label><br>
+
+            <input type="checkbox" id="somewhere-else-check" name="somewhere-else-check" value="somewhere-else-check">
+            <label for="somewhere-else-check">Somewhere else</label><br><br>
+
+            
+            <label for="therapist-location" class="text1">Location/Neighborhood:</label>
+            <input type="text" id="therapist-location" name="therapist-location">
+
+        </div>
+
+        <div class="question update-question">
+            <label class="text1">Does this therapist provide couples therapy?</label>
+            <div class="radio-yn-div">
+                <input type="radio" id="update-couples-yes" name="couples" value="yes">
+                <input type="radio" id="update-couples-no" name="couples" value="no">
+            </div>
+            <div class=radio-yn-label-div>
+                <label for="update-couples-yes">Yes</label>
+                <label for="update-couples-no">No</label>
+            </div>
+        </div>
+
+        <div class="question update-question">
+            <label class="text1">Does this therapist serve youth? </label>
+            <div class="radio-yn-div">
+                <input type="radio" id="update-youth-yes" name="youth" value="yes">
+                <input type="radio" id="update-youth-no" name="youth" value="no">
+            </div>
+            <div class=radio-yn-label-div>
+                <label for="update-youth-yes">Yes</label>
+                <label for="update-youth-no">No</label>
+            </div>
+        </div>
+
+        <div class="question update-question">
+            <label for="therapist-website" class="text1">Therapist's website:</label>
+            <input type="text" id="update-therapist-website" name="therapist-website">
+        </div>
+
+        <div class="question update-question">
+            <label for="therapist-contact" class="text1">Therapist's contact info:</label>
+            <input type="text" id="update-therapist-contact" name="therapist-contact">
+        </div>
+        
+        
+        <div class="question update-question">
+            <label class="text1">Does this therapist accept insurance?</label>
+            <div class="radio-yn-div">
+                <input type="radio" id="update-insurance-yes" name="couples" value="yes">
+                <input type="radio" id="update-insurance-no" name="couples" value="no">
+            </div>
+            <div class=radio-yn-label-div>
+                <label for="update-insurance-yes">Yes</label>
+                <label for="update-insurance-no">No</label>
+            </div>
+        </div>
+
+        <div class="question update-question">
+            <label for="therapist-insurance" class="text1">Which insurance(s) do they accept?</label>
+            <textarea id="therapist-insurance" name="therapist-insurance" class="center-me" rows="6" cols="50">
+            </textarea>
+        </div>
+
+
+        <div class="question update-question">
+            <label class="text1">Accepts Masshealth?</label>
+            <div class="radio-yn-div">
+                <input type="radio" id="client-masshealth-yes" name="couples" value="yes">
+                <input type="radio" id="client-masshealth-no" name="couples" value="no">
+            </div>
+            <div class=radio-yn-label-div>
+                <label for="client-masshealth-yes">Yes</label>
+                <label for="client-masshealth-no">No</label>
+            </div>
+        </div>
+
+        <div class="question update-question">
+            <label for="therapist-cost" class="text1">Cost per session without insurance:</label>
+            <input type="text" id="update-therapist-cost" name="therapist-cost">
+        </div>
+
+        <div class="question update-question">
+            <label for="therapist-access" class="text1">Accessibility info:</label>
+            <textarea id="therapist-access" name="therapist-access" class="center-me" rows="6" cols="50">
+            </textarea>
+        </div>
+
+
+        <div class="question update-question">
+
+                <label for="therapist-comments" class="text1">Client Comments:</label>
+                <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">
+                </textarea> 
+
+        </div>
+
+        <div class="question update-question">
+
+            <label for="curator-comments" class="text1">Curator Comments:</label>
+            <textarea id="curator-comments" name="curator-comments" class="center-me" rows="8" cols="50">
+            </textarea> 
+
+        </div>
+
+        <div class="button-align">
+            <input type="submit" value="Submit" id="update-provider-submit" class="add-provider-submit" onclick="">
+        </div>
+
+
+    </form>
+
+    <div class="spacer1"></div>
+        
+    <footer>
+
+        <!-- maybe replace with background removed image? -->
+        <div class="center-me2">
+
+            <a href="javascript:void(0);" id="caret-down-plz">
+                <img id="caret-down" src="make-me-pretty/caret-down2-no-bg.png">
+            </a>
+            
+            
+            <img id="caret-up" src="make-me-pretty/caret-up2-no-bg.png">
+            <!-- <i class="fas fa-caret-up fa-2x" id=little-caret-up></i> -->
+            <img class="heart" src="make-me-pretty/heart-no-bg.png">
+        </div>
+
+        <div class="extend-footer">
+
+            <p class=testimonial>
+            <em>"This is a placeholder for testimonials and messages of encouragement from users to other users."</em>
+            </p>
+
+            <div class=footer-map>
+                <!-- <p>Site</p> -->
+                <a class="footlink" href="index.html">Home</a>
+                <a class="footlink" href="findatherapist.html">Find a Therapist</a>
+                <a class="footlink" href="add-to-the-list.html">Add a Provider</a>    
+                <a class="footlink" href="resources.html">Resources</a>
+                <a class="footlink" href="about.html">About</a> 
+                <a class="footlink" href="contact.html">Contact</a> 
+                <!-- <a class="footlink" href="how-to.html">How to Find a Therapist</a> -->
+               
+            </div>
+
+            
+            <!-- <button id="darkmode-button">🌙 Dark Mode</button>
+            <button id="addcats-button">🐈 Add Cats</button> -->
+
+        </div>
+
+
+        <p class=copyright>
+            &COPY; Izebel, 2021
+        </p>
+
+    </footer>
+
+</body>
+</html>

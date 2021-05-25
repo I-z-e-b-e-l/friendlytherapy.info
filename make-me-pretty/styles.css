@@ -563,6 +563,17 @@ input[type=checkbox] {
 }
 
 
+/* UPDATE PAGE STYLINGS */
+
+.update-form {
+    margin: 5vw;
+}
+
+
+
+
+
+
 
 
 /* RESULTS */
@@ -795,6 +806,19 @@ optgroup {
     margin-bottom: .5em;
 }
 
+/* LOGIN  */
+
+.login-div {
+    margin: 5vw;
+    max-width: 30em;
+    text-align: left;
+}
+
+
+
+
+
+
 /* TABLET STYLINGS */
 /* 481-767px */
 
@@ -966,3 +990,10 @@ optgroup {
     text-align: center;
 }
 
+.center-me3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
