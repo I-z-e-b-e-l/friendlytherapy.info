@@ -8,7 +8,7 @@
     --darkpurple: rgb(36, 8, 32);
     --darkerpurple: rgb(111, 37, 148);
     --seagreen: lightseagreen;
-    --headercolor: rgb(45, 11, 61);
+    --headercolor: rgb(151, 210, 228);
     --headertextcolor: lightseagreen;
     --heartcolor: #5be3e3;
 }
@@ -34,7 +34,16 @@ background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
 h1 {
     margin: 5vw;
 }
-    /* style links */
+
+
+/* style links */
+
+
+
+
+
+
+
 
 /* Header Stylings */
 
@@ -229,6 +238,11 @@ footer {
     margin: 2em 5vw;
 }
 
+
+
+
+
+
 /* INDEX Landing Page Stylings */
 
 .landing-div {
@@ -248,6 +262,10 @@ footer {
     margin: 0px;
     padding: 5vw;
     /* align this text somehow that makes sense */
+}
+
+#heading-break-index {
+    display: none;
 }
 
 #welcome-div {
@@ -707,6 +725,10 @@ input[type=checkbox] {
     width: 150px;
 }
 
+.take-me .list-icon {
+    width: 122px;
+}
+
 .search-question {
     margin: 3em 0em;
 }
@@ -722,7 +744,11 @@ optgroup {
 
 
 .community-ratings-select {
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
+}
+
+.search-by-rating {
+    margin-top: 1em;
 }
 
 .community-ratings-select label {
@@ -731,12 +757,21 @@ optgroup {
 }
 
 #provider-insurance-select, .friendly-select {
-    max-width: 90vw;
+    max-width: 85vw;
     height: 3em;
     font-size: 1em;
 }
 
+.radio-yn-div, .radio-yn-label-div {
+    max-width: 300px;
+}
 
+/* figure out how to fix label right margins on mobile */
+
+/* .search-question label {
+    margin-right: 10vw;
+    background-color: cyan;
+} */
 
 
 
@@ -787,6 +822,10 @@ optgroup {
 
 .faq-div {
     margin: 5vw;
+}
+
+.faq-div h1 {
+    margin-left: 0;
 }
 
 .faq-div a{
@@ -887,7 +926,6 @@ optgroup {
 /* MONITOR STYLINGS */
 
 /* 768-1280px */
-/* non standard for index at 1250? */
 
 @media screen and (min-width: 768px) {
 
@@ -913,6 +951,7 @@ optgroup {
     }
 
 
+
 /* FOOTER */
     footer p, #darkmode-button {
         margin: 2vw 5vw;
@@ -922,6 +961,10 @@ optgroup {
 /* INDEX PAGE STYLINGS */
     .color-divider-div {
         height: 150px;
+    }
+
+    #heading-break-index {
+        display: inline-block;
     }
 
     .color-divider-div h3 {
@@ -943,21 +986,30 @@ optgroup {
 
 
 
-.button-align {
-    width: 375px;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: space-between;
-    /* align-items: center; */
-}
+    .button-align {
+        width: 375px;
+        /* display: flex; */
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
 
-.button-space {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .button-space {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+/* Search the List / Find a Therapist Page */
 
+    .group1, .group2 {
+        display: flex;
+    }
+
+    .search-by-rating {
+        margin-right: 2em;
+    }
 
 
 
@@ -965,13 +1017,92 @@ optgroup {
 
 
 @media screen and (min-width: 1100px) {
-    .wider-margin {
+    /* .wider-margin {
         margin-left: ;
         margin-right: ;
+    } */
+
+    /* Find A Therapist Page */
+
+    .what-do {
+        margin-top: 0px;;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .take-me {
+        width: 300px;
+    }
+
+    .take-me p{
+        width: 90%;
+    }
+
+    .take-me .talk-icon {
+        padding: 33px 0 32px 0;
+    }
+
+    #find-magnify-heart-img {
+        padding: 7px 0 6px 0;
+    }
+
+    .take-me .icon{
+        border: 1px solid blue;
+        margin: 0;
+    }
+
+    .take-me-og a{
+        margin-top: 15px;
     }
 
 
+
 }
+
+
+/* LARGE MONITORS */
+
+@media screen and (min-width: 1300px) {
+
+    .max-width-container {
+        width: 100%;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    .max-width {
+        /* max-width: 1300px; */
+        width: 1300px;
+        /* border: 3px red solid; */
+
+    }
+
+    /* Nav */
+    header, .divA, .little-divA, .link-menu, nav.link-menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Index */
+    .landing-div h1 {
+        padding-left: 0;
+        width: 1300px;
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
 
 
 /* APPLY TO ALL PAGES */
