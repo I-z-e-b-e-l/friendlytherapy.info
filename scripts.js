@@ -28,22 +28,6 @@ caretDown.addEventListener('click', toggleFatFooter);
 
 
 
-
-
-    //nope!!
-
-    // function displayFatFooter() {
-    //     document.querySelector('.extend-footer').style.display = "block";
-    //     document.querySelector('#carret-down').style.display = "none";   
-    //     document.querySelector('#carret-up').style.display = "block";  
-    // }
-
-    // function hideFatFooter() {
-
-    // }
-
-
-
 // MOAR RESOURCES PAGE
 
 function displaySWresource(){
@@ -96,28 +80,22 @@ function displayThankYouResource(){
 
 //  ADD TO THE LIST
 
-// returns and applies only to first instance of .client-add-provider
-//revisit form plan
-//Make provider button disapear
-
-// why does style.display work but not .classListadd('show-me-resource')???
-
 function displayClientForm() {
     document.querySelector('.client-add-provider').classList.add('show-me-resource');
     document.querySelector('#provider-display-button').style.display = "none";
-    // document.getElementById('add-provider-submit').classList.add('show-me-resource');
-    // document.querySelector('.add-provider-submit').classList.add('show-me-resource');
     document.querySelector('.add-provider-submit').style.display = "block";
-
+    document.querySelector('#who-button-horizontal').classList.remove('button-align');
+    document.querySelector('.spacer2').style.display = "none";
+    document.querySelector('#who-button-horizontal').classList.add('center-me');
 }
-
 
 function displayProviderForm() {
     document.querySelector('.provider-add-provider').classList.add('show-me-resource');
     document.querySelector('#client-display-button').style.display = "none";
     document.querySelector('.add-provider-submit').style.display = "block";
+    document.querySelector('#who-button-horizontal').classList.remove('button-align');
+    document.querySelector('#who-button-horizontal').classList.add('center-me');
 }
-
 
 
 
