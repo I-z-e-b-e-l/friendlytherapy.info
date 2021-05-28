@@ -34,7 +34,7 @@
 
             <div class="spacer2"></div>
 
-            <form class="add-provider-form" id="add-provider-form">
+            <form class="add-provider-form" id="client-add-provider-form">
 
                 <div class="client-add-provider">
                     <p>This form is intended to collect information anonymously from GSM therapy clients and empower us to make better-informed decisions about our mental health care. 
@@ -69,13 +69,10 @@
                         <label for="bipoc-check" class="text1"> I am a Person of Color</label>
 
                     </div>
-
-                    <!-- add what kind of provider -->
-
-
+                    
                     <div class="question client-question">
                         <label for="therapist-name" class="text1">Therapist's name:</label>
-                        <input type="text" id="therapist-name" name="therapist-name">
+                        <input type="text" id="therapist-name" name="therapist-name" required>
                     </div>
 
                     <div class="question client-question">
@@ -90,9 +87,6 @@
 
                     <div class="question client-question">
                         <p class="text1">Does this provider offer teletherapy?</p>
-                        <!-- <input type="checkbox" id="teletherapy" name="teletherapy" value="teletherapy">
-                        <label for="teletherapy">Yes</label><br><br> -->
-
         
                             <div class="radio-yn-div">
                                 <input type="radio" id="client-teletherapy-yes" name="teletherapy-yes" value="yes">
@@ -111,8 +105,6 @@
                         <p>
                             (This information is important because practicing/licensing across state lines is very tricky. You can usually assume that if a licensed therapist is seeing you, they are licensed in your state.)   
                         </p>
-
-                        <!-- do auto dropdown instead? -->
 
                         <input type="checkbox" id="ma-check" name="ma-check" value="ma-check">
                         <label for="ma-check"> Massachusetts</label><br>
@@ -304,6 +296,14 @@
                         </textarea>
                     </div>
 
+                    <div class="question client-question">
+
+                        <label for="therapist-comments" class="text1">Comments:</label>
+                        <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">What should folks who are queer/trans/poly/kinky/swers know about working with this provider?
+                        </textarea> 
+
+                    </div>
+
 
                     <!-- move comments section here for clients? -->
 
@@ -382,25 +382,29 @@
 
                     <div class="question client-question">
                         <label for="therapist-access" class="text1">Can you share any accessibility info about their location?</label>
-                        <textarea id="therapist-access" name="therapist-access" class="center-me" rows="6" cols="50">If unknown or n/a, just leave this blank
+                        <textarea id="therapist-access" name="therapist-access" class="center-me" rows="6" cols="50">Stairs, scents, gender inclusive bathrooms, etc. If unknown or n/a, just leave this blank
                         </textarea>
                     </div>
 
 
                     <div class="question client-question">
 
-                            <label for="therapist-comments" class="text1">Comments</label>
+                            <label for="therapist-comments" class="text1">Comments:</label>
                             <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">Anthing others might find useful to know?
                             </textarea> 
 
                     </div>
 
-                <!-- end client add section of form? -->
+                
                 </div>
-        
+            </form>
+            <!-- end client add form -->
+
+            <!-- provider add provider form -->
+            <form class="add-provider-form" id="provider-add-provider-form"></form>
 
 
-                <!-- PROVDER SECTION OF FORM -->
+                
                 <div class="provider-add-provider">
                     <p>This project is intended to collect information to empower GSM therapy clients to make better-informed decisions about our mental health care.  
                     <br><br>
@@ -431,10 +435,10 @@
                         <p class="text1">Do you offer teletherapy?</p>
                         <!-- <input type="checkbox" id="teletherapy" name="teletherapy" value="teletherapy">
                         <label for="teletherapy">Yes</label><br><br> -->
-
+<!-- FIX THIS -->
                         <div class="radio-yn-div">
-                            <input type="radio" id="provider-couples-yes" name="couples" value="yes">
-                            <input type="radio" id="provider-couples-no" name="couples" value="no">
+                            <input type="radio" id="provider-couples-yes" name="teletherapy-yes" value="yes">
+                            <input type="radio" id="provider-couples-no" name="teletherapy-no" value="no">
                         </div>
                         <div class=radio-yn-label-div>
                             <label for="provider-couples-yes">Yes</label>
@@ -464,7 +468,7 @@
                         <label for="ny-check"> New York</label><br>
 
                         <input type="checkbox" id="somewhere-else-check" name="somewhere-else-check" value="somewhere-else-check">
-                        <label for="somewhere-else-check"> Massachusetts</label><br><br>
+                        <label for="somewhere-else-check">Somewhere else</label><br><br>
 
                         
                         <label for="therapist-location" class="text1">Location/Neighborhood:</label>
@@ -524,6 +528,7 @@
                         <label for="therapist-insurance" class="text1">Which insurance(s)?</label>
                         <textarea id="therapist-insurance" name="therapist-insurance" class="center-me" rows="6" cols="50">Enter as many as you like; please be specific.
                         </textarea>
+                        <!-- change to check boxes later -->
                     </div>
 
 
@@ -554,7 +559,7 @@
                     <div class="question provider-question">
 
                             <label for="therapist-comments" class="text1">Comments</label>
-                            <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving marginalized communities. 
+                            <textarea id="therapist-comments" name="therapist-comments" class="center-me" rows="8" cols="50">Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. 
                 
                             </textarea> 
                     </div>
