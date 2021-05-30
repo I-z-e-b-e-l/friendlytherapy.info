@@ -54,7 +54,7 @@ h1 {
     width: 100%;
     /* height: 30vw; */
     background-color: lightseagreen;
-    background-image: url('succulents2.jpg');
+    background-image: url('/images/succulents2.jpg');
 }
 
 .general-landing h1 {
@@ -237,7 +237,12 @@ footer {
     text-decoration: none;
     font-size: 1.2em;
     margin: .2em 0;
-    color: var(--headercolor);
+    color: white;
+}
+
+.footlink:hover {
+    color: #b6ffb0
+    /* background-color: var(--brightteal) */
 }
 
 .footlink:active {
@@ -279,7 +284,7 @@ footer {
 /* INDEX Landing Page Stylings */
 
 .landing-div {
-    background-image: url("robert-katzki-rainbow.jpg");
+    background-image: url("/images/robert-katzki-rainbow.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-color:rgb(35, 65, 65); */
@@ -587,7 +592,7 @@ input[type=checkbox] {
     display: none;
 }
 
-#thank-you-add {
+.thank-you-add {
     display: none;
 }
 

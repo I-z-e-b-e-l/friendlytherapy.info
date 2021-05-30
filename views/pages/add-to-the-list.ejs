@@ -531,23 +531,23 @@
                     <div class="question provider-question">
                         <label class="text1">Do you accept Masshealth?</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="masshealth-yes-providerinput" name="masshealth-providerinput" value="yes">
+                            <input type="radio" id="masshealth-yes-providerinput" name="masshealth-providerinput" value="yes" required>
                             <input type="radio" id="masshealth-no-providerinput" name="masshealth-providerinput" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="masshealth-yes-providerinput">Yes</label>
+                            <label for="masshealth-yes-providerinput" >Yes</label>
                             <label for="masshealth-no-providerinput">No</label>
                         </div>
                     </div>
 
                     <div class="question provider-question">
                         <label for="cost-providerinput" class="text1">What is the average cost per session for someone unable to use insurance?</label>
-                        <input type="text" id="cost-providerinput" name="cost-providerinput">
+                        <input type="text" id="cost-providerinput" name="cost-providerinput" required>
                     </div>
 
                     <div class="question provider-question">
                         <label for="access-providerinput" class="text1">Please share any accessibility info about your location if you provide in-person services: Stairs, scents, gender inclusive bathrooms, etc.</label>
-                        <textarea id="access-providerinput" name="access-providerinput" class="center-me" rows="6" cols="50">
+                        <textarea id="access-providerinput" name="access-providerinput" class="center-me" rows="6" cols="50" required>
                         </textarea>
                     </div>
 
@@ -555,7 +555,7 @@
                     <div class="question provider-question">
 
                             <label for="comments-providerinput" class="text1">Comments</label>
-                            <textarea id="comments-providerinput" name="comments-providerinput" class="center-me" rows="8" cols="50">Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. 
+                            <textarea id="comments-providerinput" name="comments-providerinput" class="center-me" rows="8" cols="50" required>Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. 
                 
                             </textarea> 
                     </div>
@@ -568,7 +568,7 @@
                     <input type="submit" value="Submit" id="add-provider-submit" class="add-provider-submit" onclick="displayThankYouAdd()">
                 </div>
 
-                <div id="thank-you-add">
+                <div class="thank-you-add">
                     <p><em>Thank you for contributing! Your entry has been added to the database!</em>
 
                     </p>

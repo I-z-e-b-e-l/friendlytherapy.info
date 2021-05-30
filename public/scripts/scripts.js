@@ -188,5 +188,5 @@ function showAdditionalRating() {
 }
 
 function displayThankYouAdd(){
-    document.querySelector('#thank-you-add').style.display = "block";
+    document.querySelector('.thank-you-add').style.display = "block";
 }
