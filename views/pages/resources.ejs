@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Resources</title>
-    <link rel="stylesheet" type="text/css" href="make-me-pretty/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-    <script src="scripts.js" defer></script>
-</head>
-<body>
+<%- include('../partials/head') -%> 
 
-    <div class="max-width-container">
-        <header class="max-width">
-                <div class="divA">
-                    <div class="little-divA">
-                        <img src="make-me-pretty/magnify-talk-no-bg.png" alt="magnifying glass heart icon" class="magnify-talk">
-                        <h2>friendlytherapy.info</h2>
-                    </div>    
-                    <a href="javascript:void(0);" id="hamburger">
-                        <i class="fas fa-bars fa-2x" id=show-me-hamburger></i> 
-                    </a>
+<%- include('../partials/header-nav') -%> 
 
-                </div>    
-        
-                <nav class="link-menu">
-                    <a class="headlink" href="index.html">Home</a>
-                    <a class="headlink" href="findatherapist.html">Find a Therapist</a>
-                    <a class="headlink" href="add-to-the-list.html">Add a Provider</a>
-                    <a class="headlink" href="resources.html">Resources</a>
-                    <!-- <a class="headlink" href="how-to.html">How to Find a Therapist</a> -->
-                    <a class="headlink" href="about.html">About</a> 
-                </nav>  
-        </header>
-    </div>
+
 
     <div class="general-landing">
         <div class="max-width-container">
@@ -225,54 +194,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    <footer>
-
-        <!-- maybe replace with background removed image? -->
-        <div class="center-me2">
-
-            <img id="carret-up" src="make-me-pretty/caret-up2-no-bg.png">
-            <!-- <i class="fas fa-caret-up fa-2x" id=little-caret-up></i> -->
-            <img class="heart" src="make-me-pretty/heart-no-bg.png">
-        </div>
-
-        <div class="extend-footer">
-
-            <p class=testimonial>
-            <em>"This is a placeholder for testimonials and nice things people say."</em>
-            </p>
-
-            <div class=footer-map>
-                <!-- <p>Site</p> -->
-                <a class="footlink" href="index.html">Home</a>
-                <a class="footlink" href="findatherapist.html">Find a Therapist</a>
-                <a class="footlink" href="add-to-the-list.html">Add a Provider</a>    
-                <a class="footlink" href="resources.html">Resources</a>
-                <a class="footlink" href="about.html">About</a> 
-                <a class="footlink" href="contact.html">Contact</a> 
-                <!-- <a class="footlink" href="how-to.html">How to Find a Therapist</a> -->
-               
-            </div>
-
-            
-            <!-- <button id="darkmode-button">🌙 Dark Mode</button>
-            <button id="addcats-button">🐈 Add Cats</button> -->
-
-        </div>
-
-
-        <p class=copyright>
-            &COPY; Izebel, 2021
-        </p>
-
-    </footer>
-</body>
-</html>
+    <%- include('../partials/footer') -%> 

@@ -123,6 +123,6 @@ const providerSchema = new Schema ({
 
 })
 
-const Comic = mongoose.model('Comic', comicSchema)
+const Provider = mongoose.model('Provider', providerSchema)
 
-module.exports=Comic;
+module.exports=Provider;

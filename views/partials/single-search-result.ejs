@@ -1,0 +1,63 @@
+<!-- loop though -->
+<!-- populate with ejs -->
+
+
+
+<div class="results-box">
+    <div class="name-div ">
+        <p class="text1">Therapist Name: <%= provider.name %></p>
+    </div>
+
+    <p>Type of Provider: <%= provider.providerType %></p>
+
+    <p>Community-Friendliness Rating:</p>
+
+    <ul>
+        <li>Queer: <%= provider.queerRating %></li>
+        <li>Trans:<%= provider.transRating %></li>
+        <li>Non-Monogamy: <%= provider.polyRating %></li>
+        <li>Kink:<%= provider.kinkRating %></li>
+        <li>SW:<%= provider.swRating %></li>
+        <li>BIPOC:<%= provider.bipocRating %></li>
+        <!-- maybe reformat this one -->
+        <li>Other Communities: <%= provider.additionalRating %></li>
+    </ul>
+
+    <!-- <p class="">Queer:
+        <br>
+        Trans:
+        <br>
+        Non-Monogamy:
+        <br>
+        Kink:
+        <br>
+        SW:
+        <br>
+        BIPOC:
+        <br>
+        Other Communities:
+    </p> -->
+    
+    <p>Institution/Private Practice: <%= provider.institution %></p>
+    <p>Offers Teletherapy: <%= provider.teletherapy %></p>
+    <p>States they practice in: <%= provider.licenseState %></p>
+    <p>Location: <%= provider.location %></p>
+    <p>Accessibility Information: <%= provider.accessibility %></p>
+    <p>Offers Couple's Therapy: <%= provider.couplesTherapy %></p>
+    <p>Serves Youth: <%= provider.youthTherapy %></p>
+    <p>Website: <%= provider.website %></p>
+    <p>Accespts Insurance: <%= provider.acceptInsurance%></p>
+    <p>Accepts MassHealth: <%= provider.acceptMassHealth %></p>
+    <p>Insurances Accepted: <%= provider.insurance %></p>
+    <p>Average Cost/Session without Insurance: <%= provider.cost %></p>
+    <p>Comments and Additional Info: provider.comments</p>
+    <p>Moderator Notes: <%= provider.commentsAdmin %></p>
+
+
+
+
+</div>
+
+
+
+
