@@ -18,7 +18,7 @@ const providerSchema = new Schema ({
     },
 
     teletherapy: {
-        type: Boolean
+        type: String
     },
 
     licenseState: {
@@ -74,11 +74,11 @@ const providerSchema = new Schema ({
     },
 
     couplesTherapy: {
-        type: Boolean
+        type: String
     },
 
     youthTherapy: {
-        type: Boolean
+        type: String
     },
 
     website: {
@@ -90,7 +90,7 @@ const providerSchema = new Schema ({
     },
 
     acceptInsurance: {
-        type: Boolean
+        type: String
     },
 
     whichInsurance: {
@@ -98,7 +98,7 @@ const providerSchema = new Schema ({
     },
 
     acceptMassHealth: {
-        type: Boolean
+        type: String
     },
 
     cost: {
