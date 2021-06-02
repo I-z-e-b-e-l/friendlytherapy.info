@@ -599,6 +599,10 @@ input[type=checkbox] {
 
 /* UPDATE PAGE STYLINGS */
 
+.update-container {
+    margin: 0 5vw;
+}
+
 .update-form {
     margin: 5vw 5vw 0 5vw;
 }
@@ -607,7 +611,23 @@ input[type=checkbox] {
     margin-top: 0;
 }
 
+th {
+    padding-bottom: 1em;
+    padding-left: 0
+}
 
+td {
+    padding:.5em 0;
+}
+
+.provider-link-update {
+    text-decoration: none;
+    color:rgb(9, 61, 85)
+}
+
+.provider-link-update:hover {
+    font-weight: bold;
+}
 
 
 

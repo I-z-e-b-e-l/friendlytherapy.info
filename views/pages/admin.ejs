@@ -2,23 +2,37 @@
 
 <%- include('../partials/header-nav') -%> 
 
+<div class="general-landing">
+    <div class="max-width-container">
+    <h1 class="max-width" class="heading-break-index">Update a Provider's Information </h1>   
+    </div>
+</div>
 
+<div class="spacer1"></div>
 
-<h1>Update a Provider's Information</h1>
-
-<div class=center-me>
-    <div class="">
+<!-- <div class=center-me> -->
+    <div class="update-container">
 
         <table class="admin-table">
             <thead>
                 <tr>
-                <th>Therapist Name</th>
+                <th>Select provider by name to update:</th>
               </tr>
             </thead>
 
             <tr>
                 <td>
-                <a href="/admin/update/id-ejs-here">
+                <a href="/admin/update/id-ejs-here" class="provider-link-update">
+
+                Sample Therapist Name, LMHC
+                <!-- ejs here -->
+                </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <a href="/admin/update/id-ejs-here" class="provider-link-update">
 
                 Sample Therapist Name, LMHC
                 <!-- ejs here -->
@@ -29,8 +43,8 @@
         </table>
 
     </div>
-</div>
+<!-- </div> -->
 
-
+<div class="spacer1"></div>
 
 <%- include('../partials/footer') -%> 

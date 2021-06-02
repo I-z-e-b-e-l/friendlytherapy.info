@@ -5,12 +5,12 @@ const router = express.Router();
 const searchAddController = require('../controllers/search-add-controllers');
 
 // router.route('/')
-//     .get(searchAddController.)
+//     .get(searchAddController.name_of_function)
 
-router.route('/add-a-provider')
+router.route('/search-add/add-to-the-list')
     .get(searchAddController.add_a_provider)
 
-router.route('/find-a-provider')
+router.route('/search-add/find-a-therapist-search')
     .get(searchAddController.find_a_provider)
 
 
