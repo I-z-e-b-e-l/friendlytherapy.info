@@ -9,6 +9,20 @@ module.exports = {
     admin: (request, response) => {
         response.render('pages/admin');
     },
+
+    // admin: (request, response) => {
+    //     Providers.find({}, (error, allProviders) => {
+    //         if (error) {
+    //             return error;
+    //         } else {
+    //             response.render("pages/admin", {providers: allProviders});
+    //         }
+    //     })
+    // },
+
+
+
+
     
     login: (request, response) => {
         response.render('pages/login');

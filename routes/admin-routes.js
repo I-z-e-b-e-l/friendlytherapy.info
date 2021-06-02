@@ -4,7 +4,7 @@ const router = express.Router();
 
 const adminController = require('../controllers/admin-controllers');
 
-// this is /admin page where all providers are listed by name
+//this is /admin page where all providers are listed by name
 router.route('/')
     .get(adminController.admin)
 

@@ -6,7 +6,7 @@ module.exports = {
     // },
     
     add_a_provider: (request, response) => {
-        response.render('pages/add-to-the-list');
+        response.render('pages/add-a-provider');
     },
 
     find_a_provider: (request, response) => {

@@ -7,10 +7,10 @@ const searchAddController = require('../controllers/search-add-controllers');
 // router.route('/')
 //     .get(searchAddController.name_of_function)
 
-router.route('/search-add/add-to-the-list')
+router.route('/add-a-provider')
     .get(searchAddController.add_a_provider)
 
-router.route('/search-add/find-a-therapist-search')
+router.route('/find-a-therapist-search')
     .get(searchAddController.find_a_provider)
 
 

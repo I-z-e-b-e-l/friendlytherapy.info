@@ -117,10 +117,6 @@ const providerSchema = new Schema ({
         type: String
     },
 
-    final:{
-        // required: [true, 'An image is required'],
-    }
-
 })
 
 const Provider = mongoose.model('Provider', providerSchema)
