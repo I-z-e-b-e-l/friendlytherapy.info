@@ -23,3 +23,6 @@ router.route('/resources')
 .get(siteController.resources)
 // send an email via the form on this page
 // .post(siteController.resource_suggest_post)
+
+
+module.exports = router;

@@ -600,10 +600,12 @@ input[type=checkbox] {
 /* UPDATE PAGE STYLINGS */
 
 .update-form {
-    margin: 5vw;
+    margin: 5vw 5vw 0 5vw;
 }
 
-
+#update-delete-div {
+    margin-top: 0;
+}
 
 
 
@@ -1073,6 +1075,12 @@ optgroup {
         margin-bottom: 1em;
     }
 
+
+/* Update Page */
+
+    #update-delete-button {
+        margin-top: 0px;
+    }
 
 }
 

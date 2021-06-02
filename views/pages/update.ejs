@@ -2,26 +2,30 @@
 
 <%- include('../partials/header-nav') -%> 
 
+    <div class="general-landing">
+        <div class="max-width-container">
+        <h1 class="max-width" class="heading-break-index">Update this Provider </h1>   
+        </div>
+    </div>
 
-
-    <h1>Update a Provider's Information</h1>
+    <!-- <h1>Update This Provider</h1> -->
 
     <form class="update-form">
     
 
         <div class="question update-question">
-            <label for="therapist-name" class="text1">Therapist's name:</label>
-            <input type="text" id="therapist-name" name="therapist-name">
+            <label for="name-update" class="text1">Provider's name:</label>
+            <input type="text" id="name-update" name="name-update">
         </div>
 
         <div class="question update-question">
-            <label for="therapist-practice" class="text1">Institution / Private Practice:</label>
-            <input type="text" id="therapist-practice" name="therapist-practice">
+            <label for="practice-update" class="text1">Institution / Private Practice:</label>
+            <input type="text" id="practice-update" name="practice-update">
         </div>
 
         <div class="question update-question">
-            <label for="provider-type" class="text1">What kind of mental health provider are they?</label>
-            <input type="text" id="provider-type" name="provider-typee" placeholder="therapist? psychiatrist?">
+            <label for="provider-type-update" class="text1">What kind of mental health provider are they?</label>
+            <input type="text" id="provider-type-update" name="provider-type-update" placeholder="therapist? psychiatrist?">
         </div>
 
         <div class="question update-question">
@@ -30,38 +34,38 @@
             <label for="teletherapy">Yes</label><br><br> -->
 
             <div class="radio-yn-div">
-                <input type="radio" id="update-teletherapy-yes" name="teletherapy-yes" value="yes">
-                <input type="radio" id="update-teletherapy-no" name="teletherapy-no" value="no">
+                <input type="radio" id="teletherapy-yes-update" name="teletherapy-update" value="yes">
+                <input type="radio" id="teletherapy-no-update" name="teletherapy-update" value="no">
             </div>
             <div class=radio-yn-label-div>
-                <label for="teletherapy-yes">Yes</label>
-                <label for="teletherapy-no">No</label>
+                <label for="teletherapy-yes-update">Yes</label>
+                <label for="teletherapy-no-update">No</label>
             </div>
         </div>
 
         <div class="question update-question">
 
-            <label for="provider-license-state" class="text1">Where does this provider practice / Where is this provider licensed?</label>
+            <label for="license-state-update" class="text1">Where does this provider practice / Where is this provider licensed?</label>
 
             <!-- do auto dropdown instead? -->
             <br><br>
-            <input type="checkbox" id="ma-check" name="ma-check" value="ma-check">
-            <label for="ma-check"> Massachusetts</label><br>
+            <input type="checkbox" id="ma-check-update" name="ma-check-update" value="ma-check-update">
+            <label for="ma-check-update"> Massachusetts</label><br>
 
-            <input type="checkbox" id="ri-check" name="ri-check" value="ri-check">
-            <label for="ri-check"> Rhode Island</label><br>
+            <input type="checkbox" id="ri-check-update" name="ri-check-update" value="ri-check-update">
+            <label for="ri-check-update"> Rhode Island</label><br>
 
-            <input type="checkbox" id="nh-check" name="nh-check" value="nh-check">
-            <label for="nh-check">New Hampshire</label><br>
+            <input type="checkbox" id="nh-check-update" name="nh-check-update" value="nh-check-update">
+            <label for="nh-check-update">New Hampshire</label><br>
 
-            <input type="checkbox" id="ct-check" name="ct-check" value="ct-check">
-            <label for="ct-check">Connecticut</label><br>
+            <input type="checkbox" id="ct-check-update" name="ct-check-update" value="ct-check-update">
+            <label for="ct-check-update">Connecticut</label><br>
 
-            <input type="checkbox" id="ny-check" name="ny-check" value="ny-check">
-            <label for="ny-check"> New York</label><br>
+            <input type="checkbox" id="ny-check-update" name="ny-check-update" value="ny-check-update">
+            <label for="ny-check-update"> New York</label><br>
 
-            <input type="checkbox" id="somewhere-else-check" name="somewhere-else-check" value="somewhere-else-check">
-            <label for="somewhere-else-check">Somewhere else</label><br><br>
+            <input type="checkbox" id="somewhere-else-check-update" name="somewhere-else-check-update" value="somewhere-else-check-update">
+            <label for="somewhere-else-check-update">Somewhere else</label><br><br>
 
             
             <label for="therapist-location" class="text1">Location/Neighborhood:</label>
@@ -72,12 +76,12 @@
         <div class="question update-question">
             <label class="text1">Does this therapist provide couples therapy?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="update-couples-yes" name="couples" value="yes">
-                <input type="radio" id="update-couples-no" name="couples" value="no">
+                <input type="radio" id="couples-yes-update" name="couples-update" value="yes">
+                <input type="radio" id="couples-no-update" name="couples-update" value="no">
             </div>
             <div class=radio-yn-label-div>
-                <label for="update-couples-yes">Yes</label>
-                <label for="update-couples-no">No</label>
+                <label for="couples-yes-update">Yes</label>
+                <label for="couples-no-update">No</label>
             </div>
         </div>
 
@@ -169,6 +173,14 @@
 
 
     </form>
+
+    <div class="center-me" id="update-delete-div">
+
+        <form action="/admin/<EJS-id-here>?_method=delete" method="POST">
+            <input type="submit" id="update-delete-button" name="delete" value="Delete">
+        </form>
+     
+    </div>
 
     <div class="spacer1"></div>
         

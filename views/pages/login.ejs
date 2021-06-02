@@ -6,7 +6,7 @@
 
     <div class="general-landing">
         <div class="max-width-container">
-        <h1 class="max-width">Login to Edit the Database of Providers</h1>   
+        <h1 class="max-width">Login to Edit the Provider Database</h1>   
         </div>
     </div>
 
@@ -17,7 +17,7 @@
     <!-- <div class="spacer2"></div> -->
     <div class=center-me>
         <div class="login-div">
-
+        <form action="/login" method="POST">
             <label for="login" class="text1">Login ID:</label>
             <br>
             <input type="text" id=login name="login">
@@ -27,6 +27,13 @@
             <label for="password" class="text1">Password:</label>
             <br>
             <input type="text" id=password name="login">
+
+            <!-- <input type="submit"> -->
+
+            <div class="center-me">
+                <input type="submit" value="Submit" id="login-submit" class="" onclick="">
+            </div>
+        </form>
         </div>
     </div>
     <div class="spacer1"></div>
