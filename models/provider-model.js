@@ -7,7 +7,7 @@ const providerSchema = new Schema ({
         type: String,
         minLength: [4, 'Minimum length for a provider\'s first and last name is 4 characters.']
     },
-    institution: {
+    practice: {
         type: String,
         minLength: [3, 'Minimum length for provider\'s institution or practice is 3 characters.']
     },
@@ -15,6 +15,10 @@ const providerSchema = new Schema ({
     providerType: {
         type: String,
         minLength: [4, 'Minimum length for provider type is 4 characters.']
+    },
+    
+    acceptingClients: {
+        type: String
     },
 
     teletherapy: {

@@ -410,7 +410,7 @@ footer {
 
 
 
-/* ADD TO THE LIST PAGE MOBILE STYLINGS */
+/* ADD TO THE LIST + Thank You PAGE MOBILE STYLINGS */
 
 
 .button-align {
@@ -421,7 +421,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit] {
+.who-button, input[type=submit], #add-another-button{
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -434,7 +434,7 @@ footer {
     
 }
 
-.who-button:focus, input[type=submit]:hover {
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover {
     border: 2px solid black;
     font-weight: bold;
 }
@@ -442,6 +442,10 @@ footer {
 
 #provider-display-button:focus {
     width: 160px;
+}
+
+#add-another-button {
+    width: 225px
 }
 
 #add-provider-submit {

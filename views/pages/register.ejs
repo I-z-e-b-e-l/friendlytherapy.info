@@ -6,7 +6,7 @@
 
     <div class="general-landing">
         <div class="max-width-container">
-        <h1 class="max-width">Login to Edit the Provider Database</h1>   
+        <h1 class="max-width">Create an Admin User to Edit the Provider Database</h1>   
         </div>
     </div>
 
@@ -14,7 +14,7 @@
 
     <div class=center-me>
         <div class="login-div">
-        <form action="/login" method="POST">
+        <form action="/register" method="POST">
             <label for="username" class="text1">Admin Username:</label>
             <br>
             <input type="text" id="username" name="username" required>
@@ -23,7 +23,7 @@
 
             <label for="password" class="text1">Password:</label>
             <br>
-            <input type="text" id="password" name="password" required>
+            <input type="text" id="password" name="password" required min="9">
 
             <!-- <input type="submit"> -->
 

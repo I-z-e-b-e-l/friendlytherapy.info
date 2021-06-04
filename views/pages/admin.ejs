@@ -20,25 +20,13 @@
               </tr>
             </thead>
 
-            <tr>
-                <td>
-                <a href="/admin/update/id-ejs-here" class="provider-link-update">
+            <!-- provider-update-listing.ejs -->
 
-                Sample Therapist Name, LMHC
-                <!-- ejs here -->
-                </a>
-                </td>
-            </tr>
+            <% providers.forEach(provider=> { %>
 
-            <tr>
-                <td>
-                <a href="/admin/update/id-ejs-here" class="provider-link-update">
-
-                Sample Therapist Name, LMHC
-                <!-- ejs here -->
-                </a>
-                </td>
-            </tr>
+                <%- include('../partials/provider-update-listing', {provider : provider}) %> 
+    
+            <% }) %>
 
         </table>
 

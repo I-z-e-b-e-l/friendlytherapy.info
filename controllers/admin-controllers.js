@@ -4,29 +4,76 @@ const Providers = require ('../models/provider-model')
 
 module.exports = {
 
+//display the register page
+  register: (request, response) => {
+    response.render('pages/register');
+},
 
-    //update to take in database info
-    admin: (request, response) => {
-        response.render('pages/admin');
+//process the registration data
+  register_post:(request, response) => {
+    bcrypt.hash(request.body.password, saltRounds, function(error, hash) {
+      const newUser = new User({
+        username: request.body.username,
+        password: hash
+      });
+      newUser.save();
+      console.log(`The hash value being saved is: ${hash}`);
+      response.redirect('/login');
+  });
+},
+
+
+
+//display the login page
+    login: (request, response) => {
+      response.render('pages/login');
+  },
+
+//execute logging in
+  login_post: (request, response) => {
+      const username = request.body.username;
+      const password = request.body.password;
+      console.log(`password entered is: ${password}`);
+      User.findOne({username: username}, (error, foundUser) => {
+        if (error) {
+          console.log(`The error at login is: ${error}`);
+        } else {
+          if(foundUser) {
+            console.log(`Username was matched: ${foundUser.username}`);
+            console.log(`Their password is: ${foundUser.password}`);
+
+            bcrypt.compare(password, foundUser.password, function(error, result) {
+            // result == true
+            if (result === true) {
+              console.log(`user ${foundUser.username} logged in`);
+              response.redirect('/admin');              
+            }
+          }); 
+          };
+        };
+     });
     },
+
+
+
+
 
     // admin: (request, response) => {
-    //     Providers.find({}, (error, allProviders) => {
-    //         if (error) {
-    //             return error;
-    //         } else {
-    //             response.render("pages/admin", {providers: allProviders});
-    //         }
-    //     })
+    //     response.render('pages/admin');
     // },
 
-
-
-
-    
-    login: (request, response) => {
-        response.render('pages/login');
+    admin: (request, response) => {
+        Providers.find({}, (error, allProviders) => {
+            if (error) {
+                return error;
+            } else {
+                console.log(allProviders)
+                response.render("pages/admin", {providers: allProviders});
+            }
+        })
     },
+
+
 
     //admin access to update a listing
     update: (request, response) => {

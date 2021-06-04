@@ -48,86 +48,87 @@
 
                     <div class="who-are-you">
 
-                        <input type="checkbox" id="queer-check" name="queer-check" value="queer-check" onclick="showQueerRating();showAdditionalRating()">
-                        <label for="queer-check" class="tooltip text1">I am Queer<span class="tooltiptext">- or something else under that umbrella: Lesbian, Gay, Bi, Pan, Polysexual, etc... </span><label><br>
+                        <input type="checkbox" id="queer_check" name="queer_check" value="queer_check" onclick="showQueerRating();showAdditionalRating()">
+                        <label for="queer_check" class="tooltip text1">I am Queer<span class="tooltiptext">- or something else under that umbrella: Lesbian, Gay, Bi, Pan, Polysexual, etc... </span><label><br>
                             <!-- FIX THIS HOVERTEXT -->
 
-                        <input type="checkbox" id="trans-check" name="trans-check" value="trans-check" onclick="showTransRating();showAdditionalRating()">
-                        <label for="trans-check"> I am Trans</label><br>
+                        <input type="checkbox" id="trans_check" name="trans_check" value="trans_check" onclick="showTransRating();showAdditionalRating()">
+                        <label for="trans_check"> I am Trans</label><br>
                             <!-- or of a gender often considered under that umbrella, nb etc -->
 
-                        <input type="checkbox" id="nonmono-check" name="nonmono-check" value="nonmono-check" onclick="showPolyRating();showAdditionalRating()">
-                        <label for="nonmono-check" class="tooltip text1"> I am Non-Monogamous <span class="tooltiptext">- Polyamorous, ENM, etc. </span></label><br>
+                        <input type="checkbox" id="nonmono_check" name="nonmono_check" value="nonmono_check" onclick="showPolyRating();showAdditionalRating()">
+                        <label for="nonmono_check" class="tooltip text1"> I am Non-Monogamous <span class="tooltiptext">- Polyamorous, ENM, etc. </span></label><br>
                         
-                        <input type="checkbox" id="kink-check" name="kink-check" value="kink-check" onclick="showKinkRating();showAdditionalRating()">
-                        <label for="kink-check" class="text1"> I am Kinky</label><br>
+                        <input type="checkbox" id="kink_check" name="kink_check" value="kink_check" onclick="showKinkRating();showAdditionalRating()">
+                        <label for="kink_check" class="text1"> I am Kinky</label><br>
 
-                        <input type="checkbox" id="sw-check" name="sw-check" value="sw-check" onclick="showSWRating();showAdditionalRating()">
-                        <label for="sw-check" class="text1"> I am a Sex Worker</label><br>
+                        <input type="checkbox" id="sw_check" name="sw_check" value="sw_check" onclick="showSWRating();showAdditionalRating()">
+                        <label for="sw_check" class="text1"> I am a Sex Worker</label><br>
 
-                        <input type="checkbox" id="bipoc-check" name="bipoc-check" value="bipoc-check" onclick="showBIPOCRating();showAdditionalRating()">
-                        <label for="bipoc-check" class="text1"> I am a Person of Color</label>
+                        <input type="checkbox" id="bipoc_check" name="bipoc_check" value="bipoc_check" onclick="showBIPOCRating();showAdditionalRating()">
+                        <label for="bipoc_check" class="text1"> I am a Person of Color</label>
 
                     </div>
                     
                     <div class="question client-question">
-                        <label for="name-clientinput" class="text1">Therapist's name:</label>
-                        <input type="text" id="name-clientinput" name="name-clientinput" required>
+                        <label for="name_client_input" class="text1">Therapist's name:</label>
+                        <input type="text" id="name_client_input" name="name_client_input" required>
                     </div>
 
                     <div class="question client-question">
-                        <label for="practice-clientinput" class="text1">Institution / Private Practice:</label>
-                        <input type="text" id="practice-clientinput" name="practice-clientinput">
+                        <label for="practice_client_input" class="text1">Institution / Private Practice:</label>
+                        <input type="text" id="practice_client_input" name="practice_client_input">
                     </div>
 
                     <div class="question client-question">
-                        <label for="provider-type-clientinput" class="text1">What kind of mental health provider are they?</label>
-                        <input type="text" id="provider-type-clientinput" name="provider-type-clientinpute" placeholder="therapist? psychiatrist?">
+                        <label for="provider_type_client_input" class="text1">What kind of mental health provider are they?</label>
+            <!-- change to checkbox -->
+                        <input type="text" id="provider_type_client_input" name="provider_type_client_input" placeholder="therapist? psychiatrist?">
                     </div>
 
                     <div class="question client-question">
                         <p class="text1">Does this provider offer teletherapy?</p>
         
                             <div class="radio-yn-div">
-                                <input type="radio" id="teletherapy-yes-clientinput" name="teletherapy-clientinput" value="yes">
-                                <input type="radio" id="teletherapy-no-clientinput" name="teletherapy-clientinput" value="no">
+                                <input type="radio" id="teletherapy_yes_client_input" name="teletherapy_client_input" value="yes">
+                                <input type="radio" id="teletherapy_no_client_input" name="teletherapy_client_input" value="no">
                             </div>
                             <div class=radio-yn-label-div>
-                                <label for="teletherapy-yes-clientinput">Yes</label>
-                                <label for="teletherapy-no-clientinput">No</label>
+                                <label for="teletherapy_yes_client_input">Yes</label>
+                                <label for="teletherapy_no_client_input">No</label>
                             </div>
 
                     </div>
 
                     <div class="question client-question">
 
-                        <label for="license-state-clientinput" class="text1">Where does this provider practice / Where is this provider licensed?</label>
+                        <label for="license_state_client_input" class="text1">Where does this provider practice / Where is this provider licensed?</label>
                         <p>
                             (This information is important because practicing/licensing across state lines is very tricky. You can usually assume that if a licensed therapist is seeing you, they are licensed in your state.)   
                         </p>
 
-                        <input type="checkbox" id="ma-check-clientinput" name="ma-check-clientinput" value="ma-check">
-                        <label for="ma-check-clientinput"> Massachusetts</label><br>
+                        <input type="checkbox" id="ma_check_client_input" name="license_state_client_input" value="ma_check">
+                        <label for="ma_check_client_input"> Massachusetts</label><br>
 
-                        <input type="checkbox" id="ri-check" name="ri-check" value="ri-check-clientinput">
-                        <label for="ri-check-clientinput"> Rhode Island</label><br>
+                        <input type="checkbox" id="ri_check" name="license_state_client_input" value="ri_check_client_input">
+                        <label for="ri_check_client_input"> Rhode Island</label><br>
 
-                        <input type="checkbox" id="nh-check-clientinput" name="nh-check-clientinput" value="nh-check-clientinput">
-                        <label for="nh-check-clientinput">New Hampshire</label><br>
+                        <input type="checkbox" id="nh_check_client_input" name="license_state_client_input" value="nh_check_client_input">
+                        <label for="nh_check_client_input">New Hampshire</label><br>
 
-                        <input type="checkbox" id="ct-check-clientinput" name="ct-check-clientinput" value="ct-check-clientinput">
-                        <label for="ct-check-clientinput">Connecticut</label><br>
+                        <input type="checkbox" id="ct_check_client_input" name="license_state_client_input" value="ct_check_client_input">
+                        <label for="ct_check_client_input">Connecticut</label><br>
 
-                        <input type="checkbox" id="ny-check-clientinput" name="ny-check-clientinput" value="ny-check-clientinput">
-                        <label for="ny-check-clientinput"> New York</label><br>
+                        <input type="checkbox" id="ny_check_client_input" name="license_state_client_input" value="ny_check_client_input">
+                        <label for="ny_check_client_input"> New York</label><br>
 
-                        <input type="checkbox" id="somewhere-else-check-clientinput" name="somewhere-else-check-clientinput" value="somewhere-else-check-clientinput">
-                        <label for="somewhere-else-check-clientinput">Somewhere else</label><br><br>
+                        <input type="checkbox" id="somewhere-else_check_client_input" name="license_state_client_input" value="somewhere-else_check_client_input">
+                        <label for="somewhere-else_check_client_input">Somewhere else</label><br><br>
 
                         <!-- inlcude international? -->
                         
-                        <label for="location-clientinput" class="text1">Location/Neighborhood:</label>
-                        <input type="text" id="location-clientinput" name="location-clientinput">
+                        <label for="location_client_input" class="text1">Location/Neighborhood:</label>
+                        <input type="text" id="location_client_input" name="location_client_input">
 
                     </div>
 
@@ -135,17 +136,17 @@
 
 
             
-                    <div class="client-rating" id="queer-rating">
+                    <div class="client-rating" id="queer_rating">
                         <label class="text1">
                             Queer Friendliness Rating
                         </label>
                         
                         <div class ="indent-me">    
                             <div class=radio-div>    
-                                <input type="radio" id="rating-zero-queer" name="queer-rating" value="zero">
-                                <input type="radio" id="rating-one-queer" name="queer-rating" value="one">
-                                <input type="radio" id="rating-two-queer" name="queer-rating" value="two">
-                                <input type="radio" id="rating-three-queer" name="queer-rating" value="three">
+                                <input type="radio" id="rating-zero-queer" name="queer_rating" value="zero">
+                                <input type="radio" id="rating-one-queer" name="queer_rating" value="one">
+                                <input type="radio" id="rating-two-queer" name="queer_rating" value="two">
+                                <input type="radio" id="rating-three-queer" name="queer_rating" value="three">
                             </div>  
                             
                             <div class=radio-label-div>    
@@ -161,15 +162,15 @@
                         </div>
                     </div>
 
-                    <div class="client-rating" id="trans-rating">
+                    <div class="client-rating" id="trans_rating">
                         <label class="text1">Trans Friendliness Rating</label>
                         
                         <div class ="indent-me">    
                             <div class=radio-div>    
-                                <input type="radio" id="rating-zero-trans" name="trans-rating" value="zero">
-                                <input type="radio" id="rating-one-trans" name="trans-rating" value="one">
-                                <input type="radio" id="rating-two-trans" name="trans-rating" value="two">
-                                <input type="radio" id="rating-three-trans" name="trans-rating" value="three">
+                                <input type="radio" id="rating-zero-trans" name="trans_rating" value="zero">
+                                <input type="radio" id="rating-one-trans" name="trans_rating" value="one">
+                                <input type="radio" id="rating-two-trans" name="trans_rating" value="two">
+                                <input type="radio" id="rating-three-trans" name="trans_rating" value="three">
                             </div>  
                             
                             <div class=radio-label-div>    
@@ -186,14 +187,14 @@
                         </div>
                     </div>
 
-                    <div class="client-rating" id="poly-rating">
+                    <div class="client-rating" id="poly_rating">
                         <label class="text1">Non-Monogamy Friendliness Rating</label>
                         <div class ="indent-me">    
                             <div class=radio-div>    
-                                <input type="radio" id="rating-zero-poly" name="poly-rating" value="zero">
-                                <input type="radio" id="rating-one-poly" name="poly-rating" value="one">
-                                <input type="radio" id="rating-two-poly" name="poly-rating" value="two">
-                                <input type="radio" id="rating-three-poly" name="poly-rating" value="three">
+                                <input type="radio" id="rating-zero-poly" name="poly_rating" value="zero">
+                                <input type="radio" id="rating-one-poly" name="poly_rating" value="one">
+                                <input type="radio" id="rating-two-poly" name="poly_rating" value="two">
+                                <input type="radio" id="rating-three-poly" name="poly_rating" value="three">
                             </div>  
                             
                             <div class=radio-label-div>    
@@ -211,15 +212,15 @@
                         </div>
                     </div>
 
-                    <div class="client-rating" id="kink-rating">
+                    <div class="client-rating" id="kink_rating">
                         <label class="text1">Kink Friendliness Rating</label>
                             
                         <div class ="indent-me">    
                             <div class=radio-div>    
-                                <input type="radio" id="rating-zero-kink" name="kink-rating" value="zero">
-                                <input type="radio" id="rating-one-kink" name="kink-rating" value="one">
-                                <input type="radio" id="rating-two-kink" name="kink-rating" value="two">
-                                <input type="radio" id="rating-three-kink" name="kink-rating" value="three">
+                                <input type="radio" id="rating-zero-kink" name="kink_rating" value="zero">
+                                <input type="radio" id="rating-one-kink" name="kink_rating" value="one">
+                                <input type="radio" id="rating-two-kink" name="kink_rating" value="two">
+                                <input type="radio" id="rating-three-kink" name="kink_rating" value="three">
                             </div>  
                             
                             <div class=radio-label-div>    
@@ -235,15 +236,15 @@
                         </div>
                     </div>
 
-                    <div class="client-rating" id="sw-rating">
+                    <div class="client-rating" id="sw_rating">
                         <label class="text1">Sex Worker Friendliness Rating</label>
                                 
                                 <div class ="indent-me">    
                                     <div class=radio-div>    
-                                        <input type="radio" id="rating-zero-sw" name="sw-rating" value="zero">
-                                        <input type="radio" id="rating-one-sw" name="sw-rating" value="one">
-                                        <input type="radio" id="rating-two-sw" name="sw-rating" value="two">
-                                        <input type="radio" id="rating-three-sw" name="sw-rating" value="three">
+                                        <input type="radio" id="rating-zero-sw" name="sw_rating" value="zero">
+                                        <input type="radio" id="rating-one-sw" name="sw_rating" value="one">
+                                        <input type="radio" id="rating-two-sw" name="sw_rating" value="two">
+                                        <input type="radio" id="rating-three-sw" name="sw_rating" value="three">
                                     </div>  
                                     
                                     <div class=radio-label-div>    
@@ -260,15 +261,15 @@
                             </div>
                     </div>
 
-                    <div class="client-rating" id="bipoc-rating">
+                    <div class="client-rating" id="bipoc_rating">
                         <label class="text1">BIPOC Friendliness Rating</label>
                             
                             <div class ="indent-me">    
                                 <div class=radio-div>    
-                                    <input type="radio" id="rating-zero-bipoc" name="bipoc-rating" value="zero">
-                                    <input type="radio" id="rating-one-bipoc" name="bipoc-rating" value="one">
-                                    <input type="radio" id="rating-two-bipoc" name="bipoc-rating" value="two">
-                                    <input type="radio" id="rating-three-bipoc" name="bipoc-rating" value="three">
+                                    <input type="radio" id="rating-zero-bipoc" name="bipoc_rating" value="zero">
+                                    <input type="radio" id="rating-one-bipoc" name="bipoc_rating" value="one">
+                                    <input type="radio" id="rating-two-bipoc" name="bipoc_rating" value="two">
+                                    <input type="radio" id="rating-three-bipoc" name="bipoc_rating" value="three">
                                 </div>  
                                 
                                 <div class=radio-label-div>    
@@ -290,17 +291,17 @@
                     <div class="client-rating" id=additional-rating>
                         <!-- do this differently? -->
                         <!-- inset text field? radial buttons with stylngs?  -->
-                        <label for="additional" class="text1">
+                        <label for="additional_rating_info" class="text1">
                             Rating for friendliness to additional sub-cultures, identidies, communities, trauma, types of neurodivisty, etc
                         </label>
-                        <textarea id="additional-rating-info" class="center-me" name="additional-rating-info" rows="8" cols="50">Enter as many as you like with a number 0-3, separated by a comma
+                        <textarea id="additional_rating_info" class="center-me" name="additional_rating_info" rows="8" cols="50">Enter as many as you like with a number 0-3, separated by a comma
                         </textarea>
                     </div>
 
                     <div class="question client-question">
 
-                        <label for="comments-community-clientinput" class="text1">Comments:</label>
-                        <textarea id="comments-community-clientinput" name="comments-community-clientinput" class="center-me" rows="8" cols="50">What should folks who are queer/trans/poly/kinky/swers know about working with this provider?
+                        <label for="comments_community_client_input" class="text1">Comments:</label>
+                        <textarea id="comments_community_client_input" name="comments_community_client_input" class="center-me" rows="8" cols="50">What should folks who are queer/trans/poly/kinky/swers know about working with this provider?
                         </textarea> 
 
                     </div>
@@ -308,53 +309,53 @@
                     <div class="question client-question">
                         <label class="text1">Does this therapist provide couples therapy? (skip if unknown)</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="couples-yes-clientinput" name="couples-clientinput" value="yes">
-                            <input type="radio" id="couples-no-clientinput" name="couples-clientinput" value="no">
+                            <input type="radio" id="couples_yes_client_input" name="couples_client_input" value="yes">
+                            <input type="radio" id="couples-no_client_input" name="couples_client_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="couples-yes-clientinput">Yes</label>
-                            <label for="couples-no-clientinput">No</label>
+                            <label for="couples_yes_client_input">Yes</label>
+                            <label for="couples-no_client_input">No</label>
                         </div>
                     </div>
 
                     <div class="question client-question">
                         <label class="text1">Does this therapist serve youth? (skip if unknown)</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="youth-yes-clientinput" name="youth-clientinput" value="yes">
-                            <input type="radio" id="youth-no-clientinput" name="youth-clientinput" value="no">
+                            <input type="radio" id="youth-yes_client_input" name="youth_client_input" value="yes">
+                            <input type="radio" id="youth-no_client_input" name="youth_client_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="youth-yes-clientinput">Yes</label>
-                            <label for="youth-no-clientinput">No</label>
+                            <label for="youth-yes_client_input">Yes</label>
+                            <label for="youth-no_client_input">No</label>
                         </div>
                     </div>
 
                     <div class="question client-question">
-                        <label for="website-clientinput" class="text1">Therapist's website:</label>
-                        <input type="text" id="website-clientinput" name="website-clientinput">
+                        <label for="website_client_input" class="text1">Therapist's website:</label>
+                        <input type="text" id="website_client_input" name="website_client_input">
                     </div>
 
                     <div class="question client-question">
-                        <label for="contact-clientinput" class="text1">Therapist's contact info:</label>
-                        <input type="text" id="contact-clientinput" name="contact-clientinput">
+                        <label for="contact_client_input" class="text1">Therapist's contact info:</label>
+                        <input type="text" id="contact_client_input" name="contact_client_input">
                     </div>
                     
                     
                     <div class="question client-question">
                         <label class="text1">Does this therapist accept insurance? (skip if unknown)</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="insurance-yes-clientinput" name="insurance-yn-clientinput" value="yes">
-                            <input type="radio" id="insurance-no-clientinput" name="insurance-yn-clientinput" value="no">
+                            <input type="radio" id="insurance_yes_client_input" name="insurance_yn_client_input" value="yes">
+                            <input type="radio" id="insurance-no_client_input" name="insurance_yn_client_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="insurance-yes-clientinput">Yes</label>
-                            <label for="insurance-no-clientinput">No</label>
+                            <label for="insurance_yes_client_input">Yes</label>
+                            <label for="insurance-no_client_input">No</label>
                         </div>
                     </div>
 
                     <div class="question client-question">
-                        <label for="insurance-clientinput" class="text1">Which insurance(s) do they accept?</label>
-                        <textarea id="insurance-clientinput" name="insurance-clientinput" class="center-me" rows="6" cols="50">Enter as many as you like. If unknown, just leave this blank.
+                        <label for="which_insurance_client_input" class="text1">Which insurance(s) do they accept?</label>
+                        <textarea id="which_insurance_client_input" name="which_insurance_client_input" class="center-me" rows="6" cols="50">Enter as many as you like. If unknown, just leave this blank.
                         </textarea>
                     </div>
 
@@ -362,31 +363,31 @@
                     <div class="question client-question">
                         <label class="text1">Accepts Masshealth?</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="masshealth-yes-clientinput" name="masshealth-clientinput" value="yes">
-                            <input type="radio" id="masshealth-no-clientinput" name="masshealth-clientinput" value="no">
+                            <input type="radio" id="masshealth_yes_client_input" name="masshealth_client_input" value="yes">
+                            <input type="radio" id="masshealth_no_client_input" name="masshealth_client_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="masshealth-yes-clientinput">Yes</label>
-                            <label for="masshealth-no-clientinput">No</label>
+                            <label for="masshealth_yes_client_input">Yes</label>
+                            <label for="masshealth_no_client_input">No</label>
                         </div>
                     </div>
 
                     <div class="question client-question">
-                        <label for="cost-clientinput" class="text1">If you do not use insurance to pay for therapy, what is the cost per session? (If you are able to use insurance, skip this.)</label>
-                        <input type="text" id="cost-clientinput" name="cost-clientinput">
+                        <label for="cost_client_input" class="text1">If you do not use insurance to pay for therapy, what is the cost per session? (If you are able to use insurance, skip this.)</label>
+                        <input type="text" id="cost_client_input" name="cost_client_input">
                     </div>
 
                     <div class="question client-question">
-                        <label for="access-clientinput" class="text1">Can you share any accessibility info about their location?</label>
-                        <textarea id="access-clientinput" name="access-clientinput" class="center-me" rows="6" cols="50">Stairs, scents, gender inclusive bathrooms, etc. If unknown or n/a, just leave this blank
+                        <label for="access_client_input" class="text1">Can you share any accessibility info about their location?</label>
+                        <textarea id="access_client_input" name="access_client_input" class="center-me" rows="6" cols="50">Stairs, scents, gender inclusive bathrooms, etc. If unknown or n/a, just leave this blank
                         </textarea>
                     </div>
 
 
                     <div class="question client-question">
 
-                            <label for="comments-clientinput" class="text1">Comments:</label>
-                            <textarea id="comments-clientinput" name="comments-clientinput" class="center-me" rows="8" cols="50">Anthing others might find useful to know?
+                            <label for="comments_client_input" class="text1">Comments:</label>
+                            <textarea id="comments_client_input" name="comments_client_input" class="center-me" rows="8" cols="50">Anthing others might find useful to know?
                             </textarea> 
 
                     </div>
@@ -413,117 +414,117 @@
                     <!-- add option to create login to edit entry in the future? -->
 
                     <div class="question provider-question">
-                        <label for="name-providerinput" class="text1">Your name:</label>
-                        <input type="text" id="name-providerinput" name="name-providerinput" required>
+                        <label for="name_provider_input" class="text1">Your name:</label>
+                        <input type="text" id="name_provider_input" name="name_provider_input" required>
                     </div>
-
+<!-- change to check box -->
                     <div class="question provider-question">
-                        <label for="provider-type-providerinput" class="text1">What kind of mental health provider are you?</label>
-                        <input type="text" id="provider-type-providerinput" name="provider-type-providerinput" placeholder="therapist? psychiatrist?" required>
+                        <label for="provider_type_provider_input" class="text1">What kind of mental health provider are you?</label>
+                        <input type="text" id="provider_type_provider_input" name="provider_type_provider_input" placeholder="therapist? psychiatrist?" required>
                         <!-- figure out how to deal with licensed vs. unlicensed. maybe change to checkbox? -->
                     </div>
 
                     <div class="question provider-question">
-                        <label for="practice-providerinput" class="text1">Institution / Private Practice:</label>
-                        <input type="text" id="practice-providerinput" name="practice-providerinput" required> 
+                        <label for="practice_provider_input" class="text1">Institution / Private Practice:</label>
+                        <input type="text" id="practice_provider_input" name="practice_provider_input" required> 
                     </div>
 
                     <div class="question provider-question">
                         <p class="text1">Do you offer teletherapy?</p>
 <!-- FIX THIS -->
                         <div class="radio-yn-div">
-                            <input type="radio" id="teletherapy-yes-providerinput" name="teletherapy-providerinput" value="yes" required>
-                            <input type="radio" id="teletherapy-no-providerinput" name="teletherapy-providerinput" value="no" required>
+                            <input type="radio" id="teletherapy_yes_provider_input" name="teletherapy_provider_input" value="yes" required>
+                            <input type="radio" id="teletherapy_no_provider_input" name="teletherapy_provider_input" value="no" required>
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="teletherapy-yes-providerinput" name="teletherapy-providerinput">Yes</label>
-                            <label for="teletherapy-no-providerinput" name="teletherapy-providerinput">No</label>
+                            <label for="teletherapy_yes_provider_input" name="teletherapy_provider_input">Yes</label>
+                            <label for="teletherapy_no_provider_input" name="teletherapy_provider_input">No</label>
                         </div>
                     </div>
 
                     <div class="question provider-question">
 
-                        <label for="license-state-providerinput" class="text1">Where do you practice / Where are you licensed?</label>
+                        <label for="license_state_provider_input" class="text1">Where do you practice / Where are you licensed?</label>
 
                         <br><br>
-                        <input type="checkbox" id="ma-check-providerinput" name="ma-check-providerinput" value="ma-check-providerinput">
-                        <label for="ma-check-providerinput"> Massachusetts</label><br>
+                        <input type="checkbox" id="ma_check_provider_input" name="license_state_provider_input" value="ma_check_provider_input">
+                        <label for="ma_check_provider_input"> Massachusetts</label><br>
 
-                        <input type="checkbox" id="ri-check-providerinput" name="ri-check-providerinput" value="ri-check-providerinput">
-                        <label for="ri-check-providerinput"> Rhode Island</label><br>
+                        <input type="checkbox" id="ri_check_provider_input" name="license_state_provider_input" value="ri_check_provider_input">
+                        <label for="ri_check_provider_input"> Rhode Island</label><br>
 
-                        <input type="checkbox" id="nh-check-providerinput" name="nh-check-providerinput" value="nh-check-providerinput">
-                        <label for="nh-check-providerinput">New Hampshire</label><br>
+                        <input type="checkbox" id="nh_check_provider_input" name="license_state_provider_input" value="nh_check_provider_input">
+                        <label for="nh_check_provider_input">New Hampshire</label><br>
 
-                        <input type="checkbox" id="ct-check-providerinput" name="ct-check-providerinput" value="ct-check-providerinput>
-                        <label for="ct-check">Connecticut</label><br>
+                        <input type="checkbox" id="ct_check_provider_input" name="license_state_provider_input" value="ct_check_provider_input>
+                        <label for="ct_check">Connecticut</label><br>
 
-                        <input type="checkbox" id="ny-check-providerinput" name="ny-check-providerinput" value="ny-check-providerinput">
-                        <label for="ny-check-providerinput"> New York</label><br>
+                        <input type="checkbox" id="ny_check_provider_input" name="license_state_provider_input" value="ny_check_provider_input">
+                        <label for="ny_check_provider_input"> New York</label><br>
 
-                        <input type="checkbox" id="ny-check-providerinput" name="ny-check-providerinput" value="ny-check-providerinput">
-                        <label for="ny-check-providerinput"> Outside of the US</label><br>
+                        <input type="checkbox" id="ny_check_provider_input" name="license_state_provider_input" value="ny_check_provider_input">
+                        <label for="ny_check_provider_input"> Outside of the US</label><br>
 
-                        <input type="checkbox" id="somewhere-else-check-providerinput" name="somewhere-else-check-providerinput" value="somewhere-else-check-providerinput">
-                        <label for="somewhere-else-check-providerinput">Somewhere else within the US</label><br><br>
+                        <input type="checkbox" id="somewhere-else_check_provider_input" name="somewhere-else_check_provider_input" value="somewhere-else_check_provider_input">
+                        <label for="somewhere-else_check_provider_input">Somewhere else within the US</label><br><br>
 
                         
-                        <label for="location-providerinput" class="text1">Location/Neighborhood:</label>
-                        <input type="text" id="location-providerinput" name="location-providerinput">
+                        <label for="location_provider_input" class="text1">Location/Neighborhood:</label>
+                        <input type="text" id="location_provider_input" name="location_provider_input">
 
                     </div>
 
                     
                     <div class="question provider-question">
-                        <label class="text1" for="couples-providerinput">Do you provide couples therapy?</label>
+                        <label class="text1" for="couples_provider_input">Do you provide couples therapy?</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="couples-yes-providerinput" name="couples-providerinput" value="yes">
-                            <input type="radio" id="couples-no-providerinput" name="couples-providerinput" value="no">
+                            <input type="radio" id="couples_yes_provider_input" name="couples_provider_input" value="yes">
+                            <input type="radio" id="couples-no_provider_input" name="couples_provider_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="couples-yes-providerinput">Yes</label>
-                            <label for="couples-no-providerinput">No</label>
+                            <label for="couples_yes_provider_input">Yes</label>
+                            <label for="couples-no_provider_input">No</label>
                         </div>
                     </div>
 
                     <div class="question provider-question">
                         <label class="text1">Do you serve youth?</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="youth-yes-providerinput" name="youth-providerinput" value="yes">
-                            <input type="radio" id="youth-no-providerinput" name="youth-providerinput" value="no">
+                            <input type="radio" id="youth-yes_provider_input" name="youth_provider_input" value="yes">
+                            <input type="radio" id="youth-no_provider_input" name="youth_provider_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="youth-yes-providerinput">Yes</label>
-                            <label for="youth-no-providerinput">No</label>
+                            <label for="youth-yes_provider_input">Yes</label>
+                            <label for="youth-no_provider_input">No</label>
                         </div>
                     </div>
 
                     <div class="question provider-question">
-                        <label for="website-providerinput" class="text1">Your website:</label>
-                        <input type="text" id="website-providerinput" name="website-providerinput">
+                        <label for="website_provider_input" class="text1">Your website:</label>
+                        <input type="text" id="website_provider_input" name="website_provider_input">
                     </div>
 
                     <div class="question provider-question">
-                        <label for="contact-providerinput" class="text1">Your contact info:</label>
-                        <input type="text" id="contact-providerinput" name="contact-providerinput" required>
+                        <label for="contact_provider_input" class="text1">Your contact info:</label>
+                        <input type="text" id="contact_provider_input" name="contact_provider_input" required>
                     </div>
                     
                     
                     <div class="question provider-question">
                         <label class="text1">Do you accept insurance?</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="insurance-yes-providerinput" name="insurance-yn-providerinput" value="yes" required>
-                            <input type="radio" id="insurance-no-providerinput" name="insurance-yn-providerinput" value="no" required>
+                            <input type="radio" id="insurance_yes_provider_input" name="insurance_yn_provider_input" value="yes" required>
+                            <input type="radio" id="insurance-no_provider_input" name="insurance_yn_provider_input" value="no" required>
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="insurance-yes-providerinput">Yes</label>
-                            <label for="insurance-no-providerinput">No</label>
+                            <label for="insurance_yes_provider_input">Yes</label>
+                            <label for="insurance-no_provider_input">No</label>
                         </div>
                     </div>
 
                     <div class="question provider-question">
-                        <label for="insurance-providerinput" class="text1">Which insurance(s)?</label>
-                        <textarea id="insurance-providerinput" name="insurance-providerinput" class="center-me" rows="6" cols="50">Enter as many as you like; please be specific.
+                        <label for="which_insurance_provider_input" class="text1">Which insurance(s)?</label>
+                        <textarea id="which_insurance_provider_input" name="which_insurance_provider_input" class="center-me" rows="6" cols="50">Enter as many as you like; please be specific.
                         </textarea>
                         <!-- change to check boxes later -->
                     </div>
@@ -532,31 +533,31 @@
                     <div class="question provider-question">
                         <label class="text1">Do you accept Masshealth?</label>
                         <div class="radio-yn-div">
-                            <input type="radio" id="masshealth-yes-providerinput" name="masshealth-providerinput" value="yes" required>
-                            <input type="radio" id="masshealth-no-providerinput" name="masshealth-providerinput" value="no">
+                            <input type="radio" id="masshealth_yes_provider_input" name="masshealth_provider_input" value="yes" required>
+                            <input type="radio" id="masshealth_no_provider_input" name="masshealth_provider_input" value="no">
                         </div>
                         <div class=radio-yn-label-div>
-                            <label for="masshealth-yes-providerinput" >Yes</label>
-                            <label for="masshealth-no-providerinput">No</label>
+                            <label for="masshealth_yes_provider_input" >Yes</label>
+                            <label for="masshealth_no_provider_input">No</label>
                         </div>
                     </div>
 
                     <div class="question provider-question">
-                        <label for="cost-providerinput" class="text1">What is the average cost per session for someone unable to use insurance?</label>
-                        <input type="text" id="cost-providerinput" name="cost-providerinput" required>
+                        <label for="cost_provider_input" class="text1">What is the average cost per session for someone unable to use insurance?</label>
+                        <input type="text" id="cost_provider_input" name="cost_provider_input" required>
                     </div>
 
                     <div class="question provider-question">
-                        <label for="access-providerinput" class="text1">Please share any accessibility info about your location if you provide in-person services: Stairs, scents, gender inclusive bathrooms, etc.</label>
-                        <textarea id="access-providerinput" name="access-providerinput" class="center-me" rows="6" cols="50" required>
+                        <label for="access_provider_input" class="text1">Please share any accessibility info about your location if you provide in-person services: Stairs, scents, gender inclusive bathrooms, etc.</label>
+                        <textarea id="access_provider_input" name="access_provider_input" class="center-me" rows="6" cols="50" required>
                         </textarea>
                     </div>
 
 
                     <div class="question provider-question">
 
-                            <label for="comments-providerinput" class="text1">Comments</label>
-                            <textarea id="comments-providerinput" name="comments-providerinput" class="center-me" rows="8" cols="50" required>Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. 
+                            <label for="comments_provider_input" class="text1">Comments</label>
+                            <textarea id="comments_provider_input" name="comments_provider_input" class="center-me" rows="8" cols="50" required>Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. 
                 
                             </textarea> 
                     </div>
