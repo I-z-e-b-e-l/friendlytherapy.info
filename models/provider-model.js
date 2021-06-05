@@ -8,8 +8,8 @@ const providerSchema = new Schema ({
         minLength: [4, 'Minimum length for a provider\'s first and last name is 4 characters.']
     },
     practice: {
-        type: String,
-        minLength: [3, 'Minimum length for provider\'s institution or practice is 3 characters.']
+        type: String
+        // minLength: [3, 'Minimum length for provider\'s institution or practice is 3 characters.']
     },
 
     providerType: {

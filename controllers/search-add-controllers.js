@@ -14,7 +14,7 @@ module.exports = {
         // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input[]"]');
         // name="interests[]"
         // console.log(licenseStateCheckboxes)
-        console.log("Tell me this is working!")
+        console.log("This much is working!")
         //loop through and store all of the checked inputs
 
         const newProvider = new Providers ({
@@ -22,7 +22,8 @@ module.exports = {
             practice: request.body.practice_client_input,
             providerType: request.body.provider_type_client_input,
             teletherapy: request.body.teletherapy_client_input,
-            licenseState: license_state_client_input,
+            // licenseState: license_state_client_input,
+            licenseState: request.body.license_state_client_input,
             location: request.body.location_client_input,
             queerRating: request.body.queer_rating,
             transRating: request.body.trans_rating,
@@ -44,7 +45,7 @@ module.exports = {
             comments: request.body.comments_client_input,
         });
         newProvider.save();
-        response.redirect('/thank-you');
+        response.redirect('/search-add/thank-you');
     },
 
 
