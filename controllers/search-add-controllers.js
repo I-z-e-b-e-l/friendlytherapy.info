@@ -14,10 +14,9 @@ module.exports = {
         // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input[]"]');
         // name="interests[]"
         // console.log(licenseStateCheckboxes)
-        console.log("This much is working!")
         //loop through and store all of the checked inputs
 
-        const newProvider = new Providers ({
+        let newProvider = new Providers ({
             name: request.body.name_client_input,
             practice: request.body.practice_client_input,
             providerType: request.body.provider_type_client_input,
@@ -59,7 +58,7 @@ add_a_provider_provider_input_post: (request, response ) => {
 
     //loop through and store all of the checked inputs
 
-    const newProvider = new Provider ({
+    let newProvider = new Providers.add_a_provider_provider_input_post ({
         name: request.body.name_provider_input,
         pronouns: request.body.pronouns_provider_input,
         practice: request.body.practice_provider_input,

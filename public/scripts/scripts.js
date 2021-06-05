@@ -83,7 +83,7 @@ function displayThankYouResource(){
 function displayClientForm() {
     document.querySelector('.client-add-provider').classList.add('show-me-resource');
     document.querySelector('#provider-display-button').style.display = "none";
-    document.querySelector('.add-provider-submit').style.display = "block";
+    // document.querySelector('.add-provider-submit').style.display = "block";
     document.querySelector('#who-button-horizontal').classList.remove('button-align');
     document.querySelector('.spacer2').style.display = "none";
     document.querySelector('#who-button-horizontal').classList.add('center-me');
@@ -92,7 +92,7 @@ function displayClientForm() {
 function displayProviderForm() {
     document.querySelector('.provider-add-provider').classList.add('show-me-resource');
     document.querySelector('#client-display-button').style.display = "none";
-    document.querySelector('.add-provider-submit').style.display = "block";
+    // document.querySelector('.add-provider-submit').style.display = "block";
     document.querySelector('#who-button-horizontal').classList.remove('button-align');
     document.querySelector('#who-button-horizontal').classList.add('center-me');
 }
