@@ -113,8 +113,8 @@ function displayProviderForm() {
 
 // display rating options when identity is clicked
 
-let checkBoxQueer = document.getElementById("queer-check");
-let queerRating = document.getElementById("queer-rating");
+let checkBoxQueer = document.getElementById("queer_check");
+let queerRating = document.getElementById("queer_rating");
 
 function showQueerRating() {
     
@@ -125,8 +125,8 @@ function showQueerRating() {
     }
 }
 
-let checkBoxTrans = document.getElementById("trans-check");
-let transRating = document.getElementById("trans-rating");
+let checkBoxTrans = document.getElementById("trans_check");
+let transRating = document.getElementById("trans_rating");
 
 function showTransRating() {
     if (checkBoxTrans.checked == true){
@@ -136,8 +136,8 @@ function showTransRating() {
     }
 }
 
-let checkBoxPoly = document.getElementById("nonmono-check");
-let polyRating = document.getElementById("poly-rating");
+let checkBoxPoly = document.getElementById("nonmono_check");
+let polyRating = document.getElementById("poly_rating");
 function showPolyRating() {
     if (checkBoxPoly.checked == true){
         polyRating.style.display = "block";
@@ -146,8 +146,8 @@ function showPolyRating() {
     }
   }
 
-let checkBoxKink = document.getElementById("kink-check");
-let kinkRating = document.getElementById("kink-rating");  
+let checkBoxKink = document.getElementById("kink_check");
+let kinkRating = document.getElementById("kink_rating");  
 function showKinkRating() {
     if (checkBoxKink.checked == true){
         kinkRating.style.display = "block";
@@ -157,8 +157,8 @@ function showKinkRating() {
 
 }
 
-let checkBoxSW = document.getElementById("sw-check");
-let SWRating = document.getElementById("sw-rating");
+let checkBoxSW = document.getElementById("sw_check");
+let SWRating = document.getElementById("sw_rating");
 function showSWRating() {
     if (checkBoxSW.checked == true){
         SWRating.style.display = "block";
@@ -167,8 +167,8 @@ function showSWRating() {
     }
 }
 
-let checkBoxBIPOC = document.getElementById("bipoc-check");
-let bipocRating = document.getElementById("bipoc-rating");
+let checkBoxBIPOC = document.getElementById("bipoc_check");
+let bipocRating = document.getElementById("bipoc_rating");
 function showBIPOCRating() {
     if (checkBoxBIPOC.checked == true){
         bipocRating.style.display = "block";
@@ -177,7 +177,7 @@ function showBIPOCRating() {
     }
 }
 
-let additionalRating = document.getElementById("additional-rating");
+let additionalRating = document.getElementById("additional_rating");
 
 function showAdditionalRating() {
     if ((checkBoxQueer.checked == true) || (checkBoxTrans.checked == true) || (checkBoxPoly.checked == true)  (checkBoxKink.checked == true) ||  (checkBoxSW.checked == true) ||  (checkBoxBIPOC.checked == true)){
@@ -190,3 +190,29 @@ function showAdditionalRating() {
 function displayThankYouAdd(){
     document.querySelector('.thank-you-add').style.display = "block";
 }
+
+
+
+// manage checkboxes
+
+    //name = license_state_client_input
+
+let license_state_client_input_array = []
+let license_state_client_input_checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+for (let i = 0; i < license_state_client_input_checkboxes.length; i++) {
+    license_state_client_input_array.push(license_state_client_input_checkboxes[i].value)
+}
+
+
+    //a variable that will hold the index number of the selected radio button
+    var theone
+for (i=0;i<document.tv.station.length;i++){
+if (document.tv.station[i].checked==true){
+theone=i
+break //exist for loop, as target acquired.
+}
+}
+
+
+

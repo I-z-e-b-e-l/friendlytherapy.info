@@ -24,7 +24,8 @@ router.route('/update')
 router.route('/update/:id')
     .get(adminController.update)
 
-
+    router.route('/nope')
+    .get(adminController.nope)
 
 
 module.exports = router;

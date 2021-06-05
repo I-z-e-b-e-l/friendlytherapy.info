@@ -4,13 +4,16 @@ const router = express.Router();
 
 const searchAddController = require('../controllers/search-add-controllers');
 
-// router.route('/')
-//     .get(searchAddController.name_of_function)
-
 router.route('/add-a-provider')
     .get(searchAddController.add_a_provider)
-    // .post(searchAddController.add_a_provider_client_input_post)
-    // .post(searchAddController.add_a_provider_post_provider_input_post)
+
+// router.route('/add-a-provider-client-input')
+//     .post(searchAddController.add_a_provider_client_input_post)
+
+router.post('/add-a-provider-client-input', searchAddController.add_a_provider_client_input_post)
+
+router.route('/add-a-provider-provider-input')
+    .post(searchAddController.add_a_provider_provider_input_post)
 
 router.route('/find-a-therapist-search')
     .get(searchAddController.find_a_provider)

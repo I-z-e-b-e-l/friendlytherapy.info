@@ -16,6 +16,14 @@ const providerSchema = new Schema ({
         type: String,
         minLength: [4, 'Minimum length for provider type is 4 characters.']
     },
+
+    pronouns: {
+        type: String
+    },
+
+    licensure: {
+        type: String
+    },
     
     acceptingClients: {
         type: String
@@ -120,6 +128,10 @@ const providerSchema = new Schema ({
     commentsAdmin: {
         type: String
     },
+
+    lastUpdate: {
+        type: String
+    }
 
 })
 

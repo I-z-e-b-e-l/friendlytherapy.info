@@ -7,16 +7,22 @@ module.exports = {
         response.render('pages/add-a-provider');
     },
 
-    // make one of these for each form
 
     // this is the post for the client form
     add_a_provider_client_input_post: (request, response ) => {
-        const newProvider = new Provider ({
+
+        // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input[]"]');
+        // name="interests[]"
+        // console.log(licenseStateCheckboxes)
+        console.log("Tell me this is working!")
+        //loop through and store all of the checked inputs
+
+        const newProvider = new Providers ({
             name: request.body.name_client_input,
             practice: request.body.practice_client_input,
             providerType: request.body.provider_type_client_input,
             teletherapy: request.body.teletherapy_client_input,
-            licenseState: request.body.license_state_client_input,
+            licenseState: license_state_client_input,
             location: request.body.location_client_input,
             queerRating: request.body.queer_rating,
             transRating: request.body.trans_rating,
@@ -36,18 +42,25 @@ module.exports = {
             cost: request.body.cost_client_input,
             accessibility: request.body.access_client_input,
             comments: request.body.comments_client_input,
-            // commentsAdmin: request.body.,
         });
         newProvider.save();
         response.redirect('/thank-you');
     },
-    
-    //fix routes
+
+
 
 // this is the post for the provider form
 add_a_provider_provider_input_post: (request, response ) => {
+
+    // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input[]"]');
+    // name="interests[]"
+    // console.log(licenseStateCheckboxes)
+
+    //loop through and store all of the checked inputs
+
     const newProvider = new Provider ({
         name: request.body.name_provider_input,
+        pronouns: request.body.pronouns_provider_input,
         practice: request.body.practice_provider_input,
         providerType: request.body.provider_type_provider_input,
         teletherapy: request.body.teletherapy_provider_input,
@@ -63,7 +76,6 @@ add_a_provider_provider_input_post: (request, response ) => {
         cost: request.body.cost_provider_input,
         accessibility: request.body.access_provider_input,
         comments: request.body.comments_provider_input,
-        // commentsAdmin: request.body.,
     });
     newProvider.save();
     response.redirect('/thank-you');
@@ -104,6 +116,6 @@ add_a_provider_provider_input_post: (request, response ) => {
 
     thank_you: (request, response) => {
         response.render('pages/thank-you');
-    },
+    }
 
 }

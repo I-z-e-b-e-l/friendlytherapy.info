@@ -594,7 +594,7 @@ input[type=checkbox] {
 }
 
 
-#poly-rating, #queer-rating, #trans-rating, #kink-rating, #sw-rating, #bipoc-rating, #additional-rating {
+#poly_rating, #queer_rating, #trans_rating, #kink_rating, #sw_rating, #bipoc_rating, #additional_rating {
     display: none;
 }
 

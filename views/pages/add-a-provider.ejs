@@ -34,7 +34,7 @@
 
             <div class="spacer2"></div>
 
-            <form class="add-provider-form" id="client-add-provider-form">
+            <form class="add-provider-form" id="client-add-provider-form" method="post" action="/add-a-provider-client-input">
 
                 <div class="client-add-provider">
                     <p>This form is intended to collect information anonymously from GSM therapy clients and empower us to make better-informed decisions about our mental health care. 
@@ -76,13 +76,13 @@
                     </div>
 
                     <div class="question client-question">
-                        <label for="practice_client_input" class="text1">Institution / Private Practice:</label>
+                        <label for="practice_client_input" class="text1">Institution / Private Practice Name:</label>
                         <input type="text" id="practice_client_input" name="practice_client_input">
                     </div>
 
                     <div class="question client-question">
                         <label for="provider_type_client_input" class="text1">What kind of mental health provider are they?</label>
-            <!-- change to checkbox -->
+            <!-- change to checkbox or radio? -->
                         <input type="text" id="provider_type_client_input" name="provider_type_client_input" placeholder="therapist? psychiatrist?">
                     </div>
 
@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="question client-question">
-
+<!-- change name back? b/c checkbox? -->
                         <label for="license_state_client_input" class="text1">Where does this provider practice / Where is this provider licensed?</label>
                         <p>
                             (This information is important because practicing/licensing across state lines is very tricky. You can usually assume that if a licensed therapist is seeing you, they are licensed in your state.)   
@@ -292,17 +292,15 @@
                         <!-- do this differently? -->
                         <!-- inset text field? radial buttons with stylngs?  -->
                         <label for="additional_rating_info" class="text1">
-                            Rating for friendliness to additional sub-cultures, identidies, communities, trauma, types of neurodivisty, etc
+                            Rating for friendliness to additional sub-cultures, identities, communities, trauma, types of neurodivisty, etc
                         </label>
-                        <textarea id="additional_rating_info" class="center-me" name="additional_rating_info" rows="8" cols="50">Enter as many as you like with a number 0-3, separated by a comma
-                        </textarea>
+                        <textarea id="additional_rating_info" class="center-me" name="additional_rating_info" rows="8" cols="50" placeholder="Enter as many as you like with a number 0-3, separated by a comma"></textarea>
                     </div>
 
                     <div class="question client-question">
 
                         <label for="comments_community_client_input" class="text1">Comments:</label>
-                        <textarea id="comments_community_client_input" name="comments_community_client_input" class="center-me" rows="8" cols="50">What should folks who are queer/trans/poly/kinky/swers know about working with this provider?
-                        </textarea> 
+                        <textarea id="comments_community_client_input" name="comments_community_client_input" class="center-me" rows="8" cols="50" placeholder="What should folks who are queer/trans/poly/kinky/swers know about working with this provider?"></textarea> 
 
                     </div>
 
@@ -355,8 +353,7 @@
 
                     <div class="question client-question">
                         <label for="which_insurance_client_input" class="text1">Which insurance(s) do they accept?</label>
-                        <textarea id="which_insurance_client_input" name="which_insurance_client_input" class="center-me" rows="6" cols="50">Enter as many as you like. If unknown, just leave this blank.
-                        </textarea>
+                        <textarea id="which_insurance_client_input" name="which_insurance_client_input" class="center-me" rows="6" cols="50" placeholder="Enter as many as you like. If unknown, just leave this blank."></textarea>
                     </div>
 
 
@@ -374,21 +371,19 @@
 
                     <div class="question client-question">
                         <label for="cost_client_input" class="text1">If you do not use insurance to pay for therapy, what is the cost per session? (If you are able to use insurance, skip this.)</label>
-                        <input type="text" id="cost_client_input" name="cost_client_input">
+                        <input type="text" id="cost_client_input" name="cost_client_input" placeholder="$">
                     </div>
 
                     <div class="question client-question">
                         <label for="access_client_input" class="text1">Can you share any accessibility info about their location?</label>
-                        <textarea id="access_client_input" name="access_client_input" class="center-me" rows="6" cols="50">Stairs, scents, gender inclusive bathrooms, etc. If unknown or n/a, just leave this blank
-                        </textarea>
+                        <textarea id="access_client_input" name="access_client_input" class="center-me" rows="6" cols="50" placeholder="Stairs, scents, gender inclusive bathrooms, etc. If unknown or n/a, just leave this blank"></textarea>
                     </div>
 
 
                     <div class="question client-question">
 
                             <label for="comments_client_input" class="text1">Comments:</label>
-                            <textarea id="comments_client_input" name="comments_client_input" class="center-me" rows="8" cols="50">Anthing others might find useful to know?
-                            </textarea> 
+                            <textarea id="comments_client_input" name="comments_client_input" class="center-me" rows="8" cols="50" placeholder="Anything others might find useful to know?"></textarea> 
 
                     </div>
 
@@ -398,7 +393,7 @@
             <!-- end client add form -->
 
             <!-- provider add provider form -->
-            <form class="add-provider-form" id="provider-add-provider-form"></form>
+            <form class="add-provider-form" id="provider-add-provider-form" method="post" action="/add-a-provider-provider-input">
 
 
                 
@@ -417,7 +412,13 @@
                         <label for="name_provider_input" class="text1">Your name:</label>
                         <input type="text" id="name_provider_input" name="name_provider_input" required>
                     </div>
-<!-- change to check box -->
+
+                    <div class="question provider-question">
+                        <label for="pronouns_provider_input" class="text1">Your pronouns:</label>
+                        <input type="text" id="pronouns_provider_input" name="pronouns_provider_input" required>
+                    </div>
+
+<!-- change to check box? -->
                     <div class="question provider-question">
                         <label for="provider_type_provider_input" class="text1">What kind of mental health provider are you?</label>
                         <input type="text" id="provider_type_provider_input" name="provider_type_provider_input" placeholder="therapist? psychiatrist?" required>
@@ -425,7 +426,7 @@
                     </div>
 
                     <div class="question provider-question">
-                        <label for="practice_provider_input" class="text1">Institution / Private Practice:</label>
+                        <label for="practice_provider_input" class="text1">Institution / Private Practice Name:</label>
                         <input type="text" id="practice_provider_input" name="practice_provider_input" required> 
                     </div>
 
@@ -524,8 +525,7 @@
 
                     <div class="question provider-question">
                         <label for="which_insurance_provider_input" class="text1">Which insurance(s)?</label>
-                        <textarea id="which_insurance_provider_input" name="which_insurance_provider_input" class="center-me" rows="6" cols="50">Enter as many as you like; please be specific.
-                        </textarea>
+                        <textarea id="which_insurance_provider_input" name="which_insurance_provider_input" class="center-me" rows="6" cols="50" pleaceholder="Enter as many as you like; please be specific."></textarea>
                         <!-- change to check boxes later -->
                     </div>
 
@@ -549,17 +549,14 @@
 
                     <div class="question provider-question">
                         <label for="access_provider_input" class="text1">Please share any accessibility info about your location if you provide in-person services: Stairs, scents, gender inclusive bathrooms, etc.</label>
-                        <textarea id="access_provider_input" name="access_provider_input" class="center-me" rows="6" cols="50" required>
-                        </textarea>
+                        <textarea id="access_provider_input" name="access_provider_input" class="center-me" rows="6" cols="50" required></textarea>
                     </div>
 
 
                     <div class="question provider-question">
 
                             <label for="comments_provider_input" class="text1">Comments</label>
-                            <textarea id="comments_provider_input" name="comments_provider_input" class="center-me" rows="8" cols="50" required>Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. 
-                
-                            </textarea> 
+                            <textarea id="comments_provider_input" name="comments_provider_input" class="center-me" rows="8" cols="50" required placeholder="Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. "></textarea> 
                     </div>
  
                 <!--end provider section -->
@@ -567,7 +564,7 @@
 
 
                 <div class="center-me">
-                    <input type="submit" value="Submit" id="add-provider-submit" class="add-provider-submit" onclick="displayThankYouAdd()">
+                    <input type="submit" value="Submit" id="add-provider-submit" class="add-provider-submit">
                 </div>
 
                 <div class="thank-you-add">

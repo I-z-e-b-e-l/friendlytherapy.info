@@ -37,6 +37,7 @@ module.exports = {
       User.findOne({username: username}, (error, foundUser) => {
         if (error) {
           console.log(`The error at login is: ${error}`);
+          response.redirect('/nope');  
         } else {
           if(foundUser) {
             console.log(`Username was matched: ${foundUser.username}`);
@@ -78,7 +79,7 @@ module.exports = {
     //admin access to update a listing
     update: (request, response) => {
         response.render('pages/update');
-        }
+        },
 
     // update: (request, response) => {
     //     const { id } = request.params;
@@ -89,6 +90,10 @@ module.exports = {
     //             response.render('pages/update', { Provider: foundProvider });
     //         }
     //     })
-    // }
+    // },
+
+    nope: (request, response) => {
+      response.render('pages/nope');
+  }
 
 }
