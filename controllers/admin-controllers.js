@@ -65,6 +65,7 @@ module.exports = {
 
         
     admin: (request, response) => {
+      if (request.isAuthenticated()) {
         Providers.find({}, (error, allProviders) => {
             if (error) {
                 return error;
@@ -73,7 +74,10 @@ module.exports = {
                 response.render("pages/admin", {providers: allProviders, user: request.user});
             }
         })
-
+      } else {
+        console.log("the request is not authenticated")
+        response.redirect('/login');
+      }
     },
 
     nope: (request, response) => {

@@ -8,14 +8,16 @@
     </div>
 </div>
 
-<div class="spacer1"></div>
+<div class="spacer2"></div>
 
 <!-- <div class=center-me> -->
     <div class="update-container">
         <% if (user) { %>
-        <p>Welcome, <%= user.username %></p>
+        <p>You are logged in as:<br> 
+            <%= user.username %> </p>
         <% } %>
-        
+
+<!-- <div class="spacer2"></div>  -->
 
         <table class="admin-table">
             <thead>
