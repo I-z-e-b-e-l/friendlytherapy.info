@@ -122,7 +122,6 @@ module.exports = {
           if (error) {
               return error;
           } else {
-              console.log("It's the redirect that's not working")
               response.redirect('/admin');
           }
       })
@@ -131,11 +130,11 @@ module.exports = {
 
   delete_provider: (request, response) => {
     const {id} = request.params;
-    Comics.deleteOne({_id: id}, (error) => {
+    Providers.deleteOne({_id: id}, (error) => {
         if (error) {
             return error;
         } else {
-            response.redirect('pages/admin')
+            response.redirect('/admin')
         }
     })
 }
