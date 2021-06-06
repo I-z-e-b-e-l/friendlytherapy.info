@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=put" method="POST">
+    <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=put" method="post">
     
 
         <div class="question update-question">
@@ -18,7 +18,7 @@
 
         <div class="question update-question">
             <label for="pronouns_update" class="text1">Provider's pronouns:</label>
-            <input type="text" id="pronouns_update" name="name_update" value="<%= Provider.pronouns %>">
+            <input type="text" id="pronouns_update" name="pronouns_update" value="<%= Provider.pronouns %>">
         </div>
 
         <div class="question update-question">

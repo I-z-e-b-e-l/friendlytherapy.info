@@ -122,7 +122,8 @@ module.exports = {
           if (error) {
               return error;
           } else {
-              response.redirect('pages/admin');
+              console.log("It's the redirect that's not working")
+              response.redirect('/admin');
           }
       })
   },
