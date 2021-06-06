@@ -6,6 +6,10 @@ const morgan = require('morgan');
 // const transporter = nodemailer.createTransport(transport[, defaults]);
 // const nodemailer = require('nodemailer');
 
+
+const session = require('express-session');
+const passport = require('passport');
+
 const methodOverride = require('method-override');
 
 require('./config/connection');
@@ -20,6 +24,14 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: false
+  }))
+  
+  app.use(passport.initialize());
+  app.use(passport.session());
 
 // next stop: index routes
 const routes = require('./routes/index-routes');

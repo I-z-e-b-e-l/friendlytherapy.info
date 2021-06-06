@@ -12,6 +12,10 @@
 
 <!-- <div class=center-me> -->
     <div class="update-container">
+        <% if (user) { %>
+        <p>Welcome, <%= user.username %></p>
+        <% } %>
+        
 
         <table class="admin-table">
             <thead>
@@ -29,6 +33,10 @@
             <% }) %>
 
         </table>
+
+        <div class="center-me">
+            <button value="logout" class="logout-button">Logout</button>
+        </div>
 
     </div>
 <!-- </div> -->

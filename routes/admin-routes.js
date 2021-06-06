@@ -17,6 +17,9 @@ router.route('/login')
     .get(adminController.login)
     .post(adminController.login_post)
 
+router.route('/logout')
+    .get(adminController.logout)
+
 // router.route('/update')
 //     .get(adminController.update)
 
@@ -25,6 +28,8 @@ router.route('/update/:id')
     .get(adminController.update)
     .put(adminController.update_provider)
     .delete(adminController.delete_provider)
+
+
 
 
 

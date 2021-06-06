@@ -1,6 +1,12 @@
 const { response } = require('express');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 const Providers = require ('../models/provider-model')
+const User = require ('../models/user-model')
+
+
 
 module.exports = {
 
@@ -10,51 +16,85 @@ module.exports = {
 },
 
 //process the registration data
+//   register_post:(request, response) => {
+//     console.log("the eagle has landed")
+//     bcrypt.hash(request.body.password, saltRounds, function(error, hash) {
+//       const newUser = new User({
+//         username: request.body.username,
+//         password: hash
+//       });
+//       newUser.save();
+//       console.log(`The hash value being saved is: ${hash}`);
+//       response.redirect('/admin/login');
+//   });
+// },
+
   register_post:(request, response) => {
-    bcrypt.hash(request.body.password, saltRounds, function(error, hash) {
-      const newUser = new User({
-        username: request.body.username,
-        password: hash
-      });
-      newUser.save();
-      console.log(`The hash value being saved is: ${hash}`);
-      response.redirect('/login');
-  });
-},
+    User.register({username: request.body.username}, request.body.password, (error, user) => {
+      if (error) {
+        console.log(error);
+        response.redirect('/register');
+      } else {
+        passport.authenticate('local')(request, response, () => {
+          response.redirect('/');
+        });
+      }
+    });
+  },
 
-
-
-//display the login page
-    login: (request, response) => {
+  login: (request, response) => {
       response.render('pages/login');
   },
 
-//execute logging in
+  // login_post: (request, response) => {
+  //     console.log("the eagle has landed on login-post")
+  //     const username = request.body.username;
+  //     const password = request.body.password;
+  //     console.log(`password entered is: ${password}`);
+  //     User.findOne({username: username}, (error, foundUser) => {
+  //       if (error) {
+  //         console.log(`The error at login is: ${error}`);
+  //         response.redirect('/nope');  
+  //       } else {
+  //         if(foundUser) {
+  //           //delete console logs later
+  //           console.log(`Username was matched: ${foundUser.username}`);
+  //           console.log(`Their password is: ${foundUser.password}`);
+
+  //           bcrypt.compare(password, foundUser.password, function(error, result) {
+
+  //           if (result === true) {
+  //             console.log(`user ${foundUser.username} logged in`);
+  //             response.redirect('/admin');              
+  //           }
+  //         }); 
+  //         };
+  //       };
+  //    });
+  //   },
+
   login_post: (request, response) => {
-      const username = request.body.username;
-      const password = request.body.password;
-      console.log(`password entered is: ${password}`);
-      User.findOne({username: username}, (error, foundUser) => {
-        if (error) {
-          console.log(`The error at login is: ${error}`);
-          response.redirect('/nope');  
-        } else {
-          if(foundUser) {
-            console.log(`Username was matched: ${foundUser.username}`);
-            console.log(`Their password is: ${foundUser.password}`);
+    const user = new User({
+      username: request.body.username,
+      password: request.body.password
+    });
+  
+    request.login(user, (error) => {
+      if (error) {
+        return error;
+      } else {
+        passport.authenticate('local')(request, response, () => {
+          response.redirect('/');
+        });
+      }
+    });
+  },
 
-            bcrypt.compare(password, foundUser.password, function(error, result) {
-            // result == true
-            if (result === true) {
-              console.log(`user ${foundUser.username} logged in`);
-              response.redirect('/admin');              
-            }
-          }); 
-          };
-        };
-     });
-    },
 
+  logout:(request, response) => {
+    request.logout();
+    response.redirect('/login');
+  },
 
 
 
@@ -63,15 +103,18 @@ module.exports = {
     //     response.render('pages/admin');
     // },
 
+
+        
     admin: (request, response) => {
         Providers.find({}, (error, allProviders) => {
             if (error) {
                 return error;
             } else {
-                console.log(allProviders)
-                response.render("pages/admin", {providers: allProviders});
+                // console.log(allProviders)
+                response.render("pages/admin", {providers: allProviders, user: request.user});
             }
         })
+
     },
 
     nope: (request, response) => {
@@ -84,7 +127,19 @@ module.exports = {
     //     response.render('pages/update');
     //     },
 
+    // update: (request, response) => {
+    //     const { id } = request.params;
+    //     Providers.findOne({_id: id}, (error, foundProvider) => {
+    //         if (error) {
+    //             return error;
+    //         } else {
+    //             response.render('pages/update', { Provider: foundProvider });
+    //         }
+    //     })
+    // },
+
     update: (request, response) => {
+      if (request.isAuthenticated()) {
         const { id } = request.params;
         Providers.findOne({_id: id}, (error, foundProvider) => {
             if (error) {
@@ -93,10 +148,15 @@ module.exports = {
                 response.render('pages/update', { Provider: foundProvider });
             }
         })
+      } {
+        response.redirect('/nope')
+      } 
     },
 
     update_provider: (request, response) => {
       console.log("The eagle has landed");
+      if (request.isAuthenticated()) {
+        console.log("The eagle is authenticated");
       const {id} = request.params;
 
       Providers.findByIdAndUpdate({_id: id}, {$set: {
@@ -125,6 +185,9 @@ module.exports = {
               response.redirect('/admin');
           }
       })
+    } else {
+      response.redirect('/nope')
+    }
   },
 
 
