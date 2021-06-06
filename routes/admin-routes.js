@@ -29,7 +29,8 @@ router.route('/update/:id')
     .put(adminController.update_provider)
     .delete(adminController.delete_provider)
 
-
+router.route('/nope')
+    .get(adminController.nope)
 
 
 

@@ -6,7 +6,7 @@ const saltRounds = 10;
 const Providers = require ('../models/provider-model')
 const User = require ('../models/user-model')
 
-
+const passport = require('passport');
 
 module.exports = {
 
@@ -15,20 +15,6 @@ module.exports = {
     response.render('pages/register');
 },
 
-//process the registration data
-//   register_post:(request, response) => {
-//     console.log("the eagle has landed")
-//     bcrypt.hash(request.body.password, saltRounds, function(error, hash) {
-//       const newUser = new User({
-//         username: request.body.username,
-//         password: hash
-//       });
-//       newUser.save();
-//       console.log(`The hash value being saved is: ${hash}`);
-//       response.redirect('/admin/login');
-//   });
-// },
-
   register_post:(request, response) => {
     User.register({username: request.body.username}, request.body.password, (error, user) => {
       if (error) {
@@ -36,7 +22,7 @@ module.exports = {
         response.redirect('/register');
       } else {
         passport.authenticate('local')(request, response, () => {
-          response.redirect('/');
+          response.redirect('/admin/login');
         });
       }
     });
@@ -45,33 +31,6 @@ module.exports = {
   login: (request, response) => {
       response.render('pages/login');
   },
-
-  // login_post: (request, response) => {
-  //     console.log("the eagle has landed on login-post")
-  //     const username = request.body.username;
-  //     const password = request.body.password;
-  //     console.log(`password entered is: ${password}`);
-  //     User.findOne({username: username}, (error, foundUser) => {
-  //       if (error) {
-  //         console.log(`The error at login is: ${error}`);
-  //         response.redirect('/nope');  
-  //       } else {
-  //         if(foundUser) {
-  //           //delete console logs later
-  //           console.log(`Username was matched: ${foundUser.username}`);
-  //           console.log(`Their password is: ${foundUser.password}`);
-
-  //           bcrypt.compare(password, foundUser.password, function(error, result) {
-
-  //           if (result === true) {
-  //             console.log(`user ${foundUser.username} logged in`);
-  //             response.redirect('/admin');              
-  //           }
-  //         }); 
-  //         };
-  //       };
-  //    });
-  //   },
 
   login_post: (request, response) => {
     const user = new User({
@@ -84,7 +43,7 @@ module.exports = {
         return error;
       } else {
         passport.authenticate('local')(request, response, () => {
-          response.redirect('/');
+          response.redirect('/admin');
         });
       }
     });
@@ -149,7 +108,7 @@ module.exports = {
             }
         })
       } {
-        response.redirect('/nope')
+        response.redirect('/admin/nope')
       } 
     },
 
@@ -186,7 +145,7 @@ module.exports = {
           }
       })
     } else {
-      response.redirect('/nope')
+      response.redirect('/admin/nope')
     }
   },
 

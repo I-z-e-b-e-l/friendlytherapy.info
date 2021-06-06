@@ -197,22 +197,22 @@ function displayThankYouAdd(){
 
     //name = license_state_client_input
 
-let license_state_client_input_array = []
-let license_state_client_input_checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+// let license_state_client_input_array = []
+// let license_state_client_input_checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
 
-for (let i = 0; i < license_state_client_input_checkboxes.length; i++) {
-    license_state_client_input_array.push(license_state_client_input_checkboxes[i].value)
-}
+// for (let i = 0; i < license_state_client_input_checkboxes.length; i++) {
+//     license_state_client_input_array.push(license_state_client_input_checkboxes[i].value)
+// }
 
 
     //a variable that will hold the index number of the selected radio button
-    var theone
-for (i=0;i<document.tv.station.length;i++){
-if (document.tv.station[i].checked==true){
-theone=i
-break //exist for loop, as target acquired.
-}
-}
+    // var theone
+// for (i=0;i<document.tv.station.length;i++){
+// if (document.tv.station[i].checked==true){
+// theone=i
+//break //exist for loop, as target acquired.
+//}
+//}
 
 
 
