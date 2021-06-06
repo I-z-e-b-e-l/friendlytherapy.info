@@ -17,12 +17,30 @@ router.route('/login')
     .get(adminController.login)
     .post(adminController.login_post)
 
-router.route('/update')
-    .get(adminController.update)
+// router.route('/update')
+//     .get(adminController.update)
 
 //pre-populate form by grabbing info on therapist from database
 router.route('/update/:id')
     .get(adminController.update)
+    .put(adminController.update_provider)
+    .delete(adminController.delete_provider)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     router.route('/nope')
     .get(adminController.nope)

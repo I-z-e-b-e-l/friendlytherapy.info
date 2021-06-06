@@ -74,26 +74,83 @@ module.exports = {
         })
     },
 
+    nope: (request, response) => {
+      response.render('pages/nope');
+    },
 
 
     //admin access to update a listing
-    update: (request, response) => {
-        response.render('pages/update');
-        },
-
     // update: (request, response) => {
-    //     const { id } = request.params;
-    //     Providers.findOne({_id: id}, (error, foundProvider) => {
-    //         if (error) {
-    //             return error;
-    //         } else {
-    //             response.render('pages/update', { Provider: foundProvider });
-    //         }
-    //     })
-    // },
+    //     response.render('pages/update');
+    //     },
 
-    nope: (request, response) => {
-      response.render('pages/nope');
-  }
+    update: (request, response) => {
+        const { id } = request.params;
+        Providers.findOne({_id: id}, (error, foundProvider) => {
+            if (error) {
+                return error;
+            } else {
+                response.render('pages/update', { Provider: foundProvider });
+            }
+        })
+    },
+
+    update_provider: (request, response) => {
+      console.log("The eagle has landed");
+      const {id} = request.params;
+
+      Providers.findByIdAndUpdate({_id: id}, {$set: {
+        name: request.body.name_update,
+        pronouns: request.body.pronouns_update,
+        practice: request.body.practice_update,
+        providerType: request.body.provider_type_update,
+        teletherapy: request.body.teletherapy_update,
+        licenseState: request.body.license_state_update,
+        location: request.body.location_update,
+        couplesTherapy: request.body.couples_update,
+        youthTherapy: request.body.youth_update,
+        website: request.body.website_update,
+        contact: request.body.contact_update,
+        acceptInsurance: request.body.insurance_yn_update,
+        whichInsurance: request.body.which_insurance_update,
+        acceptMassHealth: request.body.masshealth_yn_update,
+        cost: request.body.cost_update,
+        accessibility: request.body.access_update,
+        comments: request.body.comments_update,
+        commentsAdmin: request.body.admin_comments_update
+      }}, {new: true}, (error) => {
+          if (error) {
+              return error;
+          } else {
+              response.redirect('pages/admin');
+          }
+      })
+  },
+
+
+  delete_provider: (request, response) => {
+    const {id} = request.params;
+    Comics.deleteOne({_id: id}, (error) => {
+        if (error) {
+            return error;
+        } else {
+            response.redirect('pages/admin')
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -1,6 +1,7 @@
 const { response } = require('express');
 
-const Providers = require ('../models/provider-model')
+const Providers = require ('../models/provider-model');
+
 module.exports = {
 
     add_a_provider: (request, response) => {
@@ -50,52 +51,60 @@ module.exports = {
 
 
 // this is the post for the provider form
-add_a_provider_provider_input_post: (request, response ) => {
+    add_a_provider_provider_input_post: (request, response ) => {
 
-    // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input[]"]');
-    // name="interests[]"
-    // console.log(licenseStateCheckboxes)
+        // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input"]');
 
-    //loop through and store all of the checked inputs
+        // console.log(licenseStateCheckboxes)
 
-    let newProvider = new Providers.add_a_provider_provider_input_post ({
-        name: request.body.name_provider_input,
-        pronouns: request.body.pronouns_provider_input,
-        practice: request.body.practice_provider_input,
-        providerType: request.body.provider_type_provider_input,
-        teletherapy: request.body.teletherapy_provider_input,
-        licenseState: request.body.license_state_provider_input,
-        location: request.body.location_provider_input,
-        couplesTherapy: request.body.couples_provider_input,
-        youthTherapy: request.body.youth_provider_input,
-        website: request.body.website_provider_input,
-        contact: request.body.contact_provider_input,
-        acceptInsurance: request.body.insurance_yn_provider_input,
-        whichInsurance: request.body.which_insurance_provider_input,
-        acceptMassHealth: request.body.masshealth_provider_input,
-        cost: request.body.cost_provider_input,
-        accessibility: request.body.access_provider_input,
-        comments: request.body.comments_provider_input,
-    });
-    newProvider.save();
-    response.redirect('/thank-you');
-},
+        //loop through and store all of the checked inputs?
+
+        let newProvider = new Providers ({
+            name: request.body.name_provider_input,
+            pronouns: request.body.pronouns_provider_input,
+            practice: request.body.practice_provider_input,
+            providerType: request.body.provider_type_provider_input,
+            teletherapy: request.body.teletherapy_provider_input,
+            licenseState: request.body.license_state_provider_input,
+            location: request.body.location_provider_input,
+            couplesTherapy: request.body.couples_provider_input,
+            youthTherapy: request.body.youth_provider_input,
+            website: request.body.website_provider_input,
+            contact: request.body.contact_provider_input,
+            acceptInsurance: request.body.insurance_yn_provider_input,
+            whichInsurance: request.body.which_insurance_provider_input,
+            acceptMassHealth: request.body.masshealth_provider_input,
+            cost: request.body.cost_provider_input,
+            accessibility: request.body.access_provider_input,
+            comments: request.body.comments_provider_input,
+        });
+        newProvider.save();
+        response.redirect('/search-add/thank-you');
+    },
+
+    thank_you: (request, response) => {
+    response.render('pages/thank-you');
+    },
 
 
 
-    // find_a_provider: (request, response) => {
-    //     response.render('pages/find-a-therapist-search');
-    // },
 
     find_a_provider: (request, response) => {
-        Providers.find({}, (error, allProviders) => {
-            if (error) {
-                return error;
-            } else {
-                response.render('pages/find-a-therapist-search', {providers: allProviders});
-            }
-        })
+        response.render('pages/find-a-therapist-search');
     },
+
+    //search controller
+
+
+    // search: (request, response) => {
+    //     Providers.find({}, (error, allProviders) => {
+    //         if (error) {
+    //             return error;
+    //         } else {
+    //             response.render('pages/results', {providers: allProviders});
+    //         }
+    //     })
+    // },
 
 
     // results: (request, response) => {
@@ -114,8 +123,6 @@ add_a_provider_provider_input_post: (request, response ) => {
     },
 
 
-    thank_you: (request, response) => {
-        response.render('pages/thank-you');
-    }
+
 
 }

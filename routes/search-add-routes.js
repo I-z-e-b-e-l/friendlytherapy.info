@@ -15,13 +15,16 @@ router.route('/add-a-provider-client-input')
 router.route('/add-a-provider-provider-input')
     .post(searchAddController.add_a_provider_provider_input_post)
 
+router.route('/thank-you')
+.get(searchAddController.thank_you)
+
 router.route('/find-a-therapist-search')
     .get(searchAddController.find_a_provider)
+    // .post(searchAddController.search)
 
 router.route('/results')
 .get(searchAddController.results)
 
-router.route('/thank-you')
-.get(searchAddController.thank_you)
+
 
 module.exports = router;

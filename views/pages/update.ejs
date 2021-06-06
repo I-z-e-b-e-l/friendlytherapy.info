@@ -4,40 +4,43 @@
 
     <div class="general-landing">
         <div class="max-width-container">
-        <h1 class="max-width" class="heading-break-index">Update this Provider </h1>   
+        <h1 class="max-width" class="heading-break-index">Update Provider Information:<br><%= Provider.name %></h1>   
         </div>
     </div>
 
-    <!-- <h1>Update This Provider</h1> -->
-
-    <form class="update-form">
+    <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=put" method="POST">
     
 
         <div class="question update-question">
             <label for="name_update" class="text1">Provider's name:</label>
-            <input type="text" id="name_update" name="name_update">
+            <input type="text" id="name_update" name="name_update" value="<%= Provider.name %>">
         </div>
 
         <div class="question update-question">
-            <label for="practice_update" class="text1">Institution / Private Practice:</label>
-            <input type="text" id="practice_update" name="practice_update">
+            <label for="pronouns_update" class="text1">Provider's pronouns:</label>
+            <input type="text" id="pronouns_update" name="name_update" value="<%= Provider.pronouns %>">
         </div>
 
         <div class="question update-question">
-            <label for="provider-type_update" class="text1">What kind of mental health provider are they?</label>
-            <input type="text" id="provider-type_update" name="provider-type_update" placeholder="therapist? psychiatrist?">
+            <label for="practice_update" class="text1">Institution / Private Practice Name:</label>
+            <input type="text" id="practice_update" name="practice_update" value="<%= Provider.practice %>">
+        </div>
+
+        <div class="question update-question">
+            <label for="provider_type_update" class="text1">What kind of mental health provider are they?</label>
+            <input type="text" id="provider_type_update" name="provider_type_update" value="<%= Provider.providerType %>">
         </div>
 
         <div class="question update-question">
             <p class="text1">Does this provider offer teletherapy?</p>
 
             <div class="radio-yn-div">
-                <input type="radio" id="teletherapy-yes_update" name="teletherapy_update" value="yes">
-                <input type="radio" id="teletherapy-no_update" name="teletherapy_update" value="no">
+                <input type="radio" id="teletherapy_yes_update" name="teletherapy_update" value="yes">
+                <input type="radio" id="teletherapy_no_update" name="teletherapy_update" value="no">
             </div>
             <div class=radio-yn-label-div>
-                <label for="teletherapy-yes_update">Yes</label>
-                <label for="teletherapy-no_update">No</label>
+                <label for="teletherapy_yes_update">Yes</label>
+                <label for="teletherapy_no_update">No</label>
             </div>
         </div>
 
@@ -67,19 +70,19 @@
 
             
             <label for="therapist-location" class="text1">Location/Neighborhood:</label>
-            <input type="text" id="therapist-location" name="therapist-location">
+            <input type="text" id="location_update" name="location_update" value="<%= Provider.location %>">
 
         </div>
 
         <div class="question update-question">
             <label class="text1">Does this therapist provide couples_update therapy?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="couples_update-yes_update" name="couples_update_update" value="yes">
-                <input type="radio" id="couples_update-no_update" name="couples_update_update" value="no">
+                <input type="radio" id="couples_yes_update" name="couples_update" value="yes">
+                <input type="radio" id="couples_no_update" name="couples_update" value="no">
             </div>
             <div class=radio-yn-label-div>
-                <label for="couples_update-yes_update">Yes</label>
-                <label for="couples_update-no_update">No</label>
+                <label for="couples_yes_update">Yes</label>
+                <label for="couplesno_update">No</label>
             </div>
         </div>
 
@@ -97,20 +100,20 @@
 
         <div class="question update-question">
             <label for="website_update" class="text1">Website:</label>
-            <input type="text" id="website_update" name="website_update">
+            <input type="text" id="website_update" name="website_update" value="<%= Provider.website %>">
         </div>
 
         <div class="question update-question">
             <label for="contact_update" class="text1">Therapist's contact info:</label>
-            <input type="text" id="contact_update" name="contact_update">
+            <input type="text" id="contact_update" name="contact_update" value="<%= Provider.contact %>">
         </div>
         
         
         <div class="question update-question">
             <label class="text1">Does this therapist accept insurance?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="update-insurance-yes" name="couples_update" value="yes">
-                <input type="radio" id="update-insurance-no" name="couples_update" value="no">
+                <input type="radio" id="update-insurance-yes" name="insurance_yn_update" value="yes">
+                <input type="radio" id="update-insurance-no" name="insurance_yn_update" value="no">
             </div>
             <div class=radio-yn-label-div>
                 <label for="update-insurance-yes">Yes</label>
@@ -119,8 +122,8 @@
         </div>
 
         <div class="question update-question">
-            <label for="insurance_update" class="text1">Which insurance(s) do they accept?</label>
-            <textarea id="insurance_update" name="insurance_update" class="center-me" rows="6" cols="50">
+            <label for="which_insurance_update" class="text1">Which insurance(s) do they accept?</label>
+            <textarea id="which_insurance_update" name="which_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.whichInsurance %>">
             </textarea>
         </div>
 
@@ -128,23 +131,23 @@
         <div class="question update-question">
             <label class="text1">Accepts Masshealth?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="masshealth-yes_update" name="masshealth_yn_update" value="yes">
-                <input type="radio" id="masshealth-no_update" name="masshealth_yn_update" value="no">
+                <input type="radio" id="masshealth_yes_update" name="masshealth_yn_update" value="yes">
+                <input type="radio" id="masshealth_no_update" name="masshealth_yn_update" value="no">
             </div>
             <div class=radio-yn-label-div>
-                <label for="masshealth-yes_update">Yes</label>
-                <label for="masshealth-no_update">No</label>
+                <label for="masshealth_yes_update">Yes</label>
+                <label for="masshealth_no_update">No</label>
             </div>
         </div>
 
         <div class="question update-question">
             <label for="cost_update" class="text1">Cost per session without insurance:</label>
-            <input type="text" id="cost_update" name="cost_update">
+            <input type="text" id="cost_update" name="cost_update" value="<%= Provider.cost %>">
         </div>
 
         <div class="question update-question">
             <label for="access_update" class="text1">Accessibility info:</label>
-            <textarea id="access_update" name="access_update" class="center-me" rows="6" cols="50">
+            <textarea id="access_update" name="access_update" class="center-me" rows="6" cols="50" value="<%= Provider.accessibility %>">
             </textarea>
         </div>
 
@@ -153,19 +156,20 @@
         <div class="question update-question">
 
                 <label for="comments_update" class="text1">Client Comments:</label>
-                <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50">
+                <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50" value="<%= Provider.comments %>">
                 </textarea> 
 
         </div>
 
         <div class="question update-question">
 
-            <label for="curator_comments_update" class="text1">Curator Comments:</label>
-            <textarea id="curator_comments_update" name="curator_comments_update" class="center-me" rows="8" cols="50">
+            <label for="admin_comments_update" class="text1">Admin Comments:</label>
+            <textarea id="admin_comments_update" name="admin_comments_update" class="center-me" rows="8" cols="50" value="<%= Provider.commentsAdmin %>">
             </textarea> 
 
         </div>
 
+        
         <div class="button-align">
             <input type="submit" value="Submit" id="update-provider-submit" class="add-provider-submit" onclick="">
         </div>

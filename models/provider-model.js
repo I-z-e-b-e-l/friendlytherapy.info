@@ -34,7 +34,7 @@ const providerSchema = new Schema ({
     },
 
     licenseState: {
-        type: String 
+        type: [] 
     },
 
     location: {
@@ -129,8 +129,8 @@ const providerSchema = new Schema ({
         type: String
     },
 
-    lastUpdate: {
-        type: String
+    updated: { 
+        type: Date, default: Date.now() 
     }
 
 })
