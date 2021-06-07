@@ -10,10 +10,14 @@ const passport = require('passport');
 
 module.exports = {
 
-//display the register page
+  //display the register page
   register: (request, response) => {
-    response.render('pages/register');
-},
+    if (request.isAuthenticated()){
+      response.render('pages/register');
+    } else {
+      response.render('pages/nope');
+    }
+  },
 
   register_post:(request, response) => {
     User.register({username: request.body.username}, request.body.password, (error, user) => {
@@ -40,9 +44,12 @@ module.exports = {
   
     request.login(user, (error) => {
       if (error) {
-        return error;
+        // return error;
+        console.log(error);
+        response.redirect('/admin/login');
       } else {
         passport.authenticate('local')(request, response, () => {
+          console.log("You are logged in");
           response.redirect('/admin');
         });
       }
@@ -52,7 +59,8 @@ module.exports = {
 
   logout:(request, response) => {
     request.logout();
-    response.redirect('/login');
+    console.log("you are logged out")
+    response.redirect('/admin/login');
   },
 
 
@@ -70,13 +78,12 @@ module.exports = {
             if (error) {
                 return error;
             } else {
-                // console.log(allProviders)
                 response.render("pages/admin", {providers: allProviders, user: request.user});
             }
         })
       } else {
-        console.log("the request is not authenticated")
-        response.redirect('/login');
+        console.log("the request @ admin is not authenticated")
+        response.redirect('/admin/login');
       }
     },
 
@@ -85,36 +92,23 @@ module.exports = {
     },
 
 
-    //admin access to update a listing
-    // update: (request, response) => {
-    //     response.render('pages/update');
-    //     },
-
-    // update: (request, response) => {
-    //     const { id } = request.params;
-    //     Providers.findOne({_id: id}, (error, foundProvider) => {
-    //         if (error) {
-    //             return error;
-    //         } else {
-    //             response.render('pages/update', { Provider: foundProvider });
-    //         }
-    //     })
-    // },
-
     update: (request, response) => {
-      if (request.isAuthenticated()) {
-        const { id } = request.params;
-        Providers.findOne({_id: id}, (error, foundProvider) => {
-            if (error) {
-                return error;
-            } else {
-                response.render('pages/update', { Provider: foundProvider });
-            }
-        })
-      } {
-        response.redirect('/admin/nope')
-      } 
-    },
+      if (request.isAuthenticated()){
+              const { id } = request.params;
+      Providers.findOne({_id: id}, (error, foundProvider) => {
+          if (error) {
+              return error;
+          } else {
+              response.render('pages/update', { Provider: foundProvider });
+          }
+      })
+      } else {
+        console.log("you are not authenticated @update");
+        response.redirect('admin/nope')
+      }
+
+  },
+
 
     update_provider: (request, response) => {
       console.log("The eagle has landed");
@@ -122,7 +116,8 @@ module.exports = {
         console.log("The eagle is authenticated");
       const {id} = request.params;
 
-      Providers.findByIdAndUpdate({_id: id}, {$set: {
+      // Providers.findByIdAndUpdate({_id: id}, {$set: {
+      Providers.findByIdAndUpdate(id, {$set: {  
         name: request.body.name_update,
         pronouns: request.body.pronouns_update,
         practice: request.body.practice_update,
@@ -155,6 +150,7 @@ module.exports = {
 
 
   delete_provider: (request, response) => {
+    if (request.isAuthenticated()) {
     const {id} = request.params;
     Providers.deleteOne({_id: id}, (error) => {
         if (error) {
@@ -162,21 +158,9 @@ module.exports = {
         } else {
             response.redirect('/admin')
         }
-    })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    });
+    } else {
+    response.redirect('/admin/nope')
+    }
+  }
 }

@@ -421,7 +421,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button{
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button{
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -434,7 +434,7 @@ footer {
     
 }
 
-.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover {
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover {
     border: 2px solid black;
     font-weight: bold;
 }
@@ -448,7 +448,7 @@ footer {
     width: 225px
 }
 
-.logout-button {
+.logout-button, .login-redirect-button {
     width: 100px;
 }
 

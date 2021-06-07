@@ -6,21 +6,24 @@
 
     <div class="center-me">
         <div class="contact-form-div">
+
             <h1 class="contact-form-content">Contact</h1>
-            <form class="forms-all contact-form">
-                <label for="name" class="contact-form-content form-label">Your name:</label>
-                <input type="text" name="Name" class="contact-form-content form-input-text" required>
+
+            <form class="forms-all contact-form" id="contact-form" method="POST" action="send" enctype = "multipart/form-data">
+                <label for="contact_form_name" class="contact-form-content form-label">Your name:</label>
+                <input type="text" name="contact_form_name" class="contact-form-content form-input-text" required>
                 <br><br>
-                <label for="email" class="contact-form-content form-label">Your email:</label>
-                <input type="email" name="email" class="contact-form-content form-input-text" required>
+                <label for="contact_form_email" class="contact-form-content form-label">Your email:</label>
+                <input type="email" name="contact_form_email" class="contact-form-content form-input-text" required>
                 <br><br>
-                <label for="message" class="contact-form-content form-label">Message:</label>
-                <textarea name="message" class="contact-form-content form-input-text" rows="6" required></textarea>
+                <label for="contact_form_message" class="contact-form-content form-label">Message:</label>
+                <textarea name="contact_form_message" class="contact-form-content form-input-text" rows="6" required></textarea>
                 <br><br>
                 <div class="center-me2">
-                    <button type="submit" class="contact-form-content contact-submit-button">Send Message</button> 
+                    <button type="submit" value="submit" class="contact-form-content contact-submit-button">Send Message</button> 
                 </div>
             </form>
+
         </div>
     </div>
 
