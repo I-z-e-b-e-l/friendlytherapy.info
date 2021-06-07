@@ -82,30 +82,28 @@
             <div class="search-question">
                 <p class="text1">Type of provider you're looking for:</p>
 
-                <input type="checkbox" id="provider-type-therapist" name="provider-type-search" value="provider-type-therapist" onclick="">
-                <label for="provider-type-search">Therapist</label>
+                <input type="checkbox" id="provider_type_therapist" name="provider_type_search" value="Therapist" onclick="">
+                <label for="provider_type_search">Therapist</label>
                 <br>
-                <input type="checkbox" id="provider-type-psychiatrist" name="provider-type-search" value="provider-type-psychiatrist" onclick="">
-                <label for="provider-type-search">Psychiatrist</label>
+                <input type="checkbox" id="provider_type_psychiatrist" name="provider_type_search" value="Psychiatrist" onclick="">
+                <label for="provider_type_search">Psychiatrist</label>
             </div>
             
 
             <div class="search-question">
-                <label for="provider-state" class="text1">What state would you like to see a provider in?</label>
+                <label for="provider_state_search" class="text1">What state would you like to see a provider in?</label>
                 <p>For insurance and licensing reasons, this should usually be the state you live in, even if you are looking for remote therapy. 
                 <br><br>
                 International therapists are not bound by US licensing restrictions.</p>
-                <select name="provider-state" id="provider-state">
+                <select name="provider_state_search" id="provider_state_search">
                     <optgroup>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="rhode-island">Rhode Island</option>
-                    <option value="new-hampshire">New Hampshire</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="new-york">New York</option>
-                    option>
-                    <option value="somewhere-else">Somewhere else</option>
-                    option>
-                    <option value="international">Show me international therapists</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="New York">New York</option>
+                    <option value="Another State">Another State</option>
+                    <option value="International">Show me international therapists</option>
                     </optgroup>
                 </select>
             </div>
@@ -125,8 +123,8 @@
 
                     <div class="group1">
                     <div class="search-by-rating">
-                        <label for="provider-rating" class="">Queer-friendliness</label>
-                        <select class="friendly-select" name="provider-queer-friendliness" id="provider-queer-friendliness">
+                        <label for="queer_rating_search" class="">Queer-friendliness</label>
+                        <select class="friendly-select" name="queer_rating_search" id="queer_rating_search">
                             <optgroup>
                             <option value="not-relevant">Not relevant to me</option>
                             <option value="0">0 (show all)</option>
@@ -138,8 +136,8 @@
                     </div>
 
                     <div class="search-by-rating">
-                        <label for="provider-rating" class="">Trans-friendliness</label>
-                        <select class="friendly-select" name="provider-trans-friendliness" id="provider-trans-friendliness">
+                        <label for="trans_rating_search" class="">Trans-friendliness</label>
+                        <select class="friendly-select" name="trans_rating_search" id="trans_rating_search">
                             <optgroup>
                             <option value="not-relevant">Not relevant to me</option>
                             <option value="0">0 (show all)</option>
@@ -151,8 +149,8 @@
                     </div>
                     
                     <div class="search-by-rating">
-                        <label for="provider-rating" class="">Non-Monogamy-friendliness</label>
-                        <select class="friendly-select" name="provider-poly-friendliness" id="provider-poly-friendliness">
+                        <label for="poly_rating_search" class="">Non-Monogamy-friendliness</label>
+                        <select class="friendly-select" name="poly_rating_search" id="poly_rating_search">
                             <optgroup>
                             <option value="not-relevant">Not relevant to me</option>
                             <option value="0">0 (show all)</option>
@@ -166,8 +164,8 @@
 
                     <div class="group2">
                     <div class="search-by-rating">
-                        <label for="provider-rating" class="">Kink-friendliness</label>
-                        <select class="friendly-select" name="provider-kink-friendliness" id="provider-kink-friendliness">
+                        <label for="kink_rating_search" class="">Kink-friendliness</label>
+                        <select class="friendly-select" name="kink_rating_search" id="kink_rating_search">
                             <optgroup>
                             <option value="not-relevant">Not relevant to me</option>
                             <option value="0">0 (show all)</option>
@@ -179,8 +177,8 @@
                     </div>
 
                     <div class="search-by-rating">
-                        <label for="provider-rating" class="">Sex Worker-friendliness</label>
-                        <select class="friendly-select" name="provider-sw-friendliness" id="provider-sw-friendliness">
+                        <label for="sw_rating_search" class="">Sex Worker-friendliness</label>
+                        <select class="friendly-select" name="sw_rating_search" id="sw_rating_search">
                             <optgroup>
                             <option value="not-relevant">Not relevant to me</option>
                             <option value="0">0 (show all)</option>
@@ -192,8 +190,8 @@
                     </div>
                     
                     <div class="search-by-rating">
-                        <label for="provider-rating" class="">BIPOC-friendliness</label>
-                        <select class="friendly-select" name="provider-bipoc-friendliness" id="provider-bipoc-friendliness">
+                        <label for="bipoc_rating_search" class="">BIPOC-friendliness</label>
+                        <select class="friendly-select" name="bipoc_rating_search" id="bipoc_rating_search">
                             <optgroup>
                             <option value="not-relevant">Not relevant to me</option>
                             <option value="0">0 (show all)</option>
@@ -209,7 +207,20 @@
 
             </div>
 
-
+            <div class="search-question">
+                <label class="text1">Are you looking for teletherapy?</label>
+ 
+                    <!-- <div class="radio-container"> -->
+                        <div class="radio-yn-div">
+                            <input type="radio" id="teletherapy_yes" name="teletherapy_search" value="yes">
+                            <input type="radio" id="teletherapy_no" name="teletherapy_search" value="no">
+                        </div>
+                        <div class=radio-yn-label-div>
+                            <label for="teletherapy_yes">Yes</label>
+                            <label for="teletherapy_no">No</label>
+                        </div>
+                    <!-- </div> -->
+            </div>
             
             <div class="search-question">
                 <label class="text1">Are you looking for couples therapy?</label>
@@ -239,21 +250,21 @@
             </div>
 
             <div class="search-question">
-                <input type="checkbox" id="only-insurance-therapist" name="only-insurance-therapist" value="only-insurance-therapist" onclick="">
-                <label for="only-insurance-therapist" class="text1">Only show me providers who accept insurance</label>
+                <input type="checkbox" id="accept_insurance_yes" name="accept_insurance_yes" value="yes" onclick="">
+                <label for="accept_insurance_yes" class="text1">Only show me providers who accept insurance</label>
             </div>
 
             <div class="search-question">
                 
-                <input type="checkbox" id="only-masshealth-therapist" name="only-masshealth-therapist" value="only-masshealth-therapist" onclick="">
-                <label for="only-masshealth-therapist" class="text1">Only show me providers who accept Masshealth</label>
+                <input type="checkbox" id="accept_masshealth_yes_search" name="accept_masshealth_yes_search" value="yes" onclick="">
+                <label for="accept_masshealth_yes_search" class="text1">Only show me providers who accept Masshealth</label>
                
             </div>
 
             <div class="search-question">
-                <label for="provider-insurance" class="text1">What insurance do you want to use?</label>
+                <label for="which_insurance_search" class="text1">What insurance do you want to use?</label>
                 <p>Note: There may be additonal insurances accepted by provders, so don't give up hope if you don't see yours here, or don't see it listed.</p>
-                <select name="provider-insurance" id="provider-insurance-select">
+                <select name="which_insurance_search" id="which_insurance_search">
                     <optgroup>
 
                     <option value="aetna">Aetna</option>
@@ -266,24 +277,19 @@
                     <option value="Commonwealth Care"></option>                    
                     <option value="Empire Blue Cross Blue Sheild">Empire Blue Cross Blue Sheild</option>
                     <option value="Fallon Health">Fallon Health</option>
-
                     <option value="Harvard Pilgrim Health">Harvard Pilgrim Health</option>
-
                     <option value="Magellan">Magellan</option>                   
                     <option value="medicare">Medicare</option>
-                    
                     <option value="MBHP">MBHP (Massachusetts Behavioral Health Partnership</option>
                     <option value="Network Health">Network Health</option>   
                     <option value=Optum">Optum</option>                    
                     <option value="Partners">Partners</option>
-                 
-                    
                     <option value="tricare">Tricare</option>
                     <option value="Tufts">Tufts</option>
                     <option value="United Healthcare">United Healthcare</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <!-- <option value=""></option> -->
+                    <!-- <option value=""></option> -->
+                    <!-- <option value=""></option> -->
                     </optgroup>
                 </select>
             </div>

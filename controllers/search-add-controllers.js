@@ -12,17 +12,11 @@ module.exports = {
     // this is the post for the client form
     add_a_provider_client_input_post: (request, response ) => {
 
-        // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input[]"]');
-        // name="interests[]"
-        // console.log(licenseStateCheckboxes)
-        //loop through and store all of the checked inputs
-
         let newProvider = new Providers ({
             name: request.body.name_client_input,
             practice: request.body.practice_client_input,
             providerType: request.body.provider_type_client_input,
             teletherapy: request.body.teletherapy_client_input,
-            // licenseState: license_state_client_input,
             licenseState: request.body.license_state_client_input,
             location: request.body.location_client_input,
             queerRating: request.body.queer_rating,
@@ -53,12 +47,6 @@ module.exports = {
 // this is the post for the provider form
     add_a_provider_provider_input_post: (request, response ) => {
 
-        // const licenseStateCheckboxes = document.querySelectorAll('input[name="license_state_client_input"]');
-
-        // console.log(licenseStateCheckboxes)
-
-        //loop through and store all of the checked inputs?
-
         let newProvider = new Providers ({
             name: request.body.name_provider_input,
             pronouns: request.body.pronouns_provider_input,
@@ -87,30 +75,40 @@ module.exports = {
     },
 
 
-
+//SEARCH PAGE
 
     find_a_provider: (request, response) => {
         response.render('pages/find-a-therapist-search');
     },
 
-    //search controller
+    //post route to execute searching the database
+    search: (request, response) => {
+
+        //Provider.find()
+
+        // request.body.provider_type_search,
+        // request.body.provider_state_search,
+        // request.body.queer_rating_search,
+        // request.body.trans_rating_search,
+        // request.body.poly_rating_search,
+        // request.body.kink_rating_search,
+        // request.body.teletherapy_provider_input,
+        // request.body.sw_rating_search,
+        // request.body.bipoc_rating_search,
+        // request.body.couples,
+        // request.body.youth,
+        // request.body.accept_insurance_yes,
+        // request.body.accept_masshealth_yes_search,
+        //  request.body.which_insurance_search,
 
 
-    // search: (request, response) => {
-    //     Providers.find({}, (error, allProviders) => {
-    //         if (error) {
-    //             return error;
-    //         } else {
-    //             response.render('pages/results', {providers: allProviders});
-    //         }
-    //     })
-    // },
+        
+
+    },
 
 
-    // results: (request, response) => {
-    //     response.render('pages/results');
-    // },
 
+    //not working
     results: (request, response) => {
         Providers.find({}, (error, allProviders) => {
             if (error) {
@@ -121,6 +119,8 @@ module.exports = {
             }
         })
     },
+
+
 
 
 
