@@ -14,6 +14,9 @@ module.exports = {
     },
 
     //send an email via the form on contact page
+    contact_post: (request, response) => {
+        response.sendFile(process.cwd() + "/pages/contact.html");
+    },
 
     how_to: (request, response) => {
         response.render('pages/how-to');
@@ -21,8 +24,12 @@ module.exports = {
 
     resources: (request, response) => {
         response.render('pages/resources');
-    }
+    },
 
+    //send an email via the form on resources page
+    // resource_suggest_post: (request, response) => {
+    //     response.sendFile(process.cwd() + "/pages/resources.html");
+    // },
 
 }
 

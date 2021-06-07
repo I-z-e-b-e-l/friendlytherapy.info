@@ -13,8 +13,7 @@ router.route('/about')
 
 router.route('/contact')
 .get(siteController.contact)
-// send an email via the form on this page
-// .post(siteController.contact_post)
+.post(siteController.contact_post)
 
 router.route('/how-to')
 .get(siteController.how_to)

@@ -222,20 +222,22 @@ function displayThankYouAdd(){
 
 //contact page
 
-// const contactForm = document.getElementById("contact-form"); 
-// const formEvent = form.addEventListener("submit", (event) => {
-//     event.preventDefault();
+const contactForm = document.getElementById("contact-form"); 
+const formEvent = contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-// let mail = new FormData(form);
-// sendMail(mail);
-// })
+let mail = new FormData(form);
+sendMail(mail);
+})
 
-// const sendMail = (mail) => {
-//     fetch("https://nodemailer-vic-lo.herokuapp.com/send", {
-//         method: "post", //2.
-//         body: mail, //3.
+const sendMail = (mail) => {
+    // fetch("https://friendlytherapy.info/contact", {
+    // fetch("https://<sitehere>.herokuapp.com/contact", {
+    fetch("localhost:3000/contact", {
+        method: "post", 
+        body: mail,
     
-//       }).then((response) => {
-//         return response.json();
-//       });
-//     };
+      }).then((response) => {
+        return response.json();
+      });
+    }; 
