@@ -105,13 +105,13 @@ module.exports = {
         // console.log(`result of request.body.provider_type_search is: ${request.body.provider_type_search}`)
         // console.log(`result of request.body.teletherapy_search is: ${request.body.teletherapy_search}`)
         // console.log(`result of request.body.which_insurance_search is: ${request.body.which_insurance_search}`)
-        console.log(`result of request.body is: ${request.body}`)
-
+        // console.log(`result of request.body is: ${request.body}`)
+        console.log(`This is the value of document.querySelector('.provider_type_search:checked').value: ${document.querySelector('.provider_type_search:checked').value}`)
 
         Providers.find({
             
             // providerType: "therapist",
-
+            providerType: document.querySelector('.provider_type_search:checked').value
             // providerType: request.body.provider_type_search,
             // licenseState: "Rhode Island",
             // licenseState: request.body.provider_state_search,
@@ -128,7 +128,7 @@ module.exports = {
             // couplesTherapy:"yes",
             // youthTherapy:"yes",
             // acceptInsurance:"",
-            whichInsurance: request.body.which_insurance_search,
+            // whichInsurance: request.body.which_insurance_search,
             // acceptMassHealth: "",
         
         }, (error, resultProviders) => {
