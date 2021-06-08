@@ -410,7 +410,7 @@ footer {
 
 
 
-/* ADD TO THE LIST + Thank You PAGE MOBILE STYLINGS */
+/* ADD TO THE LIST + Thank You PAGE MOBILE STYLINGS + SEARCH */
 
 
 .button-align {
@@ -421,7 +421,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button{
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, #search-again-button{
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -434,7 +434,7 @@ footer {
     
 }
 
-.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover {
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover {
     border: 2px solid black;
     font-weight: bold;
 }
@@ -644,6 +644,10 @@ td {
 
 /* RESULTS */
 
+.gradient-checkbox {
+    width: 20px;
+}
+
 .results-box {
     margin: 5vw;
     padding: 5vw;
@@ -791,6 +795,10 @@ td {
     margin: 3em 0em;
 }
 
+/* .seach-checkbox {
+    background-color: #a1e7a1;
+} */
+
 #provider-state {
     min-width: 275px;
     height: 35px;
@@ -814,11 +822,16 @@ optgroup {
     margin-bottom: .2em;
 }
 
-#provider-insurance-select, .friendly-select {
+#which_insurance_search, #provider_state_search, .friendly-select {
     max-width: 85vw;
     height: 3em;
     font-size: 1em;
+    
 }
+
+/* optgroup {
+    font-size: 1em;
+} */
 
 .radio-yn-div, .radio-yn-label-div {
     max-width: 300px;

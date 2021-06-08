@@ -81,10 +81,6 @@ module.exports = {
         response.render('pages/find-a-therapist-search');
     },
 
-    //post route to execute searching the database
-    search: (request, response) => {
-
-        //Provider.find()
 
         // request.body.provider_type_search,
         // request.body.provider_state_search,
@@ -92,23 +88,64 @@ module.exports = {
         // request.body.trans_rating_search,
         // request.body.poly_rating_search,
         // request.body.kink_rating_search,
-        // request.body.teletherapy_provider_input,
         // request.body.sw_rating_search,
         // request.body.bipoc_rating_search,
-        // request.body.couples,
-        // request.body.youth,
+        // request.body.teletherapy_search,
+        // request.body.couples_seach,
+        // request.body.youth_search,
         // request.body.accept_insurance_yes,
         // request.body.accept_masshealth_yes_search,
-        //  request.body.which_insurance_search,
+        // request.body.which_insurance_search,
 
 
+    //post route to execute searching the database
+    search: (request, response) => {
+
+        // console.log(`result of request.body.provider_state_search is: ${request.body.provider_state_search}`)
+        // console.log(`result of request.body.provider_type_search is: ${request.body.provider_type_search}`)
+        // console.log(`result of request.body.teletherapy_search is: ${request.body.teletherapy_search}`)
+        // console.log(`result of request.body.which_insurance_search is: ${request.body.which_insurance_search}`)
+        console.log(`result of request.body is: ${request.body}`)
+
+
+        Providers.find({
+            
+            // providerType: "therapist",
+
+            // providerType: request.body.provider_type_search,
+            // licenseState: "Rhode Island",
+            // licenseState: request.body.provider_state_search,
+            //set ratings to be < or = to number
+
+            // queerRating: {$gte: request.body.queer_rating_search },
+            // queerRating: request.body.queer_rating_search,
+            // transRating: "",
+            // polyRating: "",
+            // kinkRating: "",
+            // swRating: "",
+            // bipocRating: "",
+            // teletherapy: request.body.teletherapy_search,
+            // couplesTherapy:"yes",
+            // youthTherapy:"yes",
+            // acceptInsurance:"",
+            whichInsurance: request.body.which_insurance_search,
+            // acceptMassHealth: "",
         
+        }, (error, resultProviders) => {
+            if (error) {
+                
+
+                return error;
+            } else {
+                console.log(`second console.log result of request.body is: ${request.body}`)
+                console.log(resultProviders)
+                response.render("pages/results", {providers: resultProviders});
+            }
+        })      
 
     },
 
 
-
-    //not working
     results: (request, response) => {
         Providers.find({}, (error, allProviders) => {
             if (error) {
