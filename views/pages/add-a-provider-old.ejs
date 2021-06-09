@@ -82,16 +82,8 @@
 
                     <div class="question client-question">
                         <label for="provider_type_client_input" class="text1">What kind of mental health provider are they?</label>
-            
-                        <!-- <input type="text" id="provider_type_client_input" name="provider_type_client_input" placeholder="therapist? psychiatrist?"> -->
-
-                        <input type="checkbox" id="provider_type_therapist_client_input" name="provider_type_client_input" value="therapist" required>
-                        <label for="provider_type_therapist_client_input">Therapist</label>
-                        <br>
-                        <input type="checkbox" id="provider_type_psychiatrist_client_input" name="provider_type_client_input" value="psychiatrist" required>
-                        <label for="provider_type_psychiatrist_client_input">Psychiatrist</label>
-
-
+            <!-- change to checkbox or radio? -->
+                        <input type="text" id="provider_type_client_input" name="provider_type_client_input" placeholder="therapist? psychiatrist?">
                     </div>
 
                     <div class="question client-question">
@@ -356,22 +348,17 @@
                             <input type="radio" id="insurance_yes_client_input" name="insurance_yn_client_input" value="yes">
                             <input type="radio" id="insurance-no_client_input" name="insurance_yn_client_input" value="no">
                         </div>
-                        <div class=radio-yn-label-div>
+                        <div class="radio-yn-label-div">
                             <label for="insurance_yes_client_input">Yes</label>
                             <label for="insurance-no_client_input">No</label>
                         </div>
                     </div>
 
-                    <!-- <div class="question client-question">
+                    <div class="question client-question">
                         <label for="which_insurance_client_input" class="text1">Which insurance(s) do they accept?</label>
                         <textarea id="which_insurance_client_input" name="which_insurance_client_input" class="center-me" rows="6" cols="50" placeholder="Enter as many as you like. If unknown, just leave this blank."></textarea>
-                    </div> -->
+                    </div>
 
-
-                    <div class="question provider-question">
-                        <label for="additional_insurance_client_input" class="text1">Which insurance(s) do they accept?:</label>
-                        <input type="text" id="additional_insurance_client_input" name="additional_insurance_client_input" rows="6" cols="50" placeholder="Enter as many as you like. If unknown, just leave this blank. Please note: insurance information may take a few days to appear in the searchable database.">
-                    </div>   
 
                     <div class="question client-question">
                         <label class="text1">Accepts Masshealth?</label>
@@ -379,7 +366,7 @@
                             <input type="radio" id="masshealth_yes_client_input" name="masshealth_client_input" value="yes">
                             <input type="radio" id="masshealth_no_client_input" name="masshealth_client_input" value="no">
                         </div>
-                        <div class=radio-yn-label-div>
+                        <div class="radio-yn-label-div">
                             <label for="masshealth_yes_client_input">Yes</label>
                             <label for="masshealth_no_client_input">No</label>
                         </div>
@@ -404,7 +391,7 @@
                     </div>
 
                     <div class="center-me">
-                        <input type="submit" value="Submit-C" id="add-provider-client-submit" class="add-provider-submit">
+                        <input type="submit" value="Submit" id="add-provider-client-submit" class="add-provider-submit">
                     </div>
                 
                 </div>
@@ -437,23 +424,16 @@
                         <input type="text" id="pronouns_provider_input" name="pronouns_provider_input" required>
                     </div>
 
+<!-- change to check box? -->
                     <div class="question provider-question">
                         <label for="provider_type_provider_input" class="text1">What kind of mental health provider are you?</label>
-
-                    <!-- make sure it's ok that required is in both inputs -->
-
-                        <input type="checkbox" id="provider_type_therapist_provider_input" name="provider_type_provider_input" value="therapist" required>
-                        <label for="provider_type_therapist_provider_input">Therapist</label>
-                        <br>
-                        <input type="checkbox" id="provider_type_psychiatrist_provider_input" name="provider_type_provider_input" value="psychiatrist" required>
-                        <label for="provider_type_psychiatrist_provider_input">Psychiatrist</label>
-
-
+                        <input type="text" id="provider_type_provider_input" name="provider_type_provider_input" placeholder="therapist? psychiatrist?" required>
+                        <!-- figure out how to deal with licensed vs. unlicensed. maybe change to checkbox? -->
                     </div>
 
                     <div class="question provider-question">
-                        <label for="practice_provider_input" class="text1">Institution Name / Private Practice Name:</label>
-                        <input type="text" id="practice_provider_input" name="practice_provider_input"> 
+                        <label for="practice_provider_input" class="text1">Institution / Private Practice Name:</label>
+                        <input type="text" id="practice_provider_input" name="practice_provider_input" required> 
                     </div>
 
                     <div class="question provider-question">
@@ -474,25 +454,25 @@
                         <label for="license_state_provider_input" class="text1">Where do you practice / Where are you licensed?</label>
 
                         <br><br>
-                        <input type="checkbox" id="ma_check_provider_input" name="license_state_provider_input" value="Massachusetts">
+                        <input type="checkbox" id="ma_check_provider_input" name="license_state_provider_input" value="ma_check_provider_input">
                         <label for="ma_check_provider_input"> Massachusetts</label><br>
 
-                        <input type="checkbox" id="ri_check_provider_input" name="license_state_provider_input" value="Rhode Island">
+                        <input type="checkbox" id="ri_check_provider_input" name="license_state_provider_input" value="ri_check_provider_input">
                         <label for="ri_check_provider_input"> Rhode Island</label><br>
 
-                        <input type="checkbox" id="nh_check_provider_input" name="license_state_provider_input" value="New Hampshire">
+                        <input type="checkbox" id="nh_check_provider_input" name="license_state_provider_input" value="nh_check_provider_input">
                         <label for="nh_check_provider_input">New Hampshire</label><br>
 
-                        <input type="checkbox" id="ct_check_provider_input" name="license_state_provider_input" value="Connecticut>
+                        <input type="checkbox" id="ct_check_provider_input" name="license_state_provider_input" value="ct_check_provider_input>
                         <label for="ct_check">Connecticut</label><br>
 
-                        <input type="checkbox" id="ny_check_provider_input" name="license_state_provider_input" value="New York">
+                        <input type="checkbox" id="ny_check_provider_input" name="license_state_provider_input" value="ny_check_provider_input">
                         <label for="ny_check_provider_input"> New York</label><br>
 
-                        <input type="checkbox" id="ny_check_provider_input" name="license_state_provider_input" value="Outside of the US">
+                        <input type="checkbox" id="ny_check_provider_input" name="license_state_provider_input" value="ny_check_provider_input">
                         <label for="ny_check_provider_input"> Outside of the US</label><br>
 
-                        <input type="checkbox" id="somewhere-else_check_provider_input" name="somewhere-else_check_provider_input" value="Somewhere else within the US">
+                        <input type="checkbox" id="somewhere-else_check_provider_input" name="somewhere-else_check_provider_input" value="somewhere-else_check_provider_input">
                         <label for="somewhere-else_check_provider_input">Somewhere else within the US</label><br><br>
 
                         
@@ -508,7 +488,7 @@
                             <input type="radio" id="couples_yes_provider_input" name="couples_provider_input" value="yes">
                             <input type="radio" id="couples-no_provider_input" name="couples_provider_input" value="no">
                         </div>
-                        <div class="radio-yn-label-div">
+                        <div class=radio-yn-label-div>
                             <label for="couples_yes_provider_input">Yes</label>
                             <label for="couples-no_provider_input">No</label>
                         </div>
@@ -551,83 +531,9 @@
 
                     <div class="question provider-question">
                         <label for="which_insurance_provider_input" class="text1">Which insurance(s)?</label>
-                        <!-- <textarea id="which_insurance_provider_input" name="which_insurance_provider_input" class="center-me" rows="6" cols="50" pleaceholder="Enter as many as you like; please be specific."></textarea> -->
-                        <div class="health-insurace-box">
-                            <input type="checkbox" class="insurance-checkbox" id="another_insurance_provider_input" name="which_insurance_provider_input" value="another_insurance_provider_input">
-                            <label for="another_insurance_provider_iput" class="">Another insurance not listed here</label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="aetna_provider_input" name="which_insurance_provider_input" value="Aetna">
-                            <label for="aetna_provider_input" class="">Aetna</label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="allways_health_partners_provider_input" name="which_insurance_provider_input" value="Allways Health Partners">
-                            <label for="allways_health_partners_provider_input" class="">Allways Health Partners</label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="anthem_provider_input" name="which_insurance_provider_input" value="Anthem">
-                            <label for="anthem_provider_input" class="">Anthem</label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="beacon_provider_input" name="which_insurance_provider_input" value="Beacon">
-                            <label for="beacon_provider_inpu" class="">Beacon</label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="beacon_health_options_provider_input" name="which_insurance_provider_input" value="Beacon Health Options">
-                            <label for="beacon_health_options_provider_input" class="">Beacon Health Options</label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="bmc_healthnet_provider_input" name="which_insurance_provider_input" value="BMC HealthNet">
-                            <label for="bmc_healthnet_provider_input" class="">BMC HealthNet</label>
-
-                            <!-- <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label>
-
-                            <input type="checkbox" class="insurance-checkbox" id="" name="which_insurance_provider_input" value="">
-                            <label for="" class=""></label> -->
-
-
-                        </div>
-                
+                        <textarea id="which_insurance_provider_input" name="which_insurance_provider_input" class="center-me" rows="6" cols="50" pleaceholder="Enter as many as you like; please be specific."></textarea>
+                        <!-- change to check boxes later -->
                     </div>
-
-                    <div class="question provider-question">
-                        <label for="additional_insurance_provider_input" class="text1">If you accept insurance plans not listed above, please add them here:</label>
-                        <input type="text" id="additional_insurance_provider_input" name="additional_insurance_provider_input" rows="6" cols="50" placeholder="Please make sure you checked off the box for Another Insurance above - thanks!">
-                    </div>                    
 
 
                     <div class="question provider-question">
@@ -636,7 +542,7 @@
                             <input type="radio" id="masshealth_yes_provider_input" name="masshealth_provider_input" value="yes" required>
                             <input type="radio" id="masshealth_no_provider_input" name="masshealth_provider_input" value="no">
                         </div>
-                        <div class="radio-yn-label-div">
+                        <div class=radio-yn-label-div>
                             <label for="masshealth_yes_provider_input" >Yes</label>
                             <label for="masshealth_no_provider_input">No</label>
                         </div>
@@ -656,11 +562,11 @@
                     <div class="question provider-question">
 
                             <label for="comments_provider_input" class="text1">Comments</label>
-                            <textarea id="comments_provider_input" name="comments_provider_input" class="center-me" rows="8" cols="50" required placeholder="Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures."></textarea> 
+                            <textarea id="comments_provider_input" name="comments_provider_input" class="center-me" rows="8" cols="50" required placeholder="Please use this section to describe anything it might be useful for clients to know about you: modalities you use, specialties, and your comfort and familiarity in serving specific marginalized communities or subcultures. "></textarea> 
                     </div>
 
                     <div class="center-me">
-                        <input type="submit" value="Submit -P" id="add-provider-provider-submit" class="add-provider-submit">
+                        <input type="submit" value="Submit" id="add-provider-provider-submit" class="add-provider-submit">
                     </div>
                 <!--end provider section -->
                 </div>
@@ -678,10 +584,7 @@
 
             <!-- </div> -->
 
-            <div class="center-me">
-                <p>Oops! I made a mistake!</p>
-                <button id="reset-form-button">Reset Form</button>
-            </div>
+
 
             
         <!-- end max width -->

@@ -33,6 +33,7 @@ module.exports = {
             contact: request.body.contact_client_input,
             acceptInsurance: request.body.insurance_yn_client_input,
             whichInsurance: request.body.which_insurance_client_input,
+            insuranceFromClient: request.body.additional_insurance_client_input,
             acceptMassHealth: request.body.masshealth_client_input,
             cost: request.body.cost_client_input,
             accessibility: request.body.access_client_input,
@@ -61,6 +62,7 @@ module.exports = {
             contact: request.body.contact_provider_input,
             acceptInsurance: request.body.insurance_yn_provider_input,
             whichInsurance: request.body.which_insurance_provider_input,
+            additionalInsurance: request.body.additional_insurance_provider_input,
             acceptMassHealth: request.body.masshealth_provider_input,
             cost: request.body.cost_provider_input,
             accessibility: request.body.access_provider_input,
@@ -82,68 +84,55 @@ module.exports = {
     },
 
 
-        // request.body.provider_type_search,
-        // request.body.provider_state_search,
-        // request.body.queer_rating_search,
-        // request.body.trans_rating_search,
-        // request.body.poly_rating_search,
-        // request.body.kink_rating_search,
-        // request.body.sw_rating_search,
-        // request.body.bipoc_rating_search,
-        // request.body.teletherapy_search,
-        // request.body.couples_seach,
-        // request.body.youth_search,
-        // request.body.accept_insurance_yes,
-        // request.body.accept_masshealth_yes_search,
-        // request.body.which_insurance_search,
-
-
-    //post route to execute searching the database
     search: (request, response) => {
-
-        // console.log(`result of request.body.provider_state_search is: ${request.body.provider_state_search}`)
-        // console.log(`result of request.body.provider_type_search is: ${request.body.provider_type_search}`)
-        // console.log(`result of request.body.teletherapy_search is: ${request.body.teletherapy_search}`)
-        // console.log(`result of request.body.which_insurance_search is: ${request.body.which_insurance_search}`)
-        // console.log(`result of request.body is: ${request.body}`)
-        console.log(`This is the value of document.querySelector('.provider_type_search:checked').value: ${document.querySelector('.provider_type_search:checked').value}`)
-
-        Providers.find({
-            
-            // providerType: "therapist",
-            providerType: document.querySelector('.provider_type_search:checked').value
-            // providerType: request.body.provider_type_search,
-            // licenseState: "Rhode Island",
-            // licenseState: request.body.provider_state_search,
-            //set ratings to be < or = to number
-
-            // queerRating: {$gte: request.body.queer_rating_search },
-            // queerRating: request.body.queer_rating_search,
-            // transRating: "",
-            // polyRating: "",
-            // kinkRating: "",
-            // swRating: "",
-            // bipocRating: "",
-            // teletherapy: request.body.teletherapy_search,
-            // couplesTherapy:"yes",
-            // youthTherapy:"yes",
-            // acceptInsurance:"",
-            // whichInsurance: request.body.which_insurance_search,
-            // acceptMassHealth: "",
+        const data = request.body;
+        console.log(data);
+  
+        const query = {};
+        if (data.provider_type_search) query.providerType = data.provider_type_search;
+        if (data.provider_state_search) query.licenseState = data.provider_state_search;
+        if (data.queer_rating_search) query.queerRating = data.queer_rating_search;
+        if (data.trans_rating_search) query.transRating = data.trans_rating_search;
+        if (data.poly_rating_search) query.polyRating = data.poly_rating_search;
+        if (data.kink_rating_search) query.kinkRating = data.kink_rating_search;
+        if (data.sw_rating_search) query.swRating = data.sw_rating_search;
+        if (data.bipoc_rating_search) query.bipocRating = data.bipoc_rating_search;
+        if (data.teletherapy_provider_input) query.teletherapy = data.teletherapy_provider_input;
+        if (data.couples) query.couplesTherapy = data.couples;
+        if (data.youth) query.youthTherapy = data.youth;
+        if (data.accept_insurance) query.acceptInsurance = data.accept_insurance;
+        if (data.which_insurance_search) query.whichInsurance = data.which_insurance_search;
         
-        }, (error, resultProviders) => {
-            if (error) {
-                
+  
+        console.log(query);
+  
+        Providers.find(query, (err, resultProviders) => {
+          if (err) {
+            console.log(err)
+          } else {
+            console.log('results', resultProviders);
+            // response.render('pages/search', {results: results})
+            response.render('pages/results', {providers: resultProviders})
 
-                return error;
-            } else {
-                console.log(`second console.log result of request.body is: ${request.body}`)
-                console.log(resultProviders)
-                response.render("pages/results", {providers: resultProviders});
-            }
-        })      
+          }
+        });
+      },
 
-    },
+    // search: (request, response) => {
+        
+    //     Providers.find({
+    //         providerType: request.body.provider_type_search,
+            
+    //     }, (error, resultProviders) => {
+    //         if (error) {
+    //             return error;
+    //         } else {
+    //             console.log(`These are the resultProviders: ${resultProviders}`)
+    //             response.render("pages/results", {providers: resultProviders});
+    //         }
+    //     })
+    // },
+
 
 
     results: (request, response) => {

@@ -28,7 +28,15 @@
 
         <div class="question update-question">
             <label for="provider_type_update" class="text1">What kind of mental health provider are they?</label>
-            <input type="text" id="provider_type_update" name="provider_type_update" value="<%= Provider.providerType %>">
+                 
+            <!-- <input type="text" id="provider_type_update" name="provider_type_update" value="<%= Provider.providerType %>"> -->
+
+            <input type="checkbox" id="provider_type_therapist_update" name="provider_type_update" value="therapist" required>
+            <label for="provider_type_therapist_update">Therapist</label>
+            <br>
+            <input type="checkbox" id="provider_type_psychiatrist_update" name="provider_type_update" value="psychiatrist" required>
+            <label for="provider_type_psychiatrist_update">Psychiatrist</label>
+
         </div>
 
         <div class="question update-question">
@@ -38,7 +46,7 @@
                 <input type="radio" id="teletherapy_yes_update" name="teletherapy_update" value="yes">
                 <input type="radio" id="teletherapy_no_update" name="teletherapy_update" value="no">
             </div>
-            <div class=radio-yn-label-div>
+            <div class="radio-yn-label-div">
                 <label for="teletherapy_yes_update">Yes</label>
                 <label for="teletherapy_no_update">No</label>
             </div>
@@ -115,17 +123,35 @@
                 <input type="radio" id="update-insurance-yes" name="insurance_yn_update" value="yes">
                 <input type="radio" id="update-insurance-no" name="insurance_yn_update" value="no">
             </div>
-            <div class=radio-yn-label-div>
+            <div class="radio-yn-label-div">
                 <label for="update-insurance-yes">Yes</label>
                 <label for="update-insurance-no">No</label>
             </div>
         </div>
 
         <div class="question update-question">
+            <label for="client_listed_insurance_update" class="text1">Insurances listed by client:</label>
+            <!-- <textarea id="client_listed_insurance_update" name="client_listed_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.insuranceFromClient %>">
+            </textarea> -->
+            <p><%= Provider.insuranceFromClient %></p>
+        </div>
+
+
+        <div class="question update-question">
             <label for="which_insurance_update" class="text1">Which insurance(s) do they accept?</label>
-            <textarea id="which_insurance_update" name="which_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.whichInsurance %>">
+            <!-- <textarea id="which_insurance_update" name="which_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.whichInsurance %>">
+            </textarea> -->
+
+<!-- Add insurance checkboxes here -->
+
+        </div>
+
+        <div class="question update-question">
+            <label for="additional_insurance_update" class="text1">Additional they accept:</label>
+            <textarea id="additional_insurance_update" name="additional_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.additionalInsurance %>">
             </textarea>
         </div>
+
 
 <!-- fix -->
         <div class="question update-question">
@@ -134,7 +160,7 @@
                 <input type="radio" id="masshealth_yes_update" name="masshealth_yn_update" value="yes">
                 <input type="radio" id="masshealth_no_update" name="masshealth_yn_update" value="no">
             </div>
-            <div class=radio-yn-label-div>
+            <div class="radio-yn-label-div">
                 <label for="masshealth_yes_update">Yes</label>
                 <label for="masshealth_no_update">No</label>
             </div>

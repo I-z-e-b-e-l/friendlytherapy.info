@@ -22,7 +22,7 @@ router.route('/find-a-therapist-search')
     .get(searchAddController.find_a_provider)
 
 router.route('/search')
-    .get(searchAddController.search)
+    .post(searchAddController.search)
 
 
 

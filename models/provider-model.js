@@ -13,7 +13,7 @@ const providerSchema = new Schema ({
     },
 
     providerType: {
-        type: String,
+        type: [String],
         minLength: [4, 'Minimum length for provider type is 4 characters.']
     },
 
@@ -30,12 +30,12 @@ const providerSchema = new Schema ({
     },
 
     teletherapy: {
-        type: String
+        type: Boolean
     },
 
     licenseState: {
         // type: [] 
-        type: Array
+        type: [String]
     },
 
     location: {
@@ -43,39 +43,30 @@ const providerSchema = new Schema ({
     },
 
     queerRating: {
-        type: Number,
-        minimum: [0, 'Minimum rating is 0.'],
-        maximum: [3, 'Maximum rating is 3.']
+        // type: Number,
+        // minimum: [0, 'Minimum rating is 0.'],
+        // maximum: [3, 'Maximum rating is 3.']
+        type: String
     },
 
     transRating: {
-        type: Number,
-        minimum: [0, 'Minimum rating is 0.'],
-        maximum: [3, 'Maximum rating is 3.']
+        type: String
     },
 
     polyRating: {
-        type: Number,
-        minimum: [0, 'Minimum rating is 0.'],
-        maximum: [3, 'Maximum rating is 3.']
+        type: String
     },
 
     kinkRating: {
-        type: Number,
-        minimum: [0, 'Minimum rating is 0.'],
-        maximum: [3, 'Maximum rating is 3.']
+        type: String
     },
 
     swRating: {
-        type: Number,
-        minimum: [0, 'Minimum rating is 0.'],
-        maximum: [3, 'Maximum rating is 3.']
+        type: String
     },
 
     bipocRating: {
-        type: Number,
-        minimum: [0, 'Minimum rating is 0.'],
-        maximum: [3, 'Maximum rating is 3.']
+        type: String
     },
 
     additionalRating: {
@@ -87,11 +78,11 @@ const providerSchema = new Schema ({
     },
 
     couplesTherapy: {
-        type: String
+        type: Boolean
     },
 
     youthTherapy: {
-        type: String
+        type: Boolean
     },
 
     website: {
@@ -103,15 +94,23 @@ const providerSchema = new Schema ({
     },
 
     acceptInsurance: {
-        type: String
+        type: Boolean
     },
 
     whichInsurance: {
         type: String
     },
 
-    acceptMassHealth: {
+    additionalInsurance: {
         type: String
+    },
+
+    insuranceFromClient: {
+        type: String
+    },
+
+    acceptMassHealth: {
+        type: Boolean
     },
 
     cost: {
