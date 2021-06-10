@@ -130,12 +130,15 @@ module.exports = {
         website: request.body.website_update,
         contact: request.body.contact_update,
         acceptInsurance: request.body.insurance_yn_update,
+        //skip insurancefromclient
         whichInsurance: request.body.which_insurance_update,
+        additionalInsurance: request.body.additional_insurance_update,
         acceptMassHealth: request.body.masshealth_yn_update,
         cost: request.body.cost_update,
         accessibility: request.body.access_update,
         comments: request.body.comments_update,
-        commentsAdmin: request.body.admin_comments_update
+        commentsAdmin: request.body.admin_comments_update,
+        lastUpdate: request.body.last_update,
       }}, {new: true}, (error) => {
           if (error) {
               return error;

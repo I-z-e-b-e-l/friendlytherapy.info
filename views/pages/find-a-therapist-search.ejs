@@ -70,19 +70,28 @@
 
     <div class="search-the-list max-width-container center-this-top">
 
-        <div class="max-width">
-            <h2> Search for a Provider</h2>
 
-            <!-- <div class="spacer1"></div> -->
-            <div class="search-question">
-                <p class="text1">Show me every provider in the database:</p>
-                <a href="/search-add/results">
-                    <button id="show-all-button">Show All</button>
-                </a>
-            </div>   
-        </div>
+
+    </div>
+    
+    <div class="search-the-list max-width-container center-this-top">
 
         <form id="search-the-list-form" class="max-width" action="/search-add/search" method="POST">
+
+            <div class="max-width">
+                <h2> Search for a Provider</h2>
+            </div>
+
+
+                <!-- <div class="spacer1"></div> -->
+                <div class="show-all-div">
+                    <p class="text1">Show me every provider in the database:</p>
+                    <a href="/search-add/results">
+                        <button id="show-all-button">Show All</button>
+                    </a>
+                </div>   
+            
+
 
 
             <div class="search-question">
@@ -118,8 +127,9 @@
 
             <div class="search-question">
 
-                <p class="text1">Only show providers with a frendliness rating of at least this number for these communities:</p>
-                <p>Providers are rated by clients on a 0 to 3 scale.</p>
+                <p class="text1">Only show providers with this frendliness rating for these communities:</p>
+                <p>Providers are rated by clients on a 0 to 3 scale: 0 being completely unfamiliar, and 3 being super comfortable and supportive.</p>
+                <p><em>Selecting a rating in your search will mean you only see providers who were submitted and rated by clients.</em></p>
                 <!-- <p>
                 0 = completely unfamiliar   
                 <br>
@@ -214,79 +224,61 @@
 
             </div>
 
-            <div class="search-question">
+            <!-- <div class="search-question">
                 <label class="text1">Are you looking for teletherapy?</label>
-            <!-- set value to true/false or yes/no? -->
                     
                         <div class="radio-yn-div">
                             <input type="radio" id="teletherapy_yes" name="teletherapy_search" value="true">
-                            <input type="radio" id="teletherapy_no" name="teletherapy_search" value="false">
+                            <input type="radio" id="teletherapy_no" name="teletherapy_search" value="">
                         </div>
                         <div class="radio-yn-label-div">
                             <label for="teletherapy_yes">Yes</label>
                             <label for="teletherapy_no">No</label>
                         </div>
                   
-            </div> 
+            </div>   -->
 
-
-            <!-- <div class="search-question">
-
-                <input type="checkbox" class="search-checkbox" id="teletherapy_yes" name="teletherapy_search" value="yes">
-                <label for="teletherapy_yes" class="text1">Only show me providers who do teletherapy</label>
-
-            </div> -->
-            
-            <!-- <div class="search-question">
-                <label class="text1">Are you looking for couples therapy?</label>
-
-                        <div class="radio-yn-div">
-                            <input type="radio" id="couples-yes" name="couples" value="yes">
-                            <input type="radio" id="couples-no" name="couples" value="no">
-                        </div>
-                        <div class=radio-yn-label-div>
-                            <label for="couples-yes">Yes</label>
-                            <label for="couples-no">No</label>
-                        </div>
-            </div> -->
 
             <div class="search-question">
 
-                <input type="checkbox" class="search-checkbox" id="couples_search" name="couples_search" value="yes">
-                <label for="couples_search" class="text1">Only show me providers who do couples therapy</label>
+                <input type="checkbox" class="search-checkbox" id="teletherapy_search" name="teletherapy_search" value="true">
+                <label for="teletherapy_search" class="text1">Only show me providers who will do teletherapy / telehealth</label>
 
             </div>
 
+
             <!-- <div class="search-question">
-                <label class="text1">Are you looking for a provider who serves youth?</label>
+                <label class="text1">Only show providers who accept insurance?</label>
                 <div class="radio-yn-div">
-                    <input type="radio" id="youth-yes" name="youth" value="yes">
-                    <input type="radio" id="youth-no" name="youth" value="no">
+                    <input type="radio" id="accept_insurance_yes" name="accept_insurance" value="true">
+                    <input type="radio" id="accept_insurance_no" name="accept_insurance" value="">
                 </div>
-                <div class=radio-yn-label-div>
+                <div class="radio-yn-label-div">
                     <label for="youth-yes">Yes</label>
                     <label for="youth-no">No</label>
                 </div>
             </div> -->
 
-            <div class="search-question">
 
-                <input type="checkbox" class="search-checkbox" id="youth_search" name="youth_search" value="yes">
-                <label for="youth_search" class="text1">Only show me providers who serve youth</label>
-
-            </div>
 
             <div class="search-question">
-                <input type="checkbox" class="search-checkbox" id="accept_insurance_yes" name="accept_insurance_yes" value="yes" onclick="">
-                <label for="accept_insurance_yes" class="text1">Only show me providers who accept insurance</label>
+                <input type="checkbox" class="search-checkbox" id="accept_insurance" name="accept_insurance" value="true">
+                <label for="accept_insurance" class="text1">Only show me providers who accept insurance</label> 
             </div>
 
+
+            <div class="search-question">
+                <input type="checkbox" class="search-checkbox" id="accept_masshealth" name="accept_masshealth" value="true">
+                <label for="accept_masshealth" class="text1">Only show me providers who accept MassHealth</label> 
+            </div>
+
+<!-- 
             <div class="search-question">
                 
-                <input type="checkbox" id="accept_masshealth_yes_search" class="search-checkbox"name="accept_masshealth_yes_search" value="yes" onclick="">
+                <input type="checkbox" id="accept_masshealth_yes_search" class="search-checkbox" name="accept_masshealth_yes_search" value="true">
                 <label for="accept_masshealth_yes_search" class="text1">Only show me providers who accept Masshealth</label>
                
-            </div>
+            </div> -->
 
             <div class="search-question">
                 <label for="which_insurance_search" class="text1">What insurance do you want to use?</label>
@@ -341,7 +333,44 @@
                 </select>
             </div>
 
+            <div class="search-question">
+                <label class="text1">Are you looking for couples therapy?</label>
 
+                        <div class="radio-yn-div">
+                            <input type="radio" id="couples-yes" name="couples" value="true">
+                            <input type="radio" id="couples-no" name="couples" value="">
+                        </div>
+                        <div class=radio-yn-label-div>
+                            <label for="couples-yes">Yes</label>
+                            <label for="couples-no">No</label>
+                        </div>
+            </div>
+
+            <!-- <div class="search-question">
+
+                <input type="checkbox" class="search-checkbox" id="couples_search" name="couples_search" value=true>
+                <label for="couples_search" class="text1">Only show me providers who do couples therapy</label>
+
+            </div> -->
+
+            <div class="search-question">
+                <label class="text1">Are you looking for a provider who serves youth?</label>
+                <div class="radio-yn-div">
+                    <input type="radio" id="youth-yes" name="youth" value="true">
+                    <input type="radio" id="youth-no" name="youth" value="">
+                </div>
+                <div class="radio-yn-label-div">
+                    <label for="youth-yes">Yes</label>
+                    <label for="youth-no">No</label>
+                </div>
+            </div>
+
+            <!-- <div class="search-question">
+
+                <input type="checkbox" class="search-checkbox" id="youth_search" name="youth_search" value="yes">
+                <label for="youth_search" class="text1">Only show me providers who serve youth</label>
+
+            </div> -->
 
 
             <!-- max cost per session -->

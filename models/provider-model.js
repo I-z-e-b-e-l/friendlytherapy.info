@@ -129,7 +129,11 @@ const providerSchema = new Schema ({
         type: String
     },
 
-    updated: { 
+    lastUpdate: {
+        type: String
+    },
+
+    added: { 
         type: Date, default: Date.now() 
     },
 

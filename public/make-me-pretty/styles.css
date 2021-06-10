@@ -663,6 +663,36 @@ td {
 }
 
 
+.result-row {
+    display: flex;
+    margin-top: 1em;
+}
+
+.result-row p, .result-row h4 {
+    margin: 0;
+}
+
+.result-row h4, .rating-result-box h4 {
+    padding-right: .3em;
+    font-weight: normal;
+}
+
+.result-row p {
+    font-weight: bold;
+}
+
+/* .rating-result-box {
+    border: 1px lavender solid;
+    margin-top: 1em;
+    padding-left: 1em;
+} */
+
+.rating-row {
+    margin-top: 0;
+    margin-bottom: .2em;
+}
+
+
 
 /* MOAR RESOURCES PAGE */
 
@@ -783,6 +813,15 @@ td {
 
 .take-me .list-icon {
     width: 122px;
+}
+
+.show-all-div {
+    display: flex;
+}
+
+#show-all-button {
+    margin: .4em 1em .6em 1em;
+    width: 110px;
 }
 
 

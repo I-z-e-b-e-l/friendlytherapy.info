@@ -56,7 +56,6 @@
 
             <label for="license-state_update" class="text1">Where does this provider practice / Where is this provider licensed?</label>
 
-            <!-- do auto dropdown instead? -->
             <br><br>
             <input type="checkbox" id="ma-check_update" name="ma-check_update" value="ma-check_update">
             <label for="ma-check_update"> Massachusetts</label><br>
@@ -88,7 +87,7 @@
                 <input type="radio" id="couples_yes_update" name="couples_update" value="yes">
                 <input type="radio" id="couples_no_update" name="couples_update" value="no">
             </div>
-            <div class=radio-yn-label-div>
+            <div class="radio-yn-label-div">
                 <label for="couples_yes_update">Yes</label>
                 <label for="couplesno_update">No</label>
             </div>
@@ -100,7 +99,7 @@
                 <input type="radio" id="youth-yes_update" name="youth_update" value="yes">
                 <input type="radio" id="youth-no_update" name="youth_update" value="no">
             </div>
-            <div class=radio-yn-label-div>
+            <div class="radio-yn-label-div">
                 <label for="youth-yes_update">Yes</label>
                 <label for="youth-no_update">No</label>
             </div>
@@ -141,6 +140,30 @@
             <label for="which_insurance_update" class="text1">Which insurance(s) do they accept?</label>
             <!-- <textarea id="which_insurance_update" name="which_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.whichInsurance %>">
             </textarea> -->
+
+            <div class="health-insurace-box">
+                <input type="checkbox" class="insurance-checkbox" id="another_insurance_provider_input" name="which_insurance_provider_input" value="another_insurance_provider_input">
+                <label for="another_insurance_provider_iput" class="">Another insurance not listed here</label>
+
+                <input type="checkbox" class="insurance-checkbox" id="aetna_provider_input" name="which_insurance_provider_input" value="Aetna">
+                <label for="aetna_provider_input" class="">Aetna</label>
+
+                <input type="checkbox" class="insurance-checkbox" id="allways_health_partners_provider_input" name="which_insurance_provider_input" value="Allways Health Partners">
+                <label for="allways_health_partners_provider_input" class="">Allways Health Partners</label>
+
+                <input type="checkbox" class="insurance-checkbox" id="anthem_provider_input" name="which_insurance_provider_input" value="Anthem">
+                <label for="anthem_provider_input" class="">Anthem</label>
+
+                <input type="checkbox" class="insurance-checkbox" id="beacon_provider_input" name="which_insurance_provider_input" value="Beacon">
+                <label for="beacon_provider_inpu" class="">Beacon</label>
+
+                <input type="checkbox" class="insurance-checkbox" id="beacon_health_options_provider_input" name="which_insurance_provider_input" value="Beacon Health Options">
+                <label for="beacon_health_options_provider_input" class="">Beacon Health Options</label>
+
+                <input type="checkbox" class="insurance-checkbox" id="bmc_healthnet_provider_input" name="which_insurance_provider_input" value="BMC HealthNet">
+                <label for="bmc_healthnet_provider_input" class="">BMC HealthNet</label>
+
+            </div>   
 
 <!-- Add insurance checkboxes here -->
 
@@ -191,6 +214,14 @@
 
             <label for="admin_comments_update" class="text1">Admin Comments:</label>
             <textarea id="admin_comments_update" name="admin_comments_update" class="center-me" rows="8" cols="50" value="<%= Provider.commentsAdmin %>">
+            </textarea> 
+
+        </div>
+
+        <div class="question update-question">
+
+            <label for="last_update" class="text1">Last Update:</label>
+            <textarea id="last_update" name="last_update" class="center-me" rows="8" cols="50" value="<%= Provider.lastUpdate %>">
             </textarea> 
 
         </div>

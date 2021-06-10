@@ -97,10 +97,11 @@ module.exports = {
         if (data.kink_rating_search) query.kinkRating = data.kink_rating_search;
         if (data.sw_rating_search) query.swRating = data.sw_rating_search;
         if (data.bipoc_rating_search) query.bipocRating = data.bipoc_rating_search;
-        if (data.teletherapy_provider_input) query.teletherapy = data.teletherapy_provider_input;
+        if (data.teletherapy_search) query.teletherapy = data.teletherapy_search;
         if (data.couples) query.couplesTherapy = data.couples;
         if (data.youth) query.youthTherapy = data.youth;
         if (data.accept_insurance) query.acceptInsurance = data.accept_insurance;
+        if (data.accept_masshealth) query.acceptMassHealth = data.accept_masshealth;
         if (data.which_insurance_search) query.whichInsurance = data.which_insurance_search;
         
   
