@@ -48,6 +48,10 @@ h1 {
     height: 5vh;   
 }
 
+.spacer3 {
+    height: 20vh;
+}
+
 /* style links */
 
 .general-landing {
@@ -421,7 +425,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, #search-again-button{
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, #search-again-button {
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -536,7 +540,7 @@ footer {
 input[type='radio'] { 
     transform: scale(2.5); 
 }
-/* maybe change radio select color later */
+
 input[type='radio']:checked:after { 
         width: 12px;
         height: 12px;
@@ -597,6 +601,15 @@ input[type=checkbox] {
     margin-top: 20px;
 }
 
+.insurance-check-row {
+    display: flex;
+}
+
+.insurance-check-row label {
+    padding-top: .6em;
+}
+
+
 
 #poly_rating, #queer_rating, #trans_rating, #kink_rating, #sw_rating, #bipoc_rating, #additional_rating {
     display: none;
@@ -605,6 +618,25 @@ input[type=checkbox] {
 .thank-you-add {
     display: none;
 }
+
+.reset-form-button {
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    padding: 5px 10px;
+    border-radius: 17px;
+    border: 1px solid mediumaquamarine;
+    margin-top: 2em;
+}
+
+
+
+.reset-form-button:hover {
+border: 1px solid black;
+font-weight: bold;
+}
+
+
+
+
 
 
 /* UPDATE PAGE STYLINGS */
@@ -639,7 +671,33 @@ td {
     font-weight: bold;
 }
 
+/* Update and Add to the List (Add a Provider) Styling */
 
+.show-insurance-button {
+    font-size: .7em;
+    margin-top: 2.2em;
+    margin-bottom: 1em;
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    border: 1px solid mediumaquamarine;
+    border-radius: 17px;
+    font-size: .8em;
+}
+
+.show-insurance-button p {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+
+.show-insurance-button:hover {
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.insurance-box {
+    display: none;
+    margin-top: 1.6em;
+}
 
 
 /* RESULTS */
@@ -691,6 +749,10 @@ td {
     margin-top: 0;
     margin-bottom: .2em;
 }
+
+/* #not-perfect {
+    margin-top: 
+} */
 
 
 
@@ -793,18 +855,20 @@ td {
 }
 
 .banner {
-    height: 11em;
+    /* height: 11em; */
+    height: 20em;
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
-    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    /* background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1);  */
+    background-image: url('/images/succulents2.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 4em 0;
 }
 
-.banner h2 {
+.banner h1 {
     margin: 10vw;
-    /* color: white; */
+    color: white;
 }
 
 #find-magnify-heart-img {
@@ -816,7 +880,15 @@ td {
 }
 
 .show-all-div {
+    /* display: flex; */
+    margin-top: 0;
+}
+
+.show-all-button-div {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #show-all-button {
@@ -826,17 +898,15 @@ td {
 
 
 #search-the-list-form {
-    max-width: 650px;
+    /* max-width: 650px; */
+    max-width: 1100px;
     margin-right: 5vw;
+    margin-top: 0;
 }
 
 .search-question {
     margin: 3em 0em;
 }
-
-/* .seach-checkbox {
-    background-color: #a1e7a1;
-} */
 
 #provider-state {
     min-width: 275px;
@@ -860,6 +930,16 @@ optgroup {
     display: block;
     margin-bottom: .2em;
 }
+
+/* .check-label {
+    background-color: blueviolet;
+    width: 200px;
+} */
+
+/* .search-checkbox {
+
+} */
+
 
 #which_insurance_search, #provider_state_search, .friendly-select {
     max-width: 85vw;
@@ -1009,6 +1089,10 @@ optgroup {
         height: 0;   
     }
 
+    .spacer3 {
+        height: 5vh;
+    }
+
     .general-landing {
         height: 50vh;
     }
@@ -1039,6 +1123,20 @@ optgroup {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    /* SEARCH PAGE */
+
+    .show-all-div {
+        display: flex;
+        /* margin-top: 0; */
+    }
+
+    .show-all-button-div {
+        width: 120px;
+        display: inline;
+        /* justify-content: center;
+        align-items: center; */
     }
 
 }
@@ -1209,6 +1307,38 @@ optgroup {
     /* .search-the-list {
         background-color: deeppink;
     } */
+
+
+    /* ADD TO THE LIST @1100px*/
+
+    .insurance-check-row {
+        width: 450px;
+    }
+
+    .insurance-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .center-me-at-1100{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:cyan;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  */
+    }
+
+    /* Results Page */
+
+    #search-again-button {
+        margin-top: 0;
+    }
+
 
 }
 

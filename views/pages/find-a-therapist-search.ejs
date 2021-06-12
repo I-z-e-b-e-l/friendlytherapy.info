@@ -60,9 +60,8 @@
     <div class="banner">
     <!-- <div class="color-divider-div"> -->
         <a name="search-the-list">
-            <h2>
-                Built by the community, for the community.
-            </h2>
+            <!-- <h2> Built by the community, for the community. </h2> -->
+            <h1> Search for a Provider</h1>
         </a>
     </div>
 
@@ -74,21 +73,25 @@
 
     </div>
     
-    <div class="search-the-list max-width-container center-this-top">
+    <div class="search-the-list max-width-container">
 
         <form id="search-the-list-form" class="max-width" action="/search-add/search" method="POST">
 
-            <div class="max-width">
+            <!-- <div class="max-width">
                 <h2> Search for a Provider</h2>
-            </div>
+            </div> -->
 
 
                 <!-- <div class="spacer1"></div> -->
                 <div class="show-all-div">
                     <p class="text1">Show me every provider in the database:</p>
-                    <a href="/search-add/results">
+                    <div class="show-all-button-div">
+                        <a href="/search-add/results">
                         <button id="show-all-button">Show All</button>
-                    </a>
+                    </a>                    
+                    </div>
+
+
                 </div>   
             
 
@@ -107,9 +110,7 @@
 
             <div class="search-question">
                 <label for="provider_state_search" class="text1">What state would you like to see a provider in?</label>
-                <p>For insurance and licensing reasons, this should usually be the state you live in, even if you are looking for remote therapy. 
-                <br><br>
-                International therapists are not bound by US licensing restrictions.</p>
+                <p><em>For insurance and licensing reasons, this should usually be the state you live in, even if you are looking for remote therapy - unless you are open to international providers who are not bound by US licensing restrictions.</em></p>
                 <select name="provider_state_search" id="provider_state_search">
                     <optgroup>
                     <option value=""></option>   
@@ -242,7 +243,7 @@
             <div class="search-question">
 
                 <input type="checkbox" class="search-checkbox" id="teletherapy_search" name="teletherapy_search" value="true">
-                <label for="teletherapy_search" class="text1">Only show me providers who will do teletherapy / telehealth</label>
+                <label for="teletherapy_search" class="text1 check-label">Only show me providers who will do teletherapy / telehealth</label>
 
             </div>
 
@@ -263,13 +264,13 @@
 
             <div class="search-question">
                 <input type="checkbox" class="search-checkbox" id="accept_insurance" name="accept_insurance" value="true">
-                <label for="accept_insurance" class="text1">Only show me providers who accept insurance</label> 
+                <label for="accept_insurance" class="text1 check-label">Only show me providers who accept insurance</label> 
             </div>
 
 
             <div class="search-question">
                 <input type="checkbox" class="search-checkbox" id="accept_masshealth" name="accept_masshealth" value="true">
-                <label for="accept_masshealth" class="text1">Only show me providers who accept MassHealth</label> 
+                <label for="accept_masshealth" class="text1 check-label">Only show me providers who accept MassHealth</label> 
             </div>
 
 <!-- 

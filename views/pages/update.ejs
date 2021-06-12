@@ -27,24 +27,30 @@
         </div>
 
         <div class="question update-question">
-            <label for="provider_type_update" class="text1">What kind of mental health provider are they?</label>
+            <label for="provider_type_update" class="text1">What kind of mental health provider are they?</label><br><br>
                  
             <!-- <input type="text" id="provider_type_update" name="provider_type_update" value="<%= Provider.providerType %>"> -->
 
-            <input type="checkbox" id="provider_type_therapist_update" name="provider_type_update" value="therapist" required>
+            <input type="checkbox" id="provider_type_therapist_update" name="provider_type_update" value="therapist"<% if (Provider.providerType == "therapist"){%><%="checked"%> <%}%> >
             <label for="provider_type_therapist_update">Therapist</label>
             <br>
-            <input type="checkbox" id="provider_type_psychiatrist_update" name="provider_type_update" value="psychiatrist" required>
+            <input type="checkbox" id="provider_type_psychiatrist_update" name="provider_type_update" value="psychiatrist" <% if (Provider.providerType == "psychiatrist"){%><%="checked"%> <%}%> >
             <label for="provider_type_psychiatrist_update">Psychiatrist</label>
 
+        </div>
+
+        <div class="question provider-question">
+            <label for="credentials_update" class="text1">Credentials:</label>
+            <input type="text" id="credentials_update" name="credentials_update" value="<%= Provider.credentials %>">
         </div>
 
         <div class="question update-question">
             <p class="text1">Does this provider offer teletherapy?</p>
 
             <div class="radio-yn-div">
-                <input type="radio" id="teletherapy_yes_update" name="teletherapy_update" value="yes">
-                <input type="radio" id="teletherapy_no_update" name="teletherapy_update" value="no">
+                <input type="radio" id="teletherapy_yes_update" name="teletherapy_update" value="true" <% if (Provider.teletherapy === true){%><%="checked"%> <%}%> > 
+
+                <input type="radio" id="teletherapy_no_update" name="teletherapy_update" value="false" <% if (Provider.teletherapy === false){%><%="checked"%> <%}%> >
             </div>
             <div class="radio-yn-label-div">
                 <label for="teletherapy_yes_update">Yes</label>
@@ -52,40 +58,49 @@
             </div>
         </div>
 
+
+
+
         <div class="question update-question">
 
-            <label for="license-state_update" class="text1">Where does this provider practice / Where is this provider licensed?</label>
+            <label for="license_state_update" class="text1">Where does this provider practice / Where is this provider licensed?</label>
 
             <br><br>
-            <input type="checkbox" id="ma-check_update" name="ma-check_update" value="ma-check_update">
-            <label for="ma-check_update"> Massachusetts</label><br>
+            <input type="checkbox" id="ma_check_update" name="license_state_update" value="Massachusetts" <% if (Provider.licenseState.includes("Massachusetts")===true){ %> <%="checked"%> <%}%> > 
+            <label for="ma_check_update"> Massachusetts</label><br>
 
-            <input type="checkbox" id="ri-check_update" name="ri-check_update" value="ri-check_update">
-            <label for="ri-check_update"> Rhode Island</label><br>
+            <input type="checkbox" id="ri_check_update" name="license_state_update" value="Rhode Island" <% if (Provider.licenseState.includes("Rhode Island")===true){ %> <%="checked"%> <%}%> > 
+            <label for="ri_check_update"> Rhode Island</label><br>
 
-            <input type="checkbox" id="nh-check_update" name="nh-check_update" value="nh-check_update">
-            <label for="nh-check_update">New Hampshire</label><br>
+            <input type="checkbox" id="nh_check_update" name="license_state_update" value="New Hampshire" <% if (Provider.licenseState.includes("New Hampshire")===true){ %> <%="checked"%> <%}%> > 
+            <label for="nh_check_update">New Hampshire</label><br>
 
-            <input type="checkbox" id="ct-check_update" name="ct-check_update" value="ct-check_update">
-            <label for="ct-check_update">Connecticut</label><br>
+            <input type="checkbox" id="ct_check_update" name="license_state_update" value="Connecticut" <% if (Provider.licenseState.includes("Connecticut")===true){ %> <%="checked"%> <%}%> > 
+            <label for="ct_check_update">Connecticut</label><br>
 
-            <input type="checkbox" id="ny-check_update" name="ny-check_update" value="ny-check_update">
-            <label for="ny-check_update"> New York</label><br>
+            <input type="checkbox" id="ny_check_update" name="license_state_update" value="New York" <% if (Provider.licenseState.includes("New York")===true){ %> <%="checked"%> <%}%> > 
+            <label for="ny_check_update"> New York</label><br>
 
-            <input type="checkbox" id="somewhere-else-check_update" name="somewhere-else-check_update" value="somewhere-else-check_update">
-            <label for="somewhere-else-check_update">Somewhere else</label><br><br>
+            <input type="checkbox" id="somewhere-else_check_update" name="license_state_update" value="Another State" <% if (Provider.licenseState.includes("Another State")===true){ %> <%="checked"%> <%}%> > 
+            <label for="somewhere-else_check_update">Another State</label><br>
 
-            
+            <input type="checkbox" id="international_update" name="license_state_update" value="International" <% if (Provider.licenseState.includes("International")===true){ %> <%="checked"%> <%}%> > 
+            <label for="ma_check_update"> International</label><br>
+
+
+        </div>
+
+        <div class="question update-question">
             <label for="therapist-location" class="text1">Location/Neighborhood:</label>
             <input type="text" id="location_update" name="location_update" value="<%= Provider.location %>">
 
         </div>
 
         <div class="question update-question">
-            <label class="text1">Does this therapist provide couples_update therapy?</label>
+            <label class="text1">Does this therapist provide couples therapy?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="couples_yes_update" name="couples_update" value="yes">
-                <input type="radio" id="couples_no_update" name="couples_update" value="no">
+                <input type="radio" id="couples_yes_update" name="couples_update" value="true"  <% if (Provider.couplesTherapy === true){%><%="checked"%> <%}%> >
+                <input type="radio" id="couples_no_update" name="couples_update" value="false" <% if (Provider.couplesTherapy === false){%><%="checked"%> <%}%> >
             </div>
             <div class="radio-yn-label-div">
                 <label for="couples_yes_update">Yes</label>
@@ -96,8 +111,8 @@
         <div class="question update-question">
             <label class="text1">Does this therapist serve youth? </label>
             <div class="radio-yn-div">
-                <input type="radio" id="youth-yes_update" name="youth_update" value="yes">
-                <input type="radio" id="youth-no_update" name="youth_update" value="no">
+                <input type="radio" id="youth-yes_update" name="youth_update" value="true" <% if (Provider.youthTherapy === true){%><%="checked"%> <%}%> >
+                <input type="radio" id="youth-no_update" name="youth_update" value="false" <% if (Provider.youthTherapy === false){%><%="checked"%> <%}%> >
             </div>
             <div class="radio-yn-label-div">
                 <label for="youth-yes_update">Yes</label>
@@ -119,8 +134,8 @@
         <div class="question update-question">
             <label class="text1">Does this therapist accept insurance?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="update-insurance-yes" name="insurance_yn_update" value="yes">
-                <input type="radio" id="update-insurance-no" name="insurance_yn_update" value="no">
+                <input type="radio" id="update-insurance-yes" name="insurance_yn_update" value="true" <% if (Provider.acceptInsurance === true){%><%="checked"%> <%}%>>
+                <input type="radio" id="update-insurance-no" name="insurance_yn_update" value="false" <% if (Provider.acceptInsurance === false){%><%="checked"%> <%}%>>
             </div>
             <div class="radio-yn-label-div">
                 <label for="update-insurance-yes">Yes</label>
@@ -130,58 +145,243 @@
 
         <div class="question update-question">
             <label for="client_listed_insurance_update" class="text1">Insurances listed by client:</label>
-            <!-- <textarea id="client_listed_insurance_update" name="client_listed_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.insuranceFromClient %>">
-            </textarea> -->
             <p><%= Provider.insuranceFromClient %></p>
         </div>
 
 
         <div class="question update-question">
             <label for="which_insurance_update" class="text1">Which insurance(s) do they accept?</label>
-            <!-- <textarea id="which_insurance_update" name="which_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.whichInsurance %>">
-            </textarea> -->
 
-            <div class="health-insurace-box">
-                <input type="checkbox" class="insurance-checkbox" id="another_insurance_provider_input" name="which_insurance_provider_input" value="another_insurance_provider_input">
-                <label for="another_insurance_provider_iput" class="">Another insurance not listed here</label>
 
-                <input type="checkbox" class="insurance-checkbox" id="aetna_provider_input" name="which_insurance_provider_input" value="Aetna">
-                <label for="aetna_provider_input" class="">Aetna</label>
+            <div class="center-me">
+                <div class="pretend-button show-insurance-button" onclick="display_insurance_options()">
+                    <p >Show Insurance Options</p>
+                </div>
+            </div>
 
-                <input type="checkbox" class="insurance-checkbox" id="allways_health_partners_provider_input" name="which_insurance_provider_input" value="Allways Health Partners">
-                <label for="allways_health_partners_provider_input" class="">Allways Health Partners</label>
+            <div class ="center-me-at-1110">
+                <div class="insurance-box">
 
-                <input type="checkbox" class="insurance-checkbox" id="anthem_provider_input" name="which_insurance_provider_input" value="Anthem">
-                <label for="anthem_provider_input" class="">Anthem</label>
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="another_insurance_update" name="which_insurance_update" value="Another insurance" <% if (Provider.whichInsurance.includes("Another insurance")===true){ %> <%="checked"%> <%}%> >
+                        <label for="another_insurance_update" class="">Another insurance not listed here</label>
+                    </div>
 
-                <input type="checkbox" class="insurance-checkbox" id="beacon_provider_input" name="which_insurance_provider_input" value="Beacon">
-                <label for="beacon_provider_inpu" class="">Beacon</label>
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="aetna_update" name="which_insurance_update" value="Aetna" <% if (Provider.whichInsurance.includes("Aetna")===true){ %> <%="checked"%> <%}%> >
+                        <label for="aetna_update" class="">Aetna</label>                                
+                    </div>
 
-                <input type="checkbox" class="insurance-checkbox" id="beacon_health_options_provider_input" name="which_insurance_provider_input" value="Beacon Health Options">
-                <label for="beacon_health_options_provider_input" class="">Beacon Health Options</label>
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="allways_health_partners_update" name="which_insurance_update" value="Allways Health Partners" <% if (Provider.whichInsurance.includes("Allways Health Partners")===true){ %> <%="checked"%> <%}%> >
+                        <label for="allways_health_partners_update" class="">Allways Health Partners</label>                                
+                    </div>
 
-                <input type="checkbox" class="insurance-checkbox" id="bmc_healthnet_provider_input" name="which_insurance_provider_input" value="BMC HealthNet">
-                <label for="bmc_healthnet_provider_input" class="">BMC HealthNet</label>
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="anthem_update" name="which_insurance_update" value="Anthem" <% if (Provider.whichInsurance.includes("Anthem")===true){ %> <%="checked"%> <%}%> >
+                        <label for="anthem_update" class="">Anthem</label>                                
+                    </div>
 
-            </div>   
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="beacon_update" name="which_insurance_update" value="Beacon" <% if (Provider.whichInsurance.includes("Beacon")===true){ %> <%="checked"%> <%}%> >
+                        <label for="beacon_provider_inpu" class="">Beacon</label>                                
+                    </div>
 
-<!-- Add insurance checkboxes here -->
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="beacon_health_options_update" name="which_insurance_update" value="Beacon Health Options" <% if (Provider.whichInsurance.includes("Beacon Health Options")===true){ %> <%="checked"%> <%}%> >
+                        <label for="beacon_health_options_update" class="">Beacon Health Options</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="bmc_healthnet_update" name="which_insurance_update" value="BMC HealthNet" <% if (Provider.whichInsurance.includes("BMC HealthNet")===true){ %> <%="checked"%> <%}%> >
+                        <label for="bmc_healthnet_update" class="">BMC HealthNet</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="blue_care_network_update" name="which_insurance_update" value="Blue Care Network" <% if (Provider.whichInsurance.includes("Blue Care Network")===true){ %> <%="checked"%> <%}%> >
+                        <label for="blue_care_network_update" class="">Blue Care Network</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="blue_cross_update" name="which_insurance_update" value="Blue Cross" <% if (Provider.whichInsurance.includes("Blue Cross")===true){ %> <%="checked"%> <%}%> >
+                        <label for="blue_cross_update" class="">Blue Cross</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="blue_cross_blue_sheild_update" name="which_insurance_update" value="Blue Cross Blue Sheild" <% if (Provider.whichInsurance.includes("Blue Cross Blue Sheild")===true){ %> <%="checked"%> <%}%> >
+                        <label for="blue_cross_blue_sheild_update" class="">Blue Cross Blue Sheild</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="bu_student_health_plan_update" name="which_insurance_update" value="BU Student Health Plan" <% if (Provider.whichInsurance.includes("BU Student Health Plan")===true){ %> <%="checked"%> <%}%> >
+                        <label for="bu_student_health_plan_update" class="">BU Student Health Plan</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="childrens_medical_security_update" name="which_insurance_update" value="Children's Medical Security Plan" <% if (Provider.whichInsurance.includes("Children's Medical Security Plan")===true){ %> <%="checked"%> <%}%> >
+                        <label for="childrens_medical_security_update" class="">Children's Medical Security Plan</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="cigna_update" name="which_insurance_update" value="Cigna"  <% if (Provider.whichInsurance.includes("Cigna")===true){ %> <%="checked"%> <%}%> >
+                        <label for="cigna_update" class="">Cigna</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="choice_care_network_update" name="which_insurance_update" value="Choice Care Network (Health Value Management Inc.)"  <% if (Provider.whichInsurance.includes("Choice Care Network (Health Value Management Inc.)")===true){ %> <%="checked"%> <%}%> >
+                        <label for="choice_care_network_update" class="">Choice Care Network (Health Value Management Inc.)</label>
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="commonwealth_care_update" name="which_insurance_update" value="Commonwealth Care Alliance" <% if (Provider.whichInsurance.includes("Commonwealth Care Alliance")===true){ %> <%="checked"%> <%}%> >
+                        <label for="commonwealth_care_update" class="">Commonwealth Care Alliance</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="c3_update" name="which_insurance_update" value="Community Care Cooperative (C3)" <% if (Provider.whichInsurance.includes("Community Care Cooperative (C3)")===true){ %> <%="checked"%> <%}%> >
+                        <label for="c3_update" class="">Community Care Cooperative (C3)</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="empire_bcbs_update" name="which_insurance_update" value="Empire Blue Cross Blue Sheild" <% if (Provider.whichInsurance.includes("Empire Blue Cross Blue Sheild")===true){ %> <%="checked"%> <%}%> >
+                        <label for="empire_bcbs_update" class="">Empire Blue Cross Blue Sheild</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="fallon_update" name="which_insurance_update" value="Fallon Health" <% if (Provider.whichInsurance.includes("Fallon Health")===true){ %> <%="checked"%> <%}%> >
+                        <label for="fallon_update" class="">Fallon Health</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="first_health_update" name="which_insurance_update" value="First Health" <% if (Provider.whichInsurance.includes("First Health")===true){ %> <%="checked"%> <%}%> >
+                        <label for="first_health_update" class="">First Health</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="gic_update" name="which_insurance_update" value="Group Insurance Commission (GIC)" <% if (Provider.whichInsurance.includes("Group Insurance Commission (GIC)")===true){ %> <%="checked"%> <%}%> >
+                        <label for="gic_update" class="">Group Insurance Commission (GIC)</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="global_medical_management_update" name="which_insurance_update" value="Global Medical Management Inc." <% if (Provider.whichInsurance.includes("Global Medical Management Inc.")===true){ %> <%="checked"%> <%}%> >
+                        <label for="global_medical_management_update" class="">Global Medical Management Inc.</label>                                 
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="harvard_pilgrim_update" name="which_insurance_update" value="Harvard Pilgrim Health" <% if (Provider.whichInsurance.includes("Harvard Pilgrim Health")===true){ %> <%="checked"%> <%}%> >
+                        <label for="harvard_pilgrim_update" class="">Harvard Pilgrim Health</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="health_safety_net_update" name="which_insurance_update" value="Health Safety Net" <% if (Provider.whichInsurance.includes("Health Safety Net")===true){ %> <%="checked"%> <%}%> >
+                        <label for="health_safety_net_update" class="">Health Safety Net</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="humana_update" name="which_insurance_update" value="Humana" <% if (Provider.whichInsurance.includes("Humana")===true){ %> <%="checked"%> <%}%> >
+                        <label for="humana_update" class="">Humana</label>
+
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="magellan_update" name="which_insurance_update" value="Magellan" <% if (Provider.whichInsurance.includes("Magellan")===true){ %> <%="checked"%> <%}%> >
+                        <label for="magellan_update" class="">Magellan</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="mbph_update" name="which_insurance_update" value="MBHP (Massachusetts Behavioral Health Partnership)" <% if (Provider.whichInsurance.includes("MBHP (Massachusetts Behavioral Health Partnership)")===true){ %> <%="checked"%> <%}%> >
+                        <label for="mbph_update" class="">MBHP (Massachusetts Behavioral Health Partnership)</label>                                 
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="medicare_update" name="which_insurance_update" value="Medicare" <% if (Provider.whichInsurance.includes("Medicare")===true){ %> <%="checked"%> <%}%> >
+                        <label for="medicare_update" class="">Medicare</label>                                 
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="medicaid_update" name="which_insurance_update" value="Medicaid" <% if (Provider.whichInsurance.includes("Medicaid")===true){ %> <%="checked"%> <%}%> >
+                        <label for="medicaid_update" class="">Medicaid</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="mnh_update"   name="which_insurance_update" value="MNH" <% if (Provider.whichInsurance.includes("MNH")===true){ %> <%="checked"%> <%}%> >
+                        <label for="mnh_update" class="">MNH</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="network_health_update" name="which_insurance_update" value="Network Health (Tufts)" <% if (Provider.whichInsurance.includes("Network Health (Tufts)")===true){ %> <%="checked"%> <%}%> >
+                        <label for="network_health_update" class="">Network Health (Tufts)</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="optum_update" name="which_insurance_update" value="Optum" <% if (Provider.whichInsurance.includes("Optum")===true){ %> <%="checked"%> <%}%> >
+                        <label for="optum_update" class="">Optum</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="oxford_update" name="which_insurance_update" value="Oxford" <% if (Provider.whichInsurance.includes("Oxford")===true){ %> <%="checked"%> <%}%> >
+                        <label for="oxford_update" class="">Oxford</label>                                 
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="partners_update" name="which_insurance_update" value="Partners" <% if (Provider.whichInsurance.includes("Partners")===true){ %> <%="checked"%> <%}%> >
+                        <label for="partners_update" class="">Partners</label>                                 
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="steward_update" name="which_insurance_update" value="Steward" <% if (Provider.whichInsurance.includes("Steward")===true){ %> <%="checked"%> <%}%> >
+                    <label for="steward_update" class="">Steward</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="tricare_update" name="which_insurance_update" value="Tricare" <% if (Provider.whichInsurance.includes("Tricare")===true){ %> <%="checked"%> <%}%> >
+                        <label for="tricare_update" class="">Tricare</label>                                
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="tufts_update" name="which_insurance_update" value="Tufts" <% if (Provider.whichInsurance.includes("Tufts")===true){ %> <%="checked"%> <%}%> >
+                        <label for="tufts_update" class="Tufts">Tufts</label>
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="tufts_health_together_update" name="which_insurance_update" value="Tufts Health Together" <% if (Provider.whichInsurance.includes("Tufts Health Together")===true){ %> <%="checked"%> <%}%> >
+                        <label for="tufts_health_together_update" class="Tufts">Tufts Health Together</label> 
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="unicare_update" name="which_insurance_update" value="Unicare" <% if (Provider.whichInsurance.includes("Unicare")===true){ %> <%="checked"%> <%}%> >
+                        <label for="unicare_update" class="">Unicare</label>
+                    </div>
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="ubh_update" name="which_insurance_update" value="United Behavioral Health (UBH)" <% if (Provider.whichInsurance.includes("United Behavioral Health (UBH)")===true){ %> <%="checked"%> <%}%>>
+                        <label for="ubh_update" class="">United Behavioral Health (UBH)</label> 
+                    </div>
+                    <!-- 
+                        <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="_update" name="which_insurance_update" value="">
+                    <label for="" class=""></label>
+                    </div>  -->
+
+
+                <!-- end health-insurance-box  -->
+                </div>
+            </div>
+
 
         </div>
 
         <div class="question update-question">
-            <label for="additional_insurance_update" class="text1">Additional they accept:</label>
-            <textarea id="additional_insurance_update" name="additional_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.additionalInsurance %>">
-            </textarea>
-        </div>
+            <label for="additional_insurance_update" class="text1">Additional insurances they accept:</label>
+            <textarea id="additional_insurance_update" name="additional_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.additionalInsurance %>"><%= Provider.additionalInsurance %></textarea>
 
 
 <!-- fix -->
         <div class="question update-question">
             <label class="text1">Accepts Masshealth?</label>
             <div class="radio-yn-div">
-                <input type="radio" id="masshealth_yes_update" name="masshealth_yn_update" value="yes">
-                <input type="radio" id="masshealth_no_update" name="masshealth_yn_update" value="no">
+                <input type="radio" id="masshealth_yes_update" name="masshealth_yn_update" value="true" <% if (Provider.acceptMassHealth === true){%><%="checked"%> <%}%> >
+                <input type="radio" id="masshealth_no_update" name="masshealth_yn_update" value="false" <% if (Provider.acceptMassHealth === false){%><%="checked"%> <%}%> >
             </div>
             <div class="radio-yn-label-div">
                 <label for="masshealth_yes_update">Yes</label>
@@ -196,33 +396,28 @@
 
         <div class="question update-question">
             <label for="access_update" class="text1">Accessibility info:</label>
-            <textarea id="access_update" name="access_update" class="center-me" rows="6" cols="50" value="<%= Provider.accessibility %>">
-            </textarea>
+            <textarea id="access_update" name="access_update" class="center-me" rows="6" cols="50"><%= Provider.accessibility %></textarea>
         </div>
 
-        <!-- add other comments to update -->
 
         <div class="question update-question">
 
-                <label for="comments_update" class="text1">Client Comments:</label>
-                <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50" value="<%= Provider.comments %>">
-                </textarea> 
+                <label for="comments_update" class="text1">General Comments:</label>
+                <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50"><%= Provider.comments %></textarea> 
 
         </div>
 
         <div class="question update-question">
 
             <label for="admin_comments_update" class="text1">Admin Comments:</label>
-            <textarea id="admin_comments_update" name="admin_comments_update" class="center-me" rows="8" cols="50" value="<%= Provider.commentsAdmin %>">
-            </textarea> 
+            <textarea id="admin_comments_update" name="admin_comments_update" class="center-me" rows="8" cols="50"><%= Provider.commentsAdmin %></textarea> 
 
         </div>
 
         <div class="question update-question">
 
             <label for="last_update" class="text1">Last Update:</label>
-            <textarea id="last_update" name="last_update" class="center-me" rows="8" cols="50" value="<%= Provider.lastUpdate %>">
-            </textarea> 
+            <input type="text" id="last_update" name="last_update" class="center-me" value="<%= Provider.lastUpdate %>"></input> 
 
         </div>
 

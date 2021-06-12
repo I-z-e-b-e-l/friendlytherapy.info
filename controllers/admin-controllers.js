@@ -122,6 +122,7 @@ module.exports = {
         pronouns: request.body.pronouns_update,
         practice: request.body.practice_update,
         providerType: request.body.provider_type_update,
+        credentials: request.body.credentials_update,
         teletherapy: request.body.teletherapy_update,
         licenseState: request.body.license_state_update,
         location: request.body.location_update,

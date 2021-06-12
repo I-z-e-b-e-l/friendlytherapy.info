@@ -17,6 +17,10 @@ const providerSchema = new Schema ({
         minLength: [4, 'Minimum length for provider type is 4 characters.']
     },
 
+    credentials: {
+        type: String
+    },
+
     pronouns: {
         type: String
     },
@@ -34,7 +38,6 @@ const providerSchema = new Schema ({
     },
 
     licenseState: {
-        // type: [] 
         type: [String]
     },
 
@@ -43,9 +46,6 @@ const providerSchema = new Schema ({
     },
 
     queerRating: {
-        // type: Number,
-        // minimum: [0, 'Minimum rating is 0.'],
-        // maximum: [3, 'Maximum rating is 3.']
         type: String
     },
 
@@ -98,7 +98,7 @@ const providerSchema = new Schema ({
     },
 
     whichInsurance: {
-        type: String
+        type: [String]
     },
 
     additionalInsurance: {
