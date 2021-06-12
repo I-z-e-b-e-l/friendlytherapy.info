@@ -15,7 +15,7 @@ module.exports = {
 
     //send an email via the form on contact page
     contact_post: (request, response) => {
-        response.sendFile(process.cwd() + "/pages/contact.html");
+        response.sendFile(process.cwd() + "/pages/contact");
     },
 
     how_to: (request, response) => {
