@@ -1,0 +1,50 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/header-nav') -%> 
+
+<div class="general-landing">
+    <div class="max-width-container">
+    <h1 class="max-width" class="heading-break-index">Update a Provider's Information </h1>   
+    </div>
+</div>
+
+<div class="spacer2"></div>
+
+<!-- <div class=center-me> -->
+    <div class="update-container">
+        <% if (user) { %>
+        <p>You are logged in as:<br> 
+            <%= user.username %> </p>
+        <% } %>
+
+<!-- <div class="spacer2"></div>  -->
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                <th>Select provider by name to update:</th>
+              </tr>
+            </thead>
+
+            <!-- provider-update-listing.ejs -->
+
+            <% providers.forEach(provider=> { %>
+
+                <%- include('../partials/provider-update-listing', {provider : provider}) %> 
+    
+            <% }) %>
+
+        </table>
+
+        <div class="center-me">
+            <a href="/admin/logout">
+             <button value="logout" class="logout-button">Logout</button>
+            </a>
+        </div>
+
+    </div>
+<!-- </div> -->
+
+<div class="spacer1"></div>
+
+<%- include('../partials/footer') -%> 

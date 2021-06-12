@@ -1,0 +1,405 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/header-nav') -%> 
+
+
+
+    <div class="max-width-container">
+
+        <div class="what-do max-width">
+
+            <!-- broken anchor link!!! -->
+            <div class="take-me-searchable-db take-me center-me2">
+                <a href="#search-the-list"></a>
+                <img src="/images/search-list-no-bg.png" class="icon">
+                    <h2>The Searchable Database</h2>
+                </a>
+                <p>
+                    Search for therapists and psychiatrists by insurance, location, and more.
+                </p>
+            </div>
+
+            <!-- <div class="take-me-add take-me center-me2">
+                
+                <a href="/search-add/add-a-provider">
+                    <img src="/images/talk-icon.jpg" class="talk-icon icon">
+                    <h2>Add a Provider</h2>
+                </a>
+                <p>
+                    Clients and providers are encouraged to add their information to the list.                
+                </p>
+            </div> -->
+
+
+            <div class="take-me-how-to take-me center-me2">
+                
+                <a href="/how-to">
+                    <img src="/images/magnify-heart-no-bg.png" id="find-magnify-heart-img" class="icon">
+                    <h2>How to Find a Therapist</h2>
+                </a>
+                <p>A step by step guide to finding a therapist.</p>
+            </div>
+
+
+
+            <!-- maybe remove this? -->
+            <div class="take-me-og take-me center-me2">
+                
+                <a href="https://docs.google.com/spreadsheets/d/1zrEkpd6vOEyXpqTZsDl2lhlbfCSPop2BIlMQxINlSac/edit?usp=sharing" target="_blank">
+                    <img src="/images/list.jpg" class="list-icon icon">
+                    <h2>The Google Sheet</h2>
+                </a>
+                <p>The original list. Scroll through to view all of the entries created by clients and providers.</p>
+            </div>
+
+        </div>
+    </div>  
+
+    
+    <!-- why wont this work? -->
+    <div class="banner">
+    <!-- <div class="color-divider-div"> -->
+        <a name="search-the-list">
+            <!-- <h2> Built by the community, for the community. </h2> -->
+            <h1> Search for a Provider</h1>
+        </a>
+    </div>
+
+
+
+    <div class="search-the-list max-width-container center-this-top">
+
+
+
+    </div>
+    
+    <div class="search-the-list max-width-container">
+
+        <form id="search-the-list-form" class="max-width" action="/search-add/search" method="POST">
+
+            <!-- <div class="max-width">
+                <h2> Search for a Provider</h2>
+            </div> -->
+
+
+                <!-- <div class="spacer1"></div> -->
+                <div class="show-all-div">
+                    <p class="text1">Show me every provider in the database:</p>
+                    <div class="show-all-button-div">
+                        <a href="/search-add/results">
+                        <button id="show-all-button">Show All</button>
+                    </a>                    
+                    </div>
+
+
+                </div>   
+            
+
+
+
+            <div class="search-question">
+                <p class="text1">Type of provider you're looking for:</p>
+
+                <input type="checkbox" class="provider_type_search" id="provider_type_therapist" name="provider_type_search" value="therapist">
+                <label for="provider_type_search">Therapist</label>
+                <br>
+                <input type="checkbox" class="provider_type_search" id="provider_type_psychiatrist" name="provider_type_search" value="psychiatrist">
+                <label for="provider_type_search">Psychiatrist</label>
+            </div>
+            
+
+            <div class="search-question">
+                <label for="provider_state_search" class="text1">What state would you like to see a provider in?</label>
+                <p><em>For insurance and licensing reasons, this should usually be the state you live in, even if you are looking for remote therapy - unless you are open to international providers who are not bound by US licensing restrictions.</em></p>
+                <select name="provider_state_search" id="provider_state_search">
+                    <optgroup>
+                    <option value=""></option>   
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="New York">New York</option>
+                    <option value="Another State">Another State</option>
+                    <option value="International">Show me international therapists</option>
+                    </optgroup>
+                </select>
+            </div>
+
+
+            <div class="search-question">
+
+                <p class="text1">Only show providers with this frendliness rating for these communities:</p>
+                <p>Providers are rated by clients on a 0 to 3 scale: 0 being completely unfamiliar, and 3 being super comfortable and supportive.</p>
+                <p><em>Selecting a rating in your search will mean you only see providers who were submitted and rated by clients.</em></p>
+                <!-- <p>
+                0 = completely unfamiliar   
+                <br>
+                3 = super comfortable and familiar 
+                </p> -->
+
+                <div class="community-ratings-select">
+
+                    <div class="group1">
+                    <div class="search-by-rating">
+                        <label for="queer_rating_search" class="">Queer-friendliness</label>
+                        <select class="friendly-select" name="queer_rating_search" id="queer_rating_search">
+                            <optgroup>
+                            <option value="">Not relevant to me</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="search-by-rating">
+                        <label for="trans_rating_search" class="">Trans-friendliness</label>
+                        <select class="friendly-select" name="trans_rating_search" id="trans_rating_search">
+                            <optgroup>
+                            <option value="">Not relevant to me</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="search-by-rating">
+                        <label for="poly_rating_search" class="">Non-Monogamy-friendliness</label>
+                        <select class="friendly-select" name="poly_rating_search" id="poly_rating_search">
+                            <optgroup>
+                            <option value="">Not relevant to me</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            </optgroup>
+                        </select>
+                    </div>
+                    </div>
+
+                    <div class="group2">
+                    <div class="search-by-rating">
+                        <label for="kink_rating_search" class="">Kink-friendliness</label>
+                        <select class="friendly-select" name="kink_rating_search" id="kink_rating_search">
+                            <optgroup>
+                            <option value="">Not relevant to me</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="search-by-rating">
+                        <label for="sw_rating_search" class="">Sex Worker-friendliness</label>
+                        <select class="friendly-select" name="sw_rating_search" id="sw_rating_search">
+                            <optgroup>
+                            <option value="">Not relevant to me</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="search-by-rating">
+                        <label for="bipoc_rating_search" class="">BIPOC-friendliness</label>
+                        <select class="friendly-select" name="bipoc_rating_search" id="bipoc_rating_search">
+                            <optgroup>
+                            <option value="">Not relevant to me</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            </optgroup>
+                        </select>
+                    </div>
+                    </div>  
+                </div>
+
+
+            </div>
+
+            <!-- <div class="search-question">
+                <label class="text1">Are you looking for teletherapy?</label>
+                    
+                        <div class="radio-yn-div">
+                            <input type="radio" id="teletherapy_yes" name="teletherapy_search" value="true">
+                            <input type="radio" id="teletherapy_no" name="teletherapy_search" value="">
+                        </div>
+                        <div class="radio-yn-label-div">
+                            <label for="teletherapy_yes">Yes</label>
+                            <label for="teletherapy_no">No</label>
+                        </div>
+                  
+            </div>   -->
+
+
+            <div class="search-question">
+
+                <input type="checkbox" class="search-checkbox" id="teletherapy_search" name="teletherapy_search" value="true">
+                <label for="teletherapy_search" class="text1 check-label">Only show me providers who will do teletherapy / telehealth</label>
+
+            </div>
+
+
+            <!-- <div class="search-question">
+                <label class="text1">Only show providers who accept insurance?</label>
+                <div class="radio-yn-div">
+                    <input type="radio" id="accept_insurance_yes" name="accept_insurance" value="true">
+                    <input type="radio" id="accept_insurance_no" name="accept_insurance" value="">
+                </div>
+                <div class="radio-yn-label-div">
+                    <label for="youth-yes">Yes</label>
+                    <label for="youth-no">No</label>
+                </div>
+            </div> -->
+
+
+
+            <div class="search-question">
+                <input type="checkbox" class="search-checkbox" id="accept_insurance" name="accept_insurance" value="true">
+                <label for="accept_insurance" class="text1 check-label">Only show me providers who accept insurance</label> 
+            </div>
+
+
+            <div class="search-question">
+                <input type="checkbox" class="search-checkbox" id="accept_masshealth" name="accept_masshealth" value="true">
+                <label for="accept_masshealth" class="text1 check-label">Only show me providers who accept MassHealth</label> 
+            </div>
+
+<!-- 
+            <div class="search-question">
+                
+                <input type="checkbox" id="accept_masshealth_yes_search" class="search-checkbox" name="accept_masshealth_yes_search" value="true">
+                <label for="accept_masshealth_yes_search" class="text1">Only show me providers who accept Masshealth</label>
+               
+            </div> -->
+
+            <div class="search-question">
+                <label for="which_insurance_search" class="text1">What insurance do you want to use?</label>
+                <p>Note: There may be additonal insurances accepted by provders, so don't give up hope if you don't see yours here, or don't see it listed.</p>
+                <select name="which_insurance_search" id="which_insurance_search">
+                    <optgroup>
+                    <option value=""></option>
+                    <option value="Another Insurance">Another insurance not listed here</option>
+                    <option value="Aetna">Aetna</option>
+                    <option value="Allways Health Partners">Allways Health Partners</option>
+                    <option value="Anthem">Anthem</option>                   
+                    <option value="Beacon">Beacon</option>
+                    <option value="Beacon Health Options">Beacon Health Options</option>
+                    <option value="BMC HealthNet">BMC HealthNet</option>
+                    <option value="Blue Care Network">Blue Care Network</option>   
+                    <option value="Blue Cross">Blue Cross</option>                    
+                    <option value="Blue Cross Blue Sheild">Blue Cross Blue Sheild</option>
+                    <option value="Blue Cross">Blue Cross</option>
+                    <option value="BU Student Health Plan">BU Student Health Plan</option> 
+                    <option value="Children's Medical Security Plan">Children's Medical Security Plan</option>
+                    <option value="Cigna">Cigna</option>
+                    <option value="Choice Care Network (Health Value Management Inc.)">Choice Care Network (Health Value Management Inc.)</option>
+                    <option value="Commonwealth Care Alliance">Commonwealth Care Alliance</option>  
+                    <option value="Community Care Cooperative (C3)">Community Care Cooperative (C3)</option>                  
+                    <option value="Empire Blue Cross Blue Sheild">Empire Blue Cross Blue Sheild</option>
+                    <option value="Fallon Health">Fallon Health</option>
+                    <option value="First Health">First Health</option>
+                    <option value="Group Insurance Commission (GIC)">Group Insurance Commission (GIC)</option>
+                    <option value="Global Medical Management Inc.">Global Medical Management Inc.</option>
+                    <option value="Harvard Pilgrim Health">Harvard Pilgrim Health</option>
+                    <option value="Health Safety Net">Health Safety Net</option>
+                    <option value="Humana">Humana</option>
+                    <option value="Magellan">Magellan</option>
+                    <option value="MBHP (Massachusetts Behavioral Health Partnership)">MBHP (Massachusetts Behavioral Health Partnership)</option>                   
+                    <option value="Medicare">Medicare</option>
+                    <option value="Medicaid">Medicaid</option>
+                    <option value="MHN">MHN</option>
+                    <option value="Network Health (Tufts)">Network Health (Tufts)</option>   
+                    <option value="Optum">Optum</option> 
+                    <option value="Oxford">Oxford</option>                    
+                    <option value="Partners">Partners</option>
+                    <option value="Steward">Steward</option>
+                    <option value="tricare">Tricare</option>
+                    <option value="Tufts">Tufts</option>
+                    <option value="Tufts health Together">Tufts Health Together</option>
+                    <option value="UniCare">UniCare</option>
+                    <option value="United Behavioral Health (UBH)">United Behavioral Health (UBH)</option>
+                    <!-- <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option> -->
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="search-question">
+                <label class="text1">Are you looking for couples therapy?</label>
+
+                        <div class="radio-yn-div">
+                            <input type="radio" id="couples-yes" name="couples" value="true">
+                            <input type="radio" id="couples-no" name="couples" value="">
+                        </div>
+                        <div class=radio-yn-label-div>
+                            <label for="couples-yes">Yes</label>
+                            <label for="couples-no">No</label>
+                        </div>
+            </div>
+
+            <!-- <div class="search-question">
+
+                <input type="checkbox" class="search-checkbox" id="couples_search" name="couples_search" value=true>
+                <label for="couples_search" class="text1">Only show me providers who do couples therapy</label>
+
+            </div> -->
+
+            <div class="search-question">
+                <label class="text1">Are you looking for a provider who serves youth?</label>
+                <div class="radio-yn-div">
+                    <input type="radio" id="youth-yes" name="youth" value="true">
+                    <input type="radio" id="youth-no" name="youth" value="">
+                </div>
+                <div class="radio-yn-label-div">
+                    <label for="youth-yes">Yes</label>
+                    <label for="youth-no">No</label>
+                </div>
+            </div>
+
+            <!-- <div class="search-question">
+
+                <input type="checkbox" class="search-checkbox" id="youth_search" name="youth_search" value="yes">
+                <label for="youth_search" class="text1">Only show me providers who serve youth</label>
+
+            </div> -->
+
+
+            <!-- max cost per session -->
+
+            
+            <div class="center-me2">
+                <div class="button-align">
+                    <input type="submit" value="Search" id="search-submit" class="search-submit" onclick="">
+                </div>            
+            </div>
+        </form>
+
+    </div>
+
+    <!-- <div class="spacer1"></div> -->
+
+    <div class="spacer1"></div>
+
+
+
+    <div class="max-width-container">
+        <div class="search-footer max-width">
+            <p>
+                <!-- The moderator does not assume responsibility for community submitted content. 
+                <br><br> -->
+                To give feedback on this resource, please <a href="/contact">contact Izebel</a>.
+            </p>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') -%> 

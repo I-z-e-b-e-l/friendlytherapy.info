@@ -1,0 +1,144 @@
+<!-- loop though -->
+<!-- populate with ejs -->
+
+
+
+<div class="results-box">
+    <div class="name-div ">
+        <p class="text1"><%= provider.name %></p>
+    </div>
+
+    <div class="result-row">
+        <h4>Type of Provider:</h4> 
+        <p><%= provider.providerType %></p>      
+    </div>
+
+    <div class="result-row">
+        <h4>Institution/Private Practice:</h4> 
+        <p><%= provider.institution %></p>      
+    </div>
+
+    <div class="rating-result-box">
+        <p>Community-Friendliness Rating</p>
+        <div class="result-row rating-row">
+            <h4>Queer:</h4>
+            <p><%= provider.queerRating %></p>
+        </div>
+        <div class="result-row rating-row">
+            <h4>Trans:</h4>
+            <p><%= provider.transRating %></p>
+        </div>
+        <div class="result-row rating-row">
+            <h4>Non-Monogamy:</h4>
+            <p><%= provider.polyRating %></p>
+        </div>
+        <div class="result-row rating-row">
+            <h4>Kink:</h4>
+            <p><%= provider.kinkRating %></p>
+        </div>
+        <div class="result-row rating-row">
+            <h4>Sex Worker:</h4>
+            <p><%= provider.swRating %></p>
+        </div>
+        <div class="result-row rating-row">
+            <h4>BIPOC:</h4>
+            <p><%= provider.bipocRating %></p>
+        </div>
+        <!-- <div class="result-row"> -->
+        <h4 class="rating-row">Other Communities:</h4>
+        <p class="rating-row"><%= provider.additionalRating %></p>
+        <!-- </div> -->
+
+    </div>
+
+    <div class="result-row">
+        <h4>Offers Teletherapy: </h4> 
+        <% if (provider.teletherapy === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </p>   
+    </div>
+
+    <div class="result-row">
+        <h4>States they practice in:</h4> 
+        <p><%= provider.licenseState %></p>      
+    </div>
+    
+    <div class="result-row">
+        <h4>Location:</h4> 
+        <p><%= provider.location %></p>      
+    </div>
+
+    <div class="result-row">
+        <h4>Accessibility Information:</h4> 
+        <p><%= provider.accessibility %></p>      
+    </div>
+
+    <div class="result-row">
+        <h4>Offers Couple's Therapy:</h4> 
+        <% if (provider.couplesTherapy === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </p>   
+    </div>
+
+    <div class="result-row">
+        <h4>Serves Youth:</h4> 
+        <% if (provider.youthTherapy === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </p>   
+    </div>
+
+    <div class="result-row">
+        <h4>Website:</h4> 
+        <p><a href="<%= provider.website %>"><%= provider.website %></a> 
+            </p>    
+    </div>
+
+    <div class="result-row">
+        <h4>Accespts Insurance:</h4> 
+        <% if (provider.acceptInsurance === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </p>   
+    </div>
+
+    <div class="result-row">
+        <h4>Accespts MassHealth:</h4> 
+        <% if (provider.acceptMassHealth === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </p>   
+    </div>
+
+    <div class="result-row">
+        <h4>Insurances Accepted:</h4> 
+        <p><%= provider.insurance %></p>     
+    </div>
+
+    <div class="result-row">
+        <h4>Average Cost/Session without Insurance:</h4> 
+        <p><%= provider.cost %></p>      
+    </div>
+
+    <div class="result-row">
+        <h4>Comments and Additional Info:</h4> 
+        <p><%= provider.commentsAdmin %></p> 
+    </div>
+
+    <div class="result-row">
+        <h4>Moderator Notes:</h4> 
+        <p><%= provider.commentsAdmin %></p>    
+    </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,41 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/header-nav') -%> 
+
+
+
+    <div class="general-landing">
+        <div class="max-width-container">
+        <h1 class="max-width">Login to Edit the Provider Database</h1>   
+        </div>
+    </div>
+
+ <div class="spacer2-mobile"></div>
+
+    <div class=center-me>
+        <div class="login-div">
+        <form action="/admin/login" method="POST">
+            <label for="username" class="text1">Admin Username:</label>
+            <br>
+            <input type="text" id="username" name="username" required>
+
+            <div class="spacer2"></div>
+
+            <label for="password" class="text1">Password:</label>
+            <br>
+            <input type="text" id="password" name="password" required>
+
+            <!-- <input type="submit"> -->
+
+            <div class="center-me">
+                <input type="submit" value="Submit" id="login-submit" class="">
+            </div>
+        </form>
+        </div>
+    </div>
+    
+    <div class="spacer1"></div>
+
+
+
+    <%- include('../partials/footer') -%> 

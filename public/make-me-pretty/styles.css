@@ -1,0 +1,1439 @@
+/* Cross Site Stylings */
+
+    /* set universal colors */
+:root {
+    --tealblue: #063C5E; 
+    --lightblue: rgb(205, 218, 218);
+    --brightteal: teal;
+    --darkpurple: rgb(36, 8, 32);
+    --darkerpurple: rgb(111, 37, 148);
+    --seagreen: lightseagreen;
+    --headercolor: rgb(151, 210, 228);
+    --headertextcolor: lightseagreen;
+    --heartcolor: #5be3e3;
+}
+
+body {
+
+    background-color: white;
+    color: black;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* make dark mode */
+/* body {
+       background-color: rgb(54, 59, 59);
+    color: rgb(184, 167, 187); 
+} */
+
+/* nice gradient for darkmode: background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+ */
+
+h1 {
+    margin: 5vw;
+}
+
+.spacer1 {
+    height: 10vh;
+}
+
+
+.spacer2 {
+    height: 5vh;
+}
+
+.spacer2-mobile {
+    height: 5vh;   
+}
+
+.spacer3 {
+    height: 20vh;
+}
+
+/* style links */
+
+.general-landing {
+    width: 100%;
+    /* height: 30vw; */
+    background-color: lightseagreen;
+    background-image: url('/images/succulents2.jpg');
+}
+
+.general-landing h1 {
+    margin: 0vw;
+    padding: 5vw 5vw 0 5vw;
+    color: white;
+    padding-bottom: 2em;
+}
+
+.subheading {
+    margin: 0vw;
+    padding: 5vw 0;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/* Header Stylings */
+
+header {
+    /* background-color: var(--headercolor); */
+    /* width: 100%; */
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
+    /* background-image: linear-gradient(to right,  #06c5d5, #cee1a6, #fd970a);  */
+
+    color: white;
+}
+
+header img {
+    /* width: 50px; */
+    height: 2.3em;
+    /* margin-top: 5vw;
+    margin-left: 5vw; */
+}
+
+header h2 {
+    color: var(--headertextcolor);
+    /* color: var(--tealblue); */
+    /* display: inline-flex; */
+    margin-left: 10px;
+    /* margin-bottom: 0px;
+    margin-top: 0px; */
+    /* padding-bottom: 30px; */
+
+}
+
+.divA {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 5vw 3vw 5vw;
+
+
+}
+
+.little-divA {
+    display: flex;
+    align-items: center;
+    /* margin-left: 2vw; */
+}
+
+#show-me-hamburger {
+    color: var(--headertextcolor);
+}
+
+.link-menu {
+    display: none;
+}
+
+.link-menu.open {
+    /* background-color: var(--tealblue); */
+    background-color: var(--headercolor);
+    display: block;
+    position: absolute;
+    margin-left: 65vw;
+}
+
+.headlink {
+    display: block;
+    text-align: center;
+    padding: 7% 7% 7% 7%; 
+    border-top: 1px solid white;
+    text-decoration: none;
+    color: var(--brightteal)
+}
+
+.headlink:hover {
+    color: var(--brightteal);
+    font-weight: bold;
+}
+
+.headlink:active {
+    color: white;
+    background-color: var(--brightteal)
+}
+
+
+
+
+/* FOOTER STYLINGS */
+
+footer {
+    width: 100%;
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);   */
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1);   
+    padding-bottom: 1em;
+    
+}
+
+.extend-footer {
+    display: none;
+}
+
+.extend-footer.open {
+    display: block;
+}
+
+/* #little-caret-up {
+    margin-top: 20px;
+    color: black;
+    -webkit-text-fill-color: var(--heartcolor); 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+} */
+
+
+
+
+    #caret-down {
+        width: 25px;
+        margin: 20px 0 10px 0;
+    }
+
+/* irrelevant until JS fixed */
+        #caret-up {
+            /* width: 25px;
+            margin: 20px 0 10px 0; */
+            display: none;
+        }
+
+        /* #caret-up.open {
+            width: 25px;
+            margin: 20px 0 10px 0;
+            display: block;
+        } */
+
+        /* not working */
+        /* 
+        #caret-down.hide {
+            display: none;
+        } */
+
+.heart {
+    width: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    margin: 2em 5vw;
+}
+
+.footer-map {
+    margin: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-map p{
+    margin: 1em 0 .5em 0;
+    font-size: 1.3em;
+
+    /* font-weight:bold */
+}
+
+.footlink {
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: .2em 0;
+    color: white;
+}
+
+.footlink:hover {
+    color: #b6ffb0
+    /* background-color: var(--brightteal) */
+}
+
+.footlink:active {
+    color: var(--brightteal);
+    /* background-color: var(--brightteal) */
+}
+
+#darkmode-button{
+    background-color: rgb(71, 88, 88);
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
+    border: 1px solid rgb(15, 29, 24);
+    border-radius: 17px;
+    width: 150px;
+    font-size: 1.2em;
+    padding: 4px 4px 5px 4px;
+    margin: 5vw;
+}
+
+#addcats-button{
+    /* background-color: var(--heartcolor); */
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
+    border: 1px solid rgb(15, 29, 24);
+    border-radius: 17px;
+    width: 150px;
+    font-size: 1.2em;
+    padding: 4px 4px 5px 4px;
+    margin: 5vw;
+}
+
+.copyright {
+    margin: 2em 5vw;
+}
+
+
+
+
+
+
+/* INDEX Landing Page Stylings */
+
+.landing-div {
+    background-image: url("/images/robert-katzki-rainbow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color:rgb(35, 65, 65); */
+    /* background-position: center; */
+    /* width: 100vw; */
+    height: 50vh;
+    /* display: flex;
+    align-items: flex-end; */
+}
+
+.landing-div h1 {
+    color: rgb(245, 241, 241);
+    margin: 0px;
+    padding: 5vw;
+    /* align this text somehow that makes sense */
+}
+
+#heading-break-index {
+    display: none;
+}
+
+#welcome-div {
+    margin: 5vw;
+}
+
+#stuff-to-do-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.do-stuff img {
+    width: 200px;
+}
+
+.color-divider-div {
+    background-color: var(--seagreen);
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8vh 0vh
+}
+
+.do-stuff a{
+    text-decoration: none;
+    color: var(--brightteal)
+}
+
+.do-stuff {
+    margin-bottom: 10vh;
+    width: 275px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .do-stuff h4 {
+    display: flex;
+    justify-content: center;
+} */
+
+#magnify-talk-index {
+    width: 225px;
+    padding-right: 10px;
+    /* margin-top: 30px; */
+}
+
+#plant-index {
+    width: 175px;
+}
+
+
+
+/* How to Find a Therapist Page */
+
+
+.how-to-text {
+    padding: 5vw 5vw 0 5vw;
+}
+
+.how-to-text li {
+    margin: .8em 0 0 0;
+}
+
+
+
+.pro-tips {
+    width: 100%;
+    background-color: rgb(131, 197, 194);
+    padding: 5vw;
+    margin-top: 5vw;
+}
+
+.example {
+    background-color: mediumaquamarine;
+    /* width: 75%; */
+    padding: 5vw;
+    background-color: mediumaquamarine;
+    width: 75%;
+    margin: 5wv;
+}
+
+.example p {
+    margin: 0px;
+}
+
+.pro-tips li, .pro-tips p{
+    margin: .8em 10vw 0 0;
+}
+
+#note {
+    padding-bottom: 10vh;
+}
+
+    /* Do something with ol maybe not numbers */
+    /* Style li with some space between */
+
+
+
+/* ADD TO THE LIST + Thank You PAGE MOBILE STYLINGS + SEARCH */
+
+
+.button-align {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, #search-again-button {
+    /* background-color: lightseagreen; */
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    border: 1px solid mediumaquamarine;
+    border-radius: 17px;
+    width: 150px;
+    font-size: 1.2em;
+    padding: 4px;
+    margin: 5vw 0;
+    
+}
+
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover {
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+
+#provider-display-button:focus {
+    width: 160px;
+}
+
+#add-another-button {
+    width: 225px
+}
+
+.logout-button, .login-redirect-button {
+    width: 100px;
+}
+
+/* #add-provider-submit {
+    display: none;
+} */
+
+
+    /* fix this later */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    /* width: 300px; */
+    color: rgb(9, 61, 85);
+    text-align: center;
+    border-radius: 6px;
+    padding: 11px 0 0 4px;
+    position: absolute;
+    z-index: 1;
+    font-weight: normal
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+
+
+
+/* this is the entire form, both versions */
+.add-provider-form {
+    margin: 5vw;
+}  
+
+/* this is the entire client form version - UNCOMMENT */
+.client-add-provider {
+    display: none;
+}
+
+
+/* this is the entire provider form version*/
+.provider-add-provider {
+    display: none;
+}
+
+
+
+
+
+
+
+.client-rating{
+    /* display:none; */
+    margin: 5em 0em;
+}
+
+
+.radio-div, .radio-label-div {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.radio-label-div {
+    margin-left: .4em;
+    margin-right: .22em;
+    margin-top: 1em;
+} 
+
+.client-rating p {
+    font-size: .7em;
+    width: 28vw;
+}
+
+.rating-explain {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* for radio button alignment */
+.indent-me {
+    margin: 0vw 6vw;
+}
+
+input[type='radio'] { 
+    transform: scale(2.5); 
+}
+
+input[type='radio']:checked:after { 
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        /* background-color: #ffa500; */
+        /* background-image: linear-gradient(to right,  #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);     */
+        content: '';
+        background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white; 
+ 
+}
+
+
+.radio-yn-div, .radio-yn-label-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.radio-yn-label-div {
+    margin-top: 1em;
+}
+
+.question {
+    margin: 5em 0em;
+}
+
+.radio-yn-div, .radio-div {
+    margin-top: 2em;
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+input[type=checkbox] {
+    /* width: 5em; */
+    /* padding: 5em; */
+    transform: scale(2);
+    margin: 1em;
+}
+
+
+.text1 {
+    font-weight: 600;
+}
+
+.question textarea, .client-rating textarea {
+    margin-top: 20px;
+}
+
+.insurance-check-row {
+    display: flex;
+}
+
+.insurance-check-row label {
+    padding-top: .6em;
+}
+
+
+
+#poly_rating, #queer_rating, #trans_rating, #kink_rating, #sw_rating, #bipoc_rating, #additional_rating {
+    display: none;
+}
+
+.thank-you-add {
+    display: none;
+}
+
+.reset-form-button {
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    padding: 5px 10px;
+    border-radius: 17px;
+    border: 1px solid mediumaquamarine;
+    margin-top: 2em;
+}
+
+
+
+.reset-form-button:hover {
+border: 1px solid black;
+font-weight: bold;
+}
+
+
+
+
+
+
+/* UPDATE PAGE STYLINGS */
+
+.update-container {
+    margin: 0 5vw;
+}
+
+.update-form {
+    margin: 5vw 5vw 0 5vw;
+}
+
+#update-delete-div {
+    margin-top: 0;
+}
+
+th {
+    padding-bottom: 1em;
+    padding-left: 0
+}
+
+td {
+    padding:.5em 0;
+}
+
+.provider-link-update {
+    text-decoration: none;
+    color:rgb(9, 61, 85)
+}
+
+.provider-link-update:hover {
+    font-weight: bold;
+}
+
+/* Update and Add to the List (Add a Provider) Styling */
+
+.show-insurance-button {
+    font-size: .7em;
+    margin-top: 2.2em;
+    margin-bottom: 1em;
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    border: 1px solid mediumaquamarine;
+    border-radius: 17px;
+    font-size: .8em;
+}
+
+.show-insurance-button p {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+
+.show-insurance-button:hover {
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.insurance-box {
+    display: none;
+    margin-top: 1.6em;
+}
+
+
+/* RESULTS */
+
+.gradient-checkbox {
+    width: 20px;
+}
+
+.results-box {
+    margin: 5vw;
+    padding: 5vw;
+    border: 5px lavender solid;
+}
+
+.name-div {
+    background-color: #cdc5e7;
+    /* width: 100%; */
+    height: 3em;
+    display: flex;
+    padding-left: 1em;
+}
+
+
+.result-row {
+    display: flex;
+    margin-top: 1em;
+}
+
+.result-row p, .result-row h4 {
+    margin: 0;
+}
+
+.result-row h4, .rating-result-box h4 {
+    padding-right: .3em;
+    font-weight: normal;
+}
+
+.result-row p {
+    font-weight: bold;
+}
+
+/* .rating-result-box {
+    border: 1px lavender solid;
+    margin-top: 1em;
+    padding-left: 1em;
+} */
+
+.rating-row {
+    margin-top: 0;
+    margin-bottom: .2em;
+}
+
+/* #not-perfect {
+    margin-top: 
+} */
+
+
+
+/* MOAR RESOURCES PAGE */
+
+.resources-for {
+    margin: 5vw;
+}
+
+.resource-square{
+    /* background-color: mediumslateblue; */
+    border: mediumslateblue 5px solid;
+    margin: 5vw;
+    padding: 5vw;
+    /* max-width: 1200px; */
+}
+
+.sw-resource, .trans-resource, .kink-resource, .poly-resource, .bipoc-resource {
+    display: none;
+}
+
+.show-me-resource {
+    display: block;
+}
+
+.resource-square a{
+    text-decoration: none;
+    /* color: aliceblue; */
+    color: black;
+    font-size: 1.5em;
+    margin-top: .2em;
+ 
+}
+
+.resource-square p {
+    font-size: 1.2em;
+    margin-bottom: .1em;
+}
+
+#show-resources-form-button {
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    border: 1px solid mediumaquamarine;
+    border-radius: 17px;
+    /* width: 150px; */
+    font-size: 1.2em;
+    padding: 4px 5px;
+    margin: 3em 0 4em 0;
+}
+
+#add-resource-form {
+    display: none;
+}
+
+.color-divider-div2 {
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);   */
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh 0 0 0;
+}
+
+#add-resource-container {
+    margin: 5em 5vw 7em 5vw;
+}
+
+.resource-question label, .resource-question input, .resource-question textarea {
+    margin: 1em 0 2em 0
+}
+
+.resource-question label {
+    font-weight: bold;
+}
+
+#thank-you-resource {
+    display: none;
+}
+
+
+/* FIND A THERAPIST pAGE */
+
+.what-do, .search-explain, .search-footer, #search-the-list-form {
+    margin: 5vw;
+}
+
+.what-do a{
+    text-decoration: none;
+    color: var(--brightteal)
+}
+
+.what-do p{
+    /* margin-top: 0; */
+    margin: 0 6vw;
+}
+
+.what-do div {
+    margin-top: 10vh;
+}
+
+.banner {
+    /* height: 11em; */
+    height: 20em;
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
+    /* background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1);  */
+    background-image: url('/images/succulents2.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 0;
+}
+
+.banner h1 {
+    margin: 10vw;
+    color: white;
+}
+
+#find-magnify-heart-img {
+    width: 150px;
+}
+
+.take-me .list-icon {
+    width: 122px;
+}
+
+.show-all-div {
+    /* display: flex; */
+    margin-top: 0;
+}
+
+.show-all-button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#show-all-button {
+    margin: .4em 1em .6em 1em;
+    width: 110px;
+}
+
+
+#search-the-list-form {
+    /* max-width: 650px; */
+    max-width: 1100px;
+    margin-right: 5vw;
+    margin-top: 0;
+}
+
+.search-question {
+    margin: 3em 0em;
+}
+
+#provider-state {
+    min-width: 275px;
+    height: 35px;
+}
+
+optgroup {
+    font-size: 1em;
+}
+
+
+.community-ratings-select {
+    /* margin-left: 5vw; */
+}
+
+.search-by-rating {
+    margin-top: 1em;
+}
+
+.community-ratings-select label {
+    display: block;
+    margin-bottom: .2em;
+}
+
+/* .check-label {
+    background-color: blueviolet;
+    width: 200px;
+} */
+
+/* .search-checkbox {
+
+} */
+
+
+#which_insurance_search, #provider_state_search, .friendly-select {
+    max-width: 85vw;
+    height: 3em;
+    font-size: 1em;
+    
+}
+
+/* optgroup {
+    font-size: 1em;
+} */
+
+.radio-yn-div, .radio-yn-label-div {
+    max-width: 300px;
+}
+
+/* .radio-container {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+/* figure out how to fix label right margins on mobile */
+
+/* .search-question label {
+    margin-right: 10vw;
+    background-color: cyan;
+} */
+
+
+
+
+/* CONTACT PAGE STYLINGS */
+
+.contact-form-div {
+    margin-top: 7vh;
+    width: 90vw;
+    max-width: 500px;
+}
+
+.contact-form-div h1 {
+    margin-left: 0;
+    color: var(--brightteal);
+
+}
+
+.contact-form {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+
+
+.contact-form-content {
+    width: 88%;
+    color: var(--brightteal);
+}
+
+.form-input-text {
+    border: 0px;
+    border-bottom: 2px solid  var(--brightteal);
+    padding-top: 3vh;
+    width: 100%
+}
+
+.contact-form-div textarea {
+    /* do not relocate this */
+    padding: 0px;
+}
+
+
+.contact-submit-button {
+    /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
+    border: 0px;
+    border-radius: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 10em;
+    margin-top: 3vh;
+    color: white;
+    font-size: 1em;
+}
+
+
+/* ABOUT PAGE STYLINGS */
+
+.faq-div {
+    margin: 5vw;
+}
+
+.faq-div h1 {
+    margin-left: 0;
+}
+
+.faq-div a{
+    text-decoration: none;
+}
+
+.faq-div h4 {
+    margin-top: 3em;
+}
+
+.about-landing {
+    background-color: #fac3ef;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.about-landing img {
+    width: 100%;
+}
+
+.donate a{
+    margin-bottom: .5em;
+}
+
+/* LOGIN  */
+
+.login-div {
+    margin: 5vw;
+    /* max-width: 400px; */
+    width: 400px;
+    text-align: left;
+}
+
+
+
+
+
+
+/* TABLET STYLINGS */
+/* 481-767px */
+
+/* @media screen and (min-width: 481px) and (max-width: 767px) {
+
+
+} */
+
+
+@media screen and (min-width: 685px) {
+
+    .spacer2-mobile {
+        height: 0;   
+    }
+
+    .spacer3 {
+        height: 5vh;
+    }
+
+    .general-landing {
+        height: 50vh;
+    }
+
+/* INDEX PAGE STYLINGS - TABLET - non-standard breakpoint  */
+    #stuff-to-do-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5vw;
+    }
+
+    #magnify-talk-index {
+        width: 175px;
+        padding-right: 25px;
+        margin-top: 30px;
+    }
+
+    #list-index {
+        width: 150px;
+    }
+
+    #plant-index {
+        width: 120px;
+    }
+
+    .do-stuff {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* SEARCH PAGE */
+
+    .show-all-div {
+        display: flex;
+        /* margin-top: 0; */
+    }
+
+    .show-all-button-div {
+        width: 120px;
+        display: inline;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MONITOR STYLINGS */
+
+@media screen and (min-width: 768px) {
+
+/* HEADER */
+    #hamburger {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .link-menu {
+        display: flex;
+        align-items: center;
+        margin-right: 3vw;
+    }
+
+    .headlink {
+        padding: .5em; 
+        border: none;
+    }
+
+
+
+/* FOOTER */
+    footer p, #darkmode-button {
+        margin: 2vw 5vw;
+    }
+
+
+/* INDEX PAGE STYLINGS */
+    .color-divider-div {
+        height: 150px;
+    }
+
+    .heading-break-index {
+        display: inline-block;
+    }
+
+    .color-divider-div h3 {
+        font-size: 1.5em;
+    }
+
+    #stuff-to-do-container h2 {
+        font-size: 1.2em;
+    }
+
+/* ABOUT PAGE STYLINGS */
+
+    .about-landing img {
+        width: 70%;
+        margin-left: 12vw;
+    }
+
+/* ADD TO THE LIST PAGE - media*/
+
+
+
+    .button-align {
+        /* width: 375px;
+        flex-direction: row;
+        justify-content: space-between; */
+    }
+
+    .button-space {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    
+/* Search the List / Find a Therapist Page */
+
+    .group1, .group2 {
+        display: flex;
+    }
+
+    .search-by-rating {
+        margin-right: 2em;
+    }
+
+    .radio-yn-div, .radio-yn-label-div {
+        max-width: 300px;
+    }
+    
+
+
+/* How-to Page */
+
+    .example {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+
+/* Update Page */
+
+    #update-delete-button {
+        margin-top: 0px;
+    }
+
+}
+
+
+@media screen and (min-width: 1100px) {
+    /* .wider-margin {
+        margin-left: ;
+        margin-right: ;
+    } */
+
+    /* Find A Therapist Page */
+
+    .what-do {
+        margin-top: 0px;;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .take-me {
+        width: 300px;
+    }
+
+    .take-me p{
+        width: 90%;
+    }
+
+    .take-me .talk-icon {
+        padding: 33px 0 32px 0;
+    }
+
+    #find-magnify-heart-img {
+        padding: 7px 0 6px 0;
+    }
+
+    .take-me .icon{
+        margin: 0;
+    }
+
+    .take-me-og a{
+        margin-top: 15px;
+    }
+
+    /* .search-the-list {
+        background-color: deeppink;
+    } */
+
+
+    /* ADD TO THE LIST @1100px*/
+
+    .insurance-check-row {
+        width: 450px;
+    }
+
+    .insurance-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .center-me-at-1100{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:cyan;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  */
+    }
+
+    /* Results Page */
+
+    #search-again-button {
+        margin-top: 0;
+    }
+
+
+}
+
+
+/* LARGE MONITORS */
+
+@media screen and (min-width: 1300px) {
+
+    .max-width-container {
+        width: 100%;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        /* border: darkblue 2px solid; */
+    }
+
+    .max-width {
+        /* max-width: 1300px; */
+        width: 1300px;
+        /* border: 3px red solid; */
+
+    }
+
+    .max-width #example {
+        max-width: 1000px;
+    }
+
+    .resource-square{
+        margin: 5vw 0;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 1400px) {
+    /* Nav */
+    header, .divA, .little-divA, .link-menu, nav.link-menu {
+        padding-left: 0;
+        margin-left: 0;
+        /* padding-right: 0; */
+    }
+
+    /* Index */
+    .landing-div h1 {
+        padding-left: 0;
+        width: 1300px;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* APPLY TO ALL PAGES */
+
+.center-this-top {
+    display: flex;
+    justify-content: center;
+}
+
+.center-me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-me2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-me3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
