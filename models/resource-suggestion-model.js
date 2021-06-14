@@ -2,16 +2,20 @@ const mongoose = require ('mongoose');
 
 const {Schema} = mongoose;
 
-const resourceSchema = new Schema ({
-    name: {
+const resourceSuggestionSchema = new Schema ({
+    resourceName: {
         type: String,
     },
 
-    email: {
+    resourceLink: {
         type: String,
     },
 
-    message: {
+    resourceInfo: {
+        type: String,
+    },
+
+    resourceKnow: {
         type: String,
     },
 
@@ -21,6 +25,6 @@ const resourceSchema = new Schema ({
 
 })
 
-const Resource = mongoose.model('Resource', resourceSchema)
+const ResourceSuggestion = mongoose.model('ResourceSuggestion', resourceSuggestionSchema)
 
-module.exports=Resource;
+module.exports=ResourceSuggestion;

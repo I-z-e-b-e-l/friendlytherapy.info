@@ -315,38 +315,14 @@ footer {
     color: rgb(245, 241, 241);
     margin: 0px;
     padding: 5vw;
-    font-size: 220%;
+    font-size: 250%;
     -webkit-text-stroke-width: 1px;
     /* -webkit-text-stroke-color: black; */
     -webkit-text-stroke-color: #00595a;
 }
 
-#hey-there h4, #hey-there h2 {
-    margin: 5vw;
-    text-align: right;
-    /* color: white; */
-
-}
-
-#hey-there-container {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: 10vw;
-}
-
-#hey-there {
-   /* background-color: gold; */
-   /* background-color: #01c3d4; */
-   /* background-color: #d2e5b0; */
-   background-color: #07cde0;
-   background-image: linear-gradient(to right, #07cde0,  #2fdcf3, #61e1cf);   
-   padding: 5vw;
-   width: 80%; 
-}
-
-#hey-there a{
-    color:black;
+#heading-break-index {
+    display: none;
 }
 
 #welcome-div {
@@ -467,7 +443,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button {
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button {
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -480,7 +456,7 @@ footer {
     
 }
 
-.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover {
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover {
     border: 2px solid black;
     font-weight: bold;
 }
@@ -977,6 +953,11 @@ optgroup {
     font-size: 1em;
 }
 
+
+.community-ratings-select {
+    /* margin-left: 5vw; */
+}
+
 .search-by-rating {
     margin-top: 1em;
 }
@@ -1261,19 +1242,6 @@ optgroup {
 
 
 /* INDEX PAGE STYLINGS */
-
-    #hey-there h4, #hey-there h2 {
-        margin: 3vw 5vw;
-    }
-
-    #hey-there {
-    padding: 2vw 0vw;
-    width: 80%; 
-    max-width: 750px;
-    }
-
-
-
     .color-divider-div {
         height: 150px;
     }
@@ -1344,21 +1312,6 @@ optgroup {
         font-size: 150%;
     }
 
-
-
-    #hey-there {
-    /* width: 80%;   */
-    max-width: 80%;
-    }
-
-    #stuff-to-do-container {
-        margin-bottom: 0;
-    }
-
-    .do-stuff {
-        margin-bottom: 50px;
-    }
-
     /* Find A Therapist Page */
 
     .what-do {
@@ -1424,6 +1377,8 @@ optgroup {
 
     /* Results Page */
 
+    #search-again-button {===
+    }
 
 
 }
@@ -1435,7 +1390,6 @@ optgroup {
 
     .landing-div {
         background-position: center;
-        width: 100%;
         /* height: 75vh; */
     }
 
@@ -1444,13 +1398,13 @@ optgroup {
         display: flex;
         /* align-items: center; */
         justify-content: center;
-        /* flex-direction: column; */
+        flex-direction: column;
         /* border: darkblue 2px solid; */
     }
 
     .max-width {
         /* max-width: 1300px; */
-        width: 1300px;
+        width: 1300px;==
         /* border: 3px red solid; */
 
     }
@@ -1472,13 +1426,8 @@ optgroup {
         max-width: 800px;
     }
 
-    .color-divider-div {
-        height: 30vh;
-    }
 
-    #stuff-to-do-container {
-        margin-bottom: 0;
-    }
+
 
 
 
@@ -1487,40 +1436,21 @@ optgroup {
 
 @media screen and (min-width: 1400px) {
     /* Nav */
-    header, .divA, .little-divA, .link-menu, nav.link-menu, #landing-text h1 {
-        padding-left: 0;
-        margin-left: 0;
-        padding-right: 0;
+    header, .divA, .little-divA, .link-menu, nav.link-menu {
+        /* padding-left: 0;
+        margin-left: 0; */ */
+        /* padding-right: 0;
     }
 
-    .link-menu {
-        margin-right: 0;
-    }
+
 
     /* Index */
+
 
     #landing-text {
         max-width: 1000px;
         font-size: 150%;
     }
-
-    #hey-there {
-        width: 80%;  
-        /* max-width: 1120px; */
-        /* margin-right: 8vw; */
-        }
-
-    #hey-there h4, #hey-there h2 {
-        margin-right: 12vw;
-        margin-left: 12vw;
-    }
-
-    #stuff-to-do-container {
-        margin-left: 12vw;
-        margin-right: 12vw;
-    }
-
-
 }
 
 

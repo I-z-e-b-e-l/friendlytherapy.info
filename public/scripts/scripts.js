@@ -28,6 +28,24 @@ caretDown.addEventListener('click', toggleFatFooter);
 
 
 
+
+
+
+let footerMessage = [
+// '​\"We are pow­er­ful because we have sur­vived, and that is what it is all about- sur­vival and growth.\" \n-Audre Lorde',
+'\"We have always been very resilient — but our resilience doesn’t mean that our lives are ever ​easy.\" \n-Gwen Benaway', 
+'You got this. No really, you got this.',
+'\"They tried to bury us, but they did not know that we were seeds\"',
+'You are brave, bold, and beautiful, and you are doing your best.',
+];
+
+function newMessage(){
+    let randomNumber = Math.floor(Math.random()*footerMessage.length);
+    document.querySelector("#footer-message").innerHTML = footerMessage[randomNumber];
+}
+
+
+
 // MOAR RESOURCES PAGE
 
 function displaySWresource(){
@@ -78,6 +96,38 @@ function displayThankYouResource(){
 }
 
 
+
+
+
+const resourceForm = document.getElementById("add-resource-form"); 
+const resourceformEvent = resourceForm.addEventListener("submit", (event) => {
+    // event.preventDefault();
+
+let mail = new FormData(resourceForm);
+sendResourceMail(mail);
+})
+
+const sendResourceMail = (mail) => {
+    // fetch("https://friendlytherapy.herokuapp.com/contact", {
+    fetch("http://localhost:3000/contact", {
+        // headers: {'Content-Type': 'application/json'},
+        method: "post", 
+        body: mail,
+    
+      }).then((response) => {
+        return response.json();
+      });
+    }; 
+
+
+
+
+
+
+
+
+
+
 //  ADD TO THE LIST
 
 function displayClientForm() {
@@ -87,6 +137,7 @@ function displayClientForm() {
     document.querySelector('#who-button-horizontal').classList.remove('button-align');
     document.querySelector('.spacer2').style.display = "none";
     document.querySelector('#who-button-horizontal').classList.add('center-me');
+    document.querySelector('#client-added-info-check').checked=true;
 }
 
 function displayProviderForm() {
@@ -95,6 +146,7 @@ function displayProviderForm() {
     // document.querySelector('.add-provider-submit').style.display = "block";
     document.querySelector('#who-button-horizontal').classList.remove('button-align');
     document.querySelector('#who-button-horizontal').classList.add('center-me');
+    document.querySelector('#provider-added-info-check').checked=true;
 }
 
 
@@ -188,7 +240,7 @@ function showAdditionalRating() {
 }
 
 function display_insurance_options(){
-    document.querySelector('.insurance-box').style.display = "block";
+    document.querySelector('.insurance-box').style.display = "flex";
     document.querySelector('.show-insurance-button').style.display = "none";
 }
 
@@ -213,16 +265,16 @@ function displayThankYouAdd(){
 
 const contactForm = document.getElementById("contact-form"); 
 const formEvent = contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
-let mail = new FormData(form);
+let mail = new FormData(contactForm);
 sendMail(mail);
 })
 
 const sendMail = (mail) => {
-    // fetch("https://friendlytherapy.info/contact", {
-    // fetch("https://<sitehere>.herokuapp.com/contact", {
-    fetch("localhost:3000/contact", {
+    // fetch("https://friendlytherapy.herokuapp.com/contact", {
+    fetch("http://localhost:3000/contact", {
+        // headers: {'Content-Type': 'application/json'},
         method: "post", 
         body: mail,
     
@@ -230,3 +282,7 @@ const sendMail = (mail) => {
         return response.json();
       });
     }; 
+
+
+
+    //Footer

@@ -36,14 +36,18 @@
 
             <form class="add-provider-form" id="client-add-provider-form" method="post" action="/search-add/add-a-provider-client-input">
 
+                <input type="checkbox" id="client-added-info-check" name="who_added_info_check_client" value="Client added info">
+
                 <div class="client-add-provider">
-                    <p>This form is intended to collect information anonymously from GSM therapy clients and empower us to make better-informed decisions about our mental health care. 
-                    <br><br>
-                    In order to collect information from folks who are the most qualified to speak to their experience recieveing mental health care as members of any given community, we ask you to self-identify which communities you are a part of. 
-                    <br><br>
-                    Your ratings are always anonymous. No identifying information about you (or the computer or phone you are using) is collected. 
-                    <br><br>
-                    If your therapist is already on The List, please feel free to make an additional entry for them and add your comments and ratings. 
+                    <p>
+                        Awesome. Thanks for taking the time. The information you share here will help folks make better-informed decisions about our mental health care. No identifying information about you is collected.
+                    </p>
+                    <p>
+                        If your therapist is already in the database, please feel free to make an additional entry for them and add your comments and ratings.  
+                    </p>
+                    <p>
+                        In order to collect information from folks who are the most qualified to speak to their experience getting mental health care as members of any given community, please check which communities you are a part of:   
+                        <br><br>
                     </p>
 
                     <div class="who-are-you">
@@ -82,6 +86,7 @@
 
                     <div class="question client-question">
                         <label for="provider_type_client_input" class="text1">What kind of mental health provider are they?</label>
+                        <br><br>
             
                         <!-- <input type="text" id="provider_type_client_input" name="provider_type_client_input" placeholder="therapist? psychiatrist?"> -->
 
@@ -413,6 +418,9 @@
 
                 
                 <div class="provider-add-provider">
+
+
+
                     <p>This project is intended to collect information to empower gender and sexual minority therapy clients to make better-informed decisions about our mental health care.  
                     <br><br>
                     Entires made by providers will display alongside entires provided by clients. Please use the comments section to describe your self-assessed competencies in working with members of a particular community. 
@@ -425,7 +433,7 @@
                     </div>
 
 
-            
+                    <input type="checkbox" id="provider-added-info-check" name="who_added_info_check_provider" value="Provider added info">
 
                     <!-- add option to create login to edit entry in the future? -->
 
