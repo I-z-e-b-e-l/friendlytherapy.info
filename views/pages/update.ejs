@@ -40,6 +40,11 @@
         </div>
 
         <div class="question provider-question">
+            <p class="text1">Who initially added info:</p>
+            <p><%= Provider.whoAddedInfo %></p>
+        </div>
+
+        <div class="question provider-question">
             <label for="credentials_update" class="text1">Credentials:</label>
             <input type="text" id="credentials_update" name="credentials_update" value="<%= Provider.credentials %>">
         </div>
@@ -376,7 +381,6 @@
             <textarea id="additional_insurance_update" name="additional_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.additionalInsurance %>"><%= Provider.additionalInsurance %></textarea>
 
 
-<!-- fix -->
         <div class="question update-question">
             <label class="text1">Accepts Masshealth?</label>
             <div class="radio-yn-div">
@@ -439,4 +443,4 @@
 
     <div class="spacer1"></div>
         
-    <%- include('../partials/footer') -%> 
+<%- include('../partials/footer') -%> 

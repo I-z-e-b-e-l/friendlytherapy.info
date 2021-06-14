@@ -17,6 +17,10 @@ const providerSchema = new Schema ({
         minLength: [4, 'Minimum length for provider type is 4 characters.']
     },
 
+    whoAddedInfo: {
+        type: [String]
+    },
+
     credentials: {
         type: String
     },

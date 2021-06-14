@@ -143,14 +143,14 @@
             </div>
         </div>
     </div>
-<!-- add aida manduly -->
 
-    <div class=center-me>
+
+    <div class="center-me">
       <button onclick="displayAddResourceForm()" id="show-resources-form-button">Suggest a Resource</button>  
     </div>
     
 
-    <form id="add-resource-form" class="" action="urlsendmeform">
+    <form id="add-resource-form" class="" action="/resources" method="POST" enctype = "multipart/form-data">
 
             <div class="color-divider-div2">
                <h3>Suggest a Resource</h3> 
@@ -163,19 +163,22 @@
 
             <div class="resource-question">
                 <label>Name of resource:</label>
-                <input type="text" name="" value="">
+                <input type="text" name="resource_name" value="">
             </div>
 
             <div class="resource-question">
                 <label>Link:</label>
-                <input type="text" name="" value="">
+                <input type="text" name="resource_link" value="">
             </div>
-            
+
             <div class="resource-question">
                 <label>Any info you want to share:</label>
-                <textarea id="" class="center-me" name="additional-rating-info" rows="4" cols="">
-                </textarea>
+                <textarea id="" class="center-me" name="resource_info" rows="4" cols=""></textarea>
+            </div>
 
+            <div class="resource-question">
+                <label>How do you know about this resource?</label>
+                <input type="text" name="resource_know" placeholder="Have you used it yourself? Are you professionally connected?">
             </div>
 
             <div class="center-me">
@@ -183,7 +186,7 @@
             </div>
 
             <p id="thank-you-resource">
-                <em>Thank you for contributing! Your resourse suggestion will be reviewed and added in a few days! </em>
+                <em>Thank you for contributing! Your resourse suggestion will be reviewed!</em>
             </p>
 
 

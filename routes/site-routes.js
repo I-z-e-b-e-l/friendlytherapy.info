@@ -20,8 +20,12 @@ router.route('/how-to')
 
 router.route('/resources')
 .get(siteController.resources)
-// send an email via the form on this page
-// .post(siteController.resource_suggest_post)
+.post(siteController.resource_suggest_post)
+
+router.route('/thank-you-contact')
+.get(siteController.thank_you_contact)
+
+
 
 
 module.exports = router;
