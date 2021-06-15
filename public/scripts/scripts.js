@@ -97,37 +97,6 @@ function displayThankYouResource(){
 
 
 
-
-
-const resourceForm = document.getElementById("add-resource-form"); 
-const resourceformEvent = resourceForm.addEventListener("submit", (event) => {
-    // event.preventDefault();
-
-let mail = new FormData(resourceForm);
-sendResourceMail(mail);
-})
-
-const sendResourceMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
-        method: "post", 
-        body: mail,
-    
-      }).then((response) => {
-        return response.json();
-      });
-    }; 
-
-
-
-
-
-
-
-
-
-
 //  ADD TO THE LIST
 
 function displayClientForm() {
@@ -161,6 +130,11 @@ function displayProviderForm() {
 // }
 
 
+//display more options to click for ratings display
+
+function display_more_i_am_options() {
+    document.querySelector('#who-are-you-2').style.display="block"
+}
 
 
 // display rating options when identity is clicked
@@ -229,6 +203,59 @@ function showBIPOCRating() {
     }
 }
 
+let checkBoxADHD = document.getElementById("adhd_check");
+let adhdRating = document.getElementById("adhd_rating");
+function showADHDRating() {
+    if (checkBoxADHD.checked == true){
+        adhdRating.style.display = "block";
+    } else {
+        adhdRating.style.display = "none";
+    }
+}
+
+let checkBoxAutism = document.getElementById("autism_check");
+let autismRating = document.getElementById("autism_rating");
+function showAutismRating() {
+    if (checkBoxAutism.checked == true){
+        autismRating.style.display = "block";
+    } else {
+        autismRating.style.display = "none";
+    }
+}
+
+let checkBoxTrauma = document.getElementById("trauma_check");
+let traumaRating = document.getElementById("trauma_rating");
+function showTraumaRating() {
+    if (checkBoxTrauma.checked == true){
+        traumaRating.style.display = "block";
+    } else {
+        traumaRating.style.display = "none";
+    }
+}
+
+let checkBoxDisability = document.getElementById("disability_check");
+let disabilityRating = document.getElementById("disability_rating");
+function showDisabilityRating() {
+    if (checkBoxDisability.checked == true){
+        disabilityRating.style.display = "block";
+    } else {
+        disabilityRating.style.display = "none";
+    }
+}
+
+let checkBoxSubstanceUse = document.getElementById("substance_use_check");
+let substanceUseRating = document.getElementById("substance_use_rating");
+function showSubstanceUseRating() {
+    if (checkBoxSubstanceUse.checked == true){
+        substanceUseRating.style.display = "block";
+    } else {
+        substanceUseRating.style.display = "none";
+    }
+}
+
+
+
+
 let additionalRating = document.getElementById("additional_rating_info");
 
 function showAdditionalRating() {
@@ -284,5 +311,24 @@ const sendMail = (mail) => {
     }; 
 
 
+//SUGGEST A RESOURCE
 
-    //Footer
+const resourceForm = document.getElementById("add-resource-form"); 
+const resourceformEvent = resourceForm.addEventListener("submit", (event) => {
+    // event.preventDefault();
+
+let mail = new FormData(resourceForm);
+sendResourceMail(mail);
+})
+
+const sendResourceMail = (mail) => {
+    // fetch("https://friendlytherapy.herokuapp.com/contact", {
+    fetch("http://localhost:3000/contact", {
+        // headers: {'Content-Type': 'application/json'},
+        method: "post", 
+        body: mail,
+    
+      }).then((response) => {
+        return response.json();
+      });
+    }; 

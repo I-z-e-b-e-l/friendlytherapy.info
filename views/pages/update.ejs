@@ -96,9 +96,13 @@
         </div>
 
         <div class="question update-question">
-            <label for="therapist-location" class="text1">Location/Neighborhood:</label>
+            <label for="location_update" class="text1">Location/City/Neighborhood:</label>
             <input type="text" id="location_update" name="location_update" value="<%= Provider.location %>">
+        </div>
 
+        <div class="question update-question">
+            <label for="address_update" class="text1">Address (for adding to google maps):</label>
+            <input type="text" id="address_update" name="location_update" value="<%= Provider.address %>">
         </div>
 
         <div class="question update-question">
@@ -426,7 +430,7 @@
         </div>
 
         
-        <div class="button-align">
+        <div class="center-me">
             <input type="submit" value="Submit" id="update-provider-submit" class="add-provider-submit" onclick="">
         </div>
 

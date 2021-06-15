@@ -14,7 +14,7 @@
 
 
 <div class="max-width-container">
-    <div class="result-explain">
+    <div class="result-explain" id="result-ratings-explain">
         <p>        
             Entries in the database are provided by members of the community, as well as providers who have submitted their information.
             <br><br>
@@ -32,18 +32,8 @@
 
 
 
-
-<div class="max-width-container-modify">
-    <!-- <div class="search-explain result-explain max-width"> -->
-
-
-        <!-- make sidebar? -->
-    <!-- </div> -->
-    
-
-           
-    <div class="max-width-container-modify">
-        <div class="max-width">
+<div class="max-width-container">
+        <div class="max-width-container-modify">
 
     <% providers.forEach(provider=> { %>
 
@@ -52,42 +42,45 @@
     <% }) %>
 
         </div>
-    </div>
+</div>
 
 
     <!-- <div class="spacer3"></div> -->
 
 
+
     <div class="max-width-container">
-        <div class="result-explain">
-            <p>If you don't see the perfect therapist or psychiatrist for you above, don't give up! That doesn't mean that there isn't a great provider out there for you. <a href="/search-add/find-a-therapist-search">Click here</a> and try modifying your search a few times. </p>
-              
+        <div class="result-explain" id="not-perfect">
+            <p>If you don't see the perfect therapist or psychiatrist for you above, don't give up! That doesn't mean that there isn't a great provider out there for you. Try modifying your search a few times. </p>
+                
         </div>
     </div>
-
-
-
+    
+    
+    
     <div class="center-me">
-
+    
         <a href="/search-add/find-a-therapist-search"><button class="" id="search-again-button">Search Again</button></a>
-
+    
+    </div>
+        
+    
+    
+    
+        <!-- <div class="spacer3"></div> -->
+    
+    
+    
+    <div class="max-width-container">
+        <div class="result-explain" id="result-footnote">
+            <p>
+                To give feedback on this resource, or to submit updates, please <a href="/contact">contact Izebel</a>.
+            </p> 
+        </div>
     </div>
     
-
-</div>
-
-<!-- <div class="spacer3"></div> -->
-
-<div class="max-width-container">
-    <div id="result-footnote" >
-        <p>
-            <!-- The moderator does not assume responsibility for community submitted content. 
-            <br><br> -->
-            To give feedback on this resource, or to submit updates, please <a href="/contact">contact Izebel</a>.
-            <!-- link -->
-        </p>
-    </div>
-</div>
+    
+    
 
 
 

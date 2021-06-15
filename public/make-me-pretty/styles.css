@@ -484,7 +484,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button, .contact-submit-button {
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button, .contact-submit-button, #display-more-i-am-button {
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -498,7 +498,7 @@ footer {
     
 }
 
-.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover, .contact-submit-button:hover {
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover, .contact-submit-button:hover, #display-more-i-am-button:hover {
     border: 2px solid var(--brightteal);;
     /* font-weight: bold; */
     /* color: var(--brightteal); */
@@ -521,6 +521,33 @@ footer {
     width: 200px;
 }
 
+#display-more-i-am-button {
+    width: 140px;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#display-more-i-am-button p {
+    /* text-align: center; */
+    margin: 0;
+    padding: 0;
+}
+
+#show-more-row {
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+#show-more-row-text {
+    margin-right: 2em;
+}
 /* #add-provider-submit {
     display: none;
 } */
@@ -677,9 +704,15 @@ input[type=checkbox] {
     padding-top: .6em;
 }
 
-
+#who-are-you-2 {
+    display: none;
+}
 
 #poly_rating, #queer_rating, #trans_rating, #kink_rating, #sw_rating, #bipoc_rating, #additional_rating {
+    display: none;
+}
+
+#adhd_rating, #autism_rating, #disability_rating, #trauma_rating, #substance_use_rating {
     display: none;
 }
 
@@ -741,6 +774,8 @@ td {
 
 /* Update and Add to the List (Add a Provider) Styling */
 
+/* .who-are-you-2 {} */
+
 .show-insurance-button {
     font-size: .7em;
     margin-top: 2.2em;
@@ -773,11 +808,18 @@ td {
 
 .result-explain {
     max-width: 900px;
-    margin: 10vw 10vw;
+    margin: 10vh 10vw;
     
 }
 
+#show-more-info-button {
+    margin: 1em;
+}
 
+/* #show-more-provider-info {
+    background-color: aqua;
+    display: none;
+} */
 
 .gradient-checkbox {
     width: 20px;
@@ -826,10 +868,6 @@ td {
     margin-top: 0;
     margin-bottom: .2em;
 }
-
-/* #not-perfect {
-    margin-top: 
-} */
 
 
 
@@ -933,7 +971,7 @@ td {
 
 .what-do a{
     text-decoration: none;
-    color: .contact-submit-button
+    color: var(--tealblue)
 }
 
 .what-do p{
@@ -1267,6 +1305,10 @@ optgroup {
         align-items: center;
     }
 
+    #show-more-row {
+        display: flex;
+    }
+
 
 
 }
@@ -1388,6 +1430,21 @@ optgroup {
         margin-top: 0px;
     }
 
+/* Results Page */
+
+/* .result-explain {
+    margin-top: ;
+} */
+
+#search-again-button {
+    margin: 0;
+}
+
+#not-perfect {
+    margin-bottom: 2em;
+}
+
+
 }
 
 
@@ -1505,13 +1562,9 @@ optgroup {
 
     .results-box {
         margin-bottom: 0;
+        width: 700px;
     }
 
-    #result-footnote {
-        margin:5vh 0;
-        /* background-color: yellow; */
-        /* width:  */
-    }
 
 }
 
@@ -1556,7 +1609,13 @@ optgroup {
     }
 
 
+    #result-footnote {
+        width: 1100px;
+    }
 
+    #result-ratings-explain {
+        margin-bottom: 0px;
+    }
 
 
 
@@ -1571,9 +1630,6 @@ optgroup {
         font-size: 150%;
     }
 
-    .results-box {
-        max-width: 800px;
-    }
 
     .color-divider-div {
         height: 30vh;
