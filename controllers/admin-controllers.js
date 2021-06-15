@@ -46,7 +46,8 @@ module.exports = {
       if (error) {
         // return error;
         console.log(error);
-        response.redirect('/admin/login');
+        // check this
+        response.redirect('/admin/nope');
       } else {
         passport.authenticate('local')(request, response, () => {
           console.log("You are logged in");

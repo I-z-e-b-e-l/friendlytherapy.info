@@ -150,50 +150,66 @@
     </div>
     
 
-    <form id="add-resource-form" class="" action="/resources" method="POST" enctype = "multipart/form-data">
 
-            <div class="color-divider-div2">
-               <h3>Suggest a Resource</h3> 
-            </div>
 
-        <div id=add-resource-container>
+    <div class="center-me">
+        <div class="resource-form-div">
+
+            <form class="forms-all contact-form" id="add-resource-form" method="POST" action="/contact" enctype = "multipart/form-data">
+
+                <div class="resource-question">
+                    <label for="resource_name" class="contact-form-content resource-form-content form-label">Name of resource:</label>
+                    <input type="text" name="resource_name" class="contact-form-content resource-form-content resource-input" required>
+                </div>
+
+                <div class="resource-question">
+                    <label for="resource_link" class="contact-form-content resource-form-content form-label">Link:</label>
+                    <input type="text" name="resource_link" class="contact-form-content resource-form-content resource-input">
+                </div>
+
+                <div class="resource-question">
+                    <label for="resource_info" class="contact-form-content resource-form-content form-label">Any info you want to share:</label>
+                    <textarea name="resource_info" class="contact-form-content resource-form-content resource-input" rows="6"></textarea>
+                </div>
+
+                <div class="resource-question">
+                    <label for="resource_know" class="contact-form-content resource-form-content form-label">How do you know about this resource?:</label>
+                    <input type="text" name="resource_know" class="contact-form-content resource-form-content resource-input" placeholder="Have you used it yourself? Are you professionally connected?">
+                </div>
+    
+                <div class="center-me">
+                    <input type="submit" onclick="displayThankYouResource()">
+                </div>
+    
+                <p id="thank-you-resource">
+                    <em>Thank you for contributing! Your resourse suggestion will be reviewed!</em>
+                </p>
+    
+            </form>
+        </div>
+                
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- <form id="add-resource-form" class="" action="/resources" method="POST" enctype = "multipart/form-data"> -->
+
+
 
 
             
 
-            <div class="resource-question">
-                <label>Name of resource:</label>
-                <input type="text" name="resource_name" value="">
-            </div>
-
-            <div class="resource-question">
-                <label>Link:</label>
-                <input type="text" name="resource_link" value="">
-            </div>
-
-            <div class="resource-question">
-                <label>Any info you want to share:</label>
-                <textarea id="" class="center-me" name="resource_info" rows="4" cols=""></textarea>
-            </div>
-
-            <div class="resource-question">
-                <label>How do you know about this resource?</label>
-                <input type="text" name="resource_know" placeholder="Have you used it yourself? Are you professionally connected?">
-            </div>
-
-            <div class="center-me">
-                <input type="submit" onclick="displayThankYouResource()">
-            </div>
-
-            <p id="thank-you-resource">
-                <em>Thank you for contributing! Your resourse suggestion will be reviewed!</em>
-            </p>
 
 
-        </div>
 
-     
-    </form>
 
 
 

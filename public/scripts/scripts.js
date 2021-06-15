@@ -229,7 +229,7 @@ function showBIPOCRating() {
     }
 }
 
-let additionalRating = document.getElementById("additional_rating");
+let additionalRating = document.getElementById("additional_rating_info");
 
 function showAdditionalRating() {
     if ((checkBoxQueer.checked == true) || (checkBoxTrans.checked == true) || (checkBoxPoly.checked == true)  (checkBoxKink.checked == true) ||  (checkBoxSW.checked == true) ||  (checkBoxBIPOC.checked == true)){
