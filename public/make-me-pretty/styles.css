@@ -748,6 +748,7 @@ font-weight: bold;
 
 .update-form {
     margin: 5vw 5vw 0 5vw;
+    border: red 5px solid;
 }
 
 #update-delete-div {

@@ -14,9 +14,10 @@
 
     <!-- <form class="update-form" action="/admin/update/<%=Provider._id%>" method="post"> -->
 
+
+    <!-- Same as in Update-7 -->
     <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=put" method="post">
     
-
         <div class="question update-question">
             <label for="name_update" class="text1">Provider's name:</label>
             <input type="text" id="name_update" name="name_update" value="<%= Provider.name %>">
@@ -26,7 +27,7 @@
             <label for="pronouns_update" class="text1">Provider's pronouns:</label>
             <input type="text" id="pronouns_update" name="pronouns_update" value="<%= Provider.pronouns %>">
         </div>
-
+    
         <div class="question update-question">
             <label for="practice_update" class="text1">Institution / Private Practice Name:</label>
             <input type="text" id="practice_update" name="practice_update" value="<%= Provider.practice %>">
@@ -68,10 +69,7 @@
                 <label for="teletherapy_no_update">No</label>
             </div>
         </div>
-
-
-
-
+    
         <div class="question update-question">
 
             <label for="license_state_update" class="text1">Where does this provider practice / Where is this provider licensed?</label>
@@ -162,8 +160,7 @@
             <label for="client_listed_insurance_update" class="text1">Insurances listed by client:</label>
             <p><%= Provider.insuranceFromClient %></p>
         </div>
-
-
+    
         <div class="question update-question">
             <label for="which_insurance_update" class="text1">Which insurance(s) do they accept?</label>
 
@@ -389,8 +386,8 @@
         <div class="question update-question">
             <label for="additional_insurance_update" class="text1">Additional insurances they accept:</label>
             <textarea id="additional_insurance_update" name="additional_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.additionalInsurance %>"><%= Provider.additionalInsurance %></textarea>
-
-
+        </div>
+    
         <div class="question update-question">
             <label class="text1">Accepts Masshealth?</label>
             <div class="radio-yn-div">
@@ -413,11 +410,10 @@
             <textarea id="access_update" name="access_update" class="center-me" rows="6" cols="50"><%= Provider.accessibility %></textarea>
         </div>
 
-
         <div class="question update-question">
 
-                <label for="comments_update" class="text1">General Comments:</label>
-                <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50"><%= Provider.comments %></textarea> 
+            <label for="comments_update" class="text1">General Comments:</label>
+            <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50"><%= Provider.comments %></textarea> 
 
         </div>
 
@@ -435,13 +431,17 @@
 
         </div>
 
-        
         <div class="center-me">
             <input type="submit" value="Submit" id="update-provider-submit" class="add-provider-submit">
         </div>
 
-
     </form>
+
+    
+
+
+
+
 
     <div class="center-me" id="update-delete-div">
 
@@ -452,5 +452,11 @@
     </div>
 
     <div class="spacer1"></div>
-        
-<%- include('../partials/footer') -%> 
+
+
+
+<!-- <div class="max-width-container"> -->
+
+ <%- include('../partials/footer') -%>    
+<!-- </div> -->
+
