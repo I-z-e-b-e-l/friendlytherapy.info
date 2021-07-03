@@ -110,48 +110,88 @@ module.exports = {
 
   },
 
+  update_provider: (request, response) => {
+    console.log("The eagle has landed");
+    if (request.isAuthenticated()) {
+      console.log("The eagle is authenticated");
+    const {id} = request.params;
 
-    update_provider: (request, response) => {
-      console.log("The eagle has landed");
-      if (request.isAuthenticated()) {
-        console.log("The eagle is authenticated");
-      const {id} = request.params;
+    Providers.findByIdAndUpdate(id, {$set: {  
+      name: request.body.name_update,
+      pronouns: request.body.pronouns_update,
+      practice: request.body.practice_update,
+      providerType: request.body.provider_type_update,
+      credentials: request.body.credentials_update,
+      teletherapy: request.body.teletherapy_update,
+      licenseState: request.body.license_state_update,
+      location: request.body.location_update,
+      couplesTherapy: request.body.couples_update,
+      youthTherapy: request.body.youth_update,
+      website: request.body.website_update,
+      contact: request.body.contact_update,
+      acceptInsurance: request.body.insurance_yn_update,
+      //skip insurancefromclient
+      whichInsurance: request.body.which_insurance_update,
+      additionalInsurance: request.body.additional_insurance_update,
+      acceptMassHealth: request.body.masshealth_yn_update,
+      cost: request.body.cost_update,
+      accessibility: request.body.access_update,
+      comments: request.body.comments_update,
+      commentsAdmin: request.body.admin_comments_update,
+      lastUpdate: request.body.last_update,
+    }}, {new: true}, (error) => {
+        if (error) {
+            return error;
+        } else {
+            response.redirect('/admin');
+        }
+    })
+  } else {
+    response.redirect('/admin/nope')
+  }
+},
 
-      // Providers.findByIdAndUpdate({_id: id}, {$set: {
-      Providers.findByIdAndUpdate(id, {$set: {  
-        name: request.body.name_update,
-        pronouns: request.body.pronouns_update,
-        practice: request.body.practice_update,
-        providerType: request.body.provider_type_update,
-        credentials: request.body.credentials_update,
-        teletherapy: request.body.teletherapy_update,
-        licenseState: request.body.license_state_update,
-        location: request.body.location_update,
-        couplesTherapy: request.body.couples_update,
-        youthTherapy: request.body.youth_update,
-        website: request.body.website_update,
-        contact: request.body.contact_update,
-        acceptInsurance: request.body.insurance_yn_update,
-        //skip insurancefromclient
-        whichInsurance: request.body.which_insurance_update,
-        additionalInsurance: request.body.additional_insurance_update,
-        acceptMassHealth: request.body.masshealth_yn_update,
-        cost: request.body.cost_update,
-        accessibility: request.body.access_update,
-        comments: request.body.comments_update,
-        commentsAdmin: request.body.admin_comments_update,
-        lastUpdate: request.body.last_update,
-      }}, {new: true}, (error) => {
-          if (error) {
-              return error;
-          } else {
-              response.redirect('/admin');
-          }
-      })
-    } else {
-      response.redirect('/admin/nope')
-    }
-  },
+    // update_provider: (request, response) => {
+    //   console.log("The eagle has landed");
+    //   if (request.isAuthenticated()) {
+    //     console.log("The eagle is authenticated");
+    //   const {id} = request.params;
+
+
+  //     Providers.findByIdAndUpdate(id, {$set: {  
+  //       name: request.body.name_update,
+  //       pronouns: request.body.pronouns_update,
+  //       practice: request.body.practice_update,
+  //       providerType: request.body.provider_type_update,
+  //       credentials: request.body.credentials_update,
+  //       teletherapy: request.body.teletherapy_update,
+  //       licenseState: request.body.license_state_update,
+  //       location: request.body.location_update,
+  //       couplesTherapy: request.body.couples_update,
+  //       youthTherapy: request.body.youth_update,
+  //       website: request.body.website_update,
+  //       contact: request.body.contact_update,
+  //       acceptInsurance: request.body.insurance_yn_update,
+  //       //skip insurancefromclient
+  //       whichInsurance: request.body.which_insurance_update,
+  //       additionalInsurance: request.body.additional_insurance_update,
+  //       acceptMassHealth: request.body.masshealth_yn_update,
+  //       cost: request.body.cost_update,
+  //       accessibility: request.body.access_update,
+  //       comments: request.body.comments_update,
+  //       commentsAdmin: request.body.admin_comments_update,
+  //       lastUpdate: request.body.last_update,
+  //     }}, {new: true}, (error) => {
+  //         if (error) {
+  //             return error;
+  //         } else {
+  //             response.redirect('/admin');
+  //         }
+  //     })
+  //   } else {
+  //     response.redirect('/admin/nope')
+  //   }
+  // },
 
 
   delete_provider: (request, response) => {
