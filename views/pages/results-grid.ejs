@@ -1,0 +1,137 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/header-nav') -%> 
+
+
+<div class="general-landing">
+    <div class="max-width-container">
+        <h1 class="max-width">Search Results</h1>   
+    </div>
+</div>
+
+
+<!-- display what user checked off -->
+
+
+<div class="max-width-container">
+    <div class="result-explain" id="result-ratings-explain">
+        <p>        
+            Entries in the database are provided by members of the community, as well as providers who have submitted their information.
+            <br><br>
+            Clients may anonymously rate a provider's competency in a given community on a 0 - 3 scale: 
+            <br><br>
+            0 = completely unfamiliar   
+            <br>
+            3 = super comfortable and familiar
+            <br><br>
+            Providers are not permitted to rate their own familiarity a given community using the rating scale, but may describe their level of competence in the comments section.   
+        </p>
+
+    </div>
+</div>
+
+
+<div class="max-width-container">
+    <div class="max-width-container-modify">
+
+        <table>
+            <tr>
+                <th>Provider Name</th>
+                <th>Credentials</th>
+                <th>Pronouns</th>
+                <th>Type of Provider</th>
+                <th>Institution/Private Practice Name</th>
+                <!-- <th>Accepting New Clients?</th> -->
+                <th>States Licensed to Practice In</th>
+                <th>Offers Teletherapy</th>
+                <th>Location</th>
+                <!-- <th>Address</th> -->
+                <th>Queer Friendliness Rating</th>
+                <th>Trans Friendliness Rating</th>
+                <th>Nonmonogamy Friendliness Rating</th>
+                <th>Kink Friendliness Rating</th>
+                <th>Sex Worker Friendliness Rating</th>
+                <th>BIPOC Friendliness Rating</th>
+                <th>ADHD Friendliness Rating</th>
+                <th>Autism Friendliness Rating</th>
+                <th>Disability /Chronic Illness Friendliness Rating</th>
+                <th>Trauma Friendliness Rating</th>
+                <th>Substance Use Friendliness Rating</th>
+                <th>Additional Ratings</th>
+                <th>Community-Friendliness Comments</th>
+                <th>Offers Couple's Therapy</th>
+                <th>Serves Youth</th>
+                <th>Website</th>
+                <th>Contact Info</th>
+                <th>Accepts Insurance</th>
+                <th>Accepted Insurances on File</th>
+                <th>Additional Insurances</th>
+                <!-- <th>Client Entered Insurance Info</th> -->
+                <th>Accepts MassHealth</th>
+                <th>Average Cost without Insurance</th>
+                <th>Accessibility Info</th>
+                <th>Additional Comments</th>
+                <th>Who Initially Added to the Database</th>
+                <th>Info Last Updated</th>
+                <th>Admin Comments</th>
+                <!-- <th>Date Info Added</th> -->
+            </tr>
+
+            <% providers.forEach(provider=> { %>
+
+                <%- include('../partials/single-search-result-grid-row', {provider : provider}) %> 
+
+            <% }) %>
+            
+
+
+        </table>
+
+
+
+
+    </div>
+</div>
+
+
+    <!-- <div class="spacer3"></div> -->
+
+
+
+    <div class="max-width-container">
+        <div class="result-explain" id="not-perfect">
+            <p>If you don't see the perfect therapist or psychiatrist for you above, don't give up! That doesn't mean that there isn't a great provider out there for you. Try modifying your search a few times. </p>
+                
+        </div>
+    </div>
+    
+    
+    
+    <div class="center-me">
+    
+        <a href="/search-add/find-a-therapist-search"><button class="" id="search-again-button">Search Again</button></a>
+    
+    </div>
+        
+    
+    
+    
+        <!-- <div class="spacer3"></div> -->
+    
+    
+    
+    <div class="max-width-container">
+        <div class="result-explain" id="result-footnote">
+            <p>
+                To give feedback on this resource, or to submit updates, please <a href="/contact">contact Izebel</a>.
+            </p> 
+        </div>
+    </div>
+    
+    
+    
+
+
+
+
+<%- include('../partials/footer') -%> 

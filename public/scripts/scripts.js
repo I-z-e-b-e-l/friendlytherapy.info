@@ -96,6 +96,18 @@ function displayThankYouResource(){
 }
 
 
+// RESULTS 
+
+function displayResultsAsGrid() {
+    document.querySelector('#display-results-grid-div').style.display = "block";
+    document.querySelector('#search-results-boxes-div').style.display = "none";
+}
+
+function displayResultsAsBoxes() {
+    document.querySelector('#display-results-grid-div').style.display = "none";
+    document.querySelector('#search-results-boxes-div').style.display = "block";
+}
+
 
 //  ADD TO THE LIST
 

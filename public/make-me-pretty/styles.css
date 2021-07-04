@@ -484,7 +484,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button, .contact-submit-button, #display-more-i-am-button {
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button, .contact-submit-button, #display-more-i-am-button, #view-grid-button, #view-result-boxes-button {
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -498,7 +498,7 @@ footer {
     
 }
 
-.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover, .contact-submit-button:hover, #display-more-i-am-button:hover {
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover, .contact-submit-button:hover, #display-more-i-am-button:hover, #view-grid-button:hover, #view-result-boxes-button:hover {
     border: 2px solid var(--brightteal);;
     /* font-weight: bold; */
     /* color: var(--brightteal); */
@@ -748,7 +748,6 @@ font-weight: bold;
 
 .update-form {
     margin: 5vw 5vw 0 5vw;
-    border: red 5px solid;
 }
 
 #update-delete-div {
@@ -868,6 +867,71 @@ td {
 .rating-row {
     margin-top: 0;
     margin-bottom: .2em;
+}
+
+#search-results-table {
+    /* border: 1px black solid; */
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+
+#search-results-table td, #search-results-table th{
+    border: 1px #bfa9d1 solid;
+    text-align: left;
+    padding: 8px;
+}
+
+#search-results-table tr:nth-child(1n){
+    /* background-color: #dae0f8; */
+    background-color: #f1e5f8;
+    
+}
+
+#search-results-table tr:nth-child(2n){
+    background-color: #daddf8;
+    
+}
+
+#search-results-table tr:nth-child(3n){
+    background-color: #c7f6fa;
+    
+}
+
+#search-results-table tr:nth-child(4n){
+    background-color: #daf8e7;
+    
+}
+
+#search-results-table tr:nth-child(5n){
+    background-color: #f3f8da;
+    
+}
+
+#search-results-table tr:nth-child(6n){
+    background-color: #f8eada;
+    
+}
+
+#search-results-table tr:nth-child(7n){
+    background-color: #f8daf7;
+    
+}
+
+#search-results-table th {
+    background-color: white;
+    text-align: center;
+    
+}
+
+#display-results-grid-div {
+    /* display: none; */
+}
+
+#view-grid-button {
+    margin-bottom: 0;
 }
 
 

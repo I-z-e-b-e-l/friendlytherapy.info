@@ -1,0 +1,69 @@
+    <tr>
+        <td><%= provider.name %></td>
+        <td><%= provider.credentials %></td>
+        <td><%= provider.pronouns %></td>
+        <td><%= provider.providerType %></td>
+        <td><%= provider.institution %></td>
+        <!-- <td>accepting new Clients</td> -->
+        <td><%= provider.licenseState %></td>
+        <td>
+            <% if (provider.teletherapy === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </td>
+        <td><%= provider.location %></td>
+        <!-- <td>address</td> -->
+        <td><%= provider.queerRating %></td>
+        <td><%= provider.transRating %></td>
+        <td><%= provider.polyRating %></td>
+        <td><p><%= provider.kinkRating %></p></td>
+        <td><%= provider.swRating %></td>
+        <td><%= provider.bipocRating %></td>
+        <td><%= provider.adhdRating %></td>
+        <td><%= provider.autismRating %></td>
+        <td><%= provider.disabilityRating %></td>
+        <td><%= provider.traumaRating %></td>
+        <td><%= provider.substanceUseRating %></td>
+        <td><%= provider.additionalRating %></td>
+        <td><%= provider.commentsReCommunity %></td>
+        <td>
+            <% if (provider.couplesTherapy === true) { %>
+                <p>Yes</p>
+                <% } else { %>
+                <p>No</p> <%}%>
+        </td>
+        <td>        
+            <% if (provider.youthTherapy === true) { %>
+            <p>Yes</p>
+            <% } else { %>
+            <p>No</p> <%}%>
+        </td>
+        <td><a href="<%= provider.website %>"><%= provider.website %></a></td>
+        <td><%= provider.contact %></td>
+        <td>
+            <% if (provider.acceptInsurance === true) { %>
+                <p>Yes</p>
+                <% } else { %>
+                <p>No</p> <%}%>
+        </td>
+        <td><%= provider.insurance %></td>
+        <td><%= provider.additionalInsurance %></td>
+        <!-- <td>client entered insurance info</td> -->
+        <td>
+            <% if (provider.acceptMassHealth === true) { %>
+                <p>Yes</p>
+                <% } else { %>
+                <p>No</p> <%}%>
+        </td>
+        <td><%= provider.cost %></td>
+        <td><%= provider.accessibility %></td>
+        <td><%= provider.comments %></td>
+        <td><%= provider.whoAddedInfo %></td>
+        <td><%= provider.lastUpdate %></td>
+        <td><%= provider.commentsAdmin %></td>
+
+
+
+
+    </tr>
