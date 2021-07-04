@@ -6,7 +6,6 @@
     --lightblue: rgb(205, 218, 218);
     --brightteal: teal;
     --darkpurple: rgb(36, 8, 32);
-    --darkerpurple: rgb(111, 37, 148);
     --seagreen: lightseagreen;
     --headercolor: rgb(151, 210, 228);
     --headertextcolor: lightseagreen;
@@ -373,6 +372,22 @@ footer {
     margin: 8vh 0vh
 }
 
+#built-by-container {
+    display: flex;
+    width: 100%;
+}
+
+#built-by-div {
+    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #07cde0); 
+    width: 80%;
+    margin-bottom: 0;
+    padding-left: 5vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6vh;
+}
+
 .do-stuff a{
     text-decoration: none;
     color: var(--brightteal)
@@ -459,6 +474,8 @@ footer {
 /* ADD TO THE LIST + Thank You PAGE MOBILE STYLINGS + SEARCH */
 
 
+/* BUTTON BONANZA */
+
 .button-align {
     width: 100%;
     display: flex;
@@ -467,7 +484,7 @@ footer {
     align-items: center;
 }
 
-.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button {
+.who-button, input[type=submit], #add-another-button, .logout-button, .login-redirect-button, #show-all-button, .back-to-button, #search-again-button, #learn-more-button, .contact-submit-button, #display-more-i-am-button {
     /* background-color: lightseagreen; */
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);      */
     background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
@@ -477,12 +494,14 @@ footer {
     font-size: 1.2em;
     padding: 4px;
     margin: 5vw 0;
+    color: white;
     
 }
 
-.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover {
-    border: 2px solid black;
-    font-weight: bold;
+.who-button:focus, input[type=submit]:hover, #add-another-button:hover, .logout-button:hover, .login-redirect-button:hover, #show-all-button:hover, .back-to-button:hover, #learn-more-button:hover, .contact-submit-button:hover, #display-more-i-am-button:hover {
+    border: 2px solid var(--brightteal);;
+    /* font-weight: bold; */
+    /* color: var(--brightteal); */
 }
 
 
@@ -502,6 +521,33 @@ footer {
     width: 200px;
 }
 
+#display-more-i-am-button {
+    width: 140px;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#display-more-i-am-button p {
+    /* text-align: center; */
+    margin: 0;
+    padding: 0;
+}
+
+#show-more-row {
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+#show-more-row-text {
+    margin-right: 2em;
+}
 /* #add-provider-submit {
     display: none;
 } */
@@ -658,9 +704,15 @@ input[type=checkbox] {
     padding-top: .6em;
 }
 
-
+#who-are-you-2 {
+    display: none;
+}
 
 #poly_rating, #queer_rating, #trans_rating, #kink_rating, #sw_rating, #bipoc_rating, #additional_rating {
+    display: none;
+}
+
+#adhd_rating, #autism_rating, #disability_rating, #trauma_rating, #substance_use_rating {
     display: none;
 }
 
@@ -696,6 +748,7 @@ font-weight: bold;
 
 .update-form {
     margin: 5vw 5vw 0 5vw;
+    border: red 5px solid;
 }
 
 #update-delete-div {
@@ -721,6 +774,8 @@ td {
 }
 
 /* Update and Add to the List (Add a Provider) Styling */
+
+/* .who-are-you-2 {} */
 
 .show-insurance-button {
     font-size: .7em;
@@ -751,6 +806,21 @@ td {
 
 
 /* RESULTS */
+
+.result-explain {
+    max-width: 900px;
+    margin: 10vh 10vw;
+    
+}
+
+#show-more-info-button {
+    margin: 1em;
+}
+
+/* #show-more-provider-info {
+    background-color: aqua;
+    display: none;
+} */
 
 .gradient-checkbox {
     width: 20px;
@@ -799,10 +869,6 @@ td {
     margin-top: 0;
     margin-bottom: .2em;
 }
-
-/* #not-perfect {
-    margin-top: 
-} */
 
 
 
@@ -867,7 +933,7 @@ td {
     margin: 10vh 0 0 0;
 }
 
-#add-resource-container {
+/* #add-resource-container {
     margin: 5em 5vw 7em 5vw;
 }
 
@@ -877,7 +943,7 @@ td {
 
 .resource-question label {
     font-weight: bold;
-}
+} */
 
 #thank-you-resource {
     display: none;
@@ -896,13 +962,17 @@ td {
 
 /* FIND A THERAPIST pAGE */
 
+/* .how-to h2 {
+    color: var(--tealblue)
+} */
+
 .what-do, .search-explain, .search-footer, #search-the-list-form {
     margin: 5vw;
 }
 
 .what-do a{
     text-decoration: none;
-    color: var(--brightteal)
+    color: var(--tealblue)
 }
 
 .what-do p{
@@ -1070,9 +1140,9 @@ optgroup {
 
 .contact-submit-button {
     /* background-image: linear-gradient(to right,#9077e4, #8b73dd, #758edd, #50a3e0, #3bb0e3, #26c0e3, #2fdcf3);  */
-    background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1); 
-    border: 0px;
-    border-radius: 16px;
+    /* background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1);  */
+    /* border: 0px;
+    border-radius: 16px; */
     padding-top: 8px;
     padding-bottom: 8px;
     width: 10em;
@@ -1080,6 +1150,34 @@ optgroup {
     color: white;
     font-size: 1em;
 }
+
+
+/* SUGGEST A RESOURCE */
+
+.resource-form-div {
+    margin-top: 7vh;
+    width: 90vw;
+    max-width: 1000px;
+}
+
+.resource-form-content {
+    color: rgb(91, 71, 199);
+}
+
+.resource-input {
+    border: 0px;
+    /* border-bottom: 2px solid  var(--brightteal); */
+    border-bottom: 2px solid  rgb(91, 71, 199);
+    padding-top: 3vh;
+    width: 100%
+}
+
+.resource-question {
+    margin-bottom: 3em;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
 
 
 /* ABOUT PAGE STYLINGS */
@@ -1208,6 +1306,10 @@ optgroup {
         align-items: center;
     }
 
+    #show-more-row {
+        display: flex;
+    }
+
 
 
 }
@@ -1329,6 +1431,21 @@ optgroup {
         margin-top: 0px;
     }
 
+/* Results Page */
+
+/* .result-explain {
+    margin-top: ;
+} */
+
+#search-again-button {
+    margin: 0;
+}
+
+#not-perfect {
+    margin-bottom: 2em;
+}
+
+
 }
 
 
@@ -1356,8 +1473,20 @@ optgroup {
     }
 
     .do-stuff {
-        margin-bottom: 50px;
+        margin-bottom: 15vh;
     }
+
+    #built-by-div {
+        width: 80%;
+        margin-bottom: 0;
+        height: 30vh;
+        margin-bottom: 6vh;
+        max-width: 800px;
+    }
+
+
+
+
 
     /* Find A Therapist Page */
 
@@ -1392,6 +1521,10 @@ optgroup {
         margin-top: 15px;
     }
 
+    .take-me a {
+        color: var(--brightteal);
+    }
+
     /* .search-the-list {
         background-color: deeppink;
     } */
@@ -1424,6 +1557,14 @@ optgroup {
 
     /* Results Page */
 
+    #search-again-button {
+        margin: 0;
+    }
+
+    .results-box {
+        margin-bottom: 0;
+        width: 700px;
+    }
 
 
 }
@@ -1442,7 +1583,7 @@ optgroup {
     .max-width-container {
         width: 100%;
         display: flex;
-        /* align-items: center; */
+        align-items: center;
         justify-content: center;
         /* flex-direction: column; */
         /* border: darkblue 2px solid; */
@@ -1459,6 +1600,28 @@ optgroup {
         max-width: 1000px;
     }
 
+    .max-width-container-modify {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* border: darkblue 2px solid; */
+    }
+
+
+    #result-footnote {
+        width: 1100px;
+    }
+
+    #result-ratings-explain {
+        margin-bottom: 0px;
+    }
+
+
+
+
+
     .resource-square{
         margin: 5vw 0;
     }
@@ -1468,9 +1631,6 @@ optgroup {
         font-size: 150%;
     }
 
-    .results-box {
-        max-width: 800px;
-    }
 
     .color-divider-div {
         height: 30vh;
@@ -1518,6 +1678,16 @@ optgroup {
     #stuff-to-do-container {
         margin-left: 12vw;
         margin-right: 12vw;
+    }
+
+    #built-by-div {
+        justify-content: center;
+        padding-left: 0;
+        /* padding-left: 13vw; */
+        /* width: 80%; */
+        margin-bottom: 0;
+        height: 40vh;
+        max-width: 1000px;
     }
 
 

@@ -62,11 +62,10 @@ module.exports = {
             //   response.status(500).send("Something went wrong.");
             } else {
                 console.log("hits the else statement!");
-                // response.render('pages/thank-you-contact')
+                response.redirect('/thank-you-contact')
                 // response.status(200).send("Email successfully sent to recipient!");
             }
           });
-          response.render('pages/thank-you-contact'); 
         });
         
         
@@ -89,15 +88,15 @@ module.exports = {
     resource_suggest_post: (request, response) => {
 
 
-        let newResourceSuggestion = new ResourceSuggestions ({
-            resourceName: request.body.resource_name,
-            resourceLink: request.body.resource_link,
-            resourceInfo: request.body.resource_info,
-            resourceKnow: request.body.resource_know,
-        });
-        newResourceSuggestion.save();
+        // let newResourceSuggestion = new ResourceSuggestions ({
+        //     resourceName: request.body.resource_name,
+        //     resourceLink: request.body.resource_link,
+        //     resourceInfo: request.body.resource_info,
+        //     resourceKnow: request.body.resource_know,
+        // });
+        // newResourceSuggestion.save();
 
-
+ 
         let resourceForm = new multiparty.Form();
         let data = {};
         resourceForm.parse(request, function (error, fields) {
@@ -120,20 +119,25 @@ module.exports = {
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {
-                console.log("hits the else statement!");
-                // response.render('pages/thank-you-contact')
+                console.log("hits the else statement for resource send email!");
+                response.redirect('/thank-you-resource')
                 // response.status(200).send("Email successfully sent to recipient!");
             }
           });
-          response.render('pages/thank-you-resource'); 
+          // response.render('pages/thank-you-resource'); 
         });
         console.log("hits the end of nodemail")
-
-
-
-
+ 
+ 
+ 
+ 
     },
 
+
+
+
 }
+
+
 
 

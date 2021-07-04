@@ -8,19 +8,26 @@
         </div>
     </div>
 
+    <!-- <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=put" method="post"> -->
+
+    <!-- <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=post" method="post"> -->
+
+    <!-- <form class="update-form" action="/admin/update/<%=Provider._id%>" method="post"> -->
+
+
+    <!-- Same as in Update-7 -->
     <form class="update-form" action="/admin/update/<%=Provider._id%>?_method=put" method="post">
     
-
         <div class="question update-question">
             <label for="name_update" class="text1">Provider's name:</label>
             <input type="text" id="name_update" name="name_update" value="<%= Provider.name %>">
         </div>
 
-        <div class="question update-question">
-            <label for="pronouns_update" class="text1">Provider's pronouns:</label>
-            <input type="text" id="pronouns_update" name="pronouns_update" value="<%= Provider.pronouns %>">
+        <div class="question provider-question">
+            <label for="credentials_update" class="text1">Credentials:</label>
+            <input type="text" id="credentials_update" name="credentials_update" value="<%= Provider.credentials %>">
         </div>
-
+    
         <div class="question update-question">
             <label for="practice_update" class="text1">Institution / Private Practice Name:</label>
             <input type="text" id="practice_update" name="practice_update" value="<%= Provider.practice %>">
@@ -39,14 +46,14 @@
 
         </div>
 
-        <div class="question provider-question">
-            <p class="text1">Who initially added info:</p>
-            <p><%= Provider.whoAddedInfo %></p>
+        <div class="question update-question">
+            <label for="pronouns_update" class="text1">Provider's pronouns:</label>
+            <input type="text" id="pronouns_update" name="pronouns_update" value="<%= Provider.pronouns %>">
         </div>
 
         <div class="question provider-question">
-            <label for="credentials_update" class="text1">Credentials:</label>
-            <input type="text" id="credentials_update" name="credentials_update" value="<%= Provider.credentials %>">
+            <p class="text1">Who initially added info:</p>
+            <p><%= Provider.whoAddedInfo %></p>
         </div>
 
         <div class="question update-question">
@@ -62,9 +69,6 @@
                 <label for="teletherapy_no_update">No</label>
             </div>
         </div>
-
-
-
 
         <div class="question update-question">
 
@@ -96,9 +100,13 @@
         </div>
 
         <div class="question update-question">
-            <label for="therapist-location" class="text1">Location/Neighborhood:</label>
+            <label for="location_update" class="text1">General Location/City/Neighborhood Info:</label>
             <input type="text" id="location_update" name="location_update" value="<%= Provider.location %>">
+        </div>
 
+        <div class="question update-question">
+            <label for="address_update" class="text1">Full Address (for adding to google maps):</label>
+            <input type="text" id="address_update" name="address_update" value="<%= Provider.address %>">
         </div>
 
         <div class="question update-question">
@@ -134,8 +142,7 @@
             <label for="contact_update" class="text1">Therapist's contact info:</label>
             <input type="text" id="contact_update" name="contact_update" value="<%= Provider.contact %>">
         </div>
-        
-        
+
         <div class="question update-question">
             <label class="text1">Does this therapist accept insurance?</label>
             <div class="radio-yn-div">
@@ -152,7 +159,6 @@
             <label for="client_listed_insurance_update" class="text1">Insurances listed by client:</label>
             <p><%= Provider.insuranceFromClient %></p>
         </div>
-
 
         <div class="question update-question">
             <label for="which_insurance_update" class="text1">Which insurance(s) do they accept?</label>
@@ -373,14 +379,13 @@
                 </div>
             </div>
 
-
         </div>
 
         <div class="question update-question">
             <label for="additional_insurance_update" class="text1">Additional insurances they accept:</label>
             <textarea id="additional_insurance_update" name="additional_insurance_update" class="center-me" rows="6" cols="50" value="<%= Provider.additionalInsurance %>"><%= Provider.additionalInsurance %></textarea>
-
-
+        </div>
+    
         <div class="question update-question">
             <label class="text1">Accepts Masshealth?</label>
             <div class="radio-yn-div">
@@ -403,11 +408,10 @@
             <textarea id="access_update" name="access_update" class="center-me" rows="6" cols="50"><%= Provider.accessibility %></textarea>
         </div>
 
-
         <div class="question update-question">
 
-                <label for="comments_update" class="text1">General Comments:</label>
-                <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50"><%= Provider.comments %></textarea> 
+            <label for="comments_update" class="text1">General Comments:</label>
+            <textarea id="comments_update" name="comments_update" class="center-me" rows="8" cols="50"><%= Provider.comments %></textarea> 
 
         </div>
 
@@ -425,13 +429,18 @@
 
         </div>
 
-        
-        <div class="button-align">
-            <input type="submit" value="Submit" id="update-provider-submit" class="add-provider-submit" onclick="">
+
+        <div class="center-me">
+            <input type="submit" value="Submit" id="update-provider-submit" class="add-provider-submit">
         </div>
 
-
     </form>
+
+    
+
+
+
+
 
     <div class="center-me" id="update-delete-div">
 
@@ -442,5 +451,11 @@
     </div>
 
     <div class="spacer1"></div>
-        
-<%- include('../partials/footer') -%> 
+
+
+
+<!-- <div class="max-width-container"> -->
+
+ <%- include('../partials/footer') -%>    
+<!-- </div> -->
+

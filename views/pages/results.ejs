@@ -2,18 +2,21 @@
 
 <%- include('../partials/header-nav') -%> 
 
-<h1>Search Results</h1>
+
+<div class="general-landing">
+    <div class="max-width-container">
+        <h1 class="max-width">Search Results</h1>   
+    </div>
+</div>
+
 
 <!-- display what user checked off -->
 
 
 <div class="max-width-container">
-    <div class="search-explain max-width">
-
-        
-
+    <div class="result-explain" id="result-ratings-explain">
         <p>        
-            Entries on The Therapist List are provided by members of the community, as well as providers who have submitted their information.
+            Entries in the database are provided by members of the community, as well as providers who have submitted their information.
             <br><br>
             Clients may anonymously rate a provider's competency in a given community on a 0 - 3 scale: 
             <br><br>
@@ -24,30 +27,13 @@
             Providers are not permitted to rate their own familiarity a given community using the rating scale, but may describe their level of competence in the comments section.   
         </p>
 
-        <!-- make sidebar? -->
     </div>
-    
-    <!-- <div class="max-width" id="search-selections-box">
+</div>
 
-    <h5>You are viewing:</h5>
 
-        <p><img src="/images/gradient-checkbox.jpg" class="gradient-checkbox"> All Providers</p>
-        <p> <img src="/images/gradient-checkbox.jpg" class="gradient-checkbox"> Therapists</p>
-        <p> <img src="/images/gradient-checkbox.jpg" class="gradient-checkbox"> Psychiatrists</p>
-        <p> <img src="/images/gradient-checkbox.jpg" class="gradient-checkbox"> Massachusetts</p>
-        Rating
-        Couples Therapy
-        Youth
-        Accept Insuarnce
-        Which Insurance
 
-    </div> -->
-
-<!-- <p>You are viewing ${provider_type} in ${state} who </p> -->
-    
-
-    <!-- display search/results here  -->
-           
+<div class="max-width-container">
+        <div class="max-width-container-modify">
 
     <% providers.forEach(provider=> { %>
 
@@ -55,35 +41,48 @@
 
     <% }) %>
 
-    <div class="spacer3"></div>
-
-    <div class="search-explain max-width" id="not-perfect">
-        <p>If you don't see the perfect therapist or psychiatrist for you above, don't give up! That doesn't mean that there isn't a great provider out there for you. <a href="/search-add/find-a-therapist-search">Click here</a> and try modifying your search a few times. </p>
+        </div>
+</div>
 
 
+    <!-- <div class="spacer3"></div> -->
 
-    </div>
 
-    <div class="center-me">
 
-        <a href="/search-add/find-a-therapist-search"><button class="" id="search-again-button">Search Again</button></a>
-
+    <div class="max-width-container">
+        <div class="result-explain" id="not-perfect">
+            <p>If you don't see the perfect therapist or psychiatrist for you above, don't give up! That doesn't mean that there isn't a great provider out there for you. Try modifying your search a few times. </p>
+                
+        </div>
     </div>
     
-
-</div>
-
-<div class="spacer3"></div>
-
-<div class="max-width-container">
-    <div class="search-footer max-width">
-        <p>
-            <!-- The moderator does not assume responsibility for community submitted content. 
-            <br><br> -->
-            To give feedback on this resource, or to submit updates, please <a href="/contact">contact Izebel</a>.
-            <!-- link -->
-        </p>
+    
+    
+    <div class="center-me">
+    
+        <a href="/search-add/find-a-therapist-search"><button class="" id="search-again-button">Search Again</button></a>
+    
     </div>
-</div>
+        
+    
+    
+    
+        <!-- <div class="spacer3"></div> -->
+    
+    
+    
+    <div class="max-width-container">
+        <div class="result-explain" id="result-footnote">
+            <p>
+                To give feedback on this resource, or to submit updates, please <a href="/contact">contact Izebel</a>.
+            </p> 
+        </div>
+    </div>
+    
+    
+    
+
+
+
 
 <%- include('../partials/footer') -%> 

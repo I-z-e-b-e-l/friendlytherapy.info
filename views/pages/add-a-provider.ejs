@@ -73,6 +73,34 @@
                         <label for="bipoc_check" class="text1"> I am a Person of Color</label>
 
                     </div>
+
+                    <div class="" id="show-more-row">
+                        <p class="text1" id="show-more-row-text">Show me more checkboxes!</p>
+
+                        <div class="pretend-button" id="display-more-i-am-button" onclick="display_more_i_am_options()">
+                            <p >Show More</p>
+                        </div>
+
+                    </div>
+
+                    <div class="who-are-you" id="who-are-you-2">
+
+                        <input type="checkbox" id="adhd_check" name="adhd_check" value="adhd_check" onclick="showADHDRating();showAdditionalRating()">
+                        <label for="adhd_check" class="text1"> I have ADD/ADHD and can speak to this provider's compentency with things related to ADD/ADHD</label><br><br>
+
+                        <input type="checkbox" id="autism_check" name="austism_check" value="autism_check" onclick="showAutismRating();showAdditionalRating()">
+                        <label for="autism_check" class="text1"> I am on the autism spectrum and can speak to this provider's compentency with things related to autism</label><br><br>
+
+                        <input type="checkbox" id="trauma_check" name="trauma_check" value="trauma_check" onclick="showTraumaRating();showAdditionalRating()">
+                        <label for="trauma_check" class="text1"> I am a trauma survivor and can speak to this provider's compentency with things related to trauma, PTSD, CPTSD, etc.</label><br><br>
+
+                        <input type="checkbox" id="disability_check" name="disability_check" value="disability_check" onclick="showDisabilityRating();showAdditionalRating()">
+                        <label for="trauma_check" class="text1"> I have a disability or chronic illness and I can speak to this provider's compentency with issues relating to disability or chronic illness.</label><br><br>
+
+                        <input type="checkbox" id="substance_use_check" name="substance_use_check" value="substance_use_check" onclick="showSubstanceUseRating();showAdditionalRating()">
+                        <label for="substance_use_check" class="text1"> I use substances, or I am close with someone who does, and can speak to this provider's competency with issues relating to substance use, addiction, harm reduction, etc.</label>
+
+                    </div>
                     
                     <div class="question client-question">
                         <label for="name_client_input" class="text1">Therapist's name:</label>
@@ -141,15 +169,13 @@
                         <input type="checkbox" id="somewhere-else_check_client_input" name="license_state_client_input" value="Another State">
                         <label for="somewhere-else_check_client_input">Another State</label><br><br>
 
-                        <!-- inlcude international? -->
                         
-                        <label for="location_client_input" class="text1">Location/Neighborhood:</label>
+                    </div>   
+                    
+                    <div class="question provider-question">
+                        <label for="location_client_input" class="text1">Location (City/Neighborhood):</label>
                         <input type="text" id="location_client_input" name="location_client_input">
-
                     </div>
-
-
-
 
             
                     <div class="client-rating" id="queer_rating">
@@ -298,15 +324,138 @@
 
                         <div class="rating-explain"> 
                             <p>Unfamiliar or uncomfortable with BIPOC and race-related issues or conversations</p>
-                            <p>Super Comfortable and/or familiar with my community and related issues. Please specify in comments section</p>
+                            <p>Super Comfortable and/or familiar with my community and related issues. (Please specify in the comments section!)</p>
                         </div>
                         <!-- specify which text field?-->
                     </div>
 
+                    <div class="client-rating" id="adhd_rating">
+                        <label class="text1">ADD/ADHD Friendliness Rating</label>
+                                
+                                <div class ="indent-me">    
+                                    <div class="radio-div">    
+                                        <input type="radio" id="rating-zero-adhd" name="adhd_rating" value="0">
+                                        <input type="radio" id="rating-one-adhd" name="adhd_rating" value="1">
+                                        <input type="radio" id="rating-two-adhd" name="adhd_rating" value="2">
+                                        <input type="radio" id="rating-three-adhd" name="adhd_rating" value="3">
+                                    </div>  
+                                    
+                                    <div class="radio-label-div">    
+                                        <label for="rating-zero-adhd">0</label>
+                                        <label for="rating-one-adhd">1</label>
+                                        <label for="rating-two-adhd">2</label>
+                                        <label for="rating-three-adhd">3</label>
+                                    </div>  
+                                </div>    
+                            
+                            <div class="rating-explain"> 
+                                <p>Unfamiliar or uncomfortable with ADD/ADHD and related issues</p>
+                                <p>Super comfortable and familiar with ADD/ADHD and related issues</p>
+                            </div>
+                    </div>
+
+                    <div class="client-rating" id="autism_rating">
+                        <label class="text1">Austism Spectrum Friendliness Rating</label>
+                                
+                                <div class ="indent-me">    
+                                    <div class="radio-div">    
+                                        <input type="radio" id="rating-zero-autism" name="autism_rating" value="0">
+                                        <input type="radio" id="rating-one-autism" name="autism_rating" value="1">
+                                        <input type="radio" id="rating-two-autism" name="autism_rating" value="2">
+                                        <input type="radio" id="rating-three-autism" name="autism_rating" value="3">
+                                    </div>  
+                                    
+                                    <div class="radio-label-div">    
+                                        <label for="rating-zero-autism">0</label>
+                                        <label for="rating-one-autism">1</label>
+                                        <label for="rating-two-autism">2</label>
+                                        <label for="rating-three-autism">3</label>
+                                    </div>  
+                                </div>    
+                            
+                            <div class="rating-explain"> 
+                                <p>Unfamiliar or uncomfortable with Autism and related issues</p>
+                                <p>Super comfortable and familiar with Autism and related issues</p>
+                            </div>
+                    </div>
+
+                    <div class="client-rating" id="disability_rating">
+                        <label class="text1">Disability or Chronic Illness Friendliness Rating</label>
+                                
+                                <div class ="indent-me">    
+                                    <div class="radio-div">    
+                                        <input type="radio" id="rating-zero-disability" name="disability_rating" value="0">
+                                        <input type="radio" id="rating-one-disability" name="disability_rating" value="1">
+                                        <input type="radio" id="rating-two-disability" name="disability_rating" value="2">
+                                        <input type="radio" id="rating-three-disability" name="disability_rating" value="3">
+                                    </div>  
+                                    
+                                    <div class="radio-label-div">    
+                                        <label for="rating-zero-disability">0</label>
+                                        <label for="rating-one-disability">1</label>
+                                        <label for="rating-two-disability">2</label>
+                                        <label for="rating-three-disability">3</label>
+                                    </div>  
+                                </div>    
+                            
+                            <div class="rating-explain"> 
+                                <p>Unfamiliar or uncomfortable</p>
+                                <p>Super comfortable and familiar with disability, chronic illness, spoonie stuff and related issues</p>
+                            </div>
+                    </div>
+
+                    <div class="client-rating" id="trauma_rating">
+                        <label class="text1">Trauma Friendliness Rating</label>
+                                
+                                <div class ="indent-me">    
+                                    <div class="radio-div">    
+                                        <input type="radio" id="rating-zero-trauma" name="trauma_rating" value="0">
+                                        <input type="radio" id="rating-one-trauma" name="trauma_rating" value="1">
+                                        <input type="radio" id="rating-two-trauma" name="trauma_rating" value="2">
+                                        <input type="radio" id="rating-three-trauma" name="trauma_rating" value="3">
+                                    </div>  
+                                    
+                                    <div class="radio-label-div">    
+                                        <label for="rating-zero-trauma">0</label>
+                                        <label for="rating-one-trauma">1</label>
+                                        <label for="rating-two-trauma">2</label>
+                                        <label for="rating-three-trauma">3</label>
+                                    </div>  
+                                </div>    
+                            
+                            <div class="rating-explain"> 
+                                <p>Unfamiliar with current approaches or uncomfortable with trauma, etc.</p>
+                                <p>Super comfortable and familiar with trauma, PTSD, CPTSD, current research, etc. (Please share more in comments!)</p>
+                            </div>
+                    </div>
+
+                    <div class="client-rating" id="substance_use_rating">
+                        <label class="text1">Substance Use Rating</label>
+                                
+                                <div class ="indent-me">    
+                                    <div class="radio-div">    
+                                        <input type="radio" id="rating-zero-substance-use" name="substance_use_rating" value="0">
+                                        <input type="radio" id="rating-one-substance-use" name="substance_use_rating" value="1">
+                                        <input type="radio" id="rating-two-substance-use" name="substance_use_rating" value="2">
+                                        <input type="radio" id="rating-three-substance-use" name="substance_use_rating" value="3">
+                                    </div>  
+                                    
+                                    <div class="radio-label-div">    
+                                        <label for="rating-zero-substance-use">0</label>
+                                        <label for="rating-one-substance-use">1</label>
+                                        <label for="rating-two-substance-use">2</label>
+                                        <label for="rating-three-substance-use">3</label>
+                                    </div>  
+                                </div>    
+                            
+                            <div class="rating-explain"> 
+                                <p>Unfamiliar with substance use and related issues</p>
+                                <p>Super comfortable and familiar with discussing substance use, addiction, harm reduction, etc. (Please elaborate in the comments!)</p>
+                            </div>
+                    </div>
 
                     <div class="client-rating" id=additional-rating>
-                        <!-- do this differently? -->
-                        <!-- inset text field? radial buttons with stylngs?  -->
+                        <!-- do this differently? inset text field? radial buttons with stylngs?  -->
                         <label for="additional_rating_info" class="text1">
                             Rating for friendliness to additional sub-cultures, identities, communities, trauma, types of neurodivisty, etc
                         </label>
@@ -506,13 +655,15 @@
                         <input type="checkbox" id="somewhere-else_check_provider_input" name="somewhere-else_check_provider_input" value="Another State">
                         <label for="somewhere-else_check_provider_input">Another State</label><br><br>
 
-                        
-                        <label for="location_provider_input" class="text1">Location/Neighborhood:</label>
+                    </div>
+                    
+                    <div class="question provider-question">
+
+                        <label for="location_provider_input" class="text1">Location (City/Neighborhood):</label>
                         <input type="text" id="location_provider_input" name="location_provider_input">
 
                     </div>
 
-                    
                     <div class="question provider-question">
                         <label class="text1" for="couples_provider_input">Do you provide couples therapy?</label>
                         <div class="radio-yn-div">

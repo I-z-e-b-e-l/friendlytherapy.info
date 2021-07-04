@@ -49,6 +49,10 @@ const providerSchema = new Schema ({
         type: String
     },
 
+    address: {
+        type: String
+    },
+
     queerRating: {
         type: String
     },
@@ -70,6 +74,26 @@ const providerSchema = new Schema ({
     },
 
     bipocRating: {
+        type: String
+    },
+
+    adhdRating: {
+        type: String
+    },
+
+    autismRating: {
+        type: String
+    },
+
+    disabilityRating: {
+        type: String
+    },
+
+    traumaRating: {
+        type: String
+    },
+
+    substanceUseRating: {
         type: String
     },
 
