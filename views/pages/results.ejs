@@ -39,28 +39,39 @@
         <button id="view-result-boxes-button" onclick="displayResultsAsBoxes()">View As Boxes</button>
     </div>
 
-    <!-- <div id="show-hide-info-div">
-        <table id="show-hide-info-table">
+    <div id="show-hide-result-option-div">
+        <!-- <table id="show-hide-info-table">
+        </table> -->
 
-        </table>
+        <h4>Display:</h4>
+        <div class="display-results-option">
+            <p>Credientials</p>
+            <input type="checkbox" id="show-credentials-check" checked>
+        </div>
+
+        <div class="display-results-option">
+            <p>Pronouns</p>
+            <input type="checkbox" id="show-pronouns-check" checked>  
+        </div>
 
 
-    </div> -->
+
+    </div>
 
     <table id="search-results-table">
         <tr class="">
             <th>
                 Provider Name
             </th>
-            <th>
+            <th class="result-info-credentials">
                 Credentials
-                <br>
-                <input type="checkbox" id="show-credentials-check" checked>
+                <!-- <br>
+                <input type="checkbox" id="show-credentials-check" checked> -->
             </th>
-            <th>
+            <th class="result-info-pronouns">
                 Pronouns
-                <br>
-                <input type="checkbox" id="show-pronouns-check" checked>
+                <!-- <br>
+                <input type="checkbox" id="show-pronouns-check" checked> -->
             </th>
             <th>Type of Provider</th>
             <th>Institution/Private Practice Name</th>
