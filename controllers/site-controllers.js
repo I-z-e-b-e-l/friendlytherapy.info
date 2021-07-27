@@ -40,6 +40,8 @@ module.exports = {
     //send an email via the form on contact page
     contact_post: (request, response) => {
 
+        console.log("hits the contact_post controller function");
+
         let contactForm = new multiparty.Form();
         let data = {};
         contactForm.parse(request, function (error, fields) {
@@ -88,6 +90,8 @@ module.exports = {
 
     // send an email via the form on resources page
     resource_suggest_post: (request, response) => {
+
+      console.log("hits the resource_suggest_post controller function");
 
 
         // let newResourceSuggestion = new ResourceSuggestions ({
