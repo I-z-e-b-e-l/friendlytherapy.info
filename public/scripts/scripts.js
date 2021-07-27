@@ -300,47 +300,6 @@ function displayThankYouAdd(){
 
 
 
-//contact page
-
-const contactForm = document.getElementById("contact-form"); 
-const formEvent = contactForm.addEventListener("submit", (event) => {
-    // event.preventDefault();
-
-let mail = new FormData(contactForm);
-sendMail(mail);
-})
-
-const sendMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
-        method: "post", 
-        body: mail,
-    
-      }).then((response) => {
-        return response.json();
-      });
-    }; 
 
 
-//SUGGEST A RESOURCE
 
-const resourceForm = document.getElementById("add-resource-form"); 
-const resourceformEvent = resourceForm.addEventListener("submit", (event) => {
-    // event.preventDefault();
-
-let mail = new FormData(resourceForm);
-sendResourceMail(mail);
-})
-
-const sendResourceMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
-        method: "post", 
-        body: mail,
-    
-      }).then((response) => {
-        return response.json();
-      });
-    }; 

@@ -61,7 +61,7 @@ module.exports = {
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {
-                console.log("hits the else statement!");
+                console.log("hits the else statement in the contact controller function!");
                 response.redirect('/thank-you-contact')
                 // response.status(200).send("Email successfully sent to recipient!");
             }
@@ -83,6 +83,8 @@ module.exports = {
     resources: (request, response) => {
         response.render('pages/resources');
     },
+
+    
 
     // send an email via the form on resources page
     resource_suggest_post: (request, response) => {
@@ -115,7 +117,7 @@ module.exports = {
       
           transporter.sendMail(mail, (error, data) => {
             if (error) {
-                console.log("hits the if statement")
+                console.log("hits the if statement");
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {
@@ -132,6 +134,10 @@ module.exports = {
  
  
     },
+
+    thank_you_resource: (request, response) => {
+      response.render('pages/thank-you-resource')
+    }
 
 
 
