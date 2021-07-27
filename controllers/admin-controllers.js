@@ -66,13 +66,6 @@ module.exports = {
   },
 
 
-
-
-    // admin: (request, response) => {
-    //     response.render('pages/admin');
-    // },
-
-
         
     admin: (request, response) => {
       if (request.isAuthenticated()) {
@@ -87,6 +80,64 @@ module.exports = {
         console.log("the request @ admin is not authenticated")
         response.redirect('/admin/login');
       }
+    },
+
+
+    // admin_add_provider: (request, response) => {
+      // response.render('pages/admin-add-provider');
+      // response.redirect('admin/admin-add-provider');
+    // },
+
+    admin_add_provider: (request, response) => {
+      if (request.isAuthenticated()){
+        response.render('pages/admin-add-provider');
+      } else {
+        response.render('pages/nope');
+      }
+    },
+
+    admin_add_provider_post: (request, response) => {
+      let newProvider = new Providers ({
+        added: request.body.date_added_admin_input,
+        name: request.body.name_admin_input,
+        practice: request.body.practice_admin_input,
+        providerType: request.body.provider_type_admin_input,
+        credentials: request.body.credentials_admin_input,
+        teletherapy: request.body.teletherapy_admin_input,
+        licenseState: request.body.license_state_admin_input,
+        location: request.body.location_admin_input,
+        queerRating: request.body.queer_rating_admin_input,
+        transRating: request.body.trans_rating_admin_input,
+        polyRating: request.body.poly_rating_admin_input,
+        kinkRating: request.body.kink_rating_admin_input,
+        swRating: request.body.sw_rating_admin_input,
+        bipocRating: request.body.bipoc_rating_admin_input,
+        adhdRating: request.body.adhd_rating_admin_input,
+        austismRating: request.body.autism_rating_admin_input,
+        disabilityRating: request.body.disability_rating_admin_input,
+        traumaRating: request.body.trauma_rating_admin_input,
+        substanceUseRating: request.body.substance_use_rating_admin_input,
+        additionalRating: request.body.additional_rating_admin_admin_input,
+        commentsReCommunity: request.body.comments_community_admin_input,
+        whoAddedInfo: request.body.who_added_info_check_client,
+        website: request.body.website_admin_input,
+        contact: request.body.contact_admin_input,
+        acceptInsurance: request.body.insurance_yn_admin_input,
+        insuranceFromClient: request.body.additional_insurance_admin_input,
+        acceptMassHealth: request.body.masshealth_admin_input,
+        accessibility: request.body.access_admin_input,
+        couplesTherapy: request.body.couples_admin_input,
+        youthTherapy: request.body.youth_admin_input,
+        comments: request.body.comments_admin_input,
+        cost: request.body.cost_admin_input,
+        pronouns: request.body.pronouns_admin_input,
+        address: request.body.address_admin_input,      
+        acceptingClients: request.body.accpting_clients_admin_input,
+        commentsAdmin: request.body.admin_comments_admin_input, 
+        lastUpdate: request.body.last_update_admin_input
+    });
+    newProvider.save();
+    response.redirect('/admin');
     },
 
     nope: (request, response) => {

@@ -10,7 +10,7 @@
 
             <!-- broken anchor link!!! -->
             <div class="take-me-searchable-db take-me center-me2">
-                <a href="#search-the-list"></a>
+                <a href="#search-the-list-jump">
                 <img src="/images/magnify-list.png" class="icon">
                     <h2>The Searchable Database</h2>
                 </a>
@@ -56,14 +56,11 @@
     </div>  
 
     
-    <!-- why wont this work? -->
-    <div class="banner">
-    <!-- <div class="color-divider-div"> -->
-        <a name="search-the-list">
-            <!-- <h2> Built by the community, for the community. </h2> -->
+    <a id="search-the-list-jump">
+        <div class="banner">
             <h1> Search for a Provider</h1>
-        </a>
-    </div>
+        </div>
+    </a>
 
 
 
@@ -74,7 +71,6 @@
     </div>
     
     <div class="search-the-list max-width-container">
-
         <form id="search-the-list-form" class="max-width" action="/search-add/search" method="POST">
 
             <!-- <div class="max-width">
@@ -341,7 +337,7 @@
                             <input type="radio" id="couples-yes" name="couples" value="true">
                             <input type="radio" id="couples-no" name="couples" value="">
                         </div>
-                        <div class=radio-yn-label-div>
+                        <div class="radio-yn-label-div">
                             <label for="couples-yes">Yes</label>
                             <label for="couples-no">No</label>
                         </div>

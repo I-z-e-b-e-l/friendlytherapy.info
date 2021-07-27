@@ -66,9 +66,11 @@ function displayBIPOCResource(){
 }
 }
 
+// interferes with resources that should be both poly/kink when both are cheked off... how to toggle without toggle?
 function displayKinkResource(){
     for (let i=0; i<document.querySelectorAll(".kink-resource").length; i++){
-        document.querySelectorAll(".kink-resource")[i].classList.toggle('show-me-resource'); 
+        // document.querySelectorAll(".kink-resource")[i].classList.toggle('show-me-resource'); 
+        document.querySelectorAll(".kink-resource")[i].style.display= "flex";
 }
 }
 
@@ -87,7 +89,8 @@ function displayAllResource(){
 
 function displayAddResourceForm() {
     document.querySelector('#add-resource-form').style.display = "block";
-    document.querySelector('#show-resources-form-button').style.display = "none";   
+    document.querySelector('#show-resources-form-button').style.display = "none";
+    document.querySelector('#suggest-resource-header').style.display = "block";   
 
 }
 
@@ -300,47 +303,9 @@ function displayThankYouAdd(){
 
 
 
-//contact page
-
-const contactForm = document.getElementById("contact-form"); 
-const formEvent = contactForm.addEventListener("submit", (event) => {
-    // event.preventDefault();
-
-let mail = new FormData(contactForm);
-sendMail(mail);
-})
-
-const sendMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
-        method: "post", 
-        body: mail,
-    
-      }).then((response) => {
-        return response.json();
-      });
-    }; 
+//contact page - moved
 
 
-//SUGGEST A RESOURCE
 
-const resourceForm = document.getElementById("add-resource-form"); 
-const resourceformEvent = resourceForm.addEventListener("submit", (event) => {
-    // event.preventDefault();
+//SUGGEST A RESOURCE - moved
 
-let mail = new FormData(resourceForm);
-sendResourceMail(mail);
-})
-
-const sendResourceMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
-        method: "post", 
-        body: mail,
-    
-      }).then((response) => {
-        return response.json();
-      });
-    }; 

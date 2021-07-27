@@ -13,6 +13,10 @@ router.route('/register')
 router.route('/')
     .get(adminController.admin)
 
+router.route('/admin-add-provider')
+    .get(adminController.admin_add_provider)
+    .post(adminController.admin_add_provider_post)
+
 router.route('/login')
     .get(adminController.login)
     .post(adminController.login_post)
@@ -38,23 +42,6 @@ router.route('/nope')
     .get(adminController.nope)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    router.route('/nope')
-    .get(adminController.nope)
 
 
 module.exports = router;
