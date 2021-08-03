@@ -25,6 +25,8 @@ router.route('/resources')
 router.route('/thank-you-contact')
 .get(siteController.thank_you_contact)
 
+router.route('/thank-you-resource')
+.get(siteController.thank_you_resource)
 
 
 

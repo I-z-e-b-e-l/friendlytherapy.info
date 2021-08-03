@@ -40,6 +40,8 @@ module.exports = {
     //send an email via the form on contact page
     contact_post: (request, response) => {
 
+        console.log("hits the contact_post controller function");
+
         let contactForm = new multiparty.Form();
         let data = {};
         contactForm.parse(request, function (error, fields) {
@@ -61,7 +63,7 @@ module.exports = {
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {
-                console.log("hits the else statement!");
+                console.log("hits the else statement in the contact controller function!");
                 response.redirect('/thank-you-contact')
                 // response.status(200).send("Email successfully sent to recipient!");
             }
@@ -84,8 +86,12 @@ module.exports = {
         response.render('pages/resources');
     },
 
+    
+
     // send an email via the form on resources page
     resource_suggest_post: (request, response) => {
+
+      console.log("hits the resource_suggest_post controller function");
 
 
         // let newResourceSuggestion = new ResourceSuggestions ({
@@ -115,7 +121,7 @@ module.exports = {
       
           transporter.sendMail(mail, (error, data) => {
             if (error) {
-                console.log("hits the if statement")
+                console.log("hits the if statement");
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {
@@ -132,6 +138,10 @@ module.exports = {
  
  
     },
+
+    thank_you_resource: (request, response) => {
+      response.render('pages/thank-you-resource')
+    }
 
 
 

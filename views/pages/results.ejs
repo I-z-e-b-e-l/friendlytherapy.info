@@ -32,8 +32,107 @@
 
 
 
-<div class="max-width-container">
+
+<div id="display-results-grid-div">
+
+    <div class="center-me">
+        <button id="view-result-boxes-button" onclick="displayResultsAsBoxes()">View As Boxes</button>
+    </div>
+
+    <div id="show-hide-result-option-div">
+        <!-- <table id="show-hide-info-table">
+        </table> -->
+
+        <h4>Display:</h4>
+        <div class="display-results-option">
+            <p>Credientials</p>
+            <input type="checkbox" id="show-credentials-check" checked>
+        </div>
+
+        <div class="display-results-option">
+            <p>Pronouns</p>
+            <input type="checkbox" id="show-pronouns-check" checked>  
+        </div>
+
+
+
+    </div>
+
+    <table id="search-results-table">
+        <tr class="">
+            <th>
+                Provider Name
+            </th>
+            <th class="result-info-credentials">
+                Credentials
+                <!-- <br>
+                <input type="checkbox" id="show-credentials-check" checked> -->
+            </th>
+            <th class="result-info-pronouns">
+                Pronouns
+                <!-- <br>
+                <input type="checkbox" id="show-pronouns-check" checked> -->
+            </th>
+            <th>Type of Provider</th>
+            <th>Institution/Private Practice Name</th>
+            <!-- <th>Accepting New Clients?</th> -->
+            <th>States Licensed to Practice In</th>
+            <th>Offers Teletherapy</th>
+            <th>Location</th>
+            <!-- <th>Address</th> -->
+            <th>Queer Friendliness Rating</th>
+            <th>Trans Friendliness Rating</th>
+            <th>Nonmonogamy Friendliness Rating</th>
+            <th>Kink Friendliness Rating</th>
+            <th>Sex Worker Friendliness Rating</th>
+            <th>BIPOC Friendliness Rating</th>
+            <th>ADHD Friendliness Rating</th>
+            <th>Autism Friendliness Rating</th>
+            <th>Disability /Chronic Illness Friendliness Rating</th>
+            <th>Trauma Friendliness Rating</th>
+            <th>Substance Use Friendliness Rating</th>
+            <th>Additional Ratings</th>
+            <th>Community-Friendliness Comments</th>
+            <th>Offers Couple's Therapy</th>
+            <th>Serves Youth</th>
+            <th>Website</th>
+            <th>Contact Info</th>
+            <th>Accepts Insurance</th>
+            <th>Accepted Insurances on File</th>
+            <th>Additional Insurances</th>
+            <!-- <th>Client Entered Insurance Info</th> -->
+            <th>Accepts MassHealth</th>
+            <th>Average Cost without Insurance</th>
+            <th>Accessibility Info</th>
+            <th>Additional Comments</th>
+            <th>Who Initially Added to the Database</th>
+            <th>Info Last Updated</th>
+            <th>Admin Comments</th>
+            <!-- <th>Date Info Added</th> -->
+        </tr>
+
+        <% providers.forEach(provider=> { %>
+
+            <%- include('../partials/single-search-result-grid-row', {provider : provider}) %> 
+
+        <% }) %>
+        
+
+
+    </table>
+
+</div>
+
+
+
+
+
+<div class="max-width-container" id="search-results-boxes-div">
         <div class="max-width-container-modify">
+
+            <div class="center-me">
+                <button id="view-grid-button" onclick="displayResultsAsGrid()">View As Grid</button>
+            </div>
 
     <% providers.forEach(provider=> { %>
 
