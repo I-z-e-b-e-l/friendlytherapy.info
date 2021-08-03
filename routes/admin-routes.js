@@ -20,8 +20,10 @@ router.route('/login')
 router.route('/logout')
     .get(adminController.logout)
 
+router.route('/admin-add-provider')
+.get(adminController.admin_add_provider)
+.post(adminController.admin_add_provider_post)
 
-//this is the same as in Update-7
 router.route('/update/:id')
     .get(adminController.update)
     .put(adminController.update_provider)

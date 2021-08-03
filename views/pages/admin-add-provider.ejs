@@ -1,755 +1,787 @@
-<%- include('../partials/head') -%> 
+                <%- include('../partials/head') -%> 
 
-<%- include('../partials/header-nav') -%> 
-
-    
-
-    <div class="general-landing">
-        <div class="max-width-container">
-        <h1 class="max-width" class="heading-break-index">Admin Add a Provider</h1>   
-        </div>
-    </div>
-
-    <div class="max-width-container">
-        <div class="max-width">
-
-            <div class="spacer1"></div>
-
-            <div class="center-me">
-                <button type="reset" value="Reset" class="reset-form-button">Reset form</button> 
-            </div>
-
-            <form class="add-provider-form" id="admin-add-provider-form" method="post" action="">
-
-                <!-- changed this "client/provider-added-info-check" to "who-added-info-check" + id to class-->
-                <input type="checkbox" class="who-added-info-check" name="who_added_info_check_client" value="Client added info">
-                <input type="checkbox" class="who-added-info-check" name="who_added_info_check_provider" value="Provider added info">
-
-
-                <div class="admin-add-provider">
-
-                    <!-- class "client-question" changed to "admin-add-provider-question" -->
-                    <!-- _clinet_input changed to _admin_input -->
-                    
-                    <div class="question admin-add-provider-question">
-                        <label for="name_admin_input" class="text1">Provider's name:</label>
-                        <input type="text" id="name_admin_input" name="name_admin_input" required>
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="credentials_admin_input" class="text1">Credentials:</label>
-                        <input type="text" id="credentials_admin_input" name="credentials_admin_input" placeholder="LICSW, LSW, LMHC, MD, PhD, etc.">
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="pronouns_admin_input" class="text1">Provider's pronouns:</label>
-                        <input type="text" id="pronouns_admin_input" name="pronouns_admin_input" >
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="practice_admin_input" class="text1">Institution / Private Practice Name:</label>
-                        <input type="text" id="practice_admin_input" name="practice_admin_input">
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="provider_type_admin_input" class="text1">What kind of mental health provider are they?</label>
-                        <br><br>
-
-                        <input type="checkbox" id="provider_type_therapist_admin_input" name="provider_type_admin_input" value="therapist">
-                        <label for="provider_type_therapist_admin_input">Therapist</label>
-                        <br>
-                        <input type="checkbox" id="provider_type_psychiatrist_admin_input" name="provider_type_admin_input" value="psychiatrist">
-                        <label for="provider_type_psychiatrist_admin_input">Psychiatrist</label>
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <p class="text1">Does this provider offer teletherapy?</p>
-        
-                            <div class="radio-yn-div">
-                                <input type="radio" id="teletherapy_yes_admin_input" name="teletherapy_admin_input" value="yes">
-                                <input type="radio" id="teletherapy_no_admin_input" name="teletherapy_admin_input" value="no">
-                            </div>
-                            <div class="radio-yn-label-div">
-                                <label for="teletherapy_yes_admin_input">Yes</label>
-                                <label for="teletherapy_no_admin_input">No</label>
-                            </div>
-
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="license_state_admin_input" class="text1">Where does this provider practice / Where is this provider licensed?</label>
-
-                        <input type="checkbox" id="ma_check_admin_input" name="license_state_admin_input" value="Massachusetts">
-                        <label for="ma_check_admin_input"> Massachusetts</label><br>
-
-                        <input type="checkbox" id="ri_check" name="license_state_admin_input" value="Rhode Island">
-                        <label for="ri_check_admin_input"> Rhode Island</label><br>
-
-                        <input type="checkbox" id="nh_check_admin_input" name="license_state_admin_input" value="New Hampshire">
-                        <label for="nh_check_admin_input">New Hampshire</label><br>
-
-                        <input type="checkbox" id="ct_check_admin_input" name="license_state_admin_input" value="Connecticut">
-                        <label for="ct_check_admin_input">Connecticut</label><br>
-
-                        <input type="checkbox" id="ny_check_admin_input" name="license_state_admin_input" value="New York">
-                        <label for="ny_check_admin_input"> New York</label><br>
-
-                        <input type="checkbox" id="international_check_admin_input" name="license_state_admin_input" value="International">
-                        <label for="international_check_admin_input">International</label><br>
-
-                        <input type="checkbox" id="somewhere-else_check_admin_input" name="license_state_admin_input" value="Another State">
-                        <label for="somewhere-else_check_admin_input">Another State</label><br><br>     
-                    </div>   
-                    
-                    <div class="question provider-question">
-                        <label for="location_admin_input" class="text1">Location (City/Neighborhood):</label>
-                        <input type="text" id="location_admin_input" name="location_admin_input">
-                    </div>
-
-                    <div class="question provider-question">
-                        <label for="address_admin_input" class="text1">Full Address (for google maps):</label>
-                        <input type="text" id="address_admin_input" name="address_admin_input">
-                    </div>
-
-                    <!-- changed "client-rating" to "admin-add-client rating" -->
-                    <!-- changed identity"_rating" to identity"_rating_admin_add" -->
-                    <div class="admin-add-admin-add-client-rating" id="queer_rating_admin_add">
-                        <label class="text1">
-                            Queer Friendliness Rating
-                        </label>
-                        
-                        <div class ="indent-me">    
-                            <div class="radio-div">    
-                                <input type="radio" id="rating-zero-queer" name="queer_rating_admin_add" value="0">
-                                <input type="radio" id="rating-one-queer" name="queer_rating_admin_add" value="1">
-                                <input type="radio" id="rating-two-queer" name="queer_rating_admin_add" value="2">
-                                <input type="radio" id="rating-three-queer" name="queer_rating_admin_add" value="3">
-                            </div>  
-                            
-                            <div class="radio-label-div">    
-                                <label for="rating-zero-queer">0</label>
-                                <label for="rating-one-queer">1</label>
-                                <label for="rating-two-queer">2</label>
-                                <label for="rating-three-queer">3</label>
-                            </div>  
-                        </div>    
-                        <div class="rating-explain"> 
-                            <p>Unfamiliar or uncomfortable with the Queer Community and related issues</p>
-                            <p>Super Comfortable and Familiar with Queer Community and related issues </p>
-                        </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="trans_rating_admin_add">
-                        <label class="text1">Trans Friendliness Rating</label>
-                        
-                        <div class ="indent-me">    
-                            <div class="radio-div">    
-                                <input type="radio" id="rating-zero-trans" name="trans_rating_admin_add" value="0">
-                                <input type="radio" id="rating-one-trans" name="trans_rating_admin_add" value="1">
-                                <input type="radio" id="rating-two-trans" name="trans_rating_admin_add" value="2">
-                                <input type="radio" id="rating-three-trans" name="trans_rating_admin_add" value="3">
-                            </div>  
-                            
-                            <div class="radio-label-div">    
-                                <label for="rating-zero-trans">0</label>
-                                <label for="rating-one-trans">1</label>
-                                <label for="rating-two-trans">2</label>
-                                <label for="rating-three-trans">3</label>
-                            </div>  
-                        </div>    
-
-                        <div class="rating-explain"> 
-                            <p>Unfamiliar or uncomfortable with Trans people and related issues</p>
-                            <p>Super Comfortable with / supportive of Trans people and related issues</p>
-                        </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="poly_rating_admin_add">
-                        <label class="text1">Non-Monogamy Friendliness Rating</label>
-                        <div class ="indent-me">    
-                            <div class="radio-div">    
-                                <input type="radio" id="rating-zero-poly" name="poly_rating_admin_add" value="0">
-                                <input type="radio" id="rating-one-poly" name="poly_rating_admin_add" value="1">
-                                <input type="radio" id="rating-two-poly" name="poly_rating_admin_add" value="2">
-                                <input type="radio" id="rating-three-poly" name="poly_rating_admin_add" value="3">
-                            </div>  
-                            
-                            <div class="radio-label-div">    
-
-                                <label for="rating-zero-poly">0</label>
-                                <label for="rating-one-poly">1</label>
-                                <label for="rating-two-poly">2</label>
-                                <label for="rating-three-poly">3</label>
-                            </div>  
-                        </div>   
-
-                        <div class="rating-explain">
-                            <p>Little to no knowledge of, or uncomfortable with Non-Monogamy/ Polyamory</p>
-                            <p>Super comfortable and Familiar with the ENM/Poly Community, values, etc.</p>
-                        </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="kink_rating_admin_add">
-                        <label class="text1">Kink Friendliness Rating</label>
-                            
-                        <div class ="indent-me">    
-                            <div class="radio-div">    
-                                <input type="radio" id="rating-zero-kink" name="kink_rating_admin_add" value="0">
-                                <input type="radio" id="rating-one-kink" name="kink_rating_admin_add" value="1">
-                                <input type="radio" id="rating-two-kink" name="kink_rating_admin_add" value="2">
-                                <input type="radio" id="rating-three-kink" name="kink_rating_admin_add" value="3">
-                            </div>  
-                            
-                            <div class="radio-label-div">    
-                                <label for="rating-zero-kink">0</label>
-                                <label for="rating-one-kink">1</label>
-                                <label for="rating-two-kink">2</label>
-                                <label for="rating-three-kink">3</label>
-                            </div>  
-                        </div>    
-                        <div class="rating-explain"> 
-                            <p>Unfamiliar or uncomfortable with BDSM/Kink</p>
-                            <p>Super Comfortable and Familiar with BDSM/Kink, the community, values, safety/consent norms, etc.</p>
-                        </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="sw_rating_admin_add">
-                        <label class="text1">Sex Worker Friendliness Rating</label>
-                                
-                                <div class ="indent-me">    
-                                    <div class="radio-div">    
-                                        <input type="radio" id="rating-zero-sw" name="sw_rating_admin_add" value="0">
-                                        <input type="radio" id="rating-one-sw" name="sw_rating_admin_add" value="1">
-                                        <input type="radio" id="rating-two-sw" name="sw_rating_admin_add" value="2">
-                                        <input type="radio" id="rating-three-sw" name="sw_rating_admin_add" value="3">
-                                    </div>  
-                                    
-                                    <div class="radio-label-div">    
-                                        <label for="rating-zero-sw">0</label>
-                                        <label for="rating-one-sw">1</label>
-                                        <label for="rating-two-sw">2</label>
-                                        <label for="rating-three-sw">3</label>
-                                    </div>  
-                                </div>    
-                            
-                            <div class="rating-explain"> 
-                                <p>Unfamiliar or uncomfortable with Sex Work</p>
-                                <p>Super comfortable and familiar with variety of types of sex work, sex worker rights, community etc.</p>
-                            </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="bipoc_rating_admin_add">
-                        <label class="text1">BIPOC Friendliness Rating</label>
-                            
-                            <div class ="indent-me">    
-                                <div class="radio-div">    
-                                    <input type="radio" id="rating-zero-bipoc" name="bipoc_rating_admin_add" value="0">
-                                    <input type="radio" id="rating-one-bipoc" name="bipoc_rating_admin_add" value="1">
-                                    <input type="radio" id="rating-two-bipoc" name="bipoc_rating_admin_add" value="2">
-                                    <input type="radio" id="rating-three-bipoc" name="bipoc_rating_admin_add" value="3">
-                                </div>  
-                                
-                                <div class="radio-label-div">    
-                                    <label for="rating-zero-bipoc">0</label>
-                                    <label for="rating-one-bipoc">1</label>
-                                    <label for="rating-two-bipoc">2</label>
-                                    <label for="rating-three-bipoc">3</label>
-                                </div>  
-                            </div>    
-
-                        <div class="rating-explain"> 
-                            <p>Unfamiliar or uncomfortable with BIPOC and race-related issues or conversations</p>
-                            <p>Super Comfortable and/or familiar with my community and related issues. (Please specify in the comments section!)</p>
-                        </div>
-                        <!-- specify which text field?-->
-                    </div>
-
-                    <div class="admin-add-client-rating" id="adhd_rating_admin_add">
-                        <label class="text1">ADD/ADHD Friendliness Rating</label>
-                                
-                                <div class ="indent-me">    
-                                    <div class="radio-div">    
-                                        <input type="radio" id="rating-zero-adhd" name="adhd_rating_admin_add" value="0">
-                                        <input type="radio" id="rating-one-adhd" name="adhd_rating_admin_add" value="1">
-                                        <input type="radio" id="rating-two-adhd" name="adhd_rating_admin_add" value="2">
-                                        <input type="radio" id="rating-three-adhd" name="adhd_rating_admin_add" value="3">
-                                    </div>  
-                                    
-                                    <div class="radio-label-div">    
-                                        <label for="rating-zero-adhd">0</label>
-                                        <label for="rating-one-adhd">1</label>
-                                        <label for="rating-two-adhd">2</label>
-                                        <label for="rating-three-adhd">3</label>
-                                    </div>  
-                                </div>    
-                            
-                            <div class="rating-explain"> 
-                                <p>Unfamiliar or uncomfortable with ADD/ADHD and related issues</p>
-                                <p>Super comfortable and familiar with ADD/ADHD and related issues</p>
-                            </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="autism_rating_admin_add">
-                        <label class="text1">Austism Spectrum Friendliness Rating</label>
-                                
-                                <div class ="indent-me">    
-                                    <div class="radio-div">    
-                                        <input type="radio" id="rating-zero-autism" name="autism_rating_admin_add" value="0">
-                                        <input type="radio" id="rating-one-autism" name="autism_rating_admin_add" value="1">
-                                        <input type="radio" id="rating-two-autism" name="autism_rating_admin_add" value="2">
-                                        <input type="radio" id="rating-three-autism" name="autism_rating_admin_add" value="3">
-                                    </div>  
-                                    
-                                    <div class="radio-label-div">    
-                                        <label for="rating-zero-autism">0</label>
-                                        <label for="rating-one-autism">1</label>
-                                        <label for="rating-two-autism">2</label>
-                                        <label for="rating-three-autism">3</label>
-                                    </div>  
-                                </div>    
-                            
-                            <div class="rating-explain"> 
-                                <p>Unfamiliar or uncomfortable with Autism and related issues</p>
-                                <p>Super comfortable and familiar with Autism and related issues</p>
-                            </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="disability_rating_admin_add">
-                        <label class="text1">Disability or Chronic Illness Friendliness Rating</label>
-                                
-                                <div class ="indent-me">    
-                                    <div class="radio-div">    
-                                        <input type="radio" id="rating-zero-disability" name="disability_rating_admin_add" value="0">
-                                        <input type="radio" id="rating-one-disability" name="disability_rating_admin_add" value="1">
-                                        <input type="radio" id="rating-two-disability" name="disability_rating_admin_add" value="2">
-                                        <input type="radio" id="rating-three-disability" name="disability_rating_admin_add" value="3">
-                                    </div>  
-                                    
-                                    <div class="radio-label-div">    
-                                        <label for="rating-zero-disability">0</label>
-                                        <label for="rating-one-disability">1</label>
-                                        <label for="rating-two-disability">2</label>
-                                        <label for="rating-three-disability">3</label>
-                                    </div>  
-                                </div>    
-                            
-                            <div class="rating-explain"> 
-                                <p>Unfamiliar or uncomfortable</p>
-                                <p>Super comfortable and familiar with disability, chronic illness, spoonie stuff and related issues</p>
-                            </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="trauma_rating_admin_add">
-                        <label class="text1">Trauma Friendliness Rating</label>
-                                
-                                <div class ="indent-me">    
-                                    <div class="radio-div">    
-                                        <input type="radio" id="rating-zero-trauma" name="trauma_rating_admin_add" value="0">
-                                        <input type="radio" id="rating-one-trauma" name="trauma_rating_admin_add" value="1">
-                                        <input type="radio" id="rating-two-trauma" name="trauma_rating_admin_add" value="2">
-                                        <input type="radio" id="rating-three-trauma" name="trauma_rating_admin_add" value="3">
-                                    </div>  
-                                    
-                                    <div class="radio-label-div">    
-                                        <label for="rating-zero-trauma">0</label>
-                                        <label for="rating-one-trauma">1</label>
-                                        <label for="rating-two-trauma">2</label>
-                                        <label for="rating-three-trauma">3</label>
-                                    </div>  
-                                </div>    
-                            
-                            <div class="rating-explain"> 
-                                <p>Unfamiliar with current approaches or uncomfortable with trauma, etc.</p>
-                                <p>Super comfortable and familiar with trauma, PTSD, CPTSD, current research, etc. (Please share more in comments!)</p>
-                            </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id="substance_use_rating_admin_add">
-                        <label class="text1">Substance Use Rating</label>
-                                
-                                <div class ="indent-me">    
-                                    <div class="radio-div">    
-                                        <input type="radio" id="rating-zero-substance-use" name="substance_use_rating_admin_add" value="0">
-                                        <input type="radio" id="rating-one-substance-use" name="substance_use_rating_admin_add" value="1">
-                                        <input type="radio" id="rating-two-substance-use" name="substance_use_rating_admin_add" value="2">
-                                        <input type="radio" id="rating-three-substance-use" name="substance_use_rating_admin_add" value="3">
-                                    </div>  
-                                    
-                                    <div class="radio-label-div">    
-                                        <label for="rating-zero-substance-use">0</label>
-                                        <label for="rating-one-substance-use">1</label>
-                                        <label for="rating-two-substance-use">2</label>
-                                        <label for="rating-three-substance-use">3</label>
-                                    </div>  
-                                </div>    
-                            
-                            <div class="rating-explain"> 
-                                <p>Unfamiliar with substance use and related issues</p>
-                                <p>Super comfortable and familiar with discussing substance use, addiction, harm reduction, etc. (Please elaborate in the comments!)</p>
-                            </div>
-                    </div>
-
-                    <div class="admin-add-client-rating" id=additional-rating>
-                        <label for="additional_rating_admin_add_info" class="text1">
-                            Rating for friendliness to additional sub-cultures, identities, communities, trauma, types of neurodivisty, etc. not listed yet
-                        </label>
-                        <textarea id="additional_rating_admin_add_info" class="center-me" name="additional_rating_admin_add_info" rows="8" cols="50" placeholder="Enter as many as you like with a number 0-3, separated by a comma"></textarea>
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-
-                        <label for="comments_community_admin_input" class="text1">Comments:</label>
-                        <textarea id="comments_community_admin_input" name="comments_community_admin_input" class="center-me" rows="8" cols="50" placeholder="What should folks who are queer/trans/poly/kinky/swers know about working with this provider?"></textarea> 
-
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label class="text1">Does this therapist provide couples therapy? (skip if unknown)</label>
-                        <div class="radio-yn-div">
-                            <input type="radio" id="couples_yes_admin_input" name="couples_admin_input" value="yes">
-                            <input type="radio" id="couples-no_admin_input" name="couples_admin_input" value="no">
-                        </div>
-                        <div class="radio-yn-label-div">
-                            <label for="couples_yes_admin_input">Yes</label>
-                            <label for="couples-no_admin_input">No</label>
-                        </div>
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label class="text1">Does this therapist serve youth? (skip if unknown)</label>
-                        <div class="radio-yn-div">
-                            <input type="radio" id="youth-yes_admin_input" name="youth_admin_input" value="yes">
-                            <input type="radio" id="youth-no_admin_input" name="youth_admin_input" value="no">
-                        </div>
-                        <div class="radio-yn-label-div">
-                            <label for="youth-yes_admin_input">Yes</label>
-                            <label for="youth-no_admin_input">No</label>
-                        </div>
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="website_admin_input" class="text1">Therapist's website:</label>
-                        <input type="text" id="website_admin_input" name="website_admin_input">
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="contact_admin_input" class="text1">Therapist's contact info:</label>
-                        <input type="text" id="contact_admin_input" name="contact_admin_input">
-                    </div>
-                    
-                    
-                    <div class="question admin-add-provider-question">
-                        <label class="text1">Does this therapist accept insurance? (skip if unknown)</label>
-                        <div class="radio-yn-div">
-                            <input type="radio" id="insurance_yes_admin_input" name="insurance_yn_admin_input" value="yes">
-                            <input type="radio" id="insurance-no_admin_input" name="insurance_yn_admin_input" value="no">
-                        </div>
-                        <div class="radio-yn-label-div">
-                            <label for="insurance_yes_admin_input">Yes</label>
-                            <label for="insurance-no_admin_input">No</label>
-                        </div>
-                    </div>
-
-                    <div class="question provider-question">
-                        <label for="which_insurance_admin_input" class="text1">Which insurance(s)?</label>
-
-                        <div class="center-me">
-                            <div class="pretend-button show-insurance-button" onclick="display_insurance_options()">
-                                <p >Show Insurance Options</p>
-                            </div>
-                            
-                        </div>
-
-                        <div class ="center-me-at-1110">
-                            <div class="insurance-box">
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="another_insurance_admin_input" name="which_insurance_admin_input" value="Another insurance">
-                                    <label for="another_insurance_admin_input" class="">Another insurance not listed here</label>
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="aetna_admin_input" name="which_insurance_admin_input" value="Aetna">
-                                    <label for="aetna_admin_input" class="">Aetna</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="allways_health_partners_admin_input" name="which_insurance_admin_input" value="Allways Health Partners">
-                                    <label for="allways_health_partners_admin_input" class="">Allways Health Partners</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="anthem_admin_input" name="which_insurance_admin_input" value="Anthem">
-                                    <label for="anthem_admin_input" class="">Anthem</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="beacon_admin_input" name="which_insurance_admin_input" value="Beacon">
-                                    <label for="beacon_provider_inpu" class="">Beacon</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="beacon_health_options_admin_input" name="which_insurance_admin_input" value="Beacon Health Options">
-                                    <label for="beacon_health_options_admin_input" class="">Beacon Health Options</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="bmc_healthnet_admin_input" name="which_insurance_admin_input" value="BMC HealthNet">
-                                    <label for="bmc_healthnet_admin_input" class="">BMC HealthNet</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="blue_care_network_admin_input" name="which_insurance_admin_input" value="Blue Care Network">
-                                    <label for="blue_care_network_admin_input" class="">Blue Care Network</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="blue_cross_admin_input" name="which_insurance_admin_input" value="Blue Cross">
-                                    <label for="blue_cross_admin_input" class="">Blue Cross</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="blue_cross_blue_sheild_admin_input" name="which_insurance_admin_input" value="Blue Cross Blue Sheild">
-                                    <label for="blue_cross_blue_sheild_admin_input" class="">Blue Cross Blue Sheild</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="bu_student_health_plan_admin_input" name="which_insurance_admin_input" value="BU Student Health Plan">
-                                    <label for="bu_student_health_plan_admin_input" class="">BU Student Health Plan</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="childrens_medical_security_admin_input" name="which_insurance_admin_input" value="Children's Medical Security Plan">
-                                    <label for="childrens_medical_security_admin_input" class="">Children's Medical Security Plan</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="cigna_admin_input" name="which_insurance_admin_input" value="Cigna">
-                                    <label for="cigna_admin_input" class="">Cigna</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="choice_care_network_admin_input" name="which_insurance_admin_input" value="Choice Care Network (Health Value Management Inc.)">
-                                    <label for="choice_care_network_admin_input" class="">Choice Care Network (Health Value Management Inc.)</label>
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="commonwealth_care_admin_input" name="which_insurance_admin_input" value="Commonwealth Care Alliance">
-                                    <label for="commonwealth_care_admin_input" class="">Commonwealth Care Alliance</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="c3_admin_input" name="which_insurance_admin_input" value="Community Care Cooperative (C3)">
-                                    <label for="c3_admin_input" class="">Community Care Cooperative (C3)</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="empire_bcbs_admin_input" name="which_insurance_admin_input" value="Empire Blue Cross Blue Sheild">
-                                    <label for="empire_bcbs_admin_input" class="">Empire Blue Cross Blue Sheild</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="fallon_admin_input" name="which_insurance_admin_input" value="Fallon Health">
-                                    <label for="fallon_admin_input" class="">Fallon Health</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="first_health_admin_input" name="which_insurance_admin_input" value="First Health">
-                                    <label for="first_health_admin_input" class="">First Health</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="gic_admin_input" name="which_insurance_admin_input" value="Group Insurance Commission (GIC)">
-                                    <label for="gic_admin_input" class="">Group Insurance Commission (GIC)</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="global_medical_management_admin_input" name="which_insurance_admin_input" value="Global Medical Management Inc.">
-                                    <label for="global_medical_management_admin_input" class="">Global Medical Management Inc.</label>                                 
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="harvard_pilgrim_admin_input" name="which_insurance_admin_input" value="Harvard Pilgrim Health">
-                                    <label for="harvard_pilgrim_admin_input" class="">Harvard Pilgrim Health</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="health_safety_net_admin_input" name="which_insurance_admin_input" value="Health Safety Net">
-                                    <label for="health_safety_net_admin_input" class="">Health Safety Net</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="humana_admin_input" name="which_insurance_admin_input" value="Humana">
-                                    <label for="humana_admin_input" class="">Humana</label>
-
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="magellan_admin_input" name="which_insurance_admin_input" value="Magellan">
-                                    <label for="magellan_admin_input" class="">Magellan</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="mbph_admin_input" name="which_insurance_admin_input" value="MBHP (Massachusetts Behavioral Health Partnership)">
-                                    <label for="mbph_admin_input" class="">MBHP (Massachusetts Behavioral Health Partnership)</label>                                 
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="medicare_admin_input" name="which_insurance_admin_input" value="Medicare">
-                                    <label for="medicare_admin_input" class="">Medicare</label>                                 
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="medicaid_admin_input" name="which_insurance_admin_input" value="Medicaid">
-                                    <label for="medicaid_admin_input" class="">Medicaid</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="mnh_admin_input"   name="which_insurance_admin_input" value="MNH">
-                                    <label for="mnh_admin_input" class="">MNH</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="network_health_admin_input" name="which_insurance_admin_input" value="Network Health (Tufts)">
-                                    <label for="network_health_admin_input" class="">Network Health (Tufts)</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="optum_admin_input" name="which_insurance_admin_input" value="Optum">
-                                    <label for="optum_admin_input" class="">Optum</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="oxford_admin_input" name="which_insurance_admin_input" value="Oxford">
-                                    <label for="oxford_admin_input" class="">Oxford</label>                                 
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="partners_admin_input" name="which_insurance_admin_input" value="Partners">
-                                    <label for="partners_admin_input" class="">Partners</label>                                 
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="steward_admin_input" name="which_insurance_admin_input" value="Steward">
-                                <label for="steward_admin_input" class="">Steward</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="tricare_admin_input" name="which_insurance_admin_input" value="Tricare">
-                                    <label for="tricare_admin_input" class="">Tricare</label>                                
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="tufts_admin_input" name="which_insurance_admin_input" value="Tufts">
-                                    <label for="tufts_admin_input" class="Tufts">Tufts</label>
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="tufts_health_together_admin_input" name="which_insurance_admin_input" value="Tufts Health Together">
-                                    <label for="tufts_health_together_admin_input" class="Tufts">Tufts Health Together</label> 
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="unicare_admin_input" name="which_insurance_admin_input" value="Unicare">
-                                    <label for="unicare_admin_input" class="">Unicare</label>
-                                </div>
-
-                                <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="ubh_admin_input" name="which_insurance_admin_input" value="United Behavioral Health (UBH)">
-                                    <label for="ubh_admin_input" class="">United Behavioral Health (UBH)</label> 
-                                </div>
-                                <!-- 
-                                    <div class="insurance-check-row">
-                                    <input type="checkbox" class="insurance-checkbox" id="_admin_input" name="which_insurance_admin_input" value="">
-                                <label for="" class=""></label>
-                                </div>  -->
-
-
-                            <!-- end health-insurance-box  -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="question provider-question">
-                        <label for="additional_insurance_admin_input" class="text1">If they accept insurance plans not listed above, please add them here:</label>
-                        <input type="text" id="additional_insurance_admin_input" name="additional_insurance_admin_input" rows="6" cols="50" placeholder="Please make sure the box for Another Insurance is checked off above - thanks!">
-                    </div>    
-
-                    <div class="question admin-add-provider-question">
-                        <label class="text1">Accepts Masshealth?</label>
-                        <div class="radio-yn-div">
-                            <input type="radio" id="masshealth_yes_admin_input" name="masshealth_admin_input" value="yes">
-                            <input type="radio" id="masshealth_no_admin_input" name="masshealth_admin_input" value="no">
-                        </div>
-                        <div class="radio-yn-label-div">
-                            <label for="masshealth_yes_admin_input">Yes</label>
-                            <label for="masshealth_no_admin_input">No</label>
-                        </div>
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="cost_admin_input" class="text1">Average Cost per Session without Insurance:</label>
-                        <input type="text" id="cost_admin_input" name="cost_admin_input" placeholder="$">
-                    </div>
-
-                    <div class="question admin-add-provider-question">
-                        <label for="access_admin_input" class="text1">Location accessibility info</label>
-                        <textarea id="access_admin_input" name="access_admin_input" class="center-me" rows="6" cols="50" placeholder=""></textarea>
-                    </div>
-
-
-                    <div class="question admin-add-provider-question">
-
-                            <label for="comments_admin_input" class="text1">Additional User Provided Comments:</label>
-                            <textarea id="comments_admin_input" name="comments_admin_input" class="center-me" rows="8" cols="50" placeholder=""></textarea> 
-
-                    </div>
-
-                    <div class="question provider-question">
-
-                        <label for="comments_admin_input" class="text1">Comments from Providers</label>
-                        <textarea id="comments_admin_input" name="comments_admin_input" class="center-me" rows="8" cols="50"  placeholder=""></textarea> 
-                </div>
-
-
-        <!-- What is this div? Remove?-->
-                </div>
-
-<!-- 
-                    <div class="question provider-question">
-                        <label for="provider_type_admin_input" class="text1">What kind of mental health provider are you?</label><br><br>
-
-                        <input type="checkbox" id="provider_type_therapist_admin_input" name="provider_type_admin_input" value="therapist">
-                        <label for="provider_type_therapist_admin_input">Therapist</label>
-                        <br>
-                        <input type="checkbox" id="provider_type_psychiatrist_admin_input" name="provider_type_admin_input" value="psychiatrist">
-                        <label for="provider_type_psychiatrist_admin_input">Psychiatrist</label>
-                    </div> -->
-
-
-
-                    <div class="center-me">
-                        <input type="submit" value="Submit" id="admin-add-provider-provider-submit" class="add-provider-submit">
-                    </div>
-
-                    <!-- <div class="center-me"> -->
-                        <!-- <p>Oops! I made a mistake!</p> -->
-                        <!-- <button type="reset" value="Reset" class="reset-form-button">Reset the form</button> -->
-                    <!-- </div> -->
-
-
+                <%- include('../partials/header-nav') -%> 
                 
+                    
+                
+                    <div class="general-landing">
+                        <div class="max-width-container">
+                        <h1 class="max-width" class="heading-break-index">Admin Add a Provider</h1>   
+                        </div>
+                    </div>
+                
+                    <div class="max-width-container">
+                        <div class="max-width">
+                
+                            <div class="spacer1"></div>
+                
+                            <div class="center-me">
+                                <button type="reset" value="Reset" class="reset-form-button">Reset form</button> 
+                            </div>
+                
+                            <form class="add-provider-form" id="admin-add-provider-form" method="post" action="/admin/admin-add-provider">
 
-            </form>
+                                <!-- action="/search-add/add-a-provider-provider-input" -->
+                
+                                <!-- might not need this div? -->
+                                <div class="admin-add-provider">
+                
+                                    <!-- class "client-question" changed to "admin-add-provider-question" -->
+                                    <!-- _client_input changed to _admin_input -->
 
-            <!-- </div> -->
-
-
-            
-        <!-- end max width -->
-        </div>
-    <!-- end max-width-container -->
-    </div>
-
-
-    <%- include('../partials/footer') -%> 
+                                    <input type="checkbox" class="who-added-info-check" name="who_added_info_check_client" value="Client added info">
+                                    <label for="who_added_info_check_client" class="text1">Client added this info</label>
+                                    <br>
+                
+                                    <input type="checkbox" class="who-added-info-check" name="who_added_info_check_provider" value="Provider added info">
+                                    <label for="who_added_info_check_provider" class="text1">Provider added this info</label>
+                                    
+                                    <div class="question admin-add-provider-question">
+                                        <label for="name_admin_input" class="text1">Provider's name:</label>
+                                        <input type="text" id="name_admin_input" name="name_admin_input" required>
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="practice_admin_input" class="text1">Institution / Private Practice Name:</label>
+                                        <input type="text" id="practice_admin_input" name="practice_admin_input">
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="provider_type_admin_input" class="text1">What kind of mental health provider are they?</label>
+                                        <br><br>
+                
+                                        <input type="checkbox" id="provider_type_therapist_admin_input" name="provider_type_admin_input" value="therapist">
+                                        <label for="provider_type_therapist_admin_input">Therapist</label>
+                                        <br>
+                                        <input type="checkbox" id="provider_type_psychiatrist_admin_input" name="provider_type_admin_input" value="psychiatrist">
+                                        <label for="provider_type_psychiatrist_admin_input">Psychiatrist</label>
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="credentials_admin_input" class="text1">Credentials:</label>
+                                        <input type="text" id="credentials_admin_input" name="credentials_admin_input" placeholder="LICSW, LSW, LMHC, MD, PhD, etc.">
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <p class="text1">Does this provider offer teletherapy?</p>
+                        
+                                            <div class="radio-yn-div">
+                                                <input type="radio" id="teletherapy_yes_admin_input" name="teletherapy_admin_input" value="yes">
+                                                <input type="radio" id="teletherapy_no_admin_input" name="teletherapy_admin_input" value="no">
+                                            </div>
+                                            <div class="radio-yn-label-div">
+                                                <label for="teletherapy_yes_admin_input">Yes</label>
+                                                <label for="teletherapy_no_admin_input">No</label>
+                                            </div>
+                                    </div>
+                
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="license_state_admin_input" class="text1">Where does this provider practice / Where is this provider licensed?</label>
+                                        <br><br>
+                
+                                        <input type="checkbox" id="ma_check_admin_input" name="license_state_admin_input" value="Massachusetts">
+                                        <label for="ma_check_admin_input"> Massachusetts</label><br>
+                
+                                        <input type="checkbox" id="ri_check" name="license_state_admin_input" value="Rhode Island">
+                                        <label for="ri_check_admin_input"> Rhode Island</label><br>
+                
+                                        <input type="checkbox" id="nh_check_admin_input" name="license_state_admin_input" value="New Hampshire">
+                                        <label for="nh_check_admin_input">New Hampshire</label><br>
+                
+                                        <input type="checkbox" id="ct_check_admin_input" name="license_state_admin_input" value="Connecticut">
+                                        <label for="ct_check_admin_input">Connecticut</label><br>
+                
+                                        <input type="checkbox" id="ny_check_admin_input" name="license_state_admin_input" value="New York">
+                                        <label for="ny_check_admin_input"> New York</label><br>
+                
+                                        <input type="checkbox" id="international_check_admin_input" name="license_state_admin_input" value="International">
+                                        <label for="international_check_admin_input">International</label><br>
+                
+                                        <input type="checkbox" id="somewhere-else_check_admin_input" name="license_state_admin_input" value="Another State">
+                                        <label for="somewhere-else_check_admin_input">Another State</label><br><br>     
+                                    </div>   
+                                    
+                                    <div class="question provider-question">
+                                        <label for="location_admin_input" class="text1">Location (City/Neighborhood):</label>
+                                        <input type="text" id="location_admin_input" name="location_admin_input">
+                                    </div>
+                
+                                    <!-- changed "client-rating" to "admin-add-client rating" -->
+                                    <!-- changed identity"_rating" to identity"_rating_admin_input" -->
+                
+                                    <div class="admin-add-client-rating" id="poly_rating_admin_input">
+                                        <label class="text1">Non-Monogamy Friendliness Rating</label>
+                                        <div class ="indent-me">    
+                                            <div class="radio-div">    
+                                                <input type="radio" id="rating-no-info-poly" name="poly_rating_admin_input" value="no info">
+                                                <input type="radio" id="rating-zero-poly" name="poly_rating_admin_input" value="0">
+                                                <input type="radio" id="rating-one-poly" name="poly_rating_admin_input" value="1">
+                                                <input type="radio" id="rating-two-poly" name="poly_rating_admin_input" value="2">
+                                                <input type="radio" id="rating-three-poly" name="poly_rating_admin_input" value="3">
+                                            </div>  
+                                            
+                                            <div class="radio-label-div">    
+                                                <label for="rating-no info-poly">No info</label>
+                                                <label for="rating-zero-poly">0</label>
+                                                <label for="rating-one-poly">1</label>
+                                                <label for="rating-two-poly">2</label>
+                                                <label for="rating-three-poly">3</label>
+                                                
+                                            </div>  
+                                        </div>   
+                
+                                        <div class="rating-explain">
+                                            <p>Little to no knowledge of, or uncomfortable with Non-Monogamy/ Polyamory</p>
+                                            <p>Super comfortable and Familiar with the ENM/Poly Community, values, etc.</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="queer_rating_admin_input">
+                                        <label class="text1">
+                                            Queer Friendliness Rating
+                                        </label>
+                                        
+                                        <div class ="indent-me">    
+                                            <div class="radio-div">
+                                                <input type="radio" id="rating-zero-queer" name="queer_rating_admin_input" value="no info">    
+                                                <input type="radio" id="rating-zero-queer" name="queer_rating_admin_input" value="0">
+                                                <input type="radio" id="rating-one-queer" name="queer_rating_admin_input" value="1">
+                                                <input type="radio" id="rating-two-queer" name="queer_rating_admin_input" value="2">
+                                                <input type="radio" id="rating-three-queer" name="queer_rating_admin_input" value="3">
+                                            </div>  
+                                            
+                                            <div class="radio-label-div">    
+                                                <label for="rating-no-info-queer">no info</label>
+                                                <label for="rating-zero-queer">0</label>
+                                                <label for="rating-one-queer">1</label>
+                                                <label for="rating-two-queer">2</label>
+                                                <label for="rating-three-queer">3</label>
+                                            </div>  
+                                        </div>    
+                                        <div class="rating-explain"> 
+                                            <p>Unfamiliar or uncomfortable with the Queer Community and related issues</p>
+                                            <p>Super Comfortable and Familiar with Queer Community and related issues </p>
+                                        </div>
+                                    </div>
+                
+                
+                                    <div class="admin-add-client-rating" id="kink_rating_admin_input">
+                                        <label class="text1">Kink Friendliness Rating</label>
+                                            
+                                        <div class ="indent-me">    
+                                            <div class="radio-div">    
+                                                <input type="radio" id="rating-no-info-kink" name="kink_rating_admin_input" value="no info">
+                                                <input type="radio" id="rating-zero-kink" name="kink_rating_admin_input" value="0">
+                                                <input type="radio" id="rating-one-kink" name="kink_rating_admin_input" value="1">
+                                                <input type="radio" id="rating-two-kink" name="kink_rating_admin_input" value="2">
+                                                <input type="radio" id="rating-three-kink" name="kink_rating_admin_input" value="3">
+                                            </div>  
+                                            
+                                            <div class="radio-label-div">
+                                                <label for="rating-no-info-kink">no info</label>    
+                                                <label for="rating-zero-kink">0</label>
+                                                <label for="rating-one-kink">1</label>
+                                                <label for="rating-two-kink">2</label>
+                                                <label for="rating-three-kink">3</label>
+                                            </div>  
+                                        </div>    
+                                        <div class="rating-explain"> 
+                                            <p>Unfamiliar or uncomfortable with BDSM/Kink</p>
+                                            <p>Super Comfortable and Familiar with BDSM/Kink, the community, values, safety/consent norms, etc.</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="bipoc_rating_admin_input">
+                                        <label class="text1">BIPOC Friendliness Rating</label>
+                                            
+                                            <div class ="indent-me">    
+                                                <div class="radio-div">
+                                                    <input type="radio" id="rating-no-info-bipoc" name="bipoc_rating_admin_input" value="no info">                                        
+                                                    <input type="radio" id="rating-zero-bipoc" name="bipoc_rating_admin_input" value="0">
+                                                    <input type="radio" id="rating-one-bipoc" name="bipoc_rating_admin_input" value="1">
+                                                    <input type="radio" id="rating-two-bipoc" name="bipoc_rating_admin_input" value="2">
+                                                    <input type="radio" id="rating-three-bipoc" name="bipoc_rating_admin_input" value="3">
+                                                </div>  
+                                                
+                                                <div class="radio-label-div">  
+                                                    <label for="rating-no-info-bipoc">No info</label>  
+                                                    <label for="rating-zero-bipoc">0</label>
+                                                    <label for="rating-one-bipoc">1</label>
+                                                    <label for="rating-two-bipoc">2</label>
+                                                    <label for="rating-three-bipoc">3</label>
+                                                </div>  
+                                            </div>    
+                
+                                        <div class="rating-explain"> 
+                                            <p>Unfamiliar or uncomfortable with BIPOC and race-related issues or conversations</p>
+                                            <p>Super Comfortable and/or familiar with my community and related issues. (Please specify in the comments section!)</p>
+                                        </div>
+                                        <!-- specify which text field?-->
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="trans_rating_admin_input">
+                                        <label class="text1">Trans Friendliness Rating</label>
+                                        
+                                        <div class ="indent-me">    
+                                            <div class="radio-div">
+                                                <input type="radio" id="rating-no-info-trans" name="trans_rating_admin_input" value="no info">    
+                                                <input type="radio" id="rating-zero-trans" name="trans_rating_admin_input" value="0">
+                                                <input type="radio" id="rating-one-trans" name="trans_rating_admin_input" value="1">
+                                                <input type="radio" id="rating-two-trans" name="trans_rating_admin_input" value="2">
+                                                <input type="radio" id="rating-three-trans" name="trans_rating_admin_input" value="3">
+                                            </div>  
+                                            
+                                            <div class="radio-label-div">
+                                                <label for="rating-no-info-trans">no info</label>    
+                                                <label for="rating-zero-trans">0</label>
+                                                <label for="rating-one-trans">1</label>
+                                                <label for="rating-two-trans">2</label>
+                                                <label for="rating-three-trans">3</label>
+                                            </div>  
+                                        </div>    
+                
+                                        <div class="rating-explain"> 
+                                            <p>Unfamiliar or uncomfortable with Trans people and related issues</p>
+                                            <p>Super Comfortable with / supportive of Trans people and related issues</p>
+                                        </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="sw_rating_admin_input">
+                                        <label class="text1">Sex Worker Friendliness Rating</label>
+                                                
+                                                <div class ="indent-me">    
+                                                    <div class="radio-div">
+                                                        <input type="radio" id="rating-no-info-sw" name="sw_rating_admin_input" value="no info">    
+                                                        <input type="radio" id="rating-zero-sw" name="sw_rating_admin_input" value="0">
+                                                        <input type="radio" id="rating-one-sw" name="sw_rating_admin_input" value="1">
+                                                        <input type="radio" id="rating-two-sw" name="sw_rating_admin_input" value="2">
+                                                        <input type="radio" id="rating-three-sw" name="sw_rating_admin_input" value="3">
+                                                    </div>  
+                                                    
+                                                    <div class="radio-label-div">    
+                                                        <label for="rating-no-info-sw">no info</label>
+                                                        <label for="rating-zero-sw">0</label>
+                                                        <label for="rating-one-sw">1</label>
+                                                        <label for="rating-two-sw">2</label>
+                                                        <label for="rating-three-sw">3</label>
+                                                    </div>  
+                                                </div>    
+                                            
+                                            <div class="rating-explain"> 
+                                                <p>Unfamiliar or uncomfortable with Sex Work</p>
+                                                <p>Super comfortable and familiar with variety of types of sex work, sex worker rights, community etc.</p>
+                                            </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="adhd_rating_admin_input">
+                                        <label class="text1">ADD/ADHD Friendliness Rating</label>
+                                                
+                                                <div class ="indent-me">    
+                                                    <div class="radio-div">    
+                                                        <input type="radio" id="rating-no-info-adhd" name="adhd_rating_admin_input" value="no info">
+                                                        <input type="radio" id="rating-zero-adhd" name="adhd_rating_admin_input" value="0">
+                                                        <input type="radio" id="rating-one-adhd" name="adhd_rating_admin_input" value="1">
+                                                        <input type="radio" id="rating-two-adhd" name="adhd_rating_admin_input" value="2">
+                                                        <input type="radio" id="rating-three-adhd" name="adhd_rating_admin_input" value="3">
+                                                    </div>  
+                                                    
+                                                    <div class="radio-label-div">    
+                                                        <label for="rating-no-info-adhd">no info</label>
+                                                        <label for="rating-zero-adhd">0</label>
+                                                        <label for="rating-one-adhd">1</label>
+                                                        <label for="rating-two-adhd">2</label>
+                                                        <label for="rating-three-adhd">3</label>
+                                                    </div>  
+                                                </div>    
+                                            
+                                            <div class="rating-explain"> 
+                                                <p>Unfamiliar or uncomfortable with ADD/ADHD and related issues</p>
+                                                <p>Super comfortable and familiar with ADD/ADHD and related issues</p>
+                                            </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="autism_rating_admin_input">
+                                        <label class="text1">Austism Spectrum Friendliness Rating</label>
+                                                
+                                                <div class ="indent-me">    
+                                                    <div class="radio-div">
+                                                        <input type="radio" id="rating-no-info-autism" name="autism_rating_admin_input" value="no info">    
+                                                        <input type="radio" id="rating-zero-autism" name="autism_rating_admin_input" value="0">
+                                                        <input type="radio" id="rating-one-autism" name="autism_rating_admin_input" value="1">
+                                                        <input type="radio" id="rating-two-autism" name="autism_rating_admin_input" value="2">
+                                                        <input type="radio" id="rating-three-autism" name="autism_rating_admin_input" value="3">
+                                                    </div>  
+                                                    
+                                                    <div class="radio-label-div">
+                                                        <label for="rating-no-info-autism">no info</label>    
+                                                        <label for="rating-zero-autism">0</label>
+                                                        <label for="rating-one-autism">1</label>
+                                                        <label for="rating-two-autism">2</label>
+                                                        <label for="rating-three-autism">3</label>
+                                                    </div>  
+                                                </div>    
+                                            
+                                            <div class="rating-explain"> 
+                                                <p>Unfamiliar or uncomfortable with Autism and related issues</p>
+                                                <p>Super comfortable and familiar with Autism and related issues</p>
+                                            </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="disability_rating_admin_input">
+                                        <label class="text1">Disability or Chronic Illness Friendliness Rating</label>
+                                                
+                                                <div class ="indent-me">    
+                                                    <div class="radio-div">    
+                                                        <input type="radio" id="rating-no-info-disability" name="disability_rating_admin_input" value="no info">
+                                                        <input type="radio" id="rating-zero-disability" name="disability_rating_admin_input" value="0">
+                                                        <input type="radio" id="rating-one-disability" name="disability_rating_admin_input" value="1">
+                                                        <input type="radio" id="rating-two-disability" name="disability_rating_admin_input" value="2">
+                                                        <input type="radio" id="rating-three-disability" name="disability_rating_admin_input" value="3">
+                                                    </div>  
+                                                    
+                                                    <div class="radio-label-div">    
+                                                        <label for="rating-no-info-disability">no info</label>
+                                                        <label for="rating-zero-disability">0</label>
+                                                        <label for="rating-one-disability">1</label>
+                                                        <label for="rating-two-disability">2</label>
+                                                        <label for="rating-three-disability">3</label>
+                                                    </div>  
+                                                </div>    
+                                            
+                                            <div class="rating-explain"> 
+                                                <p>Unfamiliar or uncomfortable</p>
+                                                <p>Super comfortable and familiar with disability, chronic illness, spoonie stuff and related issues</p>
+                                            </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="trauma_rating_admin_input">
+                                        <label class="text1">Trauma Friendliness Rating</label>
+                                                
+                                                <div class ="indent-me">    
+                                                    <div class="radio-div">    
+                                                        <input type="radio" id="rating-no-info-trauma" name="trauma_rating_admin_input" value="no info">
+                                                        <input type="radio" id="rating-zero-trauma" name="trauma_rating_admin_input" value="0">
+                                                        <input type="radio" id="rating-one-trauma" name="trauma_rating_admin_input" value="1">
+                                                        <input type="radio" id="rating-two-trauma" name="trauma_rating_admin_input" value="2">
+                                                        <input type="radio" id="rating-three-trauma" name="trauma_rating_admin_input" value="3">
+                                                    </div>  
+                                                    
+                                                    <div class="radio-label-div">    
+                                                        <label for="rating-no-info-trauma">no info</label>
+                                                        <label for="rating-zero-trauma">0</label>
+                                                        <label for="rating-one-trauma">1</label>
+                                                        <label for="rating-two-trauma">2</label>
+                                                        <label for="rating-three-trauma">3</label>
+                                                    </div>  
+                                                </div>    
+                                            
+                                            <div class="rating-explain"> 
+                                                <p>Unfamiliar with current approaches or uncomfortable with trauma, etc.</p>
+                                                <p>Super comfortable and familiar with trauma, PTSD, CPTSD, current research, etc. (Please share more in comments!)</p>
+                                            </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id="substance_use_rating_admin_input">
+                                        <label class="text1">Substance Use Rating</label>
+                                                
+                                                <div class ="indent-me">    
+                                                    <div class="radio-div">    
+                                                        <input type="radio" id="rating-no-info-substance-use" name="substance_use_rating_admin_input" value="no info">                                        
+                                                        <input type="radio" id="rating-zero-substance-use" name="substance_use_rating_admin_input" value="0">
+                                                        <input type="radio" id="rating-one-substance-use" name="substance_use_rating_admin_input" value="1">
+                                                        <input type="radio" id="rating-two-substance-use" name="substance_use_rating_admin_input" value="2">
+                                                        <input type="radio" id="rating-three-substance-use" name="substance_use_rating_admin_input" value="3">
+                                                    </div>  
+                                                    
+                                                    <div class="radio-label-div">   
+                                                        <label for="rating-no-info-substance-use">no info</label> 
+                                                        <label for="rating-zero-substance-use">0</label>
+                                                        <label for="rating-one-substance-use">1</label>
+                                                        <label for="rating-two-substance-use">2</label>
+                                                        <label for="rating-three-substance-use">3</label>
+                                                    </div>  
+                                                </div>    
+                                            
+                                            <div class="rating-explain"> 
+                                                <p>Unfamiliar with substance use and related issues</p>
+                                                <p>Super comfortable and familiar with discussing substance use, addiction, harm reduction, etc. (Please elaborate in the comments!)</p>
+                                            </div>
+                                    </div>
+                
+                                    <div class="admin-add-client-rating" id=additional-rating>
+                                        <label for="additional_rating_admin_input" class="text1">
+                                            Rating for friendliness to additional sub-cultures, identities, communities, trauma, types of neurodivisty, etc. or other not listed yet:
+                                        </label>
+                                        <br><br>
+                                        <textarea id="additional_rating_admin_input" class="center-me" name="additional_rating_admin_input" rows="8" cols="50" placeholder="Enter as many as you like with a number 0-3, separated by a comma"></textarea>
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                
+                                        <label for="comments_community_admin_input" class="text1">Comments:</label>
+                                        <textarea id="comments_community_admin_input" name="comments_community_admin_input" class="center-me" rows="8" cols="50" placeholder="What should folks who are queer/trans/poly/kinky/swers know about working with this provider?"></textarea> 
+                
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="website_admin_input" class="text1">Therapist's website:</label>
+                                        <input type="text" id="website_admin_input" name="website_admin_input">
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="contact_admin_input" class="text1">Therapist's contact info:</label>
+                                        <input type="text" id="contact_admin_input" name="contact_admin_input">
+                                    </div>
+                                    
+                                    
+                                    <div class="question admin-add-provider-question">
+                                        <label class="text1">Does this therapist accept insurance? (skip if unknown)</label>
+                                        <div class="radio-yn-div">
+                                            <input type="radio" id="insurance_yes_admin_input" name="insurance_yn_admin_input" value="yes">
+                                            <input type="radio" id="insurance-no_admin_input" name="insurance_yn_admin_input" value="no">
+                                        </div>
+                                        <div class="radio-yn-label-div">
+                                            <label for="insurance_yes_admin_input">Yes</label>
+                                            <label for="insurance-no_admin_input">No</label>
+                                        </div>
+                                    </div>
+                
+                                    <div class="question provider-question">
+                                        <label for="which_insurance_admin_input" class="text1">Which insurance(s)?</label>
+                
+                                        <div class="center-me">
+                                            <div class="pretend-button show-insurance-button" onclick="display_insurance_options()">
+                                                <p >Show Insurance Options</p>
+                                            </div>
+                                            
+                                        </div>
+                
+                                        <div class ="center-me-at-1110">
+                                            <div class="insurance-box">
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="another_insurance_admin_input" name="which_insurance_admin_input" value="Another insurance">
+                                                    <label for="another_insurance_admin_input" class="">Another insurance not listed here</label>
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="aetna_admin_input" name="which_insurance_admin_input" value="Aetna">
+                                                    <label for="aetna_admin_input" class="">Aetna</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="allways_health_partners_admin_input" name="which_insurance_admin_input" value="Allways Health Partners">
+                                                    <label for="allways_health_partners_admin_input" class="">Allways Health Partners</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="anthem_admin_input" name="which_insurance_admin_input" value="Anthem">
+                                                    <label for="anthem_admin_input" class="">Anthem</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="beacon_admin_input" name="which_insurance_admin_input" value="Beacon">
+                                                    <label for="beacon_provider_inpu" class="">Beacon</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="beacon_health_options_admin_input" name="which_insurance_admin_input" value="Beacon Health Options">
+                                                    <label for="beacon_health_options_admin_input" class="">Beacon Health Options</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="bmc_healthnet_admin_input" name="which_insurance_admin_input" value="BMC HealthNet">
+                                                    <label for="bmc_healthnet_admin_input" class="">BMC HealthNet</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="blue_care_network_admin_input" name="which_insurance_admin_input" value="Blue Care Network">
+                                                    <label for="blue_care_network_admin_input" class="">Blue Care Network</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="blue_cross_admin_input" name="which_insurance_admin_input" value="Blue Cross">
+                                                    <label for="blue_cross_admin_input" class="">Blue Cross</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="blue_cross_blue_sheild_admin_input" name="which_insurance_admin_input" value="Blue Cross Blue Sheild">
+                                                    <label for="blue_cross_blue_sheild_admin_input" class="">Blue Cross Blue Sheild</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="bu_student_health_plan_admin_input" name="which_insurance_admin_input" value="BU Student Health Plan">
+                                                    <label for="bu_student_health_plan_admin_input" class="">BU Student Health Plan</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="childrens_medical_security_admin_input" name="which_insurance_admin_input" value="Children's Medical Security Plan">
+                                                    <label for="childrens_medical_security_admin_input" class="">Children's Medical Security Plan</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="cigna_admin_input" name="which_insurance_admin_input" value="Cigna">
+                                                    <label for="cigna_admin_input" class="">Cigna</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="choice_care_network_admin_input" name="which_insurance_admin_input" value="Choice Care Network (Health Value Management Inc.)">
+                                                    <label for="choice_care_network_admin_input" class="">Choice Care Network (Health Value Management Inc.)</label>
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="commonwealth_care_admin_input" name="which_insurance_admin_input" value="Commonwealth Care Alliance">
+                                                    <label for="commonwealth_care_admin_input" class="">Commonwealth Care Alliance</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="c3_admin_input" name="which_insurance_admin_input" value="Community Care Cooperative (C3)">
+                                                    <label for="c3_admin_input" class="">Community Care Cooperative (C3)</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="empire_bcbs_admin_input" name="which_insurance_admin_input" value="Empire Blue Cross Blue Sheild">
+                                                    <label for="empire_bcbs_admin_input" class="">Empire Blue Cross Blue Sheild</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="fallon_admin_input" name="which_insurance_admin_input" value="Fallon Health">
+                                                    <label for="fallon_admin_input" class="">Fallon Health</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="first_health_admin_input" name="which_insurance_admin_input" value="First Health">
+                                                    <label for="first_health_admin_input" class="">First Health</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="gic_admin_input" name="which_insurance_admin_input" value="Group Insurance Commission (GIC)">
+                                                    <label for="gic_admin_input" class="">Group Insurance Commission (GIC)</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="global_medical_management_admin_input" name="which_insurance_admin_input" value="Global Medical Management Inc.">
+                                                    <label for="global_medical_management_admin_input" class="">Global Medical Management Inc.</label>                                 
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="harvard_pilgrim_admin_input" name="which_insurance_admin_input" value="Harvard Pilgrim Health">
+                                                    <label for="harvard_pilgrim_admin_input" class="">Harvard Pilgrim Health</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="health_safety_net_admin_input" name="which_insurance_admin_input" value="Health Safety Net">
+                                                    <label for="health_safety_net_admin_input" class="">Health Safety Net</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="humana_admin_input" name="which_insurance_admin_input" value="Humana">
+                                                    <label for="humana_admin_input" class="">Humana</label>
+                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="magellan_admin_input" name="which_insurance_admin_input" value="Magellan">
+                                                    <label for="magellan_admin_input" class="">Magellan</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="mbph_admin_input" name="which_insurance_admin_input" value="MBHP (Massachusetts Behavioral Health Partnership)">
+                                                    <label for="mbph_admin_input" class="">MBHP (Massachusetts Behavioral Health Partnership)</label>                                 
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="medicare_admin_input" name="which_insurance_admin_input" value="Medicare">
+                                                    <label for="medicare_admin_input" class="">Medicare</label>                                 
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="medicaid_admin_input" name="which_insurance_admin_input" value="Medicaid">
+                                                    <label for="medicaid_admin_input" class="">Medicaid</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="mnh_admin_input"   name="which_insurance_admin_input" value="MNH">
+                                                    <label for="mnh_admin_input" class="">MNH</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="network_health_admin_input" name="which_insurance_admin_input" value="Network Health (Tufts)">
+                                                    <label for="network_health_admin_input" class="">Network Health (Tufts)</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="optum_admin_input" name="which_insurance_admin_input" value="Optum">
+                                                    <label for="optum_admin_input" class="">Optum</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="oxford_admin_input" name="which_insurance_admin_input" value="Oxford">
+                                                    <label for="oxford_admin_input" class="">Oxford</label>                                 
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="partners_admin_input" name="which_insurance_admin_input" value="Partners">
+                                                    <label for="partners_admin_input" class="">Partners</label>                                 
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="steward_admin_input" name="which_insurance_admin_input" value="Steward">
+                                                <label for="steward_admin_input" class="">Steward</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="tricare_admin_input" name="which_insurance_admin_input" value="Tricare">
+                                                    <label for="tricare_admin_input" class="">Tricare</label>                                
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="tufts_admin_input" name="which_insurance_admin_input" value="Tufts">
+                                                    <label for="tufts_admin_input" class="Tufts">Tufts</label>
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="tufts_health_together_admin_input" name="which_insurance_admin_input" value="Tufts Health Together">
+                                                    <label for="tufts_health_together_admin_input" class="Tufts">Tufts Health Together</label> 
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="unicare_admin_input" name="which_insurance_admin_input" value="Unicare">
+                                                    <label for="unicare_admin_input" class="">Unicare</label>
+                                                </div>
+                
+                                                <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="ubh_admin_input" name="which_insurance_admin_input" value="United Behavioral Health (UBH)">
+                                                    <label for="ubh_admin_input" class="">United Behavioral Health (UBH)</label> 
+                                                </div>
+                                                <!-- 
+                                                    <div class="insurance-check-row">
+                                                    <input type="checkbox" class="insurance-checkbox" id="_admin_input" name="which_insurance_admin_input" value="">
+                                                <label for="" class=""></label>
+                                                </div>  -->
+                
+                
+                                            <!-- end health-insurance-box  -->
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="question provider-question">
+                                        <label for="additional_insurance_admin_input" class="text1">If they accept insurance plans not listed above, please add them here:</label>
+                                        <input type="text" id="additional_insurance_admin_input" name="additional_insurance_admin_input" rows="6" cols="50" placeholder="Please make sure the box for Another Insurance is checked off above - thanks!">
+                                    </div>    
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label class="text1">Accepts Masshealth?</label>
+                                        <div class="radio-yn-div">
+                                            <input type="radio" id="masshealth_yes_admin_input" name="masshealth_admin_input" value="yes">
+                                            <input type="radio" id="masshealth_no_admin_input" name="masshealth_admin_input" value="no">
+                                        </div>
+                                        <div class="radio-yn-label-div">
+                                            <label for="masshealth_yes_admin_input">Yes</label>
+                                            <label for="masshealth_no_admin_input">No</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="question admin-add-provider-question">
+                                        <label for="access_admin_input" class="text1">Location accessibility info</label>
+                                        <textarea id="access_admin_input" name="access_admin_input" class="center-me" rows="6" cols="50" placeholder=""></textarea>
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label class="text1">Does this therapist provide couples therapy? (skip if unknown)</label>
+                                        <div class="radio-yn-div">
+                                            <input type="radio" id="couples_yes_admin_input" name="couples_admin_input" value="yes">
+                                            <input type="radio" id="couples-no_admin_input" name="couples_admin_input" value="no">
+                                        </div>
+                                        <div class="radio-yn-label-div">
+                                            <label for="couples_yes_admin_input">Yes</label>
+                                            <label for="couples-no_admin_input">No</label>
+                                        </div>
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label class="text1">Does this therapist serve youth? (skip if unknown)</label>
+                                        <div class="radio-yn-div">
+                                            <input type="radio" id="youth-yes_admin_input" name="youth_admin_input" value="yes">
+                                            <input type="radio" id="youth-no_admin_input" name="youth_admin_input" value="no">
+                                        </div>
+                                        <div class="radio-yn-label-div">
+                                            <label for="youth-yes_admin_input">Yes</label>
+                                            <label for="youth-no_admin_input">No</label>
+                                        </div>
+                                    </div>
+                
+                
+                                    <div class="question admin-add-provider-question">
+                
+                                        <label for="comments_admin_input" class="text1">Comments from Providers or Additional User Comments</label>
+                                        <textarea id="comments_admin_input" name="comments_admin_input" class="center-me" rows="8" cols="50"  placeholder=""></textarea> 
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="cost_admin_input" class="text1">Average Cost per Session Without Insurance:</label>
+                                        <input type="text" id="cost_admin_input" name="cost_admin_input" placeholder="$">
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="pronouns_admin_input" class="text1">Provider's pronouns:</label>
+                                        <input type="text" id="pronouns_admin_input" name="pronouns_admin_input" >
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="address_admin_input" class="text1">Full Address (for google maps):</label>
+                                        <input type="text" id="address_admin_input" name="address_admin_input">
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                                        <label for="accepting_clients_admin_input" class="text1">Currently accepting new clients (include as of date)</label>
+                                        <input type="text" id="accepting_clients_admin_input" name="accepting_clients_admin_input">
+                                    </div>
+                
+                                    <div class="question admin-add-provider-question">
+                
+                                        <label for="admin_comments_admin_input" class="text1">Admin Comments/Log</label>
+                                        <textarea id="admin_comments_admin_input" name="admin_comments_admin_input" class="center-me" rows="8" cols="50"  placeholder=""></textarea> 
+                                    </div>
+                
+                                    <!-- update log -->
+                                    <div class="question admin-add-provider-question">
+                
+                                        <label for="last_update_admin_input" class="text1">Last Update:</label>
+                                        <input type="text" id="last_update_admin_input" name="last_update_admin_input" class="center-me" placeholder=""></input> 
+                            
+                                    </div>
+                
+                
+                                <!-- end admin-add-provider div-->
+                                </div>
+                
+                
+                
+                                    <div class="center-me">
+                                        <input type="submit" value="Submit" id="admin-add-provider-provider-submit" class="add-provider-submit">
+                                    </div>
+                
+                                    <!-- <div class="center-me"> -->
+                                        <!-- <p>Oops! I made a mistake!</p> -->
+                                        <!-- <button type="reset" value="Reset" class="reset-form-button">Reset the form</button> -->
+                                    <!-- </div> -->
+                
+                
+                                
+                
+                            </form>
+                
+                            <!-- </div> -->
+                
+                
+                            
+                        <!-- end max width -->
+                        </div>
+                    <!-- end max-width-container -->
+                    </div>
+                
+                
+                    <%- include('../partials/footer') -%> 

@@ -17,7 +17,15 @@
             <%= user.username %> </p>
         <% } %>
 
-<!-- <div class="spacer2"></div>  -->
+        <!-- <div class="spacer2"></div>  -->
+
+        <p>Add a provider entry to the database:</p>
+        <a href="admin/admin-add-provider">
+            <button id="admin-add-button">Add New</button>
+        </a>
+
+        <!-- <div class="spacer2"></div>  -->
+
 
         <table class="admin-table">
             <thead>
@@ -29,18 +37,17 @@
             <!-- provider-update-listing.ejs -->
 
             <% providers.forEach(provider=> { %>
-
                 <%- include('../partials/provider-update-listing', {provider : provider}) %> 
     
             <% }) %>
 
         </table>
 
-        <div class="center-me">
+        <!-- <div class="center-me"> -->
             <a href="/admin/logout">
-             <button value="logout" class="logout-button">Logout</button>
-            </a>
-        </div>
+                <button value="logout" class="logout-button">Logout</button>
+                </a>
+        <!-- </div> -->
 
     </div>
 <!-- </div> -->
