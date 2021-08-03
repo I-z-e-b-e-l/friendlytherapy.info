@@ -195,7 +195,7 @@ footer {
 #footer-message {
     margin: 2em 5vw;
     color: white;
-    color: black;
+    /* color: black; */
     font-style: italic;
 }
 
@@ -287,8 +287,9 @@ footer {
     margin: 5vw;
 }
 
-.copyright {
+#copyright {
     margin: 2em 5vw;
+    color: white;
 }
 
 
@@ -1396,7 +1397,7 @@ optgroup {
     }
 
     #plant-index {
-        width: 120px;
+        width: 200px;
     }
 
     .do-stuff {
