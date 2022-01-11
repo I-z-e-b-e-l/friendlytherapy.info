@@ -12,12 +12,13 @@ sendResourceMail(mail);
 
 const sendResourceMail = (mail) => {
     // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
+    fetch("http://localhost:3000/resources", {
         // headers: {'Content-Type': 'application/json'},
         method: "post", 
         body: mail,
     
       }).then((response) => {
-        return response.json();
+        //return response.json(); this doesn't work because the response to the post is not json
+        return response;
       });
     }; 
