@@ -28,9 +28,6 @@ caretDown.addEventListener('click', toggleFatFooter);
 
 
 
-
-
-
 let footerMessage = [
 // '​\"We are pow­er­ful because we have sur­vived, and that is what it is all about- sur­vival and growth.\" \n-Audre Lorde',
 '\"We have always been very resilient — but our resilience doesn’t mean that our lives are ever ​easy.\" \n-Gwen Benaway', 
@@ -44,7 +41,7 @@ function newMessage(){
     document.querySelector("#footer-message").innerHTML = footerMessage[randomNumber];
 }
 
-
+const currentYear = document.getElementById("currentYear").innerHTML = new Date().getFullYear();
 
 // MOAR RESOURCES PAGE
 

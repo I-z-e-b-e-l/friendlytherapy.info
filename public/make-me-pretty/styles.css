@@ -606,12 +606,12 @@ footer {
 }
 
 
-.radio-div, .radio-label-div {
+.radio-div, .radio-label-div, .radio-label-div-admin-add {
     display: flex;
     justify-content: space-between;
 } 
 
-.radio-label-div {
+.radio-label-div, .radio-label-div-admin-add {
     margin-left: .4em;
     margin-right: .22em;
     margin-top: 1em;
@@ -739,16 +739,40 @@ font-weight: bold;
 
 /* ADMIN ADD A PROVIDER */
 
+/* do i need this still */
 .admin-add-client-rating{
     /* display:none; */
     margin: 5em 0em;
 }
 
-
+/* do i need this still */
 .admin-add-client-rating p {
     font-size: .7em;
     width: 28vw;
 }
+
+.radio-table {
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.radio-table td {
+    width: 75px;
+    text-align: center; 
+    vertical-align: middle;
+    
+}
+
+.rating-explain-2 {
+    font-size: .8em;
+}
+
+
+
+
+
+
+
 
 /* UPDATE PAGE STYLINGS */
 
@@ -1594,6 +1618,42 @@ optgroup {
 #not-perfect {
     margin-bottom: 2em;
 }
+
+
+
+/* Add a Provider & Admin Add Provider */
+    /* .rating-explain {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 18vw;
+        
+    } */
+
+    /* .rating-explain p {
+        width: 15em;
+        text-align: center;
+    } */
+
+
+
+    /* .radio-label-div-admin-add {
+        display: flex;
+        justify-content: space-between;
+        margin-right: .22em;
+        margin-top: 1em;
+    }  */
+
+    /* .radio-div {
+        margin-left: 1em;
+    } */
+
+    /* .im-a-one {
+        margin-right: .5em;
+    } */
+
+/* .im-a-two {
+    margin-right: .7em;
+} */
 
 
 }

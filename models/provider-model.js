@@ -117,6 +117,10 @@ const providerSchema = new Schema ({
         type: String
     },
 
+    secondWebsite: {
+        type: String
+    },
+
     contact: {
         type: String
     },
