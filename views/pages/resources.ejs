@@ -246,7 +246,7 @@
         <div class="resource-form-div">
 
             
-            <form class="forms-all contact-form" id="add-resource-form" method="POST" action="/resources" enctype = "multipart/form-data">
+            <form class="forms-all contact-form" id="add-resource-form" enctype = "multipart/form-data" onsubmit="return false;">
 
                 <div class="resource-question">
                     <label for="resource_name" class="contact-form-content resource-form-content form-label">Name of resource:</label>
@@ -272,11 +272,12 @@
                     <input type="submit" onclick="displayThankYouResource()">
                 </div>
     
-                <p id="thank-you-resource">
-                    <em>Thank you for contributing! Your resourse suggestion will be reviewed!</em>
-                </p>
-    
             </form>
+
+            <p id="thank-you-resource">
+                <em>Thank you for contributing! Your resourse suggestion will be reviewed!</em>
+            </p>
+    
             
         </div>
                 

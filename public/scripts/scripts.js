@@ -90,6 +90,7 @@ function displayAddResourceForm() {
 
 function displayThankYouResource(){
     document.querySelector('#thank-you-resource').style.display = "block";
+    document.querySelector('#add-resource-form').style.display = "none";
 }
 
 
