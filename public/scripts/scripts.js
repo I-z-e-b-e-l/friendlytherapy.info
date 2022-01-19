@@ -45,52 +45,52 @@ const currentYear = document.getElementById("currentYear").innerHTML = new Date(
 
 // MOAR RESOURCES PAGE
 
-function displaySWresource(){
-    for (let i=0; i<document.querySelectorAll(".sw-resource").length; i++){
-          document.querySelectorAll(".sw-resource")[i].classList.toggle('show-me-resource'); 
-    }
-}
+// function displaySWresource(){
+//     for (let i=0; i<document.querySelectorAll(".sw-resource").length; i++){
+//           document.querySelectorAll(".sw-resource")[i].classList.toggle('show-me-resource'); 
+//     }
+// }
 
-function displayTransResource(){
-    for (let i=0; i<document.querySelectorAll(".trans-resource").length; i++){
-          document.querySelectorAll(".trans-resource")[i].classList.toggle('show-me-resource'); 
-    }
-}
+// function displayTransResource(){
+//     for (let i=0; i<document.querySelectorAll(".trans-resource").length; i++){
+//           document.querySelectorAll(".trans-resource")[i].classList.toggle('show-me-resource'); 
+//     }
+// }
 
-function displayBIPOCResource(){
-    for (let i=0; i<document.querySelectorAll(".bipoc-resource").length; i++){
-        document.querySelectorAll(".bipoc-resource")[i].classList.toggle('show-me-resource'); 
-}
-}
+// function displayBIPOCResource(){
+//     for (let i=0; i<document.querySelectorAll(".bipoc-resource").length; i++){
+//         document.querySelectorAll(".bipoc-resource")[i].classList.toggle('show-me-resource'); 
+// }
+// }
 
-function displayKinkResource(){
-    for (let i=0; i<document.querySelectorAll(".kink-resource").length; i++){
-        document.querySelectorAll(".kink-resource")[i].classList.toggle('show-me-resource'); 
-}
-}
+// function displayKinkResource(){
+//     for (let i=0; i<document.querySelectorAll(".kink-resource").length; i++){
+//         document.querySelectorAll(".kink-resource")[i].classList.toggle('show-me-resource'); 
+// }
+// }
 
-function displayPolyResource(){
-    for (let i=0; i<document.querySelectorAll(".poly-resource").length; i++){
-        document.querySelectorAll(".poly-resource")[i].classList.toggle('show-me-resource'); 
-}
-}
+// function displayPolyResource(){
+//     for (let i=0; i<document.querySelectorAll(".poly-resource").length; i++){
+//         document.querySelectorAll(".poly-resource")[i].classList.toggle('show-me-resource'); 
+// }
+// }
 
-function displayAllResource(){
-    for (let i=0; i<document.querySelectorAll(".resource-square").length; i++){
-        document.querySelectorAll(".resource-square")[i].classList.toggle('show-me-resource'); 
-}
-}
+// function displayAllResource(){
+//     for (let i=0; i<document.querySelectorAll(".resource-square").length; i++){
+//         document.querySelectorAll(".resource-square")[i].classList.toggle('show-me-resource'); 
+// }
+// }
 
 
-function displayAddResourceForm() {
-    document.querySelector('#add-resource-form').style.display = "block";
-    document.querySelector('#show-resources-form-button').style.display = "none";   
+// function displayAddResourceForm() {
+//     document.querySelector('#add-resource-form').style.display = "block";
+//     document.querySelector('#show-resources-form-button').style.display = "none";   
 
-}
+// }
 
-function displayThankYouResource(){
-    document.querySelector('#thank-you-resource').style.display = "block";
-}
+// function displayThankYouResource(){
+//     document.querySelector('#thank-you-resource').style.display = "block";
+// }
 
 
 // RESULTS 
