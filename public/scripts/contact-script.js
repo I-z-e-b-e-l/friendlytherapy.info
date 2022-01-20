@@ -11,13 +11,13 @@ sendMail(mail);
 })
 
 const sendMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
+    fetch("https://friendlytherapy.herokuapp.com/contact", {
+    // fetch("http://localhost:3000/contact", {
         method: "post", 
         body: mail,
     
       }).then((response) => {
-        return response.json();
+        // return response.json();
+        return response;
       });
     }; 
