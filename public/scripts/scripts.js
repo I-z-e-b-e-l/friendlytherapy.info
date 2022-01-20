@@ -82,11 +82,11 @@ const currentYear = document.getElementById("currentYear").innerHTML = new Date(
 // }
 
 
-// function displayAddResourceForm() {
-//     document.querySelector('#add-resource-form').style.display = "block";
-//     document.querySelector('#show-resources-form-button').style.display = "none";   
+function displayAddResourceForm() {
+    document.querySelector('#add-resource-form').style.display = "block";
+    document.querySelector('#show-resources-form-button').style.display = "none";   
 
-// }
+}
 
 // function displayThankYouResource(){
 //     document.querySelector('#thank-you-resource').style.display = "block";
