@@ -439,7 +439,7 @@ footer {
     background-color: rgb(131, 197, 194);
     /* background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1);  */
     /* background-image: linear-gradient(to right, mediumaquamarine, #a1e7a1);  */
-    background-image: url('/images/succulents2a2.jpg');
+    background-image: url('/images/succulents2a3.jpg');
     background-size: cover;
     padding: 5vw;
     margin-top: 5vw;
@@ -606,12 +606,12 @@ footer {
 }
 
 
-.radio-div, .radio-label-div {
+.radio-div, .radio-label-div, .radio-label-div-admin-add {
     display: flex;
     justify-content: space-between;
 } 
 
-.radio-label-div {
+.radio-label-div, .radio-label-div-admin-add {
     margin-left: .4em;
     margin-right: .22em;
     margin-top: 1em;
@@ -739,16 +739,40 @@ font-weight: bold;
 
 /* ADMIN ADD A PROVIDER */
 
+/* do i need this still */
 .admin-add-client-rating{
     /* display:none; */
     margin: 5em 0em;
 }
 
-
+/* do i need this still */
 .admin-add-client-rating p {
     font-size: .7em;
     width: 28vw;
 }
+
+.radio-table {
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.radio-table td {
+    width: 75px;
+    text-align: center; 
+    vertical-align: middle;
+    
+}
+
+.rating-explain-2 {
+    font-size: .8em;
+}
+
+
+
+
+
+
+
 
 /* UPDATE PAGE STYLINGS */
 
@@ -838,11 +862,15 @@ td {
 .results-box {
     margin: 5vw;
     padding: 5vw;
-    border: 5px lavender solid;
+    /* border: 5px lavender solid; */
+    border: 5px #d0ecd0 solid;
 }
 
+/* background-image: linear-gradient(to right,  #758edd, #50a3e0, #3bb0e3,  #26c0e3, #2fdcf3, #a1e7a1);   */
+
 .name-div {
-    background-color: #cdc5e7;
+    /* background-color: #cdc5e7; */
+    background-image: linear-gradient(to left,   #73c7eb,  #83ddf1, #89e8f5, #b1ecb1, #d0ecd0, #dff0df);  
     /* width: 100%; */
     height: 3em;
     display: flex;
@@ -879,12 +907,13 @@ td {
     margin-bottom: .2em;
 }
 
+/* get rid of table layout fixed */
 #search-results-table {
-    /* border: 1px black solid; */
     border-collapse: collapse;
     width: 100%;
     margin-left: 5vw;
     margin-right: 5vw;
+    /* table-layout: fixed; */
 }
 
 
@@ -893,6 +922,7 @@ td {
     text-align: left;
     padding: 8px;
 }
+
 
 #search-results-table tr:nth-child(1n){
     /* background-color: #dae0f8; */
@@ -936,8 +966,29 @@ td {
     
 }
 
+/* selects the first column in results table, but so far unable to impact width */
+/* tbody>tr>:nth-child(1){ */
+    /* width: 10%;
+    width:30vw; */
+    /* text-align:center; */
+    /* padding: 100px; */
+   /* } */
+
+/* selects additional comments table but unable to impact width */
+/* tbody>tr>:nth-child(33){ */
+    /* width: 30%; */
+    /* width:30vw; */
+    /* text-align:center; */
+    /* padding: 100px; */
+   /* } */
+
+
+
+
+/* toggle view results */
+
 #display-results-grid-div {
-    /* display: none; */
+    display: none;
 }
 
 #view-grid-button {
@@ -958,6 +1009,11 @@ td {
 .display-results-option {
     display: flex;
     margin-right: 1em;
+}
+
+#please-note {
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 /* MOAR RESOURCES PAGE */
@@ -1134,6 +1190,10 @@ td {
 
 #find-magnify-heart-img {
     width: 150px;
+}
+
+#magnify-list-icon {
+    width: 170px;
 }
 
 .take-me .list-icon {
@@ -1342,6 +1402,14 @@ optgroup {
 
 .donate a{
     margin-bottom: .5em;
+}
+
+#thank-you-ul {
+    list-style-type:none;
+}
+
+#thank-you-ul li{
+    padding: 1em;
 }
 
 /* LOGIN  */
@@ -1596,6 +1664,42 @@ optgroup {
 }
 
 
+
+/* Add a Provider & Admin Add Provider */
+    /* .rating-explain {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 18vw;
+        
+    } */
+
+    /* .rating-explain p {
+        width: 15em;
+        text-align: center;
+    } */
+
+
+
+    /* .radio-label-div-admin-add {
+        display: flex;
+        justify-content: space-between;
+        margin-right: .22em;
+        margin-top: 1em;
+    }  */
+
+    /* .radio-div {
+        margin-left: 1em;
+    } */
+
+    /* .im-a-one {
+        margin-right: .5em;
+    } */
+
+/* .im-a-two {
+    margin-right: .7em;
+} */
+
+
 }
 
 
@@ -1629,10 +1733,7 @@ optgroup {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* justify-content: space-around; */
-    /* justify-content: space-evenly; */
-    /* margin: 0 5vw; */
-    /* align-items: center; */
+    margin-top: 10vh;;
 }
 
 .show-at-840 {
@@ -1968,10 +2069,9 @@ optgroup {
     text-align: left;
 }
 
-.sw-resource, .trans-resource, .kink-resource, .poly-resource, .bipoc-resource {
+/* .sw-resource, .trans-resource, .kink-resource, .poly-resource, .bipoc-resource {
     display: none;
-    /* margin: 0; */
-}
+} */
 
 .show-me-resource {
     display: flex;

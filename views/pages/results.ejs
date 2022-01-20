@@ -1,3 +1,5 @@
+<!-- Possibly a duplicate - this one appears to be displayins. Updating here to fix CSS on table -->
+
 <%- include('../partials/head') -%> 
 
 <%- include('../partials/header-nav') -%> 
@@ -10,7 +12,7 @@
 </div>
 
 
-<!-- display what user checked off -->
+<!-- learn PHP and display what user checked off -->
 
 
 <div class="max-width-container">
@@ -36,15 +38,15 @@
 <div id="display-results-grid-div">
 
     <div class="center-me">
-        <button id="view-result-boxes-button" onclick="displayResultsAsBoxes()">View As Boxes</button>
+        <button id="view-result-boxes-button" onclick="displayResultsAsBoxes()">View As List</button>
     </div>
 
-    <div id="show-hide-result-option-div">
+    <!-- <div id="show-hide-result-option-div"> -->
         <!-- <table id="show-hide-info-table">
         </table> -->
 
-        <h4>Display:</h4>
-        <div class="display-results-option">
+        <!-- <h4>Display:</h4> -->
+        <!-- <div class="display-results-option">
             <p>Credientials</p>
             <input type="checkbox" id="show-credentials-check" checked>
         </div>
@@ -52,10 +54,11 @@
         <div class="display-results-option">
             <p>Pronouns</p>
             <input type="checkbox" id="show-pronouns-check" checked>  
-        </div>
+        </div> -->
+    <!-- </div> -->
 
-
-
+    <div class="center-me">
+        <p id="please-note"><i>Please note, grid view is in beta, is not yet mobilble friendly and some columns may be squished</i></p>
     </div>
 
     <table id="search-results-table">
@@ -96,6 +99,7 @@
             <th>Offers Couple's Therapy</th>
             <th>Serves Youth</th>
             <th>Website</th>
+            <th>Secondary Website or Profile</th>
             <th>Contact Info</th>
             <th>Accepts Insurance</th>
             <th>Accepted Insurances on File</th>
@@ -104,7 +108,7 @@
             <th>Accepts MassHealth</th>
             <th>Average Cost without Insurance</th>
             <th>Accessibility Info</th>
-            <th>Additional Comments</th>
+            <th class="comments-column">Additional Comments</th>
             <th>Who Initially Added to the Database</th>
             <th>Info Last Updated</th>
             <th>Admin Comments</th>
@@ -134,6 +138,11 @@
                 <button id="view-grid-button" onclick="displayResultsAsGrid()">View As Grid</button>
             </div>
 
+            <div class="center-me">
+                <p><i>Note: Grid view is in beta</i></p>
+            </div>
+            
+
     <% providers.forEach(provider=> { %>
 
         <%- include('../partials/single-search-result', {provider : provider}) %> 
@@ -159,7 +168,11 @@
     
     <div class="center-me">
     
-        <a href="/search-add/find-a-therapist-search"><button class="" id="search-again-button">Search Again</button></a>
+        <a href="/search-add/find-a-therapist-search">
+            <button class="" id="search-again-button">
+                Search Again
+            </button>
+        </a>
     
     </div>
         

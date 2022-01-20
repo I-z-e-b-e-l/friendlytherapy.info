@@ -19,11 +19,11 @@
     <div class="max-width-container">
 
         <div class="max-width">
-            <div class="resources-for">
-                <label class="text1">Show me resources for:</label><br><br>
+            <!-- <div class="resources-for">
+                <label class="text1">Show me more resources for:</label><br><br>
 
                 <div id="resources-for-check-container">
-                    <!-- <div class="align-at-685"> -->
+
                         <div>
                         <input type="checkbox" id="resources-for-SW" name="resources-for-SW" value="resources-for-SW" onclick="displaySWresource()">
                         <label for="resources-for-SW" class="text1"> Sex Workers</label><br>
@@ -33,9 +33,7 @@
                         <input type="checkbox" id="resources-for-trans" name="resources-for-trans" value="resources-for-trans" onclick="displayTransResource()">
                         <label for="resources-for-trans" class="text1"> Trans Folks</label><br>
                         </div>
-                    <!-- </div> -->
 
-                    <!-- <div class="align-at-685"> -->
 
                         <div>
                         <input type="checkbox" id="resources-for-bipoc" name="resources-for-bipoc" value="resources-for-bipoc" onclick="displayBIPOCResource()">
@@ -46,9 +44,6 @@
                         <input type="checkbox" id="resources-for-kinky" name="resources-for-kinky" value="resources-for-kinky" onclick="displayKinkResource()">
                         <label for="resources-for-kinky" class="text1"> Kinky People</label><br>
                         </div>
-                    <!-- </div> -->
-
-                    <!-- <div class="align-at-685"> -->
 
                         <div>
                         <input type="checkbox" id="resources-for-poly" name="resources-for-poly" value="resources-for-poly" onclick="displayPolyResource()">
@@ -60,10 +55,11 @@
                         <label for="resources-all" class="text1"> Show me all resources</label><br>
                         </div>
 
-                    <!-- </div> -->
-
                 </div>
-            </div>    
+
+                <p>Please check to one at a time; I'll fix this soon!</p>
+
+            </div>     -->
         </div>
     </div>
 
@@ -169,14 +165,6 @@
                 </div>
             </a>
 
-            <a href="https://www.fearlessfemme100.com/resources" class="resource-link">
-                <div class="resource-square general-resource trans-resource bipoc-resource">
-                    
-                    <h3>Fearless Femme 100 <br class="show-at-840">Resource Directory</h3>    
-                    <p>Resources for finding mental health care as well as community and crisis support for people who are Queer, Trans, Black, Latinx, Muslim, or members of other marginalized communities. </p>
-                </div>
-            </a>
-
             <a href="https://www.nqttcn.com/" class="resource-link">
                 <div class="resource-square bipoc-resource">
                     <h3>Depressed While Black: <br class="show-at-840"> Help Me Find a Therapist</h3>
@@ -247,6 +235,10 @@
 
             
             <form class="forms-all contact-form" id="add-resource-form" method="POST" action="/resources" enctype = "multipart/form-data">
+
+            <!--use onsubmit ="return false" if a message on the page is desired instead of the tredirect to thank you page-->
+            
+            <!-- <form class="forms-all contact-form" id="add-resource-form" action="/resources" enctype = "multipart/form-data" onsubmit="return false;"> -->
 
                 <div class="resource-question">
                     <label for="resource_name" class="contact-form-content resource-form-content form-label">Name of resource:</label>
