@@ -13,8 +13,8 @@ sendResourceMail(mail);
 const sendResourceMail = (mail) => {
     // fetch("https://friendlytherapy.herokuapp.com/contact", { 
     // should probably be: 
-    // fetch("https://friendlytherapy.herokuapp.com/resources", { 
-    fetch("http://localhost:3000/resources", {
+    fetch("https://friendlytherapy.herokuapp.com/resources", { 
+    // fetch("http://localhost:3000/resources", {
         method: "post", 
         body: mail,
     
