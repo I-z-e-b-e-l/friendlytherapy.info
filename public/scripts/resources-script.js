@@ -11,13 +11,14 @@ sendResourceMail(mail);
 })
 
 const sendResourceMail = (mail) => {
-    // fetch("https://friendlytherapy.herokuapp.com/contact", {
-    fetch("http://localhost:3000/contact", {
-        // headers: {'Content-Type': 'application/json'},
+    // fetch("https://friendlytherapy.herokuapp.com/contact", { 
+    // should probably be: 
+    // fetch("https://friendlytherapy.herokuapp.com/resources", { 
+    fetch("http://localhost:3000/resources", {
         method: "post", 
         body: mail,
     
       }).then((response) => {
-        return response.json();
+        return response;
       });
     }; 

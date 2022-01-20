@@ -165,14 +165,6 @@
                 </div>
             </a>
 
-            <a href="https://www.fearlessfemme100.com/resources" class="resource-link">
-                <div class="resource-square general-resource trans-resource bipoc-resource">
-                    
-                    <h3>Fearless Femme 100 <br class="show-at-840">Resource Directory</h3>    
-                    <p>Resources for finding mental health care as well as community and crisis support for people who are Queer, Trans, Black, Latinx, Muslim, or members of other marginalized communities. </p>
-                </div>
-            </a>
-
             <a href="https://www.nqttcn.com/" class="resource-link">
                 <div class="resource-square bipoc-resource">
                     <h3>Depressed While Black: <br class="show-at-840"> Help Me Find a Therapist</h3>
@@ -243,6 +235,10 @@
 
             
             <form class="forms-all contact-form" id="add-resource-form" method="POST" action="/resources" enctype = "multipart/form-data">
+
+            <!--use onsubmit ="return false" if a message on the page is desired instead of the tredirect to thank you page-->
+            
+            <!-- <form class="forms-all contact-form" id="add-resource-form" action="/resources" enctype = "multipart/form-data" onsubmit="return false;"> -->
 
                 <div class="resource-question">
                     <label for="resource_name" class="contact-form-content resource-form-content form-label">Name of resource:</label>
