@@ -1,6 +1,6 @@
 //contact page
 
-console.log("ooooo... I'm a sexy sexy script for your contact page. Hello.")
+console.log("oh hai! I'm a script for your contact page doing the thing!")
 
 const contactForm = document.getElementById("contact-form"); 
 const formEvent = contactForm.addEventListener("submit", (event) => {

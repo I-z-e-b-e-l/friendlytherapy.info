@@ -1,6 +1,6 @@
 //SUGGEST A RESOURCE
 
-console.log("OMG I'm a resource script and I'm runnin baby!!!")
+console.log("OMG I'm the resources script and I'm doing the thing!")
 
 const resourceForm = document.getElementById("add-resource-form"); 
 const resourceformEvent = resourceForm.addEventListener("submit", (event) => {
