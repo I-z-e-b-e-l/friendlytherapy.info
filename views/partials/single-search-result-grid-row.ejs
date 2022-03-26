@@ -5,6 +5,7 @@
         <td><%= provider.providerType %></td>
         <td><%= provider.institution %></td>
         <!-- <td>accepting new Clients</td> -->
+        <td><%= provider.acceptingClients %> as of <%=provider.acceptingClientsAsOf %></td>
         <td><%= provider.licenseState %></td>
         <td>
             <% if (provider.teletherapy === true) { %>

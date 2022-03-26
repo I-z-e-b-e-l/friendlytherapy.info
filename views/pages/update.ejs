@@ -1,3 +1,5 @@
+<!-- There's a problem with updating the insurance that impacts everything on save and renders updated pages w/ errors -->
+
 <%- include('../partials/head') -%> 
 
 <%- include('../partials/header-nav') -%> 
@@ -45,6 +47,37 @@
             <label for="provider_type_psychiatrist_update">Psychiatrist</label>
 
         </div>
+
+        <div class="question update-question">
+            <p class="text1">Currently accepting new clients?</p>
+
+            <div class="radio-ynu-div">
+                <input type="radio" id="accepting_clients_yes_update" name="accepting_clients_update" value="true" <% if (Provider.acceptingClients === true){%><%="checked"%> <%}%> > 
+
+                <input type="radio" id="accepting_clients_no_update" name="accepting_clients_update" value="false" <% if (Provider.acceptingClients === false){%><%="checked"%> <%}%> >
+
+                <input type="radio" id="accepting_clients_unknown_update" name="accepting_clients_update" value="unknown" <% if (Provider.acceptingClients === "unknown"){%><%="checked"%> <%}%> >
+
+            </div>
+            <div class="radio-ynu-label-div">
+                <label for="accepting_clients_yes_update" class="yes3">Yes</label>
+                <label for="accepting_clients_no_update" class="no3">No</label>
+                <label for="accepting_clients_unknown_update" class="unknown3">Unknown</label>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        
+
+
+
+
+
 
         <div class="question update-question">
             <label for="pronouns_update" class="text1">Provider's pronouns:</label>
@@ -178,6 +211,8 @@
             <div class ="center-me-at-1110">
                 <div class="insurance-box">
 
+<!-- There is a problem here with at least the first two insurance providers if not all-->
+<!-- Cannot read property 'includes' of null -->
                     <div class="insurance-check-row">
                         <input type="checkbox" class="insurance-checkbox" id="another_insurance_update" name="which_insurance_update" value="Another insurance" <% if (Provider.whichInsurance.includes("Another insurance")===true){ %> <%="checked"%> <%}%> >
                         <label for="another_insurance_update" class="">Another insurance not listed here</label>

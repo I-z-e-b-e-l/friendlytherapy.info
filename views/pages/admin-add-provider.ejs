@@ -1053,9 +1053,34 @@
                     <input type="text" id="address_admin_input" name="address_admin_input">
                 </div>
 
+
+                <!-- <div class="question provider-question">
+                    <label class="text1">Are you currently accepting clients?</label>
+                    <div class="radio-yn-div">
+                        <input type="radio" id="accepting_clients_provider_input" name="accepting_clients_yes_provider_input" value="yes" required>
+                        <input type="radio" id="accepting_clients__no_provider_input" name="masshealth_provider_input" value="no">
+                    </div>
+                    <div class="radio-yn-label-div">
+                        <label for="accepting_clients_yes_provider_input" >Yes</label>
+                        <label for="accepting_clients_no_provider_input">No</label>
+                    </div>
+                </div> -->
+
                 <div class="question admin-add-provider-question">
-                    <label for="accepting_clients_admin_input" class="text1">Currently accepting new clients (include as of date)</label>
-                    <input type="text" id="accepting_clients_admin_input" name="accepting_clients_admin_input">
+                    <label class="text1">Currently accepting new clients?</label>
+                    <div class="radio-yn-div">
+                        <input type="radio" id="accepting_clients_yes_admin_input" name="accepting_clients_admin_input" value="yes">
+                        <input type="radio" id="accepting_clients_no_admin_input" name="accepting_clients_admin_input" value="no">
+                    </div>
+                    <div class="radio-yn-label-div">
+                        <label for="accepting_clients_yes_admin_input">Yes</label>
+                        <label for="accepting_clients_no_admin_input">No</label>
+                    </div>
+                </div>
+
+                <div class="question admin-add-provider-question">
+                    <label for="accepting_clients_as_of_admin_input" class="text1">Currently accepting new clients as of (date):</label>
+                    <input type="text" id="accepting_clients_as_of_admin_input" name="accepting_clients_as_of_admin_input">
                 </div>
 
                 <div class="question admin-add-provider-question">

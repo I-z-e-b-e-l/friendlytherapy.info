@@ -13,7 +13,7 @@ const routes = require('./routes/index-routes');
 const { response } = require('express');
 
 const app = express();
-const PORT = process.env. PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 

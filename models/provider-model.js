@@ -37,6 +37,10 @@ const providerSchema = new Schema ({
         type: String
     },
 
+    acceptingClientsAsOf: {
+        type: String
+    },
+
     teletherapy: {
         type: Boolean
     },

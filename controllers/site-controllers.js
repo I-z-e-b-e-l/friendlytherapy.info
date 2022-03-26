@@ -40,15 +40,15 @@ module.exports = {
     //send an email via the form on contact page
     contact_post: (request, response) => {
 
-        console.log("hits the contact_post controller function");
+      console.log("hits the contact_post controller function");
 
-        let contactForm = new multiparty.Form();
-        let data = {};
-        contactForm.parse(request, function (error, fields) {
-          console.log(fields);
-          Object.keys(fields).forEach(function (property) {
-            data[property] = fields[property].toString();
-          });
+      let contactForm = new multiparty.Form();
+      let data = {};
+      contactForm.parse(request, function (error, fields) {
+        console.log(fields);
+        Object.keys(fields).forEach(function (property) {
+          data[property] = fields[property].toString();
+        });
       
           const mail = {
             from: data.contact_form_name,
@@ -59,7 +59,7 @@ module.exports = {
       
           transporter.sendMail(mail, (error, data) => {
             if (error) {
-                console.log("hits the if statement")
+              console.log("hits the if statement");
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {
@@ -121,7 +121,7 @@ module.exports = {
       
           transporter.sendMail(mail, (error, data) => {
             if (error) {
-                console.log("hits the if statement");
+              console.log("hits the if statement");
               console.log(error);
             //   response.status(500).send("Something went wrong.");
             } else {

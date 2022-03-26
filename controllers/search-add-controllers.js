@@ -71,6 +71,7 @@ module.exports = {
             whichInsurance: request.body.which_insurance_provider_input,
             additionalInsurance: request.body.additional_insurance_provider_input,
             acceptMassHealth: request.body.masshealth_provider_input,
+            acceptNewClients: request.body.accepting_clients_provider_input,
             cost: request.body.cost_provider_input,
             accessibility: request.body.access_provider_input,
             comments: request.body.comments_provider_input,

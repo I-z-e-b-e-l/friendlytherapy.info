@@ -17,7 +17,6 @@ const sendMail = (mail) => {
         body: mail,
     
       }).then((response) => {
-        // return response.json();
         return response;
       });
     }; 

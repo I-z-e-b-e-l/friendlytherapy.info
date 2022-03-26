@@ -110,7 +110,8 @@ module.exports = {
       cost: request.body.cost_admin_input,
       pronouns: request.body.pronouns_admin_input,
       address: request.body.address_admin_input,      
-      acceptingClients: request.body.accpting_clients_admin_input,
+      acceptingClients: request.body.accepting_clients_admin_input,
+      acceptingClientsAsOf: request.body.accepting_clients_as_of_admin_input,
       commentsAdmin: request.body.admin_comments_admin_input, 
       lastUpdate: request.body.last_update_admin_input
   });
@@ -176,6 +177,8 @@ module.exports = {
       pronouns: request.body.pronouns_update,
       practice: request.body.practice_update,
       providerType: request.body.provider_type_update,
+      acceptingClients: request.body.accepting_clients_update,
+      // acceptingClientsAsOf:request.body.
       credentials: request.body.credentials_update,
       teletherapy: request.body.teletherapy_update,
       licenseState: request.body.license_state_update,

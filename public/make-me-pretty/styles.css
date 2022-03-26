@@ -125,7 +125,6 @@ header h2 {
 .little-divA {
     display: flex;
     align-items: center;
-    /* margin-left: 2vw; */
 }
 
 #show-me-hamburger {
@@ -655,12 +654,24 @@ input[type='radio']:checked:after {
 }
 
 
-.radio-yn-div, .radio-yn-label-div {
+.radio-yn-div, .radio-yn-label-div, .radio-ynu-label-div, .radio-ynu-div {
     display: flex;
     justify-content: space-around;
 }
 
-.radio-yn-label-div {
+.yes3 {
+    padding-left: 23px;
+}
+
+.no3{
+    padding-left: 50px;
+}
+
+.unknown3{
+    padding-left: 35px;
+}
+
+.radio-yn-label-div, .radio-ynu-label-div {
     margin-top: 1em;
 }
 
@@ -668,7 +679,7 @@ input[type='radio']:checked:after {
     margin: 5em 0em;
 }
 
-.radio-yn-div, .radio-div {
+.radio-yn-div, .radio-ynu-div, .radio-div {
     margin-top: 2em;
 }
 
@@ -1268,7 +1279,7 @@ optgroup {
     font-size: 1em;
 } */
 
-.radio-yn-div, .radio-yn-label-div {
+.radio-yn-div, .radio-yn-label-div, .radio-ynu-div, .radio-ynu-label-div  {
     max-width: 300px;
 }
 
@@ -1629,7 +1640,7 @@ optgroup {
         margin-right: 2em;
     }
 
-    .radio-yn-div, .radio-yn-label-div {
+    .radio-yn-div, .radio-yn-label-div, .radio-ynu-div, .radio-ynu-label-div  {
         max-width: 300px;
     }
     
