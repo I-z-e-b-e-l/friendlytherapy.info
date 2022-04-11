@@ -12,7 +12,7 @@
 
     <div class="result-row">
         <h4>Institution/Private Practice:</h4> 
-        <p><%= provider.institution %></p>      
+        <p><%= provider.practice %></p>      
     </div>
 
     <div class="result-row">
@@ -106,7 +106,7 @@
     </div>
 
     <div class="result-row">
-        <h4>Accespts Insurance:</h4> 
+        <h4>Accepts Insurance:</h4> 
         <% if (provider.acceptInsurance === true) { %>
             <p>Yes</p>
             <% } else { %>
@@ -115,7 +115,7 @@
     </div>
 
     <div class="result-row">
-        <h4>Accespts MassHealth:</h4> 
+        <h4>Accepts MassHealth:</h4> 
         <% if (provider.acceptMassHealth === true) { %>
             <p>Yes</p>
             <% } else { %>
@@ -125,7 +125,7 @@
 
     <div class="result-row">
         <h4>Insurances Accepted:</h4> 
-        <p><%= provider.insurance %></p>     
+        <p><%= provider.whichInsurance %></p>     
     </div>
 
     <div class="result-row">

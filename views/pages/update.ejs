@@ -52,9 +52,9 @@
             <p class="text1">Currently accepting new clients?</p>
 
             <div class="radio-ynu-div">
-                <input type="radio" id="accepting_clients_yes_update" name="accepting_clients_update" value="true" <% if (Provider.acceptingClients === true){%><%="checked"%> <%}%> > 
+                <input type="radio" id="accepting_clients_yes_update" name="accepting_clients_update" value="yes" <% if (Provider.acceptingClients == "yes"){%><%="checked"%> <%}%> > 
 
-                <input type="radio" id="accepting_clients_no_update" name="accepting_clients_update" value="false" <% if (Provider.acceptingClients === false){%><%="checked"%> <%}%> >
+                <input type="radio" id="accepting_clients_no_update" name="accepting_clients_update" value="no" <% if (Provider.acceptingClients == "no"){%><%="checked"%> <%}%> >
 
                 <input type="radio" id="accepting_clients_unknown_update" name="accepting_clients_update" value="unknown" <% if (Provider.acceptingClients === "unknown"){%><%="checked"%> <%}%> >
 

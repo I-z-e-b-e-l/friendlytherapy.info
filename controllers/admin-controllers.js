@@ -101,6 +101,7 @@ module.exports = {
       secondWebsite: request.body.second_website_admin_input,
       contact: request.body.contact_admin_input,
       acceptInsurance: request.body.insurance_yn_admin_input,
+      whichInsurance: request.body.which_insurance_admin_input,
       insuranceFromClient: request.body.additional_insurance_admin_input,
       acceptMassHealth: request.body.masshealth_admin_input,
       accessibility: request.body.access_admin_input,
@@ -178,7 +179,7 @@ module.exports = {
       practice: request.body.practice_update,
       providerType: request.body.provider_type_update,
       acceptingClients: request.body.accepting_clients_update,
-      // acceptingClientsAsOf:request.body.
+      acceptingClientsAsOf: request.body.accepting_clients_as_of_update,
       credentials: request.body.credentials_update,
       teletherapy: request.body.teletherapy_update,
       licenseState: request.body.license_state_update,
