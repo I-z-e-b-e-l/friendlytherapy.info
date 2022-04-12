@@ -213,6 +213,12 @@
 
 <!-- There is a problem here with at least the first two insurance providers if not all-->
 <!-- Cannot read property 'includes' of null -->
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="unknown_insurance_update" name="which_insurance_update" value="Unknown insurance" <% if (Provider.whichInsurance.includes("Unknown insurance")===true){ %> <%="checked"%> <%}%> >
+                        <label for="another_insurance_update" class="">Insurance accepted but not known</label>
+                    </div>
+
                     <div class="insurance-check-row">
                         <input type="checkbox" class="insurance-checkbox" id="another_insurance_update" name="which_insurance_update" value="Another insurance" <% if (Provider.whichInsurance.includes("Another insurance")===true){ %> <%="checked"%> <%}%> >
                         <label for="another_insurance_update" class="">Another insurance not listed here</label>
@@ -408,11 +414,18 @@
                         <input type="checkbox" class="insurance-checkbox" id="ubh_update" name="which_insurance_update" value="United Behavioral Health (UBH)" <% if (Provider.whichInsurance.includes("United Behavioral Health (UBH)")===true){ %> <%="checked"%> <%}%>>
                         <label for="ubh_update" class="">United Behavioral Health (UBH)</label> 
                     </div>
-                    <!-- 
-                        <div class="insurance-check-row">
+
+
+                    <div class="insurance-check-row">
+                        <input type="checkbox" class="insurance-checkbox" id="test_insurance_update" name="which_insurance_update" value="Test Insurance" checked>
+                    <label for="test_insurance_update" class="">Check this box to avoid a null value</label>
+                    </div>  
+
+
+                        <!-- <div class="insurance-check-row">
                         <input type="checkbox" class="insurance-checkbox" id="_update" name="which_insurance_update" value="">
                     <label for="" class=""></label>
-                    </div>  -->
+                    </div>   -->
 
 
                 <!-- end health-insurance-box  -->

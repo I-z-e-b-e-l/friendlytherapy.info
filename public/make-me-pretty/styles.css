@@ -843,7 +843,8 @@ td {
 }
 
 .insurance-box {
-    display: none;
+    /* display: none; */
+    display: flex;
     margin-top: 1.6em;
     flex-direction: column;
 }

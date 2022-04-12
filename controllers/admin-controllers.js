@@ -120,14 +120,6 @@ module.exports = {
   response.redirect('/admin');
   },
 
-
-
-
-    // admin: (request, response) => {
-    //     response.render('pages/admin');
-    // },
-
-
         
     admin: (request, response) => {
       if (request.isAuthenticated()) {
@@ -172,6 +164,9 @@ module.exports = {
     if (request.isAuthenticated()) {
       console.log("The eagle is authenticated");
     const {id} = request.params;
+
+    console.log(request.body.which_insurance_update)
+      
 
     Providers.findByIdAndUpdate(id, {$set: {  
       name: request.body.name_update,
